@@ -29,7 +29,12 @@
   "late_entry",
   "early_exit",
   "amended_from",
-  "modify_half_day_status"
+  "modify_half_day_status",
+  "overtime_section",
+  "overtime_duration",
+  "overtime_type",
+  "column_break_idku",
+  "standard_working_hours"
  ],
  "fields": [
   {
@@ -219,6 +224,43 @@
    "fieldtype": "Check",
    "hidden": 1,
    "label": "modify_half_day_status"
+  },
+  {
+   "depends_on": "overtime_type",
+   "fieldname": "overtime_section",
+   "fieldtype": "Section Break",
+   "label": "Overtime"
+  },
+  {
+   "description": "Based on \"Maximum Overtime Hours Allowed\" in Overtime Type",
+   "fieldname": "overtime_duration",
+   "fieldtype": "Time",
+   "hide_days": 1,
+   "label": "Overtime Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overtime_type",
+   "fieldtype": "Link",
+   "label": "Overtime Type",
+   "options": "Overtime Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_idku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "standard_working_hours",
+   "fieldtype": "Time",
+   "label": "Standard Working Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_overtime_duration",
+   "fieldtype": "Time",
+   "label": "Actual Overtime Duration",
+   "read_only": 1
   }
  ],
  "icon": "fa fa-ok",
