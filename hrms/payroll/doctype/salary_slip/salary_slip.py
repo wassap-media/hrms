@@ -3,7 +3,7 @@
 
 
 import unicodedata
-from datetime import date
+from datetime import date, timedelta
 
 import frappe
 from frappe import _, msgprint
@@ -27,6 +27,7 @@ from frappe.utils import (
 	rounded,
 )
 from frappe.utils.background_jobs import enqueue
+from frappe.utils.data import format_time
 
 import erpnext
 from erpnext.accounts.utils import get_fiscal_year
@@ -2580,6 +2581,8 @@ def email_salary_slips(names) -> None:
 
 def convert_str_time_to_hours(duration_str):
 	# Split the string into hours, minutes, and seconds
+	if isinstance(duration_str, timedelta):
+		duration_str = format_time(duration_str)
 	hours, minutes, seconds = (int(part) for part in duration_str.split(":"))
 	total_seconds = hours * 3600 + minutes * 60 + seconds
 

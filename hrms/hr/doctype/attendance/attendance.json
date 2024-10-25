@@ -34,7 +34,8 @@
   "overtime_duration",
   "overtime_type",
   "column_break_idku",
-  "standard_working_hours"
+  "standard_working_hours",
+  "actual_overtime_duration"
  ],
  "fields": [
   {
@@ -240,6 +241,7 @@
    "read_only": 1
   },
   {
+   "fetch_from": "shift.overtime_type",
    "fieldname": "overtime_type",
    "fieldtype": "Link",
    "label": "Overtime Type",

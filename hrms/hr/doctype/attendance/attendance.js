@@ -13,4 +13,23 @@ frappe.ui.form.on("Attendance", {
 			};
 		});
 	},
+	employee: function (frm) {
+		if (frm.doc.employee && frm.doc.attendance_date) {
+			frm.events.set_shift(frm);
+		}
+	},
+	set_shift: function (frm) {
+		frappe.call({
+			method: "hrms.hr.doctype.attendance.attendance.get_shift_type",
+			args: {
+				employee: frm.doc.employee,
+				attendance_date: frm.doc.attendance_date,
+			},
+			callback: function (r) {
+				if (r.message) {
+					frm.set_value("shift", r.message);
+				}
+			},
+		});
+	},
 });
