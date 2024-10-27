@@ -233,6 +233,7 @@
    "label": "Overtime"
   },
   {
+   "default": "0",
    "description": "Based on \"Maximum Overtime Hours Allowed\" in Overtime Type",
    "fieldname": "overtime_duration",
    "fieldtype": "Time",
@@ -253,12 +254,14 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "0",
    "fieldname": "standard_working_hours",
    "fieldtype": "Time",
    "label": "Standard Working Hours",
    "read_only": 1
   },
   {
+   "default": "0",
    "fieldname": "actual_overtime_duration",
    "fieldtype": "Time",
    "label": "Actual Overtime Duration",
