@@ -616,13 +616,13 @@ class SalarySlip(TransactionBase):
 
 		return payment_days
 
-	def get_holidays_for_employee(self, start_date, end_date, as_dict=False):
+	def get_holidays_for_employee(self, start_date, end_date):
 		holiday_list = get_holiday_list_for_employee(self.employee)
 		key = f"{holiday_list}:{start_date}:{end_date}"
 		holiday_dates = frappe.cache().hget(HOLIDAYS_BETWEEN_DATES, key)
 
 		if not holiday_dates:
-			holiday_dates = get_holiday_dates_between(holiday_list, start_date, end_date, as_dict=as_dict)
+			holiday_dates = get_holiday_dates_between(holiday_list, start_date, end_date)
 			frappe.cache().hset(HOLIDAYS_BETWEEN_DATES, key, holiday_dates)
 
 		return holiday_dates
@@ -2220,14 +2220,12 @@ class SalarySlip(TransactionBase):
 		return weekend_multiplier, public_holiday_multiplier
 
 	def get_holiday_map(self, from_date, to_date):
-		holiday_date = self.get_holidays_for_employee(from_date, to_date, as_dict=True)
+		holiday_list = get_holiday_list_for_employee(self.employee)
+		holiday_dates = get_holiday_dates_between(holiday_list, from_date, to_date, as_dict=True)
 
 		holiday_date_map = {}
-		try:
-			for date in holiday_date:
-				holiday_date_map[cstr(date.holiday_date)] = date
-		except Exception:
-			frappe.throw(_("Please try again after clearing your cache."))
+		for holiday_date in holiday_dates:
+			holiday_date_map[cstr(holiday_date.holiday_date)] = holiday_date
 
 		return holiday_date_map
 
@@ -2583,7 +2581,12 @@ def convert_str_time_to_hours(duration_str):
 	# Split the string into hours, minutes, and seconds
 	if isinstance(duration_str, timedelta):
 		duration_str = format_time(duration_str)
-	hours, minutes, seconds = (int(part) for part in duration_str.split(":"))
-	total_seconds = hours * 3600 + minutes * 60 + seconds
+	if not duration_str:
+		return
+	parts = duration_str.split(":")
+	hours = int(parts[0])
+	minutes = int(parts[1]) if len(parts) > 1 else 0
+	seconds = int(float(parts[2])) if len(parts) > 2 else 0  # Default to 0 if seconds are missing
 
+	total_seconds = hours * 3600 + minutes * 60 + seconds
 	return total_seconds / 3600

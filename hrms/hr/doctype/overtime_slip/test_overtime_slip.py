@@ -6,13 +6,14 @@ from datetime import timedelta
 
 import frappe
 from frappe.tests import IntegrationTestCase, UnitTestCase
-from frappe.utils.data import get_datetime, get_first_day, nowdate, today
+from frappe.utils.data import add_days, get_datetime, get_first_day, nowdate, today
 
 from erpnext.setup.doctype.employee.test_employee import make_employee
 
 from hrms.hr.doctype.employee_checkin.test_employee_checkin import make_checkin
 from hrms.hr.doctype.overtime_type.test_overtime_type import create_overtime_type
 from hrms.hr.doctype.shift_type.test_shift_type import make_shift_assignment, setup_shift_type
+from hrms.payroll.doctype.salary_slip.test_salary_slip import clear_cache
 from hrms.payroll.doctype.salary_structure.test_salary_structure import (
 	make_salary_structure,
 )
@@ -25,6 +26,18 @@ IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
 class TestOvertimeSlip(UnitTestCase):
+	def setUp(self):
+		for doctype in [
+			"Overtime Type",
+			"Overtime Slip",
+			"Attendance",
+			"Employee Checkin",
+			"Shift Type",
+			"Shift Assignment",
+		]:
+			frappe.db.sql(f"DELETE FROM `tab{doctype}`")
+		clear_cache()
+
 	def test_create_overtime_slip(self):
 		if not frappe.db.exists("Company", "_Test Company"):
 			company = frappe.new_doc("Company")
@@ -85,18 +98,6 @@ class TestOvertimeSlip(UnitTestCase):
 				)
 				self.assertEqual(str(detail.date), str(records[detail.reference_document]["attendance_date"]))
 
-	def tearDown(self):
-		for doctype in [
-			"Overtime Type",
-			"Overtime Slip",
-			"Attendance",
-			"Employee Checkin",
-			"Shift Type",
-			"Shift Assignment",
-		]:
-			frappe.db.sql(f"DELETE FROM `tab{doctype}`")
-		frappe.db.commit()
-
 
 def create_overtime_slip(employee):
 	slip = frappe.new_doc("Overtime Slip")
@@ -106,3 +107,26 @@ def create_overtime_slip(employee):
 
 	slip.save()
 	return slip
+
+
+def create_attendance_records_for_overtime(employee, overtime_type):
+	records = {}
+	for x in range(2):
+		attendance = frappe.new_doc("Attendance")
+		attendance.employee = employee
+		attendance.status = "Present"
+		attendance.attendance_date = add_days(today(), -(x))
+		attendance.overtime_type = overtime_type
+		attendance.overtime_duration = "02:00:00"
+		attendance.standard_working_hours = timedelta(hours=4)
+
+		attendance.save()
+		attendance.submit()
+
+		records[attendance.name] = {
+			"overtime_duration": attendance.overtime_duration,
+			"overtime_type": attendance.overtime_type,
+			"attendance_date": attendance.attendance_date,
+		}
+
+	return records
