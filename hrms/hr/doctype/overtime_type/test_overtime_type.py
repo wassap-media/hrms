@@ -47,7 +47,12 @@ def create_overtime_type(**args):
 			"salary_component": "Basic Salary",
 			"abbr": "BA",
 			"type": "Earning",
-		}
+		},
+		{
+			"salary_component": "Overtime Allowance",
+			"abbr": "OA",
+			"type": "Earning",
+		},
 	]
 
 	company = erpnext.get_default_company()
