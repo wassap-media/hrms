@@ -60,10 +60,11 @@ class Attendance(Document):
 				"Overtime Type", self.overtime_type, "maximum_overtime_hours_allowed"
 			)
 			self.actual_overtime_duration = self.overtime_duration
-			if maximum_overtime_hours:
-				overtime_duration_in_hours = convert_str_time_to_hours(self.overtime_duration)
-				if overtime_duration_in_hours > maximum_overtime_hours:
-					self.overtime_duration = str(maximum_overtime_hours) + ":00:00"
+			if not maximum_overtime_hours:
+				return
+			overtime_duration_in_hours = convert_str_time_to_hours(self.overtime_duration)
+			if overtime_duration_in_hours > maximum_overtime_hours:
+				self.overtime_duration = str(maximum_overtime_hours) + ":00:00"
 
 	def validate_attendance_date(self):
 		date_of_joining = frappe.db.get_value("Employee", self.employee, "date_of_joining")
