@@ -2301,6 +2301,8 @@ def setup_test():
 		"Payroll Period",
 		"Overtime Type",
 		"Overtime Slip",
+		"Shift Type",
+		"Shift Assignment",
 	]:
 		frappe.db.sql("delete from `tab%s`" % dt)
 
