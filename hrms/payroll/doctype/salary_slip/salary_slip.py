@@ -2156,55 +2156,69 @@ class SalarySlip(TransactionBase):
 		)
 
 	def get_overtime_type_details_and_amount(self, overtime_slips):
-		standard_duration_amount, weekends_duration_amount = 0, 0
-		public_holidays_duration_amount, calculated_amount = 0, 0
 		processed_overtime_slips = []
 		overtime_types_details = {}
 		overtime_salary_component = None
+		total_weekends_amount = total_public_holidays_amount = total_standard_amount = 0
 		for slip in overtime_slips:
 			holiday_date_map = self.get_holiday_map(slip.from_date, slip.to_date)
-			details = self.get_overtime_details(slip.name)
+			overtime_details = self.get_overtime_details(slip.name)
 
-			for detail in details:
-				overtime_hours = convert_str_time_to_hours(detail.overtime_duration)
+			for overtime_detail in overtime_details:
 				overtime_types_details, overtime_salary_component = self.set_overtime_types_details(
-					overtime_types_details, detail
+					overtime_types_details, overtime_detail
 				)
 
-				standard_working_hours = convert_str_time_to_hours(detail.standard_working_hours)
-
-				applicable_hourly_wages = (
-					overtime_types_details[detail.overtime_type]["applicable_daily_amount"]
-					/ standard_working_hours
+				weekends_duration_amount, public_holidays_duration_amount, standard_duration_amount = (
+					self.calculate_overtime_amount(overtime_detail, overtime_types_details, holiday_date_map)
 				)
-				weekend_multiplier, public_holiday_multiplier = self.get_multipliers(
-					overtime_types_details, detail
-				)
-				overtime_date = cstr(detail.date)
-				if overtime_date in holiday_date_map.keys():
-					if holiday_date_map[overtime_date].weekly_off == 1:
-						calculated_amount = overtime_hours * applicable_hourly_wages * weekend_multiplier
-						weekends_duration_amount += calculated_amount
-					elif holiday_date_map[overtime_date].weekly_off == 0:
-						calculated_amount = (
-							overtime_hours * applicable_hourly_wages * public_holiday_multiplier
-						)
-						public_holidays_duration_amount += calculated_amount
-				else:
-					calculated_amount = (
-						overtime_hours
-						* applicable_hourly_wages
-						* overtime_types_details[detail.overtime_type]["standard_multiplier"]
-					)
-					standard_duration_amount += calculated_amount
+				total_weekends_amount += weekends_duration_amount
+				total_public_holidays_amount += public_holidays_duration_amount
+				total_standard_amount += standard_duration_amount
 
 			processed_overtime_slips.append(slip.name)
 
 		return (
-			[weekends_duration_amount, public_holidays_duration_amount, standard_duration_amount],
+			[total_weekends_amount, total_public_holidays_amount, total_standard_amount],
 			processed_overtime_slips,
 			overtime_salary_component,
 		)
+
+	def calculate_overtime_amount(self, overtime_detail, overtime_types_details, holiday_date_map):
+		standard_duration_amount, weekends_duration_amount = 0, 0
+		public_holidays_duration_amount, calculated_amount = 0, 0
+		overtime_hours = convert_str_time_to_hours(overtime_detail.overtime_duration)
+		standard_working_hours = convert_str_time_to_hours(overtime_detail.standard_working_hours)
+		applicable_hourly_wages = self.get_applicable_hourly_wages(
+			overtime_types_details, overtime_detail.overtime_type, standard_working_hours
+		)
+
+		weekend_multiplier, public_holiday_multiplier = self.get_multipliers(
+			overtime_types_details, overtime_detail
+		)
+		overtime_date = cstr(overtime_detail.date)
+		if overtime_date in holiday_date_map.keys():
+			if holiday_date_map[overtime_date].weekly_off == 1:
+				calculated_amount = overtime_hours * applicable_hourly_wages * weekend_multiplier
+				weekends_duration_amount += calculated_amount
+			elif holiday_date_map[overtime_date].weekly_off == 0:
+				calculated_amount = overtime_hours * applicable_hourly_wages * public_holiday_multiplier
+				public_holidays_duration_amount += calculated_amount
+		else:
+			calculated_amount = (
+				overtime_hours
+				* applicable_hourly_wages
+				* overtime_types_details[overtime_detail.overtime_type]["standard_multiplier"]
+			)
+			standard_duration_amount += calculated_amount
+
+		return weekends_duration_amount, public_holidays_duration_amount, standard_duration_amount
+
+	def get_applicable_hourly_wages(self, overtime_types_details, overtime_type, standard_working_hours):
+		"""
+		Calculate the applicable hourly wage for overtime based on the standard working hours.
+		"""
+		return overtime_types_details[overtime_type]["applicable_daily_amount"] / standard_working_hours
 
 	def get_multipliers(self, overtime_types_details, detail):
 		weekend_multiplier = overtime_types_details[detail.overtime_type]["standard_multiplier"]
