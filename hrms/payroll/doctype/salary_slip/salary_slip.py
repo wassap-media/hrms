@@ -2248,30 +2248,38 @@ class SalarySlip(TransactionBase):
 			details, applicable_components = self.get_overtime_type_detail(detail.overtime_type)
 			overtime_types_details[detail.overtime_type] = details
 
-			if len(applicable_components):
-				overtime_types_details[detail.overtime_type]["components"] = applicable_components
-			else:
-				frappe.throw(
-					_("Select applicable components in Overtime Type: {0}").format(
-						frappe.bold(detail.overtime_type)
-					)
-				)
+			self.validate_applicable_components(applicable_components, detail.overtime_type)
+
+			overtime_types_details[detail.overtime_type]["components"] = applicable_components
 
 			if "applicable_amount" not in overtime_types_details[detail.overtime_type].keys():
-				component_amount = sum(
-					[
-						data.default_amount
-						for data in self.earnings
-						if data.salary_component in overtime_types_details[detail.overtime_type]["components"]
-						and not data.get("additional_salary", None)
-					]
-				)
-
-				overtime_types_details[detail.overtime_type]["applicable_daily_amount"] = (
-					component_amount / self.total_working_days
-				)
+				self.set_applicable_daily_amount(detail, overtime_types_details)
 
 		return overtime_types_details, overtime_types_details[detail.overtime_type].overtime_salary_component
+
+	def set_applicable_daily_amount(self, detail, overtime_types_details):
+		# Calculate and set the applicable daily amount in the dictionary
+		component_amount = self.calculate_component_amount(detail, overtime_types_details)
+		overtime_types_details[detail.overtime_type]["applicable_daily_amount"] = (
+			component_amount / self.total_working_days
+		)
+
+	def calculate_component_amount(self, detail, overtime_types_details):
+		component_amount = sum(
+			[
+				data.default_amount
+				for data in self.earnings
+				if data.salary_component in overtime_types_details[detail.overtime_type]["components"]
+				and not data.get("additional_salary", None)
+			]
+		)
+		return component_amount
+
+	def validate_applicable_components(self, applicable_components, overtime_type):
+		if not len(applicable_components):
+			frappe.throw(
+				_("Select applicable components in Overtime Type: {0}").format(frappe.bold(overtime_type))
+			)
 
 	def add_overtime_component(self, amounts, processed_overtime_slips, overtime_salary_component):
 		if not len(amounts):
