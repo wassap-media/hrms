@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2024-11-24 09:35+0000\n"
-"PO-Revision-Date: 2024-11-27 23:07\n"
+"PO-Revision-Date: 2024-12-03 23:48\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -2026,7 +2026,7 @@ msgstr "Beräkna slutresultat baserat på formel"
 #. 'Gratuity Rule'
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule.json
 msgid "Calculate Gratuity Amount Based On"
-msgstr "Beräkna Dricks Belopp Baserat På"
+msgstr "Beräkna Belöning Belopp Baserat På"
 
 #. Label of the payroll_based_on (Select) field in DocType 'Payroll Settings'
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
@@ -5831,7 +5831,7 @@ msgstr "Varannan Vecka"
 #. 'Gratuity Rule Slab'
 #: hrms/payroll/doctype/gratuity_rule_slab/gratuity_rule_slab.json
 msgid "Fraction of Applicable Earnings "
-msgstr "Bråkdel av Tillämpliga Intäkter"
+msgstr "Bråkdel av Tillämpliga Inkomster "
 
 #. Label of the daily_wages_fraction_for_half_day (Float) field in DocType
 #. 'Payroll Settings'
@@ -6203,24 +6203,24 @@ msgstr "Totalt Belopp"
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule.json
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule_dashboard.py:7
 msgid "Gratuity"
-msgstr "Dricks"
+msgstr "Belöning"
 
 #. Name of a DocType
 #: hrms/payroll/doctype/gratuity_applicable_component/gratuity_applicable_component.json
 msgid "Gratuity Applicable Component"
-msgstr "Dricks Tillämplig Komponent"
+msgstr "Belöning Tillämplig Komponent"
 
 #. Label of the gratuity_rule (Link) field in DocType 'Gratuity'
 #. Name of a DocType
 #: hrms/payroll/doctype/gratuity/gratuity.json
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule.json
 msgid "Gratuity Rule"
-msgstr "Dricks Regel"
+msgstr "Belöningsregel"
 
 #. Name of a DocType
 #: hrms/payroll/doctype/gratuity_rule_slab/gratuity_rule_slab.json
 msgid "Gratuity Rule Slab"
-msgstr "Dricks Regel Tabell"
+msgstr "Belöningsregel Tabell"
 
 #. Option for the 'Roster Color' (Select) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
@@ -13190,7 +13190,7 @@ msgstr "Totalt Betalning"
 
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:112
 msgid "Total Present"
-msgstr "Totalt Nuvarande"
+msgstr "Totalt Närvarande"
 
 #: hrms/setup.py:785
 msgid "Total Principal Amount"
@@ -13469,7 +13469,7 @@ msgstr "Resa Från"
 #. Label of the travel_funding (Select) field in DocType 'Travel Request'
 #: hrms/hr/doctype/travel_request/travel_request.json
 msgid "Travel Funding"
-msgstr "Rese Finansiering"
+msgstr "Resefinansiering"
 
 #. Name of a DocType
 #. Label of the travel_itinerary (Section Break) field in DocType 'Travel
@@ -13477,7 +13477,7 @@ msgstr "Rese Finansiering"
 #: hrms/hr/doctype/travel_itinerary/travel_itinerary.json
 #: hrms/hr/doctype/travel_request/travel_request.json
 msgid "Travel Itinerary"
-msgstr "Rese Plan"
+msgstr "Reseplan"
 
 #. Name of a DocType
 #. Label of a Link in the Expense Claims Workspace
@@ -13486,12 +13486,12 @@ msgstr "Rese Plan"
 #: hrms/hr/workspace/expense_claims/expense_claims.json
 #: hrms/hr/workspace/hr/hr.json
 msgid "Travel Request"
-msgstr "Rese Begäran"
+msgstr "Resebegäran"
 
 #. Name of a DocType
 #: hrms/hr/doctype/travel_request_costing/travel_request_costing.json
 msgid "Travel Request Costing"
-msgstr "Rese Kostnad Begäran"
+msgstr "Resebegäran Kostnad"
 
 #. Label of the travel_to (Data) field in DocType 'Travel Itinerary'
 #: hrms/hr/doctype/travel_itinerary/travel_itinerary.json
@@ -13501,7 +13501,7 @@ msgstr "Resa Till"
 #. Label of the travel_type (Select) field in DocType 'Travel Request'
 #: hrms/hr/doctype/travel_request/travel_request.json
 msgid "Travel Type"
-msgstr "Rese Typ"
+msgstr "Resetyp"
 
 #: frontend/src/components/AttendanceCalendar.vue:114
 #: hrms/hr/doctype/leave_block_list/leave_block_list.js:42
@@ -14144,7 +14144,7 @@ msgstr "Behörighet saknas för att godkänna Ledighet på Spärrad Datum"
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:57
 msgid "You are not present all day(s) between compensatory leave request days"
-msgstr "Du är inte närvarande hela dag(ar) mellan Kompensations Ledighet dagar"
+msgstr "Du är inte närvarande hela dagen/dagarna mellan de dagar du begär kompensationsledighet för"
 
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.py:101
 msgid "You can claim only an amount of {0}, the rest amount {1} should be in the application as pro-rata component"

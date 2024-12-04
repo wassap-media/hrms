@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2024-11-24 09:35+0000\n"
-"PO-Revision-Date: 2024-11-25 22:09\n"
+"PO-Revision-Date: 2024-11-29 23:34\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid " Unlink Payment on Cancellation of Employee Advance"
-msgstr ""
+msgstr "Çalışan Avansı İptalinde Ödemeyi Bağlantıdan Kaldır"
 
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.py:22
 msgid "\"From Date\" can not be greater than or equal to \"To Date\""
@@ -625,7 +625,7 @@ msgstr "Personel Özelliği Ekle"
 
 #: frontend/src/components/ExpensesTable.vue:123
 msgid "Add Expense"
-msgstr ""
+msgstr "Harcama Ekle"
 
 #: hrms/public/js/performance/performance_feedback.js:95
 msgid "Add Feedback"
@@ -633,7 +633,7 @@ msgstr "Geri Bildirim Ekle"
 
 #: frontend/src/components/ExpenseTaxesTable.vue:118
 msgid "Add Tax"
-msgstr ""
+msgstr "Vergi Ekle"
 
 #: hrms/hr/employee_property_update.js:116
 msgid "Add to Details"
@@ -803,7 +803,7 @@ msgstr "İzin Tahsisi"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:66
 msgid "Allocate Leaves"
-msgstr ""
+msgstr "Verilen İzinler"
 
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:192
 msgid "Allocate leaves to {0} employee(s)?"
@@ -1099,7 +1099,7 @@ msgstr "Yıllık Tahsis"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:356
 msgid "Annual Allocation Exceeded"
-msgstr ""
+msgstr "Yıllık Tahsis Aşıldı"
 
 #: hrms/setup.py:397
 msgid "Annual Salary"
