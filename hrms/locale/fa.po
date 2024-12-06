@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2024-11-24 09:35+0000\n"
-"PO-Revision-Date: 2024-11-30 23:35\n"
+"POT-Creation-Date: 2024-12-01 09:34+0000\n"
+"PO-Revision-Date: 2024-12-04 23:45\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -2702,7 +2702,7 @@ msgstr "هزینه یابی"
 msgid "Costing Details"
 msgstr "جزئیات هزینه"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:139
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:156
 msgid "Could not find any salary slip(s) for the employee {0}"
 msgstr ""
 
@@ -2924,7 +2924,7 @@ msgstr "واحد پول"
 msgid "Currency "
 msgstr " واحد پول"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:89
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:92
 msgid "Currency of selected Income Tax Slab should be {0} instead of {1}"
 msgstr "واحد پول منتخب مالیات بر درآمد باید به جای {1} {0} باشد."
 
@@ -4083,7 +4083,7 @@ msgstr "فیش حقوقی رایانامه به کارمند بر اساس ای�
 #: hrms/hr/report/shift_attendance/shift_attendance.py:22
 #: hrms/hr/report/unpaid_expense_claim/unpaid_expense_claim.js:8
 #: hrms/hr/report/unpaid_expense_claim/unpaid_expense_claim.py:18
-#: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:46
+#: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:57
 #: hrms/hr/report/vehicle_expenses/vehicle_expenses.py:55
 #: hrms/hr/workspace/hr/hr.json
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
@@ -5721,7 +5721,7 @@ msgstr "اولین روز"
 msgid "First Name "
 msgstr " نام کوچک"
 
-#: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:15
+#: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:29
 msgid "Fiscal Year"
 msgstr "سال مالی"
 
@@ -5886,7 +5886,7 @@ msgstr "از مبلغ"
 #: hrms/hr/report/leave_ledger/leave_ledger.js:8
 #: hrms/hr/report/leave_ledger/leave_ledger.py:47
 #: hrms/hr/report/shift_attendance/shift_attendance.js:8
-#: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:24
+#: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:37
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
@@ -5905,11 +5905,11 @@ msgstr "From Date نمی تواند بزرگتر از To Date باشد"
 msgid "From Date must come before To Date"
 msgstr "From Date باید قبل از To Date باشد"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:54
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:57
 msgid "From Date {0} cannot be after employee's relieving Date {1}"
 msgstr "از تاریخ {0} نمی تواند بعد از تاریخ معافیت کارمند {1} باشد"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:46
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:49
 msgid "From Date {0} cannot be before employee's joining Date {1}"
 msgstr "از تاریخ {0} نمی تواند قبل از تاریخ پیوستن کارمند {1} باشد"
 
@@ -6924,7 +6924,7 @@ msgstr "اسلب مالیات بر درآمد"
 msgid "Income Tax Slab Other Charges"
 msgstr "سایر هزینه های مالیات بر درآمد"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:74
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:77
 msgid "Income Tax Slab is mandatory since the Salary Structure {0} has a tax component {1}"
 msgstr ""
 
@@ -7175,6 +7175,10 @@ msgstr "بی اعتبار"
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:164
 msgid "Invalid Additional Salary"
 msgstr ""
+
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:142
+msgid "Invalid Cost Center"
+msgstr "مرکز هزینه نامعتبر است"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:319
 msgid "Invalid Payroll Payable Account. The account currency must be {0} or {1}"
@@ -8472,11 +8476,11 @@ msgstr "فیلد جا افتاده"
 msgid "Missing Fields"
 msgstr "فیلدهای گمشده"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:80
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:83
 msgid "Missing Mandatory Field"
 msgstr ""
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:150
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:167
 msgid "Missing Opening Entries"
 msgstr ""
 
@@ -9579,7 +9583,7 @@ msgstr "شماره حقوق و دستمزد"
 
 #: hrms/overrides/company.py:106
 #: hrms/patches/post_install/updates_for_multi_currency_payroll.py:65
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:103
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:106
 msgid "Payroll Payable"
 msgstr "حقوق و دستمزد قابل پرداخت"
 
@@ -9969,7 +9973,7 @@ msgstr "لطفاً با کلیک بر روی \"بازخورد آموزشی\" و 
 msgid "Please specify the job applicant to be updated."
 msgstr "لطفا متقاضی کار را مشخص کنید تا به روز شود."
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:141
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:158
 msgid "Please specify {0} and {1} (if any), for the correct tax calculation in future salary slips."
 msgstr ""
 
@@ -10969,6 +10973,10 @@ msgstr "ردیف {0}# مبلغ پرداختی نمی‌تواند بیشتر ا�
 msgid "Row {0}# Paid Amount cannot be greater than requested advance amount"
 msgstr "ردیف {0}# مبلغ پرداختی نمی تواند بیشتر از مبلغ پیش پرداخت درخواستی باشد"
 
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:139
+msgid "Row {0}: Cost Center {1} does not belong to Company {2}"
+msgstr "ردیف {0}: مرکز هزینه {1} به شرکت {2} تعلق ندارد"
+
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule.py:15
 msgid "Row {0}: From (Year) can not be greater than To (Year)"
 msgstr "ردیف {0}: از (سال) نمی تواند بزرگتر از تا (سال) باشد"
@@ -11238,7 +11246,7 @@ msgstr "تخصیص ساختار حقوق و دستمزد"
 msgid "Salary Structure Assignment field"
 msgstr ""
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:41
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:44
 msgid "Salary Structure Assignment for Employee already exists"
 msgstr "تخصیص ساختار حقوق و دستمزد برای کارمند از قبل وجود دارد"
 
@@ -11258,7 +11266,7 @@ msgstr "ساختار حقوق و دستمزد برای کارمند {0} و تا�
 msgid "Salary Structure should have flexible benefit component(s) to dispense benefit amount"
 msgstr "ساختار حقوق و دستمزد باید دارای مولفه(های) منعطف برای توزیع مبلغ مزایا باشد"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:65
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:68
 msgid "Salary Structure {0} does not belong to company {1}"
 msgstr "ساختار حقوق و دستمزد {0} متعلق به شرکت {1} نیست"
 
@@ -12476,7 +12484,7 @@ msgstr "مالیات و مزایا"
 #. Label of the tax_deducted_till_date (Currency) field in DocType 'Salary
 #. Structure Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:145
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:162
 msgid "Tax Deducted Till Date"
 msgstr "مالیات کسر شده تا تاریخ"
 
@@ -12521,7 +12529,7 @@ msgstr "مالیات بر مزایای قابل انعطاف"
 #. Label of the taxable_earnings_till_date (Currency) field in DocType 'Salary
 #. Structure Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:144
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:161
 msgid "Taxable Earnings Till Date"
 msgstr "درآمد مشمول مالیات تا تاریخ"
 
@@ -12682,7 +12690,7 @@ msgstr "هیچ جای خالی در طرح کارگزینی وجود ندارد 
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:37
 #: hrms/payroll/doctype/employee_incentive/employee_incentive.py:20
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:202
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:219
 msgid "There is no Salary Structure assigned to {0}. First assign a Salary Stucture."
 msgstr "هیچ ساختار حقوقی به {0} اختصاص داده نشده است. ابتدا یک ساختار حقوق تعیین کنید."
 
@@ -12860,7 +12868,7 @@ msgstr "به مبلغ"
 #: hrms/hr/report/leave_ledger/leave_ledger.js:15
 #: hrms/hr/report/leave_ledger/leave_ledger.py:53
 #: hrms/hr/report/shift_attendance/shift_attendance.js:15
-#: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:32
+#: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:44
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/doctype/salary_withholding_cycle/salary_withholding_cycle.json
@@ -13244,7 +13252,7 @@ msgstr ""
 msgid "Total leaves allocated is mandatory for Leave Type {0}"
 msgstr "مجموع مرخصی‌های تخصیص یافته برای نوع مرخصی {0} اجباری است"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:131
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:148
 msgid "Total percentage against cost centers should be 100"
 msgstr "درصد کل در مقابل مراکز هزینه باید 100 باشد"
 
@@ -13784,7 +13792,7 @@ msgid "Vegetarian"
 msgstr "گیاه خواری"
 
 #. Label of a Link in the Expense Claims Workspace
-#: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:40
+#: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:51
 #: hrms/hr/report/vehicle_expenses/vehicle_expenses.py:27
 #: hrms/hr/workspace/expense_claims/expense_claims.json
 msgid "Vehicle"
