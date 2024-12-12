@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2024-12-08 09:34+0000\n"
-"PO-Revision-Date: 2024-12-10 00:12\n"
+"PO-Revision-Date: 2024-12-12 00:04\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr "% Användning (B / T)"
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:134
 msgid "'employee_field_value' and 'timestamp' are required."
-msgstr "'employee_field_value' och 'timestamp' erfodras."
+msgstr "Personal och tidstämpel erfordras."
 
 #: hrms/hr/utils.py:241
 #: hrms/payroll/doctype/payroll_period/payroll_period.py:53
@@ -848,7 +848,7 @@ msgstr "Tilldelning Förfallen!"
 #. 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Allow Employee Checkin from Mobile App"
-msgstr "Tillåt Personal Incheckning från Mobil App"
+msgstr "Tillåt Personal Stämpling från Mobil App"
 
 #. Label of the allow_encashment (Check) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
@@ -897,7 +897,7 @@ msgstr "Tillåt Användare"
 #. 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Allow check-out after shift end time (in minutes)"
-msgstr "Tillåt Utcheckning efter Skift Sluttid (Minuter)"
+msgstr "Tillåt Utstämpling efter Skift Sluttid (Minuter)"
 
 #. Description of the 'Allow Users' (Section Break) field in DocType 'Leave
 #. Block List'
@@ -915,7 +915,7 @@ msgstr "Tillåt tilldelning av mer Ledighet än antal dagar under tilldelning pe
 #. 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Alternating entries as IN and OUT during the same shift"
-msgstr "Växlande poster som In/Utcheckning under samma skift"
+msgstr "Växlande poster som IN och UT under samma skift"
 
 #. Label of the amended_from (Link) field in DocType 'Appraisal'
 #. Label of the amended_from (Link) field in DocType 'Attendance'
@@ -1663,7 +1663,7 @@ msgstr "Närvaro från {0} till {1} är redan angiven för personal {2}"
 
 #: hrms/hr/doctype/shift_type/shift_type.js:47
 msgid "Attendance has been marked as per employee check-ins"
-msgstr "Närvaro hämtas per Personal Incheckning"
+msgstr "Närvaro hämtas per Personal Stämpling"
 
 #: hrms/public/js/templates/employees_with_unmarked_attendance.html:36
 msgid "Attendance has been marked for all the employees between the selected payroll dates."
@@ -1841,7 +1841,7 @@ msgstr "Starta (Dagar)"
 #. 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Begin check-in before shift start time (in minutes)"
-msgstr "Starta Incheckning före Skift Start Tid (Minuter)"
+msgstr "Starta Instämpling före Skift Start Tid (Minuter)"
 
 #. Option for the 'Level' (Select) field in DocType 'Training Event'
 #: hrms/hr/doctype/training_event/training_event.json
@@ -2098,7 +2098,7 @@ msgstr "Kan inte avbryta Skift Tilldelning: {0} eftersom det är kopplad till N�
 
 #: hrms/hr/doctype/shift_assignment/shift_assignment.py:53
 msgid "Cannot cancel Shift Assignment: {0} as it is linked to Employee Checkin: {1}"
-msgstr "Kan inte avbryta Skift Tilldelning: {0} eftersom det är kopplad till Personal Incheckning: {1}"
+msgstr "Kan inte avbryta Skift Tilldelning: {0} eftersom det är kopplad till Personal Stämpling: {1}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:270
 msgid "Cannot create Salary Slip for Employee joining after Payroll Period"
@@ -2188,11 +2188,11 @@ msgstr "Se Fel Logg {0} för mer detaljer."
 
 #: frontend/src/components/CheckInPanel.vue:124
 msgid "Check In"
-msgstr "Checka in"
+msgstr "Stämpla In"
 
 #: frontend/src/components/CheckInPanel.vue:123
 msgid "Check Out"
-msgstr "Checka Ut"
+msgstr "Stämpla Ut"
 
 #. Label of the check_vacancies (Check) field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
@@ -2206,7 +2206,7 @@ msgstr "Se {0} för mer detaljer."
 
 #: frontend/src/components/CheckInPanel.vue:160
 msgid "Check-in"
-msgstr "Checka In"
+msgstr "Stämpla In"
 
 #. Label of the check_in_date (Date) field in DocType 'Travel Itinerary'
 #: hrms/hr/doctype/travel_itinerary/travel_itinerary.json
@@ -2225,7 +2225,7 @@ msgstr "Utcheckning Datum"
 #. Label of the checkin_radius (Int) field in DocType 'Shift Location'
 #: hrms/hr/doctype/shift_location/shift_location.json
 msgid "Checkin Radius"
-msgstr "Incheckning Radie"
+msgstr "Instämpling Radie"
 
 #: hrms/hr/doctype/goal/goal_tree.js:52
 msgid "Child nodes can only be created under 'Group' type nodes"
@@ -2626,7 +2626,7 @@ msgstr "Anslutningar"
 
 #: hrms/hr/report/shift_attendance/shift_attendance.js:58
 msgid "Consider Grace Period"
-msgstr "Inkludera Respit Period"
+msgstr "Inkludera Anstånd Period"
 
 #. Label of the consider_marked_attendance_on_holidays (Check) field in DocType
 #. 'Payroll Settings'
@@ -3676,7 +3676,7 @@ msgstr "Sponsor Detaljer (Namn, Plats)"
 #. 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Determine Check-in and Check-out"
-msgstr "Incheckning och Utcheckning baserat på"
+msgstr "Stämpling baserat på"
 
 #. Label of the disable (Check) field in DocType 'Gratuity Rule'
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule.json
@@ -3834,7 +3834,7 @@ msgstr "Tidig Utcheckning Efter"
 #. Label of the early_exit_grace_period (Int) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Early Exit Grace Period"
-msgstr "Tidig Utcheckning Respit Period"
+msgstr "Tidig Utstämpling Anstånd Period"
 
 #: hrms/hr/report/shift_attendance/shift_attendance.py:186
 msgid "Early Exits"
@@ -4238,11 +4238,11 @@ msgstr "Introduktion Aktivitet"
 #: hrms/hr/workspace/hr/hr.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Employee Checkin"
-msgstr "In/Utcheckning"
+msgstr "In/Utstämpling"
 
 #: frontend/src/views/attendance/EmployeeCheckinList.vue:5
 msgid "Employee Checkin History"
-msgstr "Personal Incheckningshistorik"
+msgstr "Personal Stämpling Historik"
 
 #. Name of a DocType
 #: hrms/payroll/doctype/employee_cost_center/employee_cost_center.json
@@ -4761,11 +4761,11 @@ msgstr "Personal poster skapas med valda alternativ"
 
 #: hrms/hr/doctype/shift_type/shift_type.py:169
 msgid "Employee was marked Absent due to missing Employee Checkins."
-msgstr "Personal angavs Frånvarande på grund av saknade incheckningar."
+msgstr "Personal angavs som Frånvarande på grund av saknade stämplingar."
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:222
 msgid "Employee was marked Absent for not meeting the working hours threshold."
-msgstr "Personal angavs Frånvarande för att inte ha uppfyllt arbetstid gräns."
+msgstr "Personal angavs Frånvarande för att inte ha uppfyllt arbetstid tröskel."
 
 #: hrms/hr/doctype/attendance_request/attendance_request.py:52
 msgid "Employee {0} already has an Attendance Request {1} that overlaps with this period"
@@ -4900,7 +4900,7 @@ msgstr "Aktivera Tidig Utcheckning Val"
 #. Label of the enable_late_entry_marking (Check) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Enable Late Entry Marking"
-msgstr "Aktivera Sen Incheckning Val"
+msgstr "Aktivera Sen Instämpling Val"
 
 #: frontend/src/views/AppSettings.vue:25
 msgid "Enable Push Notifications"
@@ -5156,7 +5156,7 @@ msgstr "Var 4:e Vecka"
 #. DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Every Valid Check-in and Check-out"
-msgstr "Varje Giltig Incheckning och Utcheckning"
+msgstr "Varje Giltig Stämpling"
 
 #. Option for the 'Frequency' (Select) field in DocType 'Shift Assignment
 #. Schedule'
@@ -5638,7 +5638,7 @@ msgstr "Återkoppling {0} har lagts till"
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
 #: hrms/hr/doctype/shift_location/shift_location.json
 msgid "Fetch Geolocation"
-msgstr "Hämta Geolokalisering"
+msgstr "Hämta Geografisk Position"
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.js:25
 msgid "Fetch Shift"
@@ -5734,7 +5734,7 @@ msgstr "Slutlig Resutat Formel"
 #. DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "First Check-in and Last Check-out"
-msgstr "Första Incheckning och Sista Utcheckning"
+msgstr "Första Instämpling och Sista Utstämpling"
 
 #. Option for the 'Allocate on Day' (Select) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
@@ -6065,7 +6065,7 @@ msgstr "Bokföring Register"
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
 #: hrms/hr/doctype/shift_location/shift_location.json
 msgid "Geolocation"
-msgstr "Geolocation"
+msgstr "Geografisk Position"
 
 #: hrms/public/js/utils/index.js:186 hrms/public/js/utils/index.js:212
 msgid "Geolocation Error"
@@ -6721,7 +6721,7 @@ msgstr "Om vald, kommer skatt befrielse deklaration att övervägas för beräkn
 #. DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "If enabled, auto attendance will be marked on holidays if Employee Checkins exist"
-msgstr "Om vald, kommer automatisk närvaro att anges på helgdagar om det finns incheckningar för personal"
+msgstr "Om vald, kommer automatisk närvaro att anges på helgdagar om det finns stämplingar för personal"
 
 #. Description of the 'Consider Marked Attendance on Holidays' (Check) field in
 #. DocType 'Payroll Settings'
@@ -7602,7 +7602,7 @@ msgstr "Sista Dag"
 #. Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Last Known Successful Sync of Employee Checkin. Reset this only if you are sure that all Logs are synced from all the locations. Please don't modify this if you are unsure."
-msgstr "Senast känd lyckad synkronisering av Personal Incheckning. Återställ detta endast om du är säker på att alla loggar är synkroniserade från alla platser. Ändra inte detta om du är osäker"
+msgstr "Senast känd lyckad synkronisering av Personal Stämplingar. Återställ detta endast om du är säker på att alla loggar är synkroniserade från alla platser. Ändra inte detta om du är osäker."
 
 #. Label of the last_name (Data) field in DocType 'Employee Referral'
 #: hrms/hr/doctype/employee_referral/employee_referral.json
@@ -7617,7 +7617,7 @@ msgstr "Senaste Odometer Värde "
 #. Label of the last_sync_of_checkin (Datetime) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Last Sync of Checkin"
-msgstr "Senaste Synkronisering av Incheckning"
+msgstr "Senaste Synkronisering av Stämplingar"
 
 #: frontend/src/components/CheckInPanel.vue:9
 msgid "Last {0} was at {1}"
@@ -7633,13 +7633,13 @@ msgstr "Sena Ankomster"
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.json
 #: hrms/hr/report/shift_attendance/shift_attendance.js:48
 msgid "Late Entry"
-msgstr "Sen Incheckning"
+msgstr "Sen Instämpling"
 
 #. Label of the grace_period_settings_auto_attendance_section (Section Break)
 #. field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Late Entry & Early Exit Settings for Auto Attendance"
-msgstr "Sen Incheckning & Tidig Utcheckning för Automatiskt Närvaro"
+msgstr "Sen Instämpling & Tidig Utstämpling för Automatiskt Närvaro"
 
 #: hrms/hr/report/shift_attendance/shift_attendance.py:85
 msgid "Late Entry By"
@@ -7648,7 +7648,7 @@ msgstr "Sen Ankomst Av"
 #. Label of the late_entry_grace_period (Int) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Late Entry Grace Period"
-msgstr "Sen Incheckning Respit Period"
+msgstr "Sen Instämpling Anstånd Period"
 
 #. Label of the latitude (Float) field in DocType 'Employee Checkin'
 #. Label of the latitude (Float) field in DocType 'Shift Location'
@@ -7659,7 +7659,7 @@ msgstr "Latitud"
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:83
 msgid "Latitude and longitude values are required for checking in."
-msgstr "Latitud och longitud värde erfordras för check in."
+msgstr "Latitud och longitud värde erfordras för att stämpla."
 
 #: frontend/src/components/CheckInPanel.vue:132
 msgid "Latitude: {0}°"
@@ -8291,7 +8291,7 @@ msgstr "Ange närvaro som {0} för {1} på valda datum?"
 #. Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Mark attendance based on 'Employee Checkin' for Employees assigned to this shift."
-msgstr "Ange närvaro baserat på 'Personal In/Utcheckning' för Personal som tilldelats detta skift."
+msgstr "Ange närvaro baserat på 'Personal Stämplingar' för Personal som tilldelats detta skift."
 
 #: hrms/hr/doctype/goal/goal_tree.js:262
 msgid "Mark {0} as Completed?"
@@ -10313,7 +10313,7 @@ msgstr "Snabb Länkar"
 #. Description of the 'Checkin Radius' (Int) field in DocType 'Shift Location'
 #: hrms/hr/doctype/shift_location/shift_location.json
 msgid "Radius within which check-in is allowed (in meters)"
-msgstr "Radie inom vilken incheckning är tillåten (i meter)"
+msgstr "Radie inom vilken stämpling är tillåten (i meter)"
 
 #. Label of the raised_by (Link) field in DocType 'Employee Grievance'
 #: hrms/hr/doctype/employee_grievance/employee_grievance.json
@@ -12280,7 +12280,7 @@ msgstr "Tillåt inte Användare att skapa Ledighet Ansökningar på följande da
 #. 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Strictly based on Log Type in Employee Checkin"
-msgstr "Strikt baserat på Logg Typ i Personal In/Utcheckning"
+msgstr "Strikt baserat på Logg Typ i Personal Stämplingar"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:292
 msgid "Structures have been assigned successfully"
@@ -12690,7 +12690,7 @@ msgstr "Lönespecifikation skickad via e-post till Personal kommer att vara lös
 #. Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "The time after the shift start time when check-in is considered as late (in minutes)."
-msgstr "Tiden efter Skift Start Tid när Incheckning betraktas som sen (Minuter)."
+msgstr "Tid efter Skift Start Tid när Instämpling beaktas som sen (minuter)."
 
 #. Description of the 'Early Exit Grace Period' (Int) field in DocType 'Shift
 #. Type'
@@ -12702,7 +12702,7 @@ msgstr "Tid före Skift Slut Tid när Utcheckning betraktas som tidig (Minuter).
 #. (Int) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "The time before the shift start time during which Employee Check-in is considered for attendance."
-msgstr "Tiden före Skift Start tid under vilken Personal Incheckning anses vara Närvaro."
+msgstr "Tiden före Skift Start tid under vilken Personal Stämpling anses vara Närvaro."
 
 #. Option for the 'Type' (Select) field in DocType 'Training Event'
 #: hrms/hr/doctype/training_event/training_event.json
@@ -12742,7 +12742,7 @@ msgstr "Denna kompensationsledighet gäller från och med {0}."
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:43
 msgid "This employee already has a log with the same timestamp.{0}"
-msgstr "Personal har redan logg med samma tidsstämpel. {0}"
+msgstr "Personal har redan logg med samma tidstämpel. {0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1225
 msgid "This error can be due to invalid formula or condition."
@@ -13568,7 +13568,7 @@ msgstr "Ta bort länk till betalning"
 
 #: hrms/hr/doctype/attendance/attendance.py:219
 msgid "Unlinked Attendance record from Employee Checkins: {}"
-msgstr "Olänkad Närvaro post från Personal In/Utcheckningar: {}"
+msgstr "Ej Länkad Närvaro post från Personal Stämplingar: {}"
 
 #: hrms/hr/doctype/attendance/attendance.py:222
 msgid "Unlinked logs"
@@ -14192,7 +14192,7 @@ msgstr "Du kan lägga till ytterligare detaljer, om någon, och skicka erbjudand
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:109
 msgid "You must be within {0} meters of your shift location to check in."
-msgstr "Du måste befinna dig inom {0} meter från din arbetsplats för att checka in."
+msgstr "Du måste befinna dig inom {0} meter från din arbetsplats för att stämpla."
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:51
 msgid "You were only present for Half Day on {}. Cannot apply for a full day compensatory leave"
