@@ -2,7 +2,7 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import IntegrationTestCase, change_settings
 from frappe.utils import add_days, getdate
 
 from erpnext.setup.doctype.employee.test_employee import make_employee
@@ -34,6 +34,7 @@ class TestShiftAssignmentTool(IntegrationTestCase):
 	def tearDown(self):
 		frappe.db.rollback()
 
+	@change_settings("HR Settings", {"allow_multiple_shift_assignments": 0})
 	def test_get_employees_for_assigning_shifts(self):
 		today = getdate()
 
@@ -95,7 +96,7 @@ class TestShiftAssignmentTool(IntegrationTestCase):
 		# excludes emp2 due to overlapping days
 		make_shift_schedule_assignment(self.schedule2, self.emp2)
 		# excludes emp3 due to overlapping days
-		make_shift_schedule_assignment(self.schedule3, self.emp3, today)
+		make_shift_schedule_assignment(self.schedule3, self.emp3)
 
 		employees = shift_assignment_tool.get_employees(advanced_filters)
 		self.assertEqual(len(employees), 1)  # emp1
@@ -107,7 +108,7 @@ class TestShiftAssignmentTool(IntegrationTestCase):
 
 		employee_names = [d.employee for d in employees]
 		self.assertIn(self.emp1, employee_names)
-		self.assertIn(self.emp2, employee_names)
+		self.assertIn(self.emp3, employee_names)
 
 	def test_get_shift_requests(self):
 		today = getdate()
@@ -238,7 +239,6 @@ class TestShiftAssignmentTool(IntegrationTestCase):
 				"shift_status": "Active",
 				"create_shifts_after": today,
 				"enabled": 0,
-				"docstatus": 1,
 			},
 			pluck="employee",
 		)
