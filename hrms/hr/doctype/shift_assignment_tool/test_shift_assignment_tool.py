@@ -231,13 +231,12 @@ class TestShiftAssignmentTool(IntegrationTestCase):
 		shift_assignment_tool = ShiftAssignmentTool(args)
 
 		employees = [self.emp1, self.emp2, self.emp3]
-		shift_assignment_tool.bulk_assign(employees)
+		shift_assignment_tool._bulk_assign(employees)
 		assigned_employees = frappe.get_list(
 			"Shift Schedule Assignment",
 			filters={
 				"shift_schedule": self.schedule1,
 				"shift_status": "Active",
-				"create_shifts_after": today,
 				"enabled": 0,
 			},
 			pluck="employee",
