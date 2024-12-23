@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2024-12-08 09:34+0000\n"
-"PO-Revision-Date: 2024-12-10 00:12\n"
+"POT-Creation-Date: 2024-12-15 09:34+0000\n"
+"PO-Revision-Date: 2024-12-23 02:16\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -357,6 +357,7 @@ msgstr "Abwesend"
 
 #. Label of the absent_days (Float) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
+#: hrms/payroll/report/salary_register/salary_register.py:180
 msgid "Absent Days"
 msgstr "Abwesende Tage"
 
@@ -591,7 +592,7 @@ msgstr "Ist-Kosten"
 msgid "Actual Encashable Days"
 msgstr "Tatsächliche einlösbare Tage"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:396
+#: hrms/hr/doctype/leave_application/leave_application.py:398
 msgid "Actual balances aren't available because the leave application spans over different leave allocations. You can still apply for leaves which would be compensated during the next allocation."
 msgstr "Ist-Salden sind nicht verfügbar, da sich der Urlaubsantrag über verschiedene Urlaubskontingente erstreckt. Sie können dennoch Abwesenheiten beantragen, die bei der nächsten Zuteilung abgegolten würden."
 
@@ -1630,7 +1631,7 @@ msgstr "Die Anwesenheit für den Mitarbeiter {0} ist bereits für eine überschn
 msgid "Attendance for employee {0} is already marked for the date {1}: {2}"
 msgstr "Die Anwesenheit für den Mitarbeiter {0} ist bereits für das Datum {1} markiert: {2}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:554
+#: hrms/hr/doctype/leave_application/leave_application.py:556
 msgid "Attendance for employee {0} is already marked for this day"
 msgstr "Die Teilnahme für Mitarbeiter {0} ist bereits für diesen Tag markiert"
 
@@ -1956,7 +1957,7 @@ msgstr "Das Bonuszahlungsdatum kann kein vergangenes Datum sein"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/report/salary_payments_based_on_payment_mode/salary_payments_based_on_payment_mode.py:29
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:21
-#: hrms/payroll/report/salary_register/salary_register.py:133
+#: hrms/payroll/report/salary_register/salary_register.py:134
 #: hrms/public/js/salary_slip_deductions_report_filters.js:48
 msgid "Branch"
 msgstr "Betrieb"
@@ -2097,7 +2098,7 @@ msgstr "Es kann kein Bewerber für eine geschlossene Stellenausschreibung erstel
 msgid "Cannot create or change transactions against an Appraisal Cycle with status {0}."
 msgstr ""
 
-#: hrms/hr/doctype/leave_application/leave_application.py:561
+#: hrms/hr/doctype/leave_application/leave_application.py:563
 msgid "Cannot find active Leave Period"
 msgstr "Aktive Abwesenheitszeit kann nicht gefunden werden"
 
@@ -2472,7 +2473,7 @@ msgstr "Provision"
 #: hrms/payroll/report/bank_remittance/bank_remittance.js:9
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:9
 #: hrms/payroll/report/salary_register/salary_register.js:39
-#: hrms/payroll/report/salary_register/salary_register.py:154
+#: hrms/payroll/report/salary_register/salary_register.py:155
 #: hrms/public/js/salary_slip_deductions_report_filters.js:7
 msgid "Company"
 msgstr "Unternehmen"
@@ -2919,7 +2920,7 @@ msgstr "Kriterien, anhand derer der Mitarbeiter im Leistungsfeedback und in der 
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/bank_remittance/bank_remittance.py:51
 #: hrms/payroll/report/salary_register/salary_register.js:26
-#: hrms/payroll/report/salary_register/salary_register.py:242
+#: hrms/payroll/report/salary_register/salary_register.py:249
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Currency"
 msgstr "Währung"
@@ -3144,7 +3145,7 @@ msgstr "Geburtsdatum"
 #: hrms/payroll/doctype/retention_bonus/retention_bonus.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.py:528
-#: hrms/payroll/report/salary_register/salary_register.py:127 hrms/setup.py:396
+#: hrms/payroll/report/salary_register/salary_register.py:128 hrms/setup.py:396
 msgid "Date of Joining"
 msgstr "Eintrittsdatum"
 
@@ -3220,8 +3221,8 @@ msgstr "Steuern für nicht abgegebenen Steuerbefreiungsnachweis abziehen"
 
 #. Option for the 'Type' (Select) field in DocType 'Salary Component'
 #: hrms/payroll/doctype/salary_component/salary_component.json
-#: hrms/payroll/report/salary_register/salary_register.py:84
-#: hrms/payroll/report/salary_register/salary_register.py:90
+#: hrms/payroll/report/salary_register/salary_register.py:85
+#: hrms/payroll/report/salary_register/salary_register.py:91
 msgid "Deduction"
 msgstr "Abzug"
 
@@ -3441,7 +3442,7 @@ msgstr "Auslieferungsfahrt"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:33
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.py:515
-#: hrms/payroll/report/salary_register/salary_register.py:140
+#: hrms/payroll/report/salary_register/salary_register.py:141
 #: hrms/public/js/salary_slip_deductions_report_filters.js:42 hrms/setup.py:402
 #: hrms/templates/generators/job_opening.html:87
 msgid "Department"
@@ -3612,7 +3613,7 @@ msgstr "Beschreibung einer Stellenausschreibung"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.py:522
-#: hrms/payroll/report/salary_register/salary_register.py:147
+#: hrms/payroll/report/salary_register/salary_register.py:148
 msgid "Designation"
 msgstr "Position"
 
@@ -3849,8 +3850,8 @@ msgstr "Verdiente Abwesenheiten sind Abwesenheiten, die ein Mitarbeiter nach ein
 
 #. Option for the 'Type' (Select) field in DocType 'Salary Component'
 #: hrms/payroll/doctype/salary_component/salary_component.json
-#: hrms/payroll/report/salary_register/salary_register.py:84
-#: hrms/payroll/report/salary_register/salary_register.py:90
+#: hrms/payroll/report/salary_register/salary_register.py:85
+#: hrms/payroll/report/salary_register/salary_register.py:91
 msgid "Earning"
 msgstr "Einkommen"
 
@@ -3949,7 +3950,7 @@ msgstr "Email an gesendet"
 msgid "Email Template"
 msgstr "E-Mail-Vorlage"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:659
+#: hrms/hr/doctype/leave_application/leave_application.py:661
 msgid "Email sent to {0}"
 msgstr "E-Mail an {0} gesendet"
 
@@ -4116,7 +4117,7 @@ msgstr "E-Mails Gehaltsabrechnung an Mitarbeiter auf Basis von bevorzugten E-Mai
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:20
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:35
 #: hrms/payroll/report/salary_register/salary_register.js:32
-#: hrms/payroll/report/salary_register/salary_register.py:114
+#: hrms/payroll/report/salary_register/salary_register.py:115
 #: hrms/public/js/templates/employees_with_unmarked_attendance.html:17
 msgid "Employee"
 msgstr "Mitarbeiter"
@@ -4508,7 +4509,7 @@ msgstr ""
 #: hrms/payroll/report/professional_tax_deductions/professional_tax_deductions.py:28
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:27
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:28
-#: hrms/payroll/report/salary_register/salary_register.py:121
+#: hrms/payroll/report/salary_register/salary_register.py:122
 #: hrms/public/js/templates/employees_with_unmarked_attendance.html:18
 msgid "Employee Name"
 msgstr "Mitarbeitername"
@@ -4764,7 +4765,7 @@ msgstr "Mitarbeiter {0} hat bereits eine Bewerbung {1} für die Abrechnungsperio
 msgid "Employee {0} has already applied for Shift {1}: {2} that overlaps within this period"
 msgstr "Mitarbeiter {0} hat sich bereits für die Schicht {1}: {2} beworben, die sich mit diesem Zeitraum überschneidet"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:450
+#: hrms/hr/doctype/leave_application/leave_application.py:452
 msgid "Employee {0} has already applied for {1} between {2} and {3} : {4}"
 msgstr "Mitarbeiter {0} hat zwischen {2} und {3} bereits {1} beantragt: {4}"
 
@@ -4792,7 +4793,7 @@ msgstr "Mitarbeiter {0} am {1} nur halbtags anwesend"
 msgid "Employee {0} relieved on {1} must be set as 'Left'"
 msgstr "Am {1} freigestellter Mitarbeiter {0} muss als \"Ausgetreten\" gekennzeichnet werden"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:166
+#: hrms/payroll/doctype/gratuity/gratuity.py:163
 msgid "Employee: {0} have to complete minimum {1} years for gratuity"
 msgstr ""
 
@@ -4959,7 +4960,7 @@ msgstr "Ende"
 #: hrms/payroll/doctype/payroll_period/payroll_period.json
 #: hrms/payroll/doctype/payroll_period_date/payroll_period_date.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/salary_register/salary_register.py:167
+#: hrms/payroll/report/salary_register/salary_register.py:168
 msgid "End Date"
 msgstr "Enddatum"
 
@@ -6245,7 +6246,7 @@ msgstr "Beschwerdetyp"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/report/income_tax_deductions/income_tax_deductions.py:54
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:42
-#: hrms/payroll/report/salary_register/salary_register.py:199
+#: hrms/payroll/report/salary_register/salary_register.py:206
 msgid "Gross Pay"
 msgstr "Bruttolohn"
 
@@ -6575,7 +6576,7 @@ msgid "Hold"
 msgstr "Anhalten"
 
 #: hrms/hr/doctype/attendance/attendance.py:280
-#: hrms/hr/doctype/leave_application/leave_application.py:1290
+#: hrms/hr/doctype/leave_application/leave_application.py:1292
 #: hrms/hr/report/employees_working_on_a_holiday/employees_working_on_a_holiday.py:46
 msgid "Holiday"
 msgstr "Arbeitsfreier Tag"
@@ -6976,11 +6977,11 @@ msgstr ""
 msgid "Install Frappe HR"
 msgstr ""
 
-#: hrms/hr/doctype/leave_application/leave_application.py:409
+#: hrms/hr/doctype/leave_application/leave_application.py:411
 msgid "Insufficient Balance"
 msgstr "Unzureichendes Kontingent"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:407
+#: hrms/hr/doctype/leave_application/leave_application.py:409
 msgid "Insufficient leave balance for Leave Type {0}"
 msgstr "Unzureichendes Urlaubssaldo für die Abwesenheitsart {0}"
 
@@ -7684,7 +7685,7 @@ msgstr "Abwesenheitskontingente"
 msgid "Leave Application"
 msgstr "Urlaubsantrag"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:714
+#: hrms/hr/doctype/leave_application/leave_application.py:716
 msgid "Leave Application period cannot be across two non-consecutive leave allocations {0} and {1}."
 msgstr "Der Zeitraum des Abwesenheitsantrags kann sich nicht über zwei nicht aufeinanderfolgende Abwesenheitskontingente {0} und {1} erstrecken."
 
@@ -7762,7 +7763,7 @@ msgstr "Urlaubssperrenliste Termine"
 msgid "Leave Block List Name"
 msgstr "Name der Urlaubssperrenliste"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:1266
+#: hrms/hr/doctype/leave_application/leave_application.py:1268
 msgid "Leave Blocked"
 msgstr "Abwesenheit gesperrt"
 
@@ -7938,7 +7939,7 @@ msgstr "Abwesenheitsart {0} ist nicht umsetzbar"
 
 #. Label of the leave_without_pay (Float) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/salary_register/salary_register.py:173 hrms/setup.py:374
+#: hrms/payroll/report/salary_register/salary_register.py:174 hrms/setup.py:374
 #: hrms/setup.py:375
 msgid "Leave Without Pay"
 msgstr "Unbezahlter Urlaub"
@@ -7973,7 +7974,7 @@ msgstr "Da der Resturlaub bereits in den zukünftigen Datensatz für Urlaube {1}
 msgid "Leave cannot be applied/cancelled before {0}, as leave balance has already been carry-forwarded in the future leave allocation record {1}"
 msgstr "Da der Resturlaub bereits in den zukünftigen Datensatz für Urlaube {1} übertragen wurde, kann der Urlaub nicht vor {0} genehmigt/abgelehnt werden."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:477
+#: hrms/hr/doctype/leave_application/leave_application.py:479
 msgid "Leave of type {0} cannot be longer than {1}."
 msgstr "Abwesenheit des Typs {0} kann nicht länger als {1} sein."
 
@@ -8098,7 +8099,7 @@ msgstr "Darlehenskonto"
 msgid "Loan Product"
 msgstr "Darlehensprodukt"
 
-#: hrms/payroll/report/salary_register/salary_register.py:221 hrms/setup.py:764
+#: hrms/payroll/report/salary_register/salary_register.py:228 hrms/setup.py:764
 msgid "Loan Repayment"
 msgstr "Darlehensrückzahlung"
 
@@ -8374,7 +8375,7 @@ msgstr "Maximale Anzahl übertragener Abwesenheiten"
 msgid "Maximum Consecutive Leaves Allowed"
 msgstr "Maximal erlaubte aufeinanderfolgende Abwesenheiten"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:487
+#: hrms/hr/doctype/leave_application/leave_application.py:489
 msgid "Maximum Consecutive Leaves Exceeded"
 msgstr "Maximale Anzahl aufeinanderfolgender Abwesenheiten überschritten"
 
@@ -8659,7 +8660,7 @@ msgstr "Nummernkreis"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:49
-#: hrms/payroll/report/salary_register/salary_register.py:235
+#: hrms/payroll/report/salary_register/salary_register.py:242
 msgid "Net Pay"
 msgstr "Nettolohn"
 
@@ -8777,7 +8778,7 @@ msgstr "Kein Urlaubszeitraum gefunden"
 msgid "No Leaves Allocated to Employee: {0} for Leave Type: {1}"
 msgstr "Kein Abwesenheitskontingent für Mitarbeiter: {0} für Abwesenheitsart: {1}"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:269
+#: hrms/payroll/doctype/gratuity/gratuity.py:266
 msgid "No Salary Slip found for Employee: {0}"
 msgstr ""
 
@@ -8813,15 +8814,15 @@ msgstr "Keine aktive oder Standard-Gehaltsstruktur für Mitarbeiter gefunden {0}
 msgid "No additional expenses has been added"
 msgstr "Es wurden keine zusätzlichen Kosten hinzugefügt"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:285
+#: hrms/payroll/doctype/gratuity/gratuity.py:282
 msgid "No applicable Earning component found in last salary slip for Gratuity Rule: {0}"
 msgstr ""
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:298
+#: hrms/payroll/doctype/gratuity/gratuity.py:295
 msgid "No applicable Earning components found for Gratuity Rule: {0}"
 msgstr ""
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:258
+#: hrms/payroll/doctype/gratuity/gratuity.py:255
 msgid "No applicable slab found for the calculation of gratuity amount as per the Gratuity Rule: {0}"
 msgstr ""
 
@@ -9198,7 +9199,7 @@ msgstr ""
 msgid "Opening closed."
 msgstr "Eröffnung geschlossen."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:567
+#: hrms/hr/doctype/leave_application/leave_application.py:569
 msgid "Optional Holiday List not set for leave period {0}"
 msgstr "Optionale Feiertagsliste ist für Abwesenheitszeitraum {0} nicht festgelegt"
 
@@ -9473,7 +9474,7 @@ msgstr "Zahlungsdatum"
 #. Label of the payment_days (Float) field in DocType 'Salary Slip'
 #. Label of the payment_days_tab (Tab Break) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/salary_register/salary_register.py:179
+#: hrms/payroll/report/salary_register/salary_register.py:186
 msgid "Payment Days"
 msgstr "Zahlungsziel"
 
@@ -9908,7 +9909,7 @@ msgstr "Bitte stellen Sie die Verdienstkomponente für die Abwesenheitsart ein: 
 msgid "Please set Payroll based on in Payroll settings"
 msgstr "Bitte stellen Sie die Personalabrechnung basierend auf den Einstellungen für die Personalabrechnung ein"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:178
+#: hrms/payroll/doctype/gratuity/gratuity.py:175
 msgid "Please set Relieving Date for employee: {0}"
 msgstr "Bitte legen Sie das Austrittsdatum für den Mitarbeiter fest: {0}"
 
@@ -9921,11 +9922,11 @@ msgstr "Bitte legen Sie in den Unternehmenseinstellungen ein Standard-Kassenkont
 msgid "Please set account in Salary Component {0}"
 msgstr "Bitte legen Sie das Konto in der Gehaltskomponente {0} fest"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:622
+#: hrms/hr/doctype/leave_application/leave_application.py:624
 msgid "Please set default template for Leave Approval Notification in HR Settings."
 msgstr "Bitte legen Sie eine Email-Vorlage für Benachrichtigung über neuen Urlaubsantrag in den HR-Einstellungen fest."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:597
+#: hrms/hr/doctype/leave_application/leave_application.py:599
 msgid "Please set default template for Leave Status Notification in HR Settings."
 msgstr "Bitte legen Sie die Email-Vorlage für Statusänderung eines Urlaubsantrags in den HR-Einstellungen fest."
 
@@ -10463,7 +10464,7 @@ msgid "Reference Document Type"
 msgstr "Referenz-Dokumententyp"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:355
-#: hrms/hr/doctype/leave_application/leave_application.py:481
+#: hrms/hr/doctype/leave_application/leave_application.py:483
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:137
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:91
 msgid "Reference: {0}"
@@ -10975,7 +10976,7 @@ msgstr "Zeile Nr. {0}: Der Betrag darf nicht größer sein als der ausstehende B
 msgid "Row {0}# Allocated amount {1} cannot be greater than unclaimed amount {2}"
 msgstr "Zeile {0} # Der zugewiesene Betrag {1} darf nicht größer sein als der nicht beanspruchte Betrag {2}"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:138
+#: hrms/payroll/doctype/gratuity/gratuity.py:135
 msgid "Row {0}# Paid Amount cannot be greater than Total amount"
 msgstr "Zeile {0}# Der bezahlte Betrag darf nicht größer sein als der Gesamtbetrag"
 
@@ -11157,7 +11158,7 @@ msgstr "Gehaltsabrechnung"
 msgid "Salary Slip Based on Timesheet"
 msgstr "Gehaltsabrechnung Basierend auf Timesheet"
 
-#: hrms/payroll/report/salary_register/salary_register.py:107
+#: hrms/payroll/report/salary_register/salary_register.py:108
 msgid "Salary Slip ID"
 msgstr "Gehaltsabrechnung ID"
 
@@ -12136,7 +12137,7 @@ msgstr "Starten"
 #: hrms/payroll/doctype/payroll_period/payroll_period.json
 #: hrms/payroll/doctype/payroll_period_date/payroll_period_date.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/salary_register/salary_register.py:161
+#: hrms/payroll/report/salary_register/salary_register.py:162
 msgid "Start Date"
 msgstr "Startdatum"
 
@@ -12631,7 +12632,7 @@ msgstr "Das Datum, an dem die Gehaltskomponente mit dem Betrag zum Verdienst/Abz
 msgid "The day of the month when leaves should be allocated"
 msgstr "Der Tag des Monats, an dem Abwesenheiten zugeteilt werden sollen"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:365
+#: hrms/hr/doctype/leave_application/leave_application.py:367
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
 msgstr "Der Tag/die Tage, für den/die Sie Urlaub beantragen, sind Ferien. Deshalb müssen Sie keinen Urlaub beantragen."
 
@@ -13014,7 +13015,7 @@ msgstr "Gesamtsumme"
 msgid "Total Amount Reimbursed"
 msgstr "Gesamterstattungsbetrag"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:105
+#: hrms/payroll/doctype/gratuity/gratuity.py:102
 msgid "Total Amount cannot be zero"
 msgstr "Der Gesamtbetrag kann nicht Null sein"
 
@@ -13046,7 +13047,7 @@ msgstr "Gesamter deklarierter Betrag"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 #: hrms/payroll/report/salary_payments_based_on_payment_mode/salary_payments_based_on_payment_mode.py:148
-#: hrms/payroll/report/salary_register/salary_register.py:228
+#: hrms/payroll/report/salary_register/salary_register.py:235
 msgid "Total Deduction"
 msgstr "Gesamtabzug"
 
@@ -13891,7 +13892,7 @@ msgstr "WARNUNG: Das Modul Darlehensverwaltung wurde von ERPNext getrennt."
 msgid "Walk In"
 msgstr "Laufkundschaft"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:404
+#: hrms/hr/doctype/leave_application/leave_application.py:406
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:153
 #: hrms/payroll/doctype/salary_component/salary_component.py:56
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:322
@@ -13900,11 +13901,11 @@ msgstr "Laufkundschaft"
 msgid "Warning"
 msgstr "Warnung"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:392
+#: hrms/hr/doctype/leave_application/leave_application.py:394
 msgid "Warning: Insufficient leave balance for Leave Type {0} in this allocation."
 msgstr "Warnung: Unzureichender Urlaubssaldo für die Abwesenheitsart {0} in diesem Kontingent."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:400
+#: hrms/hr/doctype/leave_application/leave_application.py:402
 msgid "Warning: Insufficient leave balance for Leave Type {0}."
 msgstr "Warnung: Unzureichender Urlaubssaldo für die Abwesenheitsart {0}."
 
@@ -14349,7 +14350,7 @@ msgstr "{0} ist kein arbeitsfreier Tag."
 msgid "{0} is not allowed to submit Interview Feedback for the Interview: {1}"
 msgstr "{0} darf kein Interview-Feedback für das Interview abgeben: {1}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:575
+#: hrms/hr/doctype/leave_application/leave_application.py:577
 msgid "{0} is not in Optional Holiday List"
 msgstr "{0} befindet sich nicht in der optionalen Feiertagsliste"
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2024-12-08 09:34+0000\n"
-"PO-Revision-Date: 2024-12-14 00:58\n"
+"POT-Creation-Date: 2024-12-15 09:34+0000\n"
+"PO-Revision-Date: 2024-12-23 02:16\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -376,6 +376,7 @@ msgstr "Frånvarande"
 
 #. Label of the absent_days (Float) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
+#: hrms/payroll/report/salary_register/salary_register.py:180
 msgid "Absent Days"
 msgstr "Frånvarande Dagar"
 
@@ -610,7 +611,7 @@ msgstr "Faktisk Kostnad"
 msgid "Actual Encashable Days"
 msgstr "Faktiska Uttagbara Dagar"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:396
+#: hrms/hr/doctype/leave_application/leave_application.py:398
 msgid "Actual balances aren't available because the leave application spans over different leave allocations. You can still apply for leaves which would be compensated during the next allocation."
 msgstr "Faktisk saldon är inte tillgängliga eftersom ledighet ansökan sträcker sig över olika ledighet tilldelningar. Du kan fortfarande ansöka om ledighet som skulle kompenseras vid nästa tilldelning."
 
@@ -1649,7 +1650,7 @@ msgstr "Närvaro för personal {0} är redan angiven för överlappande skift {1
 msgid "Attendance for employee {0} is already marked for the date {1}: {2}"
 msgstr "Närvaro för personal {0} är redan angiven för följande datum {1}: {2}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:554
+#: hrms/hr/doctype/leave_application/leave_application.py:556
 msgid "Attendance for employee {0} is already marked for this day"
 msgstr "Närvaro för personal {0} angiven för denna dag"
 
@@ -1975,7 +1976,7 @@ msgstr "Bonus Betalning Datum kan inte vara tidigare datum"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/report/salary_payments_based_on_payment_mode/salary_payments_based_on_payment_mode.py:29
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:21
-#: hrms/payroll/report/salary_register/salary_register.py:133
+#: hrms/payroll/report/salary_register/salary_register.py:134
 #: hrms/public/js/salary_slip_deductions_report_filters.js:48
 msgid "Branch"
 msgstr "Bransch"
@@ -2116,7 +2117,7 @@ msgstr "Kan inte skapa Jobb Sökande mot stängd Jobb Erbjudande"
 msgid "Cannot create or change transactions against an Appraisal Cycle with status {0}."
 msgstr "Kan inte skapa eller ändra transaktioner mot utvärderingscykel med status {0}."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:561
+#: hrms/hr/doctype/leave_application/leave_application.py:563
 msgid "Cannot find active Leave Period"
 msgstr "Kan inte hitta aktiv Ledighet Period"
 
@@ -2491,7 +2492,7 @@ msgstr "Provision"
 #: hrms/payroll/report/bank_remittance/bank_remittance.js:9
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:9
 #: hrms/payroll/report/salary_register/salary_register.js:39
-#: hrms/payroll/report/salary_register/salary_register.py:154
+#: hrms/payroll/report/salary_register/salary_register.py:155
 #: hrms/public/js/salary_slip_deductions_report_filters.js:7
 msgid "Company"
 msgstr "Bolag"
@@ -2938,7 +2939,7 @@ msgstr "Kriterier baserade på vilken Personal som ska Bedömas i Prestation Åt
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/bank_remittance/bank_remittance.py:51
 #: hrms/payroll/report/salary_register/salary_register.js:26
-#: hrms/payroll/report/salary_register/salary_register.py:242
+#: hrms/payroll/report/salary_register/salary_register.py:249
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Currency"
 msgstr "Valuta"
@@ -3163,7 +3164,7 @@ msgstr "Födelsedag Datum"
 #: hrms/payroll/doctype/retention_bonus/retention_bonus.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.py:528
-#: hrms/payroll/report/salary_register/salary_register.py:127 hrms/setup.py:396
+#: hrms/payroll/report/salary_register/salary_register.py:128 hrms/setup.py:396
 msgid "Date of Joining"
 msgstr "Anställning Datum"
 
@@ -3239,8 +3240,8 @@ msgstr "Dra av Skatt för ej godkänd skattebefrielse Verifikat"
 
 #. Option for the 'Type' (Select) field in DocType 'Salary Component'
 #: hrms/payroll/doctype/salary_component/salary_component.json
-#: hrms/payroll/report/salary_register/salary_register.py:84
-#: hrms/payroll/report/salary_register/salary_register.py:90
+#: hrms/payroll/report/salary_register/salary_register.py:85
+#: hrms/payroll/report/salary_register/salary_register.py:91
 msgid "Deduction"
 msgstr "Avdrag"
 
@@ -3460,7 +3461,7 @@ msgstr "Leverans Rutt"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:33
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.py:515
-#: hrms/payroll/report/salary_register/salary_register.py:140
+#: hrms/payroll/report/salary_register/salary_register.py:141
 #: hrms/public/js/salary_slip_deductions_report_filters.js:42 hrms/setup.py:402
 #: hrms/templates/generators/job_opening.html:87
 msgid "Department"
@@ -3631,7 +3632,7 @@ msgstr "Beskrivning av ett Jobb Erbjudande"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.py:522
-#: hrms/payroll/report/salary_register/salary_register.py:147
+#: hrms/payroll/report/salary_register/salary_register.py:148
 msgid "Designation"
 msgstr "Befattning"
 
@@ -3868,8 +3869,8 @@ msgstr "Intjänad Ledighet är ledighet som intjänats efter att Personal har ar
 
 #. Option for the 'Type' (Select) field in DocType 'Salary Component'
 #: hrms/payroll/doctype/salary_component/salary_component.json
-#: hrms/payroll/report/salary_register/salary_register.py:84
-#: hrms/payroll/report/salary_register/salary_register.py:90
+#: hrms/payroll/report/salary_register/salary_register.py:85
+#: hrms/payroll/report/salary_register/salary_register.py:91
 msgid "Earning"
 msgstr "Lön"
 
@@ -3968,7 +3969,7 @@ msgstr "E-post Skickad Till"
 msgid "Email Template"
 msgstr "E-post Mall"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:659
+#: hrms/hr/doctype/leave_application/leave_application.py:661
 msgid "Email sent to {0}"
 msgstr "E-post skickad till {0}"
 
@@ -4135,7 +4136,7 @@ msgstr "Skickar Lönespecifikation baserat på angiven e-post adress i Personal 
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:20
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:35
 #: hrms/payroll/report/salary_register/salary_register.js:32
-#: hrms/payroll/report/salary_register/salary_register.py:114
+#: hrms/payroll/report/salary_register/salary_register.py:115
 #: hrms/public/js/templates/employees_with_unmarked_attendance.html:17
 msgid "Employee"
 msgstr "Personal"
@@ -4527,7 +4528,7 @@ msgstr "Personal Lån"
 #: hrms/payroll/report/professional_tax_deductions/professional_tax_deductions.py:28
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:27
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:28
-#: hrms/payroll/report/salary_register/salary_register.py:121
+#: hrms/payroll/report/salary_register/salary_register.py:122
 #: hrms/public/js/templates/employees_with_unmarked_attendance.html:18
 msgid "Employee Name"
 msgstr "Namn"
@@ -4783,7 +4784,7 @@ msgstr "Personal {0} har redan skickat in ansökan {1} för Löne Period {2}"
 msgid "Employee {0} has already applied for Shift {1}: {2} that overlaps within this period"
 msgstr "Personal {0} har redan ansökt om Skift {1}: {2} som överlappar under denna period"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:450
+#: hrms/hr/doctype/leave_application/leave_application.py:452
 msgid "Employee {0} has already applied for {1} between {2} and {3} : {4}"
 msgstr "Personal {0} har redan ansökt om {1} mellan {2} och {3}: {4}"
 
@@ -4811,7 +4812,7 @@ msgstr "Personal {0} halvdag {1}"
 msgid "Employee {0} relieved on {1} must be set as 'Left'"
 msgstr "Personal {0} som avskedades {1} måste anges som 'Slutat'"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:166
+#: hrms/payroll/doctype/gratuity/gratuity.py:163
 msgid "Employee: {0} have to complete minimum {1} years for gratuity"
 msgstr "Personal: {0} måste arbeta minst {1} år för dricks"
 
@@ -4978,7 +4979,7 @@ msgstr "Slut"
 #: hrms/payroll/doctype/payroll_period/payroll_period.json
 #: hrms/payroll/doctype/payroll_period_date/payroll_period_date.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/salary_register/salary_register.py:167
+#: hrms/payroll/report/salary_register/salary_register.py:168
 msgid "End Date"
 msgstr "Slut Datum"
 
@@ -6264,7 +6265,7 @@ msgstr "Klagomål Typ"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/report/income_tax_deductions/income_tax_deductions.py:54
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:42
-#: hrms/payroll/report/salary_register/salary_register.py:199
+#: hrms/payroll/report/salary_register/salary_register.py:206
 msgid "Gross Pay"
 msgstr "Brutto Lön"
 
@@ -6594,7 +6595,7 @@ msgid "Hold"
 msgstr "Spärra"
 
 #: hrms/hr/doctype/attendance/attendance.py:280
-#: hrms/hr/doctype/leave_application/leave_application.py:1290
+#: hrms/hr/doctype/leave_application/leave_application.py:1292
 #: hrms/hr/report/employees_working_on_a_holiday/employees_working_on_a_holiday.py:46
 msgid "Holiday"
 msgstr "Helgdag"
@@ -6995,11 +6996,11 @@ msgstr "Installera"
 msgid "Install Frappe HR"
 msgstr "Installera Frappe HR"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:409
+#: hrms/hr/doctype/leave_application/leave_application.py:411
 msgid "Insufficient Balance"
 msgstr "Otillräckligt Saldo"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:407
+#: hrms/hr/doctype/leave_application/leave_application.py:409
 msgid "Insufficient leave balance for Leave Type {0}"
 msgstr "Otillräckligt Ledighet Saldo för Ledighet Typ {0}"
 
@@ -7703,7 +7704,7 @@ msgstr "Ledighet Tilldelningar"
 msgid "Leave Application"
 msgstr "Ledighet Ansökan"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:714
+#: hrms/hr/doctype/leave_application/leave_application.py:716
 msgid "Leave Application period cannot be across two non-consecutive leave allocations {0} and {1}."
 msgstr "Ledighet Ansökan Period kan inte vara över två ej efterföljande ledighet tilldelningar {0} och {1}."
 
@@ -7781,7 +7782,7 @@ msgstr "Ledighet Spärr Lista Datum"
 msgid "Leave Block List Name"
 msgstr "Ledighet Spärr Lista Namn"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:1266
+#: hrms/hr/doctype/leave_application/leave_application.py:1268
 msgid "Leave Blocked"
 msgstr "Ledighet Spärrad"
 
@@ -7957,7 +7958,7 @@ msgstr "Ledighet Typ {0} är inte uttagbar"
 
 #. Label of the leave_without_pay (Float) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/salary_register/salary_register.py:173 hrms/setup.py:374
+#: hrms/payroll/report/salary_register/salary_register.py:174 hrms/setup.py:374
 #: hrms/setup.py:375
 msgid "Leave Without Pay"
 msgstr "Obetald Ledighet"
@@ -7992,7 +7993,7 @@ msgstr "Ledighet kan inte tilldelas före {0}, eftersom Ledighet Saldo redan har
 msgid "Leave cannot be applied/cancelled before {0}, as leave balance has already been carry-forwarded in the future leave allocation record {1}"
 msgstr "Ledighet inte kan tillämpas/annulleras före {0}, eftersom Ledighet Saldo redan är vidarebefordrad framtida ledighet tilldelning poster {1}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:477
+#: hrms/hr/doctype/leave_application/leave_application.py:479
 msgid "Leave of type {0} cannot be longer than {1}."
 msgstr "Ledighet av typ {0} får inte vara längre än {1}."
 
@@ -8117,7 +8118,7 @@ msgstr "Lån Konto"
 msgid "Loan Product"
 msgstr "Lån Artikel"
 
-#: hrms/payroll/report/salary_register/salary_register.py:221 hrms/setup.py:764
+#: hrms/payroll/report/salary_register/salary_register.py:228 hrms/setup.py:764
 msgid "Loan Repayment"
 msgstr "Lån Återbetalning"
 
@@ -8393,7 +8394,7 @@ msgstr "Maximum Vidarebefodrad Ledighet"
 msgid "Maximum Consecutive Leaves Allowed"
 msgstr "Maximum Ledighet Tillåten i Följd"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:487
+#: hrms/hr/doctype/leave_application/leave_application.py:489
 msgid "Maximum Consecutive Leaves Exceeded"
 msgstr "Maximum Antal Konsekutiv Ledighet Överskriden"
 
@@ -8678,7 +8679,7 @@ msgstr "Nummer Serie"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:49
-#: hrms/payroll/report/salary_register/salary_register.py:235
+#: hrms/payroll/report/salary_register/salary_register.py:242
 msgid "Net Pay"
 msgstr "Netto Lön"
 
@@ -8796,7 +8797,7 @@ msgstr "Ingen Ledighet Period Hittades"
 msgid "No Leaves Allocated to Employee: {0} for Leave Type: {1}"
 msgstr "Inga Ledigheter tilldelade Personal: {0} för Ledighet Typ: {1}"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:269
+#: hrms/payroll/doctype/gratuity/gratuity.py:266
 msgid "No Salary Slip found for Employee: {0}"
 msgstr "Ingen Lönespecifikation hittades för: {0}"
 
@@ -8832,15 +8833,15 @@ msgstr "Ingen aktiv eller standard löneart hittades för {0} för angivna datum
 msgid "No additional expenses has been added"
 msgstr "Inga extra kostnader har lagts till"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:285
+#: hrms/payroll/doctype/gratuity/gratuity.py:282
 msgid "No applicable Earning component found in last salary slip for Gratuity Rule: {0}"
 msgstr "Ingen tillämplig komponent hittades i senaste lönespecifikation för Dricks Regel: {0}"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:298
+#: hrms/payroll/doctype/gratuity/gratuity.py:295
 msgid "No applicable Earning components found for Gratuity Rule: {0}"
 msgstr "Ingen tillämplig inkomst komponent hittades för Dricks Regel: {0}"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:258
+#: hrms/payroll/doctype/gratuity/gratuity.py:255
 msgid "No applicable slab found for the calculation of gratuity amount as per the Gratuity Rule: {0}"
 msgstr "Ingen tillämplig tabell hittades för beräkning av Dricks Belopp i Dricks Regel: {0}"
 
@@ -9217,7 +9218,7 @@ msgstr "Öppning Saldo"
 msgid "Opening closed."
 msgstr "Jobb Erbjudande Stängd"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:567
+#: hrms/hr/doctype/leave_application/leave_application.py:569
 msgid "Optional Holiday List not set for leave period {0}"
 msgstr "Valfri helg lista inte angiven för ledighet period {0}"
 
@@ -9492,7 +9493,7 @@ msgstr "Betalning Datum"
 #. Label of the payment_days (Float) field in DocType 'Salary Slip'
 #. Label of the payment_days_tab (Tab Break) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/salary_register/salary_register.py:179
+#: hrms/payroll/report/salary_register/salary_register.py:186
 msgid "Payment Days"
 msgstr "Lönedagar"
 
@@ -9927,7 +9928,7 @@ msgstr "Ange Inkomst Komponent för Ledighet Typ: {0}."
 msgid "Please set Payroll based on in Payroll settings"
 msgstr "Ange Lön baserad på Löneinställningar"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:178
+#: hrms/payroll/doctype/gratuity/gratuity.py:175
 msgid "Please set Relieving Date for employee: {0}"
 msgstr "Ange avgång datum för: {0}"
 
@@ -9940,11 +9941,11 @@ msgstr "Ange Standard Kassa Konto i Bolag Inställningar"
 msgid "Please set account in Salary Component {0}"
 msgstr "Ange konto i Lönekomponent {0}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:622
+#: hrms/hr/doctype/leave_application/leave_application.py:624
 msgid "Please set default template for Leave Approval Notification in HR Settings."
 msgstr "Ange Standard Mall för Ledighet Godkännande Avisering i Personal Inställningar."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:597
+#: hrms/hr/doctype/leave_application/leave_application.py:599
 msgid "Please set default template for Leave Status Notification in HR Settings."
 msgstr "Ange Standard Mall för Ledighet Status Avisering i Personal Inställningar."
 
@@ -10482,7 +10483,7 @@ msgid "Reference Document Type"
 msgstr "Referens Dokument Typ"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:355
-#: hrms/hr/doctype/leave_application/leave_application.py:481
+#: hrms/hr/doctype/leave_application/leave_application.py:483
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:137
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:91
 msgid "Reference: {0}"
@@ -10994,7 +10995,7 @@ msgstr "Rad #{0}: Belopp kan inte vara högre än Utestående Belopp mot Utlägg
 msgid "Row {0}# Allocated amount {1} cannot be greater than unclaimed amount {2}"
 msgstr "Rad #{0}: Tilldelad Belopp {1} kan inte vara högre än ofodrad belopp {2}"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:138
+#: hrms/payroll/doctype/gratuity/gratuity.py:135
 msgid "Row {0}# Paid Amount cannot be greater than Total amount"
 msgstr "Rad #{0}: Betald belopp får inte vara högre än Totalt Belopp"
 
@@ -11176,7 +11177,7 @@ msgstr "Lönespecifikation"
 msgid "Salary Slip Based on Timesheet"
 msgstr "Lönespecifikation Baserad på Tidrapport"
 
-#: hrms/payroll/report/salary_register/salary_register.py:107
+#: hrms/payroll/report/salary_register/salary_register.py:108
 msgid "Salary Slip ID"
 msgstr "Lönespecifikation"
 
@@ -12155,7 +12156,7 @@ msgstr "Start"
 #: hrms/payroll/doctype/payroll_period/payroll_period.json
 #: hrms/payroll/doctype/payroll_period_date/payroll_period_date.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/salary_register/salary_register.py:161
+#: hrms/payroll/report/salary_register/salary_register.py:162
 msgid "Start Date"
 msgstr "Start Datum"
 
@@ -12650,7 +12651,7 @@ msgstr "Datum då Lönekomponent med Belopp kommer att bidra för Inkomst/Avdrag
 msgid "The day of the month when leaves should be allocated"
 msgstr "Dag i Månaden då ledighet ska tilldelas"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:365
+#: hrms/hr/doctype/leave_application/leave_application.py:367
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
 msgstr "Dag(ar) som man ansöker om ledighet är helg dagar. Du behöver inte ansöka om ledighet."
 
@@ -13033,7 +13034,7 @@ msgstr "Totalt Belopp"
 msgid "Total Amount Reimbursed"
 msgstr "Totalt Belopp Återbetald"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:105
+#: hrms/payroll/doctype/gratuity/gratuity.py:102
 msgid "Total Amount cannot be zero"
 msgstr "Totalt Belopp kan inte vara noll"
 
@@ -13065,7 +13066,7 @@ msgstr "Totalt Deklarerad Belopp"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 #: hrms/payroll/report/salary_payments_based_on_payment_mode/salary_payments_based_on_payment_mode.py:148
-#: hrms/payroll/report/salary_register/salary_register.py:228
+#: hrms/payroll/report/salary_register/salary_register.py:235
 msgid "Total Deduction"
 msgstr "Totalt Avdrag"
 
@@ -13910,7 +13911,7 @@ msgstr "Varning: Lån Hantering modul är separerad från System."
 msgid "Walk In"
 msgstr "Besök"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:404
+#: hrms/hr/doctype/leave_application/leave_application.py:406
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:153
 #: hrms/payroll/doctype/salary_component/salary_component.py:56
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:322
@@ -13919,11 +13920,11 @@ msgstr "Besök"
 msgid "Warning"
 msgstr "Varning"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:392
+#: hrms/hr/doctype/leave_application/leave_application.py:394
 msgid "Warning: Insufficient leave balance for Leave Type {0} in this allocation."
 msgstr "Varning: Otillräckligt Ledighet Saldo för Ledighet Typ {0} i denna tilldelning."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:400
+#: hrms/hr/doctype/leave_application/leave_application.py:402
 msgid "Warning: Insufficient leave balance for Leave Type {0}."
 msgstr "Varning: Otillräckligt Ledighet Saldo för Ledighet Typ {0}."
 
@@ -14368,7 +14369,7 @@ msgstr "{0} är inte helgdag"
 msgid "{0} is not allowed to submit Interview Feedback for the Interview: {1}"
 msgstr "{0} är inte tillåtern att  godkänna Intervju Återoppling för Intervju: {1}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:575
+#: hrms/hr/doctype/leave_application/leave_application.py:577
 msgid "{0} is not in Optional Holiday List"
 msgstr "{0} finns inte i valfri Helg Lista"
 
