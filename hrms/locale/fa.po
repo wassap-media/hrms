@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2024-12-22 09:34+0000\n"
-"PO-Revision-Date: 2024-12-24 02:35\n"
+"PO-Revision-Date: 2024-12-25 02:42\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -607,7 +607,7 @@ msgstr "افزودن بازخورد"
 
 #: frontend/src/components/ExpenseTaxesTable.vue:118
 msgid "Add Tax"
-msgstr ""
+msgstr "افزودن مالیات"
 
 #: hrms/hr/employee_property_update.js:116
 msgid "Add to Details"
@@ -833,12 +833,12 @@ msgstr "اجازه بازخرید"
 #. Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Allow Geolocation Tracking"
-msgstr ""
+msgstr "اجازه ردیابی موقعیت جغرافیایی"
 
 #. Label of the applicable_after (Int) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Allow Leave Application After (Working Days)"
-msgstr ""
+msgstr "اجازه درخواست مرخصی بعد از (روزهای کاری)"
 
 #. Label of the allow_multiple_shift_assignments (Check) field in DocType 'HR
 #. Settings'
@@ -1394,11 +1394,11 @@ msgstr "بایگانی شد"
 
 #: frontend/src/components/FileUploaderView.vue:53
 msgid "Are you sure you want to delete the attachment"
-msgstr ""
+msgstr "آیا مطمئن هستید که می خواهید پیوست را حذف کنید"
 
 #: frontend/src/components/FormView.vue:223
 msgid "Are you sure you want to delete the {0}"
-msgstr ""
+msgstr "آیا مطمئن هستید که می خواهید {0} را حذف کنید"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip_list.js:19
 msgid "Are you sure you want to email the selected salary slips?"
@@ -1667,7 +1667,7 @@ msgstr "حضور تنها پس از این تاریخ به صورت خودکار
 
 #: frontend/src/views/attendance/Dashboard.vue:19
 msgid "AttendanceRequestListView"
-msgstr ""
+msgstr "AttendanceRequestListView"
 
 #. Label of the section_break_18 (Section Break) field in DocType 'Training
 #. Event'
@@ -1990,7 +1990,7 @@ msgstr "CTC"
 #. 'Appraisal Cycle'
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.json
 msgid "Calculate Final Score based on Formula"
-msgstr ""
+msgstr "محاسبه امتیاز نهایی بر اساس فرمول"
 
 #. Label of the calculate_gratuity_amount_based_on (Select) field in DocType
 #. 'Gratuity Rule'
@@ -2826,7 +2826,7 @@ msgstr "ایجاد ثبت پرداخت جداگانه در برابر مطالب
 #. Assignment'
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 msgid "Create Shifts After"
-msgstr ""
+msgstr "ایجاد شیفت‌ها بعد از"
 
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.py:192
 msgid "Creating Appraisals"
@@ -3018,7 +3018,7 @@ msgstr "نام چرخه"
 #. Label of the cycles (Table) field in DocType 'Salary Withholding'
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 msgid "Cycles"
-msgstr ""
+msgstr "چرخه ها"
 
 #. Option for the 'Payroll Frequency' (Select) field in DocType 'Payroll Entry'
 #. Option for the 'Payroll Frequency' (Select) field in DocType 'Salary Slip'
@@ -3269,7 +3269,7 @@ msgstr "پرداخت پایه پیش فرض"
 
 #: hrms/setup.py:81
 msgid "Default Employee Advance Account"
-msgstr ""
+msgstr "حساب پیش پرداخت پیش فرض کارمند"
 
 #: hrms/setup.py:73
 msgid "Default Expense Claim Payable Account"
@@ -3306,11 +3306,11 @@ msgstr "حذف"
 
 #: frontend/src/components/FileUploaderView.vue:49
 msgid "Delete Attachment"
-msgstr ""
+msgstr "حذف پیوست"
 
 #: frontend/src/components/FormView.vue:219
 msgid "Delete {0}"
-msgstr ""
+msgstr "حذف {0}"
 
 #. Label of the delivery_trip (Link) field in DocType 'Expense Claim'
 #: hrms/hr/doctype/expense_claim/expense_claim.json
@@ -3466,7 +3466,7 @@ msgstr "تاریخ حرکت"
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:109
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:113
 msgid "Depends On Payment Days"
-msgstr ""
+msgstr "بستگی به روزهای پرداخت دارد"
 
 #. Label of the depends_on_payment_days (Check) field in DocType 'Salary
 #. Component'
@@ -5646,7 +5646,7 @@ msgstr "نام فیلد"
 
 #: frontend/src/components/FilePreviewModal.vue:4
 msgid "File Preview"
-msgstr ""
+msgstr "پیش نمایش فایل"
 
 #: hrms/hr/doctype/leave_application/leave_application.js:101
 #: hrms/hr/doctype/leave_encashment/leave_encashment.js:28
@@ -5706,7 +5706,7 @@ msgstr "نمره نهایی"
 #. Label of the final_score_formula (Code) field in DocType 'Appraisal Cycle'
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.json
 msgid "Final Score Formula"
-msgstr ""
+msgstr "فرمول امتیاز نهایی"
 
 #. Option for the 'Working Hours Calculation Based On' (Select) field in
 #. DocType 'Shift Type'
@@ -6671,7 +6671,7 @@ msgstr "تشخیص شماره سند"
 #: hrms/hr/doctype/identification_document_type/identification_document_type.json
 #: hrms/hr/doctype/travel_request/travel_request.json
 msgid "Identification Document Type"
-msgstr "نوع سند شناسایی"
+msgstr "نوع مدرک شناسایی"
 
 #. Description of the 'Process Payroll Accounting Entry based on Employee'
 #. (Check) field in DocType 'Payroll Settings'
@@ -8637,7 +8637,7 @@ msgstr ""
 
 #: frontend/src/components/RequestPanel.vue:36
 msgid "My Requests"
-msgstr ""
+msgstr "درخواست های من"
 
 #. Label of the salary_component (Data) field in DocType 'Salary Component'
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:137
