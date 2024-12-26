@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2024-12-22 09:34+0000\n"
-"PO-Revision-Date: 2024-12-24 02:35\n"
+"PO-Revision-Date: 2024-12-26 03:10\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -14196,7 +14196,7 @@ msgstr "Solo puede enviar la Deuda por un monto de cobro válido"
 
 #: hrms/api/__init__.py:683
 msgid "You can only upload JPG, PNG, PDF, TXT or Microsoft documents."
-msgstr "Sólo puede cargar documentos JPG, PNG, PDF, TXT o Microsoft."
+msgstr ""
 
 #: frontend/src/views/attendance/Dashboard.vue:29
 msgid "You have no upcoming shifts"
