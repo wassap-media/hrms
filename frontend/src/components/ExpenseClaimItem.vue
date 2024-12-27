@@ -11,11 +11,9 @@
 					{{ claimTitle }}
 				</div>
 				<div class="text-xs font-normal text-gray-500">
-					<span class="whitespace-nowrap">
-						{{ claimDates }}
-					</span>
+					<span>{{ claimDates }}</span>
 					<span class="whitespace-pre"> &middot; </span>
-					<span>
+					<span class="whitespace-nowrap">
 						{{ formatCurrency(props.doc.total_claimed_amount, currency) }}
 					</span>
 				</div>
