@@ -32,11 +32,11 @@ Initially, it was a set of modules within ERPNext but version 14 onwards, as the
 
 ## Key Features
 
-- **Employee Lifecycle**: From onboarding employees, managing promotions and transfers, all the way to documenating feedback with exit interviews, make life easier for employees throughtout their life cycle.
-- **Leave and Attendance**: Configure leave policies, pull regional holidays with a click, check-in and check-out with geolocation capturing track leave balances and attendance with reports.
+- **Employee Lifecycle**: From onboarding employees, managing promotions and transfers, all the way to documenating feedback with exit interviews, make life easier for employees throughout their life cycle.
+- **Leave and Attendance**: Configure leave policies, pull regional holidays with a click, check-in and check-out with geolocation capturing, track leave balances and attendance with reports.
 - **Expense Claims and Advances**: Manage employee advances, claim expenses, configure multi-level approval workflows all this with seamless integration with ERPNext accounting.
-- **Performance Management**: Track goals, align goals with key result areas (KRAs), enable employees to evaluate themselves, managing appraisal cycles has never been easy.
-- **Payroll & Taxation**: Create salary structures, configure income tax slabs run standard payroll, accomodate additonal salaries and off cycle payments, view income breakup on salary slips and so much more.
+- **Performance Management**: Track goals, align goals with key result areas (KRAs), enable employees to evaluate themselves, make managing appraisal cycles easy.
+- **Payroll & Taxation**: Create salary structures, configure income tax slabs, run standard payroll, accomodate additional salaries and off cycle payments, view income breakup on salary slips and so much more.
 - **Frappe HR mobile app**: Apply for and approve leaves on the go, check-in and check-out, access employee profile right from the mobile app.
 
 <details open>
@@ -74,21 +74,36 @@ It takes care of installation, setup, upgrades, monitoring, maintenance and supp
 
 
 ## Development setup
+### Docker
+You need Docker, docker-compose and git setup on your machine. Refer [Docker documentation](https://docs.docker.com/). After that, run the following commands:
+```
+git clone https://github.com/frappe/hrms
+cd hrms/docker
+docker-compose up
+```
+
+Wait for some time until the setup script creates a site. After that you can access `http://localhost:8000` in your browser and the login screen for HR should show up.
+
+Use the following credentials to log in:
+
+- Username: `Administrator`
+- Password: `admin`
 
 ### Local
 
-1. Set up bench by following the [Installation Steps](https://frappeframework.com/docs/user/en/installation)
-2. After setting up bench, [Install ERPNext](https://github.com/frappe/erpnext#installation)
-3. Once ERPNext is installed, add the hrms app to your bench by running
-
+1. Set up bench by following the [Installation Steps](https://frappeframework.com/docs/user/en/installation) and start the server and keep it running
 	```sh
+	$ bench start
+	```
+2. In a separate terminal window, run the following commands
+	```sh
+	$ bench new-site hrms.local
+	$ bench get-app erpnext
 	$ bench get-app hrms
+	$ bench --site hrms.local install-app hrms
+	$ bench --site hrms.local add-to-hosts
 	```
-4. After that, you can install the hrms app on the required site by running
-	```sh
-	$ bench --site sitename install-app hrms
-	```
-
+3. You can access the site at `http://hrms.local:8080`
 
 ## Learning and Community
 
