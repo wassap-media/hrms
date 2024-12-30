@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2024-12-22 09:34+0000\n"
-"PO-Revision-Date: 2024-12-24 02:35\n"
+"POT-Creation-Date: 2024-12-29 09:34+0000\n"
+"PO-Revision-Date: 2024-12-30 04:20\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Esperanto\n"
 "MIME-Version: 1.0\n"
@@ -14302,7 +14302,7 @@ msgstr "crwdns142774:0crwdne142774:0"
 msgid "{0} & {1}"
 msgstr "crwdns110716:0{0}crwdnd110716:0{1}crwdne110716:0"
 
-#: frontend/src/components/ExpenseClaimItem.vue:86
+#: frontend/src/components/ExpenseClaimItem.vue:84
 msgid "{0} & {1} more"
 msgstr "crwdns151392:0{0}crwdnd151392:0{1}crwdne151392:0"
 
