@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2024-12-29 09:34+0000\n"
-"PO-Revision-Date: 2024-12-30 04:19\n"
+"PO-Revision-Date: 2025-01-01 04:15\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -5044,11 +5044,11 @@ msgstr "پیغام خطا"
 
 #: frontend/src/components/FormView.vue:531
 msgid "Error creating {0}"
-msgstr ""
+msgstr "خطا در ایجاد {0}"
 
 #: frontend/src/components/FormView.vue:580
 msgid "Error deleting {0}"
-msgstr ""
+msgstr "خطا در حذف {0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1224
 msgid "Error in formula or condition"
@@ -5064,7 +5064,7 @@ msgstr "خطا در برخی ردیف ها"
 
 #: frontend/src/components/FormView.vue:558
 msgid "Error updating {0}"
-msgstr ""
+msgstr "خطا در به‌روزرسانی {0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:2270
 msgid "Error while evaluating the {doctype} {doclink} at row {row_id}. <br><br> <b>Error:</b> {error} <br><br> <b>Hint:</b> {description}"
@@ -7651,7 +7651,7 @@ msgstr ""
 
 #: frontend/src/components/CheckInPanel.vue:132
 msgid "Latitude: {0}°"
-msgstr ""
+msgstr "عرض جغرافیایی: {0}°"
 
 #. Option for the 'Calculate Payroll Working Days Based On' (Select) field in
 #. DocType 'Payroll Settings'
@@ -7800,7 +7800,7 @@ msgstr "مبلغ بازخرید مرخصی در روز"
 
 #: frontend/src/views/leave/List.vue:5
 msgid "Leave History"
-msgstr ""
+msgstr "تاریخچه مرخصی"
 
 #. Name of a report
 #: hrms/hr/report/leave_ledger/leave_ledger.json
@@ -8014,7 +8014,7 @@ msgstr "مرخصی‌ها"
 
 #: frontend/src/views/leave/Dashboard.vue:2
 msgid "Leaves & Holidays"
-msgstr ""
+msgstr "مرخصی ها و تعطیلات"
 
 #. Label of the leaves_allocated (Check) field in DocType 'Leave Policy
 #. Assignment'
@@ -8184,7 +8184,7 @@ msgstr "طول جغرافیایی"
 
 #: frontend/src/components/CheckInPanel.vue:133
 msgid "Longitude: {0}°"
-msgstr ""
+msgstr "طول جغرافیایی: {0}°"
 
 #. Label of the lower_range (Currency) field in DocType 'Job Applicant'
 #. Label of the lower_range (Currency) field in DocType 'Job Opening'
@@ -8215,7 +8215,7 @@ msgstr "اجباری"
 
 #: hrms/public/js/utils/index.js:37
 msgid "Mandatory fields required for this action:"
-msgstr ""
+msgstr "فیلدهای اجباری مورد نیاز برای این اقدام:"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.js:192
 msgid "Mandatory fields required in {0}"
@@ -8633,7 +8633,7 @@ msgstr ""
 
 #: frontend/src/views/leave/List.vue:17
 msgid "My Leaves"
-msgstr ""
+msgstr "مرخصی های من"
 
 #: frontend/src/components/RequestPanel.vue:36
 msgid "My Requests"
@@ -9204,7 +9204,7 @@ msgstr "تراز افتتاحیه"
 #. 'Salary Structure Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 msgid "Opening Balances"
-msgstr ""
+msgstr "ترازهای افتتاحیه"
 
 #: hrms/templates/generators/job_opening.html:38
 #: hrms/templates/generators/job_opening.html:218
@@ -9805,7 +9805,7 @@ msgstr "لطفا نقش سازمانی را وارد کنید"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1865
 msgid "Please see attachment"
-msgstr ""
+msgstr "لطفا پیوست را ببینید"
 
 #: hrms/hr/doctype/staffing_plan/staffing_plan.py:224
 msgid "Please select Company and Designation"
@@ -9875,7 +9875,7 @@ msgstr ""
 
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:36
 msgid "Please select company."
-msgstr ""
+msgstr "لطفا شرکت را انتخاب کنید."
 
 #: hrms/hr/doctype/employee_advance/employee_advance.js:16
 msgid "Please select employee first"
@@ -10408,7 +10408,7 @@ msgstr ""
 
 #: frontend/src/views/leave/Dashboard.vue:21
 msgid "Recent Leaves"
-msgstr ""
+msgstr "مرخصی های اخیر"
 
 #: frontend/src/views/attendance/Dashboard.vue:40
 msgid "Recent Shift Requests"
@@ -10721,20 +10721,20 @@ msgstr ""
 
 #: frontend/src/views/Home.vue:42
 msgid "Request Leave"
-msgstr ""
+msgstr "درخواست مرخصی"
 
 #: frontend/src/views/leave/Dashboard.vue:17
 msgid "Request a Leave"
-msgstr ""
+msgstr "درخواست یک مرخصی"
 
 #: frontend/src/views/attendance/Dashboard.vue:35
 msgid "Request a Shift"
-msgstr ""
+msgstr "درخواست یک شیفت"
 
 #: frontend/src/components/EmployeeAdvanceBalance.vue:21
 #: frontend/src/views/Home.vue:52
 msgid "Request an Advance"
-msgstr ""
+msgstr "درخواست یک پیش پرداخت"
 
 #. Label of the requested_by (Link) field in DocType 'Job Requisition'
 #. Label of the section_break_7 (Section Break) field in DocType 'Job
@@ -11886,7 +11886,7 @@ msgstr "زمان پایان شیفت"
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Shift Location"
-msgstr ""
+msgstr "مکان شیفت"
 
 #. Label of the shift_request (Link) field in DocType 'Shift Assignment'
 #. Name of a DocType
@@ -11961,7 +11961,7 @@ msgstr "زمان شروع شیفت"
 #. Assignment'
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 msgid "Shift Status"
-msgstr ""
+msgstr "وضعیت شیفت"
 
 #. Label of the shift_timings_section (Section Break) field in DocType
 #. 'Employee Checkin'
@@ -11972,7 +11972,7 @@ msgstr ""
 #: hrms/public/js/utils/index.js:246 hrms/public/js/utils/index.js:254
 #: hrms/public/js/utils/index.js:268 hrms/public/js/utils/index.js:275
 msgid "Shift Tools"
-msgstr ""
+msgstr "ابزارهای شیفت"
 
 #. Label of the shift_type (Link) field in DocType 'Shift Assignment'
 #. Label of the shift_type (Link) field in DocType 'Shift Assignment Tool'
@@ -13681,7 +13681,7 @@ msgstr "به روز رسانی"
 
 #: frontend/src/components/ExpensesTable.vue:123
 msgid "Update Expense"
-msgstr ""
+msgstr "به روز رسانی هزینه"
 
 #: hrms/hr/doctype/interview/interview.py:71
 msgid "Update Job Applicant"
@@ -13737,7 +13737,7 @@ msgstr "HTML را آپلود کنید"
 
 #: frontend/src/components/FileUploaderView.vue:11
 msgid "Upload images or documents"
-msgstr ""
+msgstr "تصاویر یا اسناد را آپلود کنید"
 
 #: frontend/src/components/FormView.vue:119
 #: frontend/src/components/FormView.vue:158
@@ -14361,7 +14361,7 @@ msgstr "{0} با موفقیت ایجاد شد!"
 
 #: frontend/src/components/FormView.vue:571
 msgid "{0} deleted successfully!"
-msgstr ""
+msgstr "{0} با موفقیت حذف شد!"
 
 #: frontend/src/components/CheckInPanel.vue:184
 #: frontend/src/components/RequestActionSheet.vue:290
@@ -14427,7 +14427,7 @@ msgstr ""
 
 #: frontend/src/components/FormView.vue:549
 msgid "{0} updated successfully!"
-msgstr ""
+msgstr "{0} با موفقیت به روز شد!"
 
 #: hrms/hr/doctype/staffing_plan/staffing_plan.py:129
 msgid "{0} vacancies and {1} budget for {2} already planned for subsidiary companies of {3}. You can only plan for upto {4} vacancies and and budget {5} as per staffing plan {6} for parent company {3}."
