@@ -1,14 +1,14 @@
 # Translations template for Frappe HR.
-# Copyright (C) 2024 Frappe Technologies Pvt. Ltd.
+# Copyright (C) 2025 Frappe Technologies Pvt. Ltd.
 # This file is distributed under the same license as the Frappe HR project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Frappe HR VERSION\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2024-12-29 09:34+0000\n"
-"PO-Revision-Date: 2024-12-29 09:34+0000\n"
+"POT-Creation-Date: 2025-01-05 09:34+0000\n"
+"PO-Revision-Date: 2025-01-05 09:34+0000\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: contact@frappe.io\n"
 "MIME-Version: 1.0\n"
