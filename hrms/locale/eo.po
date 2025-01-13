@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-01-05 09:34+0000\n"
-"PO-Revision-Date: 2025-01-07 06:06\n"
+"POT-Creation-Date: 2025-01-12 09:34+0000\n"
+"PO-Revision-Date: 2025-01-13 07:10\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Esperanto\n"
 "MIME-Version: 1.0\n"
@@ -2990,7 +2990,7 @@ msgstr "crwdns141248:0crwdne141248:0"
 msgid "Current Work Experience"
 msgstr "crwdns141250:0crwdne141250:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:98
 msgid "Currently, there is no {0} leave period for this date to create/update leave allocation."
 msgstr "crwdns106016:0{0}crwdne106016:0"
 
@@ -6482,7 +6482,7 @@ msgstr "crwdns141600:0crwdne141600:0"
 msgid "Half Day Date"
 msgstr "crwdns141602:0crwdne141602:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:26
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:27
 msgid "Half Day Date is mandatory"
 msgstr "crwdns107554:0crwdne107554:0"
 
@@ -6490,7 +6490,7 @@ msgstr "crwdns107554:0crwdne107554:0"
 msgid "Half Day Date should be between From Date and To Date"
 msgstr "crwdns107556:0crwdne107556:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:28
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:29
 msgid "Half Day Date should be in between Work From Date and Work End Date"
 msgstr "crwdns107558:0crwdne107558:0"
 
@@ -6613,7 +6613,7 @@ msgstr "crwdns107604:0crwdne107604:0"
 msgid "Holidays this Week."
 msgstr "crwdns107606:0crwdne107606:0"
 
-#: frontend/src/components/BottomTabs.vue:43
+#: frontend/src/components/BottomTabs.vue:43 hrms/www/jobs/index.py:13
 msgid "Home"
 msgstr "crwdns151240:0crwdne151240:0"
 
@@ -7192,6 +7192,10 @@ msgstr "crwdns151884:0crwdne151884:0"
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:323
 msgid "Invalid Dates"
 msgstr "crwdns151982:0crwdne151982:0"
+
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:25
+msgid "Invalid Leave Ledger Entry"
+msgstr "crwdns152170:0crwdne152170:0"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:319
 msgid "Invalid Payroll Payable Account. The account currency must be {0} or {1}"
@@ -7813,6 +7817,10 @@ msgstr "crwdns141820:0crwdne141820:0"
 msgid "Leave Ledger Entry"
 msgstr "crwdns108116:0crwdne108116:0"
 
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:18
+msgid "Leave Ledger Entry's To date needs to be after From date. Currently, From Date is {0} and To Date is {1}"
+msgstr "crwdns152172:0{0}crwdnd152172:0{1}crwdne152172:0"
+
 #. Label of the leave_period (Link) field in DocType 'Leave Allocation'
 #. Option for the 'Dates Based On' (Select) field in DocType 'Leave Control
 #. Panel'
@@ -7927,7 +7935,7 @@ msgstr "crwdns108184:0crwdne108184:0"
 msgid "Leave Type can either be without pay or partial pay"
 msgstr "crwdns108186:0crwdne108186:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:33
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:34
 msgid "Leave Type is mandatory"
 msgstr "crwdns108188:0crwdne108188:0"
 
@@ -7954,7 +7962,7 @@ msgstr "crwdns108196:0crwdne108196:0"
 msgid "Leave Without Pay does not match with approved {} records"
 msgstr "crwdns108200:0crwdne108200:0"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:41
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:54
 msgid "Leave allocation {0} is linked with the Leave Application {1}"
 msgstr "crwdns108202:0{0}crwdnd108202:0{1}crwdne108202:0"
 
@@ -8619,7 +8627,7 @@ msgstr "crwdns108460:0{0}crwdnd108460:0{1}crwdnd108460:0{2}crwdne108460:0"
 msgid "Multiple Shift Assignments"
 msgstr "crwdns108462:0crwdne108462:0"
 
-#: hrms/www/jobs/index.py:12
+#: hrms/www/jobs/index.py:15
 msgid "My Account"
 msgstr "crwdns108464:0crwdne108464:0"
 
@@ -8782,7 +8790,7 @@ msgstr "crwdns108522:0crwdne108522:0"
 msgid "No Interview has been scheduled."
 msgstr "crwdns141954:0crwdne141954:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:104
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:105
 msgid "No Leave Period Found"
 msgstr "crwdns108524:0crwdne108524:0"
 
@@ -9152,7 +9160,7 @@ msgstr "crwdns108662:0crwdne108662:0"
 msgid "Only Tax Impact (Cannot Claim But Part of Taxable Income)"
 msgstr "crwdns142022:0crwdne142022:0"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:20
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:33
 msgid "Only expired allocation can be cancelled"
 msgstr "crwdns108666:0crwdne108666:0"
 
@@ -9787,7 +9795,7 @@ msgstr "crwdns108946:0{0}crwdnd108946:0{1}crwdne108946:0"
 msgid "Please confirm once you have completed your training"
 msgstr "crwdns108948:0crwdne108948:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:101
 msgid "Please create a new {0} for the date {1} first."
 msgstr "crwdns108950:0{0}crwdnd108950:0{1}crwdne108950:0"
 
@@ -12672,7 +12680,7 @@ msgstr "crwdns142522:0crwdne142522:0"
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
 msgstr "crwdns110060:0crwdne110060:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:63
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:64
 msgid "The days between {0} to {1} are not valid holidays."
 msgstr "crwdns110062:0{0}crwdnd110062:0{1}crwdne110062:0"
 
@@ -12754,7 +12762,7 @@ msgstr "crwdns142536:0crwdne142536:0"
 msgid "This action will prevent making changes to the linked appraisal feedback/goals."
 msgstr "crwdns110090:0crwdne110090:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:96
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
 msgid "This compensatory leave will be applicable from {0}."
 msgstr "crwdns110092:0{0}crwdne110092:0"
 
@@ -12970,10 +12978,6 @@ msgstr "crwdns110192:0crwdne110192:0"
 #: hrms/hr/doctype/leave_application/leave_application.py:177
 msgid "To date cannot be before from date"
 msgstr "crwdns110194:0crwdne110194:0"
-
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:13
-msgid "To date needs to be before from date"
-msgstr "crwdns110196:0crwdne110196:0"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:161
 msgid "To overwrite the salary component amount for a tax component, please enable {0}"
@@ -14170,7 +14174,7 @@ msgstr "crwdns110674:0crwdne110674:0"
 msgid "You are not authorized to approve leaves on Block Dates"
 msgstr "crwdns110676:0crwdne110676:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:57
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:58
 msgid "You are not present all day(s) between compensatory leave request days"
 msgstr "crwdns110678:0crwdne110678:0"
 
@@ -14210,7 +14214,7 @@ msgstr "crwdns110692:0crwdne110692:0"
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr "crwdns149150:0{0}crwdne149150:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:51
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:52
 msgid "You were only present for Half Day on {}. Cannot apply for a full day compensatory leave"
 msgstr "crwdns110694:0crwdne110694:0"
 
@@ -14222,7 +14226,7 @@ msgstr "crwdns110696:0{0}crwdnd110696:0{1}crwdnd110696:0{2}crwdnd110696:0{3}crwd
 msgid "Your password has expired. Please reset your password to continue"
 msgstr "crwdns151382:0crwdne151382:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:99
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
 msgid "active"
 msgstr "crwdns110698:0crwdne110698:0"
 
@@ -14376,7 +14380,7 @@ msgstr "crwdns142778:0{0}crwdnd142778:0{1}crwdne142778:0"
 msgid "{0} is mandatory"
 msgstr "crwdns110740:0{0}crwdne110740:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:68
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:69
 msgid "{0} is not a holiday."
 msgstr "crwdns110742:0{0}crwdne110742:0"
 
