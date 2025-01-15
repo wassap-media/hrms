@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-01-05 09:34+0000\n"
-"PO-Revision-Date: 2025-01-09 06:37\n"
+"POT-Creation-Date: 2025-01-12 09:34+0000\n"
+"PO-Revision-Date: 2025-01-13 07:10\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -3015,7 +3015,7 @@ msgstr ""
 msgid "Current Work Experience"
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:98
 msgid "Currently, there is no {0} leave period for this date to create/update leave allocation."
 msgstr ""
 
@@ -6507,7 +6507,7 @@ msgstr ""
 msgid "Half Day Date"
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:26
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:27
 msgid "Half Day Date is mandatory"
 msgstr "半天日期必填"
 
@@ -6515,7 +6515,7 @@ msgstr "半天日期必填"
 msgid "Half Day Date should be between From Date and To Date"
 msgstr "半天时间应该是从之间的日期和终止日期"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:28
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:29
 msgid "Half Day Date should be in between Work From Date and Work End Date"
 msgstr "半天日期应在工作日期和工作结束日期之间"
 
@@ -6638,7 +6638,7 @@ msgstr ""
 msgid "Holidays this Week."
 msgstr ""
 
-#: frontend/src/components/BottomTabs.vue:43
+#: frontend/src/components/BottomTabs.vue:43 hrms/www/jobs/index.py:13
 msgid "Home"
 msgstr "主页"
 
@@ -7216,6 +7216,10 @@ msgstr ""
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:323
 msgid "Invalid Dates"
+msgstr ""
+
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:25
+msgid "Invalid Leave Ledger Entry"
 msgstr ""
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:319
@@ -7838,6 +7842,10 @@ msgstr ""
 msgid "Leave Ledger Entry"
 msgstr "留下Ledger Entry"
 
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:18
+msgid "Leave Ledger Entry's To date needs to be after From date. Currently, From Date is {0} and To Date is {1}"
+msgstr ""
+
 #. Label of the leave_period (Link) field in DocType 'Leave Allocation'
 #. Option for the 'Dates Based On' (Select) field in DocType 'Leave Control
 #. Panel'
@@ -7952,7 +7960,7 @@ msgstr ""
 msgid "Leave Type can either be without pay or partial pay"
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:33
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:34
 msgid "Leave Type is mandatory"
 msgstr ""
 
@@ -7979,7 +7987,7 @@ msgstr "无薪休假"
 msgid "Leave Without Pay does not match with approved {} records"
 msgstr "带薪休假与批准的{}记录不匹配"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:41
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:54
 msgid "Leave allocation {0} is linked with the Leave Application {1}"
 msgstr ""
 
@@ -8644,7 +8652,7 @@ msgstr ""
 msgid "Multiple Shift Assignments"
 msgstr ""
 
-#: hrms/www/jobs/index.py:12
+#: hrms/www/jobs/index.py:15
 msgid "My Account"
 msgstr "我的账户"
 
@@ -8807,7 +8815,7 @@ msgstr ""
 msgid "No Interview has been scheduled."
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:104
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:105
 msgid "No Leave Period Found"
 msgstr ""
 
@@ -9177,7 +9185,7 @@ msgstr "只能提交状态为“已批准”和“已拒绝”的轮班请求"
 msgid "Only Tax Impact (Cannot Claim But Part of Taxable Income)"
 msgstr ""
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:20
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:33
 msgid "Only expired allocation can be cancelled"
 msgstr "只能取消过期分配"
 
@@ -9812,7 +9820,7 @@ msgstr ""
 msgid "Please confirm once you have completed your training"
 msgstr "完成培训后请确认"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:101
 msgid "Please create a new {0} for the date {1} first."
 msgstr ""
 
@@ -12697,7 +12705,7 @@ msgstr ""
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
 msgstr "您申请的休假日期是节假日，无需申请休假。"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:63
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:64
 msgid "The days between {0} to {1} are not valid holidays."
 msgstr ""
 
@@ -12779,7 +12787,7 @@ msgstr ""
 msgid "This action will prevent making changes to the linked appraisal feedback/goals."
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:96
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
 msgid "This compensatory leave will be applicable from {0}."
 msgstr ""
 
@@ -12995,10 +13003,6 @@ msgstr "迄今为止不能超过员工的免除日期"
 #: hrms/hr/doctype/leave_application/leave_application.py:177
 msgid "To date cannot be before from date"
 msgstr "到日期不能早于日期"
-
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:13
-msgid "To date needs to be before from date"
-msgstr "迄今为止需要在日期之前"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:161
 msgid "To overwrite the salary component amount for a tax component, please enable {0}"
@@ -14195,7 +14199,7 @@ msgstr ""
 msgid "You are not authorized to approve leaves on Block Dates"
 msgstr "您无权批准锁定日期内的休假"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:57
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:58
 msgid "You are not present all day(s) between compensatory leave request days"
 msgstr "您在补休请求日之间不是全天"
 
@@ -14235,7 +14239,7 @@ msgstr ""
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:51
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:52
 msgid "You were only present for Half Day on {}. Cannot apply for a full day compensatory leave"
 msgstr ""
 
@@ -14247,7 +14251,7 @@ msgstr ""
 msgid "Your password has expired. Please reset your password to continue"
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:99
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
 msgid "active"
 msgstr ""
 
@@ -14401,7 +14405,7 @@ msgstr ""
 msgid "{0} is mandatory"
 msgstr "{0}是必填项"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:68
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:69
 msgid "{0} is not a holiday."
 msgstr ""
 

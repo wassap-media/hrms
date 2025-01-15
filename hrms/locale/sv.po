@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-01-05 09:34+0000\n"
-"PO-Revision-Date: 2025-01-07 06:06\n"
+"POT-Creation-Date: 2025-01-12 09:34+0000\n"
+"PO-Revision-Date: 2025-01-14 07:11\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -1800,7 +1800,7 @@ msgstr "Bank Konto Nummer"
 #. Label of the section_break_75 (Tab Break) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Bank Details"
-msgstr "Bank Uppgifter"
+msgstr "Bank Detaljer"
 
 #: hrms/hr/doctype/expense_claim/expense_claim.js:147
 msgid "Bank Entries"
@@ -2214,7 +2214,7 @@ msgstr "Incheckning Datum"
 
 #: frontend/src/components/CheckInPanel.vue:160
 msgid "Check-out"
-msgstr "Checka Ut"
+msgstr "Stämpla Ut"
 
 #. Label of the check_out_date (Date) field in DocType 'Travel Itinerary'
 #: hrms/hr/doctype/travel_itinerary/travel_itinerary.json
@@ -3015,7 +3015,7 @@ msgstr "Aktuell Tabell"
 msgid "Current Work Experience"
 msgstr "Aktuell Arbetsliv Erfarenhet"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:98
 msgid "Currently, there is no {0} leave period for this date to create/update leave allocation."
 msgstr "För närvarande finns det ingen {0} ledighet period för detta datum för att skapa/uppdatera ledighet tilldelning."
 
@@ -4340,7 +4340,7 @@ msgstr "Återkoppling Bedömning"
 #: hrms/hr/workspace/hr/hr.json
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 msgid "Employee Grade"
-msgstr "Grad"
+msgstr "Kvalificering"
 
 #. Name of a DocType
 #. Label of a Link in the Employee Lifecycle Workspace
@@ -6191,7 +6191,7 @@ msgstr "Mål är uppdaterad"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/setup.py:200
 msgid "Grade"
-msgstr "Utbildning"
+msgstr "Betyg"
 
 #. Label of the grand_total (Currency) field in DocType 'Expense Claim'
 #: hrms/hr/doctype/expense_claim/expense_claim.json
@@ -6279,13 +6279,13 @@ msgstr "Brutto Lön (Bolag Valuta)"
 #. Label of the gross_year_to_date (Currency) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Gross Year To Date"
-msgstr "Brutto Lön Hittills"
+msgstr "Brutto Lön Hittills i År"
 
 #. Label of the base_gross_year_to_date (Currency) field in DocType 'Salary
 #. Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Gross Year To Date(Company Currency)"
-msgstr "Brutto Lön Hittills (Bolag Valuta)"
+msgstr "Brutto Lön Hittills i År (Bolag Valuta)"
 
 #: hrms/hr/report/daily_work_summary_replies/daily_work_summary_replies.js:9
 msgid "Group"
@@ -6507,7 +6507,7 @@ msgstr "Halv Dag"
 msgid "Half Day Date"
 msgstr "Halv Dag Datum"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:26
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:27
 msgid "Half Day Date is mandatory"
 msgstr "Halv Dag Datum erfodras"
 
@@ -6515,7 +6515,7 @@ msgstr "Halv Dag Datum erfodras"
 msgid "Half Day Date should be between From Date and To Date"
 msgstr "Halv Dag Datum ska vara mellan Från Datum och Till Datum"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:28
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:29
 msgid "Half Day Date should be in between Work From Date and Work End Date"
 msgstr "Halv Dag Datum ska vara mellan Arbete från datum och Arbete slut datum"
 
@@ -6638,7 +6638,7 @@ msgstr "Helgdagar denna Månad"
 msgid "Holidays this Week."
 msgstr "Helgdagar denna Vecka"
 
-#: frontend/src/components/BottomTabs.vue:43
+#: frontend/src/components/BottomTabs.vue:43 hrms/www/jobs/index.py:13
 msgid "Home"
 msgstr "Hem"
 
@@ -7217,6 +7217,10 @@ msgstr "Ogiltig Resultat Enhet"
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:323
 msgid "Invalid Dates"
 msgstr "Ogiltiga Datum"
+
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:25
+msgid "Invalid Leave Ledger Entry"
+msgstr "Ogiltig Ledighet Register Post"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:319
 msgid "Invalid Payroll Payable Account. The account currency must be {0} or {1}"
@@ -7838,6 +7842,10 @@ msgstr "Ledighet Register"
 msgid "Leave Ledger Entry"
 msgstr "Ledighet Register Post"
 
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:18
+msgid "Leave Ledger Entry's To date needs to be after From date. Currently, From Date is {0} and To Date is {1}"
+msgstr "Ledighet Register Post Till datum måste vara efter Från datum. För närvarande Från Datum är {0} och Till Datum är {1}"
+
 #. Label of the leave_period (Link) field in DocType 'Leave Allocation'
 #. Option for the 'Dates Based On' (Select) field in DocType 'Leave Control
 #. Panel'
@@ -7900,7 +7908,7 @@ msgstr "Ledighet Regel: {0} redan tilldelad för personal {1} för period {2} ti
 
 #: hrms/setup.py:434 hrms/setup.py:436 hrms/setup.py:488
 msgid "Leave Status Notification"
-msgstr "Ledighet Status Meddelande"
+msgstr "Ledighet Status Avisering"
 
 #. Label of the leave_status_notification_template (Link) field in DocType 'HR
 #. Settings'
@@ -7952,7 +7960,7 @@ msgstr "Ledighet Typ kan antingen vara kompenserande eller intjänad ledighet."
 msgid "Leave Type can either be without pay or partial pay"
 msgstr "Ledighet Typ kan antingen vara obetald eller delbetald"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:33
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:34
 msgid "Leave Type is mandatory"
 msgstr "Ledighet Typ erfodras"
 
@@ -7979,7 +7987,7 @@ msgstr "Obetald Ledighet"
 msgid "Leave Without Pay does not match with approved {} records"
 msgstr "Obetald Ledighet stämmer inte med godkända {} poster"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:41
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:54
 msgid "Leave allocation {0} is linked with the Leave Application {1}"
 msgstr "Ledighet Tilldelning {0} är länkad till Ledighet Ansökan {1}"
 
@@ -8084,7 +8092,7 @@ msgstr "Slutat"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 msgid "Letter Head"
-msgstr "Sidhuvud"
+msgstr "Brevhuvud"
 
 #. Label of the level (Select) field in DocType 'Training Event'
 #: hrms/hr/doctype/training_event/training_event.json
@@ -8644,7 +8652,7 @@ msgstr "Flera Extra Löner med överskrivning egenskap finns för lön komponent
 msgid "Multiple Shift Assignments"
 msgstr "Flera Skift Tilldelningar"
 
-#: hrms/www/jobs/index.py:12
+#: hrms/www/jobs/index.py:15
 msgid "My Account"
 msgstr "Mitt Konto"
 
@@ -8807,7 +8815,7 @@ msgstr "Ingen Personal Vald"
 msgid "No Interview has been scheduled."
 msgstr "Ingen intervju är schemalagd."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:104
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:105
 msgid "No Leave Period Found"
 msgstr "Ingen Ledighet Period Hittades"
 
@@ -9177,7 +9185,7 @@ msgstr "Endast Skift förfågan med status 'Godkänd' och 'Avvisad' kan skickas 
 msgid "Only Tax Impact (Cannot Claim But Part of Taxable Income)"
 msgstr "Endast Skatt Påverkan (Kan Inte Kräva men Del av Skatt Pliktig Inkomst)"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:20
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:33
 msgid "Only expired allocation can be cancelled"
 msgstr "Endast Förfallen Tilldelning kan annulleras"
 
@@ -9570,7 +9578,7 @@ msgstr "Lön Resultat Enhet"
 #. Structure Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 msgid "Payroll Cost Centers"
-msgstr "Löne Resultat Enhet"
+msgstr "Lön Resultat Enhet"
 
 #. Label of the payroll_date (Date) field in DocType 'Additional Salary'
 #. Label of the payroll_date (Date) field in DocType 'Employee Incentive'
@@ -9601,7 +9609,7 @@ msgstr "Lönepost"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:121
 msgid "Payroll Entry cancellation is queued. It may take a few minutes"
-msgstr "Löne Post Avbokning i kö. Det kan ta några minuter"
+msgstr "Lönepost annullering i kö. Det kan ta några minuter"
 
 #. Label of the payroll_frequency (Select) field in DocType 'Payroll Entry'
 #. Label of the payroll_frequency (Select) field in DocType 'Salary Slip'
@@ -9678,7 +9686,7 @@ msgstr "Löneperioder"
 #. Label of a Card Break in the Salary Payout Workspace
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Payroll Reports"
-msgstr "Lön Rapporter"
+msgstr "Lönerapporter"
 
 #. Name of a DocType
 #. Label of a Link in the Payroll Workspace
@@ -9812,7 +9820,7 @@ msgstr "Tilldela först Löneart för {0} som gäller från eller före {1}"
 msgid "Please confirm once you have completed your training"
 msgstr "Bekräfta när du har slutfört din utbildning"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:101
 msgid "Please create a new {0} for the date {1} first."
 msgstr "Skapa ny {0} för datum {1} först."
 
@@ -12697,7 +12705,7 @@ msgstr "Dag i Månaden då ledighet ska tilldelas"
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
 msgstr "Dag(ar) som man ansöker om ledighet är helg dagar. Du behöver inte ansöka om ledighet."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:63
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:64
 msgid "The days between {0} to {1} are not valid holidays."
 msgstr "Dagarna mellan {0} och {1} är inte giltiga helgdagar."
 
@@ -12779,7 +12787,7 @@ msgstr "Dessa Ledigheter är helgdagar som är tillåtna av Bolaget, men att anv
 msgid "This action will prevent making changes to the linked appraisal feedback/goals."
 msgstr "Denna åtgärd förhindrar att ändringar görs i länkad återkoppling/mål för bedömning."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:96
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
 msgid "This compensatory leave will be applicable from {0}."
 msgstr "Denna kompensationsledighet gäller från och med {0}."
 
@@ -12995,10 +13003,6 @@ msgstr "Till Datum kan det inte vara senare än Personal Avgång Datum"
 #: hrms/hr/doctype/leave_application/leave_application.py:177
 msgid "To date cannot be before from date"
 msgstr "Till Datum kan inte vara tidiggare än Från Datum"
-
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:13
-msgid "To date needs to be before from date"
-msgstr "Till Datum ska vara tidigare än Från Datum"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:161
 msgid "To overwrite the salary component amount for a tax component, please enable {0}"
@@ -13337,7 +13341,7 @@ msgstr "Totalt lön bokförd mot denna komponent för denna personal från börj
 #. Description of the 'Month To Date' (Currency) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Total salary booked for this employee from the beginning of the month up to the current salary slip's end date."
-msgstr "Totalt lön bokförd för denna personal från början av månaden fram till aktuell lönespecifikation slutdatum."
+msgstr "Totalt lön bokförd för personal från början av månaden fram till aktuell lönespecifikation slutdatum."
 
 #. Description of the 'Year To Date' (Currency) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
@@ -14159,12 +14163,12 @@ msgstr "År"
 #: hrms/payroll/doctype/salary_detail/salary_detail.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Year To Date"
-msgstr "I År Till Datum"
+msgstr "Hittills i År"
 
 #. Label of the base_year_to_date (Currency) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Year To Date(Company Currency)"
-msgstr "I År Till Datum (Bolag Valuta)"
+msgstr "Hittills i År (Bolag Valuta)"
 
 #. Option for the 'Earned Leave Frequency' (Select) field in DocType 'Leave
 #. Type'
@@ -14195,7 +14199,7 @@ msgstr "Ja, Fortsätt"
 msgid "You are not authorized to approve leaves on Block Dates"
 msgstr "Behörighet saknas för att godkänna Ledighet på Spärrad Datum"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:57
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:58
 msgid "You are not present all day(s) between compensatory leave request days"
 msgstr "Du är inte närvarande hela dagen/dagarna mellan de dagar du begär kompensationsledighet för"
 
@@ -14235,7 +14239,7 @@ msgstr "Du kan lägga till ytterligare detaljer, om någon, och skicka erbjudand
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr "Du måste befinna dig inom {0} meter från din arbetsplats för att stämpla."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:51
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:52
 msgid "You were only present for Half Day on {}. Cannot apply for a full day compensatory leave"
 msgstr "Du var bara närvarande under halvdag den {}. Kan inte ansöka om heldag kompensation ledighet"
 
@@ -14247,7 +14251,7 @@ msgstr "Din Intervju är ombokad från {0} {1} - {2} till {3} {4} - {5}"
 msgid "Your password has expired. Please reset your password to continue"
 msgstr "Ditt lösenord har upphört att gälla. Återställ ditt lösenord för att fortsätta"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:99
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
 msgid "active"
 msgstr "aktiv"
 
@@ -14401,7 +14405,7 @@ msgstr "{0} har {1} aktiverat"
 msgid "{0} is mandatory"
 msgstr "{0} erfodras"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:68
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:69
 msgid "{0} is not a holiday."
 msgstr "{0} är inte helgdag"
 
