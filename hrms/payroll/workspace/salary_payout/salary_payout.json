@@ -13,7 +13,7 @@
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "income",
+ "icon": "accounting",
  "idx": 0,
  "is_hidden": 0,
  "label": "Salary Payout",
@@ -376,7 +376,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-01-15 16:44:35.008367",
+ "modified": "2025-01-15 17:26:05.803755",
  "modified_by": "Administrator",
  "module": "Payroll",
  "name": "Salary Payout",

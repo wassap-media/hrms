@@ -8,7 +8,7 @@
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "crm",
+ "icon": "money-coins-1",
  "idx": 0,
  "is_hidden": 0,
  "label": "Tax & Benefits",
@@ -136,7 +136,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-01-15 16:44:16.975879",
+ "modified": "2025-01-15 17:16:28.335505",
  "modified_by": "Administrator",
  "module": "Payroll",
  "name": "Tax & Benefits",
