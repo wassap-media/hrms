@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-12 09:34+0000\n"
-"PO-Revision-Date: 2025-01-13 07:10\n"
+"PO-Revision-Date: 2025-01-17 07:17\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -7105,7 +7105,7 @@ msgstr "دور مصاحبه {0} فقط برای تعیین {1} است. متقا�
 
 #: hrms/hr/doctype/interview_feedback/interview_feedback.py:40
 msgid "Interview Scheduled Date"
-msgstr "تاریخ برنامه ریزی شده مصاحبه"
+msgstr "تاریخ زمان‌بندی شده مصاحبه"
 
 #: hrms/hr/report/employee_exits/employee_exits.js:51
 #: hrms/hr/report/employee_exits/employee_exits.py:46
@@ -8788,7 +8788,7 @@ msgstr "هیچ کارمندی انتخاب نشد"
 
 #: hrms/hr/doctype/job_applicant/job_applicant_dashboard.html:53
 msgid "No Interview has been scheduled."
-msgstr ""
+msgstr "هیچ مصاحبه ای زمان‌بندی نشده است."
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:105
 msgid "No Leave Period Found"
@@ -11384,7 +11384,7 @@ msgstr "شنبه"
 #: hrms/hr/doctype/training_event/training_event.json
 #: hrms/hr/doctype/training_program/training_program.json
 msgid "Scheduled"
-msgstr "برنامه ریزی شده است"
+msgstr "زمان‌بندی شده است"
 
 #. Label of the scheduled_on (Date) field in DocType 'Interview'
 #: hrms/hr/doctype/interview/interview.json
@@ -11769,7 +11769,7 @@ msgstr ""
 
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.py:42
 msgid "Settle all Payables and Receivables before submission"
-msgstr "کلیه مطالبات و مطالبات را قبل از ارسال تسویه کنید"
+msgstr "همه پرداختنی‌ها و دریافتنی‌ها را قبل از ارسال تسویه کنید"
 
 #. Option for the 'Status' (Select) field in DocType 'Full and Final
 #. Outstanding Statement'
@@ -11938,7 +11938,7 @@ msgstr ""
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Shift Schedule"
-msgstr ""
+msgstr "زمان‌بندی شیفت"
 
 #. Label of the shift_schedule_assignment (Link) field in DocType 'Shift
 #. Assignment'
