@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-01-12 09:34+0000\n"
-"PO-Revision-Date: 2025-01-13 07:10\n"
+"POT-Creation-Date: 2025-01-19 09:34+0000\n"
+"PO-Revision-Date: 2025-01-20 08:04\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Esperanto\n"
 "MIME-Version: 1.0\n"
@@ -455,7 +455,7 @@ msgstr "crwdns143238:0crwdne143238:0"
 msgid "Accounting Dimensions"
 msgstr "crwdns140872:0crwdne140872:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:113
+#: hrms/hr/doctype/expense_claim/expense_claim.js:121
 msgid "Accounting Ledger"
 msgstr "crwdns104874:0crwdne104874:0"
 
@@ -1346,7 +1346,7 @@ msgstr "crwdns140994:0crwdne140994:0"
 msgid "Approval Status"
 msgstr "crwdns140996:0crwdne140996:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:104
+#: hrms/hr/doctype/expense_claim/expense_claim.py:118
 msgid "Approval Status must be 'Approved' or 'Rejected'"
 msgstr "crwdns105280:0crwdne105280:0"
 
@@ -1777,7 +1777,7 @@ msgstr "crwdns141080:0crwdne141080:0"
 msgid "Bank Details"
 msgstr "crwdns141082:0crwdne141082:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:147
+#: hrms/hr/doctype/expense_claim/expense_claim.js:155
 msgid "Bank Entries"
 msgstr "crwdns105434:0crwdne105434:0"
 
@@ -1982,7 +1982,7 @@ msgstr "crwdns141114:0crwdne141114:0"
 
 #. Label of the ctc (Currency) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:536
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:550
 msgid "CTC"
 msgstr "crwdns105520:0crwdne105520:0"
 
@@ -2674,7 +2674,7 @@ msgstr "crwdns105850:0crwdne105850:0"
 #. Label of the cost_center (Link) field in DocType 'Gratuity'
 #. Label of the cost_center (Link) field in DocType 'Payroll Entry'
 #: hrms/hr/doctype/expense_claim/expense_claim.json
-#: hrms/hr/doctype/expense_claim/expense_claim.py:272
+#: hrms/hr/doctype/expense_claim/expense_claim.py:286
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
 #: hrms/hr/doctype/expense_taxes_and_charges/expense_taxes_and_charges.json
 #: hrms/hr/doctype/travel_request/travel_request.json
@@ -2748,7 +2748,7 @@ msgstr "crwdns141216:0crwdne141216:0"
 #: hrms/hr/doctype/employee_advance/employee_advance.js:94
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.js:59
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.js:61
-#: hrms/hr/doctype/expense_claim/expense_claim.js:101
+#: hrms/hr/doctype/expense_claim/expense_claim.js:109
 #: hrms/hr/doctype/job_applicant/job_applicant.js:29
 #: hrms/hr/doctype/job_applicant/job_applicant.js:57
 #: hrms/hr/doctype/vehicle_log/vehicle_log.js:21
@@ -3140,7 +3140,7 @@ msgstr "crwdns106070:0crwdne106070:0"
 #: hrms/hr/report/employee_exits/employee_exits.py:32
 #: hrms/payroll/doctype/retention_bonus/retention_bonus.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:528
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:542
 #: hrms/payroll/report/salary_register/salary_register.py:128 hrms/setup.py:396
 msgid "Date of Joining"
 msgstr "crwdns106074:0crwdne106074:0"
@@ -3437,7 +3437,7 @@ msgstr "crwdns141294:0crwdne141294:0"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:33
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:515
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:529
 #: hrms/payroll/report/salary_register/salary_register.py:141
 #: hrms/public/js/salary_slip_deductions_report_filters.js:42 hrms/setup.py:402
 #: hrms/templates/generators/job_opening.html:87
@@ -3453,6 +3453,10 @@ msgstr "crwdns106236:0crwdne106236:0"
 #: hrms/hr/workspace/recruitment/recruitment.json
 msgid "Department Wise Openings"
 msgstr "crwdns106238:0crwdne106238:0"
+
+#: hrms/hr/doctype/expense_claim/expense_claim.py:96
+msgid "Department {0} does not belong to company: {1}"
+msgstr "crwdns152304:0{0}crwdnd152304:0{1}crwdne152304:0"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:195
 msgid "Department: {0}"
@@ -3608,7 +3612,7 @@ msgstr "crwdns141300:0crwdne141300:0"
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:522
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:536
 #: hrms/payroll/report/salary_register/salary_register.py:148
 msgid "Designation"
 msgstr "crwdns106292:0crwdne106292:0"
@@ -4108,7 +4112,7 @@ msgstr "crwdns141362:0crwdne141362:0"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:26
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:502
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:516
 #: hrms/payroll/report/income_tax_deductions/income_tax_deductions.py:25
 #: hrms/payroll/report/professional_tax_deductions/professional_tax_deductions.py:21
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:20
@@ -4504,7 +4508,7 @@ msgstr "crwdns148896:0crwdne148896:0"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/report/bank_remittance/bank_remittance.py:32
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:509
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:523
 #: hrms/payroll/report/income_tax_deductions/income_tax_deductions.py:32
 #: hrms/payroll/report/professional_tax_deductions/professional_tax_deductions.py:28
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:27
@@ -5385,7 +5389,7 @@ msgstr "crwdns151220:0crwdne151220:0"
 #. Name of a DocType
 #. Label of the expense_type (Data) field in DocType 'Expense Claim Type'
 #. Label of a Link in the Expense Claims Workspace
-#: hrms/hr/doctype/expense_claim/expense_claim.py:482
+#: hrms/hr/doctype/expense_claim/expense_claim.py:496
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
 #: hrms/hr/doctype/expense_claim_type/expense_claim_type.json
 #: hrms/hr/workspace/expense_claims/expense_claims.json
@@ -6918,7 +6922,7 @@ msgstr "crwdns107716:0crwdne107716:0"
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.json
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:142
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:530
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:544
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Income Tax Slab"
@@ -8540,7 +8544,7 @@ msgstr "crwdns141922:0crwdne141922:0"
 msgid "Mode of Travel"
 msgstr "crwdns141924:0crwdne141924:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:278
+#: hrms/hr/doctype/expense_claim/expense_claim.py:292
 msgid "Mode of payment is required to make a payment"
 msgstr "crwdns108422:0crwdne108422:0"
 
@@ -9459,7 +9463,7 @@ msgstr "crwdns142062:0crwdne142062:0"
 msgid "Payable Account"
 msgstr "crwdns142064:0crwdne142064:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:96
+#: hrms/hr/doctype/expense_claim/expense_claim.py:110
 msgid "Payable Account is mandatory to submit an Expense Claim"
 msgstr "crwdns108806:0crwdne108806:0"
 
@@ -9470,7 +9474,7 @@ msgid "Payables"
 msgstr "crwdns142066:0crwdne142066:0"
 
 #: hrms/hr/doctype/employee_advance/employee_advance.js:50
-#: hrms/hr/doctype/expense_claim/expense_claim.js:97
+#: hrms/hr/doctype/expense_claim/expense_claim.js:105
 #: hrms/hr/doctype/expense_claim/expense_claim_dashboard.py:9
 #: hrms/payroll/doctype/gratuity/gratuity_dashboard.py:10
 msgid "Payment"
@@ -9958,7 +9962,7 @@ msgstr "crwdns109008:0crwdne109008:0"
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "crwdns109010:0{0}crwdne109010:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:327
+#: hrms/hr/doctype/expense_claim/expense_claim.js:335
 msgid "Please set the Company"
 msgstr "crwdns109012:0crwdne109012:0"
 
@@ -10991,11 +10995,11 @@ msgstr "crwdns109390:0#{0}crwdnd109390:0{1}crwdnd109390:0{2}crwdnd109390:0{3}crw
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "crwdns109392:0#{0}crwdnd109392:0{1}crwdne109392:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:579
+#: hrms/hr/doctype/expense_claim/expense_claim.py:593
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "crwdns109394:0{0}crwdnd109394:0{1}crwdnd109394:0{2}crwdne109394:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:338
+#: hrms/hr/doctype/expense_claim/expense_claim.py:352
 msgid "Row {0}# Allocated amount {1} cannot be greater than unclaimed amount {2}"
 msgstr "crwdns109396:0{0}crwdnd109396:0{1}crwdnd109396:0{2}crwdne109396:0"
 
@@ -11027,7 +11031,7 @@ msgstr "crwdns109406:0{0}crwdnd109406:0{1}crwdnd109406:0{2}crwdnd109406:0{3}crwd
 msgid "Row {0}: {1}"
 msgstr "crwdns142312:0{0}crwdnd142312:0{1}crwdne142312:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:271
+#: hrms/hr/doctype/expense_claim/expense_claim.py:285
 msgid "Row {0}: {1} is required in the expenses table to book an expense claim."
 msgstr "crwdns109408:0{0}crwdnd109408:0{1}crwdne109408:0"
 
@@ -11368,7 +11372,7 @@ msgstr "crwdns151336:0crwdne151336:0"
 msgid "Sanctioned Amount"
 msgstr "crwdns109542:0crwdne109542:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:360
+#: hrms/hr/doctype/expense_claim/expense_claim.py:374
 msgid "Sanctioned Amount cannot be greater than Claim Amount in Row {0}."
 msgstr "crwdns109546:0{0}crwdne109546:0"
 
@@ -11474,7 +11478,7 @@ msgstr "crwdns142362:0crwdne142362:0"
 msgid "Select Users"
 msgstr "crwdns142364:0crwdne142364:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:370
+#: hrms/hr/doctype/expense_claim/expense_claim.js:378
 msgid "Select an employee to get the employee advance."
 msgstr "crwdns109588:0crwdne109588:0"
 
@@ -11726,7 +11730,7 @@ msgstr "crwdns149178:0crwdne149178:0"
 msgid "Set optional filters to fetch employees in the appraisee list"
 msgstr "crwdns142410:0crwdne142410:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:481
+#: hrms/hr/doctype/expense_claim/expense_claim.py:495
 msgid "Set the default account for the {0} {1}"
 msgstr "crwdns109690:0{0}crwdnd109690:0{1}crwdne109690:0"
 
@@ -12745,7 +12749,7 @@ msgstr "crwdns110082:0{0}crwdne110082:0"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:37
 #: hrms/payroll/doctype/employee_incentive/employee_incentive.py:20
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:222
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:200
 msgid "There is no Salary Structure assigned to {0}. First assign a Salary Stucture."
 msgstr "crwdns110084:0{0}crwdne110084:0"
 
@@ -13269,7 +13273,7 @@ msgstr "crwdns142620:0crwdne142620:0"
 msgid "Total Working Hours"
 msgstr "crwdns110298:0crwdne110298:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:354
+#: hrms/hr/doctype/expense_claim/expense_claim.py:368
 msgid "Total advance amount cannot be greater than total sanctioned amount"
 msgstr "crwdns110302:0crwdne110302:0"
 
@@ -13885,8 +13889,8 @@ msgstr "crwdns110568:0crwdne110568:0"
 #: hrms/hr/doctype/employee_separation/employee_separation.js:19
 #: hrms/hr/doctype/employee_separation/employee_separation.js:28
 #: hrms/hr/doctype/employee_separation/employee_separation.js:35
-#: hrms/hr/doctype/expense_claim/expense_claim.js:125
-#: hrms/hr/doctype/expense_claim/expense_claim.js:156
+#: hrms/hr/doctype/expense_claim/expense_claim.js:133
+#: hrms/hr/doctype/expense_claim/expense_claim.js:164
 #: hrms/hr/doctype/job_applicant/job_applicant.js:42
 msgid "View"
 msgstr "crwdns110572:0crwdne110572:0"
