@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2024-12-29 09:34+0000\n"
-"PO-Revision-Date: 2024-12-30 04:19\n"
+"POT-Creation-Date: 2025-01-12 09:34+0000\n"
+"PO-Revision-Date: 2025-01-16 07:11\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1477,7 +1477,7 @@ msgstr ""
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:114
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 msgid "Assign Shift Schedule"
-msgstr ""
+msgstr "Attribuer des plannings de quarts"
 
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.js:53
 msgid "Assign Structure"
@@ -1989,7 +1989,7 @@ msgstr ""
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment_list.js:3
 msgid "Bulk Leave Policy Assignment"
-msgstr "Affectation de la politique de congés en bloc"
+msgstr "Affectation de la politique de congés en masse"
 
 #. Name of a DocType
 #. Label of a Link in the Salary Payout Workspace
@@ -3015,7 +3015,7 @@ msgstr "Dalle actuelle"
 msgid "Current Work Experience"
 msgstr "Expérience de travail actuelle"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:98
 msgid "Currently, there is no {0} leave period for this date to create/update leave allocation."
 msgstr "Actuellement, il n'y a pas de période de congé {0} pour cette date pour créer/mettre à jour l'allocation de congé."
 
@@ -5504,7 +5504,7 @@ msgstr "Départ expirée (s)"
 
 #: hrms/hr/doctype/leave_application/leave_application_dashboard.html:8
 msgid "Expired Leaves"
-msgstr ""
+msgstr "Demandes de congés expirées"
 
 #. Label of the explanation (Small Text) field in DocType 'Attendance Request'
 #: hrms/hr/doctype/attendance_request/attendance_request.json
@@ -6507,7 +6507,7 @@ msgstr "Demi-Journée"
 msgid "Half Day Date"
 msgstr "Date de Demi-Journée"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:26
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:27
 msgid "Half Day Date is mandatory"
 msgstr "La date de la demi-journée est obligatoire"
 
@@ -6515,7 +6515,7 @@ msgstr "La date de la demi-journée est obligatoire"
 msgid "Half Day Date should be between From Date and To Date"
 msgstr "La Date de Demi-Journée doit être entre la Date de Début et la Date de Fin"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:28
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:29
 msgid "Half Day Date should be in between Work From Date and Work End Date"
 msgstr "La date de la demi-journée doit être comprise entre la date du début du travail et la date de fin du travail"
 
@@ -6638,7 +6638,7 @@ msgstr "Vacances ce mois-ci."
 msgid "Holidays this Week."
 msgstr "Vacances cette semaine."
 
-#: frontend/src/components/BottomTabs.vue:43
+#: frontend/src/components/BottomTabs.vue:43 hrms/www/jobs/index.py:13
 msgid "Home"
 msgstr "Accueil"
 
@@ -7216,6 +7216,10 @@ msgstr ""
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:323
 msgid "Invalid Dates"
+msgstr ""
+
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:25
+msgid "Invalid Leave Ledger Entry"
 msgstr ""
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:319
@@ -7803,7 +7807,7 @@ msgstr "Laisser Verrouillé"
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 #: hrms/hr/workspace/leaves/leaves.json
 msgid "Leave Control Panel"
-msgstr "Quitter le Panneau de Configuration"
+msgstr "Assistant de politique de congés en masse"
 
 #. Label of the leave_details (Table) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
@@ -7837,6 +7841,10 @@ msgstr ""
 #: hrms/hr/report/leave_ledger/leave_ledger.py:21
 msgid "Leave Ledger Entry"
 msgstr "Quitter le grand livre"
+
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:18
+msgid "Leave Ledger Entry's To date needs to be after From date. Currently, From Date is {0} and To Date is {1}"
+msgstr ""
 
 #. Label of the leave_period (Link) field in DocType 'Leave Allocation'
 #. Option for the 'Dates Based On' (Select) field in DocType 'Leave Control
@@ -7878,7 +7886,7 @@ msgstr "Politique de congé"
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.json
 #: hrms/hr/workspace/leaves/leaves.json
 msgid "Leave Policy Assignment"
-msgstr "Quitter la politique d'affectation"
+msgstr "Affectation de politique de congés"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:63
 msgid "Leave Policy Assignment Overlap"
@@ -7952,7 +7960,7 @@ msgstr "Le type de congé peut être compensatoire ou gagné."
 msgid "Leave Type can either be without pay or partial pay"
 msgstr "Quitter le Type peut être soit sans paiement partiel ou sans paiement partiel"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:33
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:34
 msgid "Leave Type is mandatory"
 msgstr ""
 
@@ -7979,7 +7987,7 @@ msgstr "Congé Sans Solde"
 msgid "Leave Without Pay does not match with approved {} records"
 msgstr "Le congé sans solde ne correspond pas aux enregistrements {} approuvés"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:41
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:54
 msgid "Leave allocation {0} is linked with the Leave Application {1}"
 msgstr "L'allocation {0} est liée à la demande de sortie {1}"
 
@@ -8049,7 +8057,7 @@ msgstr "Feuilles allouées"
 
 #: hrms/hr/doctype/leave_application/leave_application_dashboard.html:10
 msgid "Leaves Pending Approval"
-msgstr ""
+msgstr "Congés en attente d'approbation"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:76
 msgid "Leaves for the Leave Type {0} won't be carry-forwarded since carry-forwarding is disabled."
@@ -8644,7 +8652,7 @@ msgstr "De multiples traitements supplémentaires avec une propriété d'écrase
 msgid "Multiple Shift Assignments"
 msgstr "Affectations Maj Multiples"
 
-#: hrms/www/jobs/index.py:12
+#: hrms/www/jobs/index.py:15
 msgid "My Account"
 msgstr "Mon Compte"
 
@@ -8761,12 +8769,12 @@ msgstr "Nouveau(x) partie(s) alloué(s)"
 #. Allocation'
 #: hrms/hr/doctype/leave_allocation/leave_allocation.json
 msgid "New Leaves Allocated"
-msgstr "Nouvelle Allocation de Congés"
+msgstr "Nb Jours de congés à attribuer"
 
 #. Label of the no_of_days (Float) field in DocType 'Leave Control Panel'
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 msgid "New Leaves Allocated (In Days)"
-msgstr "Nouvelle Allocation de Congés (en jours)"
+msgstr "Nouvelle attribution de jours de Congés"
 
 #. Description of the 'Create Shifts After' (Date) field in DocType 'Shift
 #. Schedule Assignment'
@@ -8807,7 +8815,7 @@ msgstr "Aucun employé sélectionné"
 msgid "No Interview has been scheduled."
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:104
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:105
 msgid "No Leave Period Found"
 msgstr "Aucune période de congé trouvée"
 
@@ -9177,7 +9185,7 @@ msgstr "Seules les demandes de quart avec le statut «Approuvé» et «Rejeté»
 msgid "Only Tax Impact (Cannot Claim But Part of Taxable Income)"
 msgstr "Impact fiscal uniquement (ne peut être perçu mais fait partie du revenu imposable)"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:20
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:33
 msgid "Only expired allocation can be cancelled"
 msgstr "Seule l'allocation expirée peut être annulée"
 
@@ -9812,7 +9820,7 @@ msgstr "Veuillez assigner une structure de salaire pour l'employé {0} applicabl
 msgid "Please confirm once you have completed your training"
 msgstr "Veuillez confirmer une fois que vous avez terminé votre formation"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:101
 msgid "Please create a new {0} for the date {1} first."
 msgstr "Veuillez d'abord créer un nouveau {0} pour la date {1}."
 
@@ -9855,7 +9863,7 @@ msgstr ""
 
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:167
 msgid "Please select Shift Schedule and assignment date(s)."
-msgstr ""
+msgstr "Veuillez sélectionner de planning de quarts et des date(s) d'affectation(s)."
 
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:160
 msgid "Please select Shift Type and assignment date(s)."
@@ -11824,7 +11832,7 @@ msgstr ""
 #. Name of a Workspace
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Shift & Attendance"
-msgstr "Maj & Présence"
+msgstr "Quart et présence"
 
 #. Label of the shift_actual_end (Datetime) field in DocType 'Employee Checkin'
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
@@ -11868,7 +11876,7 @@ msgstr ""
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 #: hrms/public/js/utils/index.js:238 hrms/public/js/utils/index.js:260
 msgid "Shift Assignment Tool"
-msgstr ""
+msgstr "Affectation de planning des quarts en blocs"
 
 #: hrms/hr/doctype/shift_request/shift_request.py:51
 msgid "Shift Assignment: {0} created for Employee: {1}"
@@ -11955,7 +11963,7 @@ msgstr ""
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Shift Schedule"
-msgstr ""
+msgstr "Planification des quarts"
 
 #. Label of the shift_schedule_assignment (Link) field in DocType 'Shift
 #. Assignment'
@@ -11965,7 +11973,7 @@ msgstr ""
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Shift Schedule Assignment"
-msgstr ""
+msgstr "Affectation planning des quarts"
 
 #. Label of the shift_settings_section (Section Break) field in DocType 'HR
 #. Settings'
@@ -12697,7 +12705,7 @@ msgstr "Le jour du mois où les congés devraient être alloués"
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
 msgstr "Le(s) jour(s) pour le(s)quel(s) vous demandez un congé sont des jour(s) férié(s). Vous n’avez pas besoin d’effectuer de demande."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:63
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:64
 msgid "The days between {0} to {1} are not valid holidays."
 msgstr "Les jours compris entre {0} et {1} ne sont pas des jours fériés."
 
@@ -12779,7 +12787,7 @@ msgstr "Ces congés sont des jours fériés autorisés par la compagnie, mais il
 msgid "This action will prevent making changes to the linked appraisal feedback/goals."
 msgstr "Cette action empêchera d’apporter des modifications aux retours / objectifs d’évaluation liés."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:96
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
 msgid "This compensatory leave will be applicable from {0}."
 msgstr "Ce congé compensatoire sera applicable à partir de {0}."
 
@@ -12995,10 +13003,6 @@ msgstr "La date de fin ne peut pas dépasser la date de libération de l'employ�
 #: hrms/hr/doctype/leave_application/leave_application.py:177
 msgid "To date cannot be before from date"
 msgstr ""
-
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:13
-msgid "To date needs to be before from date"
-msgstr "À ce jour doit être avant la date du"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:161
 msgid "To overwrite the salary component amount for a tax component, please enable {0}"
@@ -14195,7 +14199,7 @@ msgstr "Oui, continuer"
 msgid "You are not authorized to approve leaves on Block Dates"
 msgstr "Vous n'êtes pas autorisé à approuver les congés sur les Dates Bloquées"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:57
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:58
 msgid "You are not present all day(s) between compensatory leave request days"
 msgstr "Vous n'êtes pas présent(e) tous les jours vos demandes de congé compensatoire"
 
@@ -14235,7 +14239,7 @@ msgstr "Vous pouvez ajouter des détails supplémentaires, le cas échéant, et 
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:51
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:52
 msgid "You were only present for Half Day on {}. Cannot apply for a full day compensatory leave"
 msgstr "Vous n'étiez présent que pour la demi-journée le {}. Vous ne pouvez pas demander un congé compensatoire d'une journée complète"
 
@@ -14247,7 +14251,7 @@ msgstr "Votre session d'entretien est reprogrammée de {0} {1} - {2} à {3} {4} 
 msgid "Your password has expired. Please reset your password to continue"
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:99
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
 msgid "active"
 msgstr "actif"
 
@@ -14401,7 +14405,7 @@ msgstr ""
 msgid "{0} is mandatory"
 msgstr "{0} est obligatoire"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:68
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:69
 msgid "{0} is not a holiday."
 msgstr "{0} n'est pas un jour férié."
 

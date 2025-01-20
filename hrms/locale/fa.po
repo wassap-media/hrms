@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-01-05 09:34+0000\n"
-"PO-Revision-Date: 2025-01-07 06:06\n"
+"POT-Creation-Date: 2025-01-12 09:34+0000\n"
+"PO-Revision-Date: 2025-01-17 07:17\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -2990,7 +2990,7 @@ msgstr "دال فعلی"
 msgid "Current Work Experience"
 msgstr "تجربه کاری فعلی"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:98
 msgid "Currently, there is no {0} leave period for this date to create/update leave allocation."
 msgstr "در حال حاضر، هیچ دوره مرخصی {0} برای این تاریخ برای ایجاد/به‌روزرسانی تخصیص مرخصی وجود ندارد."
 
@@ -6482,7 +6482,7 @@ msgstr "نیم روز"
 msgid "Half Day Date"
 msgstr "تاریخ نیم روز"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:26
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:27
 msgid "Half Day Date is mandatory"
 msgstr "تاریخ نیم روز اجباری است"
 
@@ -6490,7 +6490,7 @@ msgstr "تاریخ نیم روز اجباری است"
 msgid "Half Day Date should be between From Date and To Date"
 msgstr "تاریخ نیم روز باید بین از تاریخ و تا تاریخ باشد"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:28
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:29
 msgid "Half Day Date should be in between Work From Date and Work End Date"
 msgstr "تاریخ نیم روز باید بین تاریخ کار از تاریخ و تاریخ پایان کار باشد"
 
@@ -6613,7 +6613,7 @@ msgstr "تعطیلات این ماه"
 msgid "Holidays this Week."
 msgstr "تعطیلات این هفته"
 
-#: frontend/src/components/BottomTabs.vue:43
+#: frontend/src/components/BottomTabs.vue:43 hrms/www/jobs/index.py:13
 msgid "Home"
 msgstr "صفحه اصلی"
 
@@ -7105,7 +7105,7 @@ msgstr "دور مصاحبه {0} فقط برای تعیین {1} است. متقا�
 
 #: hrms/hr/doctype/interview_feedback/interview_feedback.py:40
 msgid "Interview Scheduled Date"
-msgstr "تاریخ برنامه ریزی شده مصاحبه"
+msgstr "تاریخ زمان‌بندی شده مصاحبه"
 
 #: hrms/hr/report/employee_exits/employee_exits.js:51
 #: hrms/hr/report/employee_exits/employee_exits.py:46
@@ -7191,6 +7191,10 @@ msgstr "مرکز هزینه نامعتبر است"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:323
 msgid "Invalid Dates"
+msgstr ""
+
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:25
+msgid "Invalid Leave Ledger Entry"
 msgstr ""
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:319
@@ -7813,6 +7817,10 @@ msgstr "دفتر مرخصی"
 msgid "Leave Ledger Entry"
 msgstr "ثبت دفتر مرخصی"
 
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:18
+msgid "Leave Ledger Entry's To date needs to be after From date. Currently, From Date is {0} and To Date is {1}"
+msgstr ""
+
 #. Label of the leave_period (Link) field in DocType 'Leave Allocation'
 #. Option for the 'Dates Based On' (Select) field in DocType 'Leave Control
 #. Panel'
@@ -7927,7 +7935,7 @@ msgstr "نوع مرخصی می تواند مرخصی جبرانی یا اکتس�
 msgid "Leave Type can either be without pay or partial pay"
 msgstr "نوع مرخصی می تواند بدون حقوق یا پرداخت جزئی باشد"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:33
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:34
 msgid "Leave Type is mandatory"
 msgstr "نوع مرخصی اجباری است"
 
@@ -7954,7 +7962,7 @@ msgstr "مرخصی بدون حقوق"
 msgid "Leave Without Pay does not match with approved {} records"
 msgstr "مرخصی بدون حقوق با رکوردهای تایید شده {} مطابقت ندارد"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:41
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:54
 msgid "Leave allocation {0} is linked with the Leave Application {1}"
 msgstr "تخصیص مرخصی {0} با برنامه مرخصی {1} پیوند داده شده است"
 
@@ -8619,7 +8627,7 @@ msgstr "حقوق اضافی چندگانه با ویژگی رونویسی برا
 msgid "Multiple Shift Assignments"
 msgstr "تخصیص شیفت چندگانه"
 
-#: hrms/www/jobs/index.py:12
+#: hrms/www/jobs/index.py:15
 msgid "My Account"
 msgstr "حساب من"
 
@@ -8780,9 +8788,9 @@ msgstr "هیچ کارمندی انتخاب نشد"
 
 #: hrms/hr/doctype/job_applicant/job_applicant_dashboard.html:53
 msgid "No Interview has been scheduled."
-msgstr ""
+msgstr "هیچ مصاحبه ای زمان‌بندی نشده است."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:104
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:105
 msgid "No Leave Period Found"
 msgstr "هیچ دوره مرخصی یافت نشد"
 
@@ -9152,7 +9160,7 @@ msgstr "فقط درخواست Shift با وضعیت \"تایید\" و \"رد ش�
 msgid "Only Tax Impact (Cannot Claim But Part of Taxable Income)"
 msgstr "فقط تأثیر مالیات (نمی توان ادعا کرد اما بخشی از درآمد مشمول مالیات)"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:20
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:33
 msgid "Only expired allocation can be cancelled"
 msgstr "فقط تخصیص منقضی شده قابل لغو است"
 
@@ -9787,7 +9795,7 @@ msgstr "لطفاً ابتدا یک ساختار حقوق و دستمزد برا�
 msgid "Please confirm once you have completed your training"
 msgstr "لطفاً پس از اتمام دوره آموزشی خود را تأیید کنید"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:101
 msgid "Please create a new {0} for the date {1} first."
 msgstr "لطفاً ابتدا یک {0} جدید برای تاریخ {1} ایجاد کنید."
 
@@ -11376,7 +11384,7 @@ msgstr "شنبه"
 #: hrms/hr/doctype/training_event/training_event.json
 #: hrms/hr/doctype/training_program/training_program.json
 msgid "Scheduled"
-msgstr "برنامه ریزی شده است"
+msgstr "زمان‌بندی شده است"
 
 #. Label of the scheduled_on (Date) field in DocType 'Interview'
 #: hrms/hr/doctype/interview/interview.json
@@ -11761,7 +11769,7 @@ msgstr ""
 
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.py:42
 msgid "Settle all Payables and Receivables before submission"
-msgstr "کلیه مطالبات و مطالبات را قبل از ارسال تسویه کنید"
+msgstr "همه پرداختنی‌ها و دریافتنی‌ها را قبل از ارسال تسویه کنید"
 
 #. Option for the 'Status' (Select) field in DocType 'Full and Final
 #. Outstanding Statement'
@@ -11930,7 +11938,7 @@ msgstr ""
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Shift Schedule"
-msgstr ""
+msgstr "زمان‌بندی شیفت"
 
 #. Label of the shift_schedule_assignment (Link) field in DocType 'Shift
 #. Assignment'
@@ -12672,7 +12680,7 @@ msgstr "روزی از ماه که باید مرخصی ها اختصاص داده
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
 msgstr "روزهایی که در آن درخواست مرخصی می دهید، تعطیلات هستند. شما نیازی به درخواست مرخصی ندارید."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:63
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:64
 msgid "The days between {0} to {1} are not valid holidays."
 msgstr "روزهای بین {0} تا {1} تعطیلات معتبر نیستند."
 
@@ -12754,7 +12762,7 @@ msgstr "این مرخصی ها تعطیلات مجاز توسط شرکت هست�
 msgid "This action will prevent making changes to the linked appraisal feedback/goals."
 msgstr "این اقدام از ایجاد تغییرات در بازخورد/اهداف ارزیابی مرتبط جلوگیری می کند."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:96
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
 msgid "This compensatory leave will be applicable from {0}."
 msgstr "این مرخصی جبرانی از {0} قابل اجرا خواهد بود."
 
@@ -12970,10 +12978,6 @@ msgstr "تا به امروز نمی تواند بیشتر از تاریخ معا
 #: hrms/hr/doctype/leave_application/leave_application.py:177
 msgid "To date cannot be before from date"
 msgstr "تا به امروز نمی تواند قبل از تاریخ باشد"
-
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:13
-msgid "To date needs to be before from date"
-msgstr "تا به امروز باید قبل از تاریخ باشد"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:161
 msgid "To overwrite the salary component amount for a tax component, please enable {0}"
@@ -14170,7 +14174,7 @@ msgstr "بله، ادامه دهید"
 msgid "You are not authorized to approve leaves on Block Dates"
 msgstr "شما مجاز به تأیید مرخصی در تاریخ های بلوک نیستید"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:57
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:58
 msgid "You are not present all day(s) between compensatory leave request days"
 msgstr "شما در تمام روز(های) بین روزهای درخواست مرخصی جبرانی حضور ندارید"
 
@@ -14210,7 +14214,7 @@ msgstr "شما می توانید جزئیات بیشتری را در صورت و
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:51
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:52
 msgid "You were only present for Half Day on {}. Cannot apply for a full day compensatory leave"
 msgstr "شما فقط برای نیم روز در {} حضور داشتید. نمی توان برای مرخصی جبرانی تمام روز درخواست داد"
 
@@ -14222,7 +14226,7 @@ msgstr "جلسه مصاحبه شما از {0} {1} - {2} به {3} {4} - {5} تغ�
 msgid "Your password has expired. Please reset your password to continue"
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:99
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
 msgid "active"
 msgstr "فعال"
 
@@ -14376,7 +14380,7 @@ msgstr ""
 msgid "{0} is mandatory"
 msgstr "{0} اجباری است"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:68
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:69
 msgid "{0} is not a holiday."
 msgstr "{0} تعطیلات نیست."
 
