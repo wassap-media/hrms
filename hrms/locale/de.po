@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2024-12-29 09:34+0000\n"
-"PO-Revision-Date: 2024-12-30 04:19\n"
+"POT-Creation-Date: 2025-01-19 09:34+0000\n"
+"PO-Revision-Date: 2025-01-20 08:03\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -461,7 +461,7 @@ msgstr "Buchhaltungsdimension"
 msgid "Accounting Dimensions"
 msgstr "Abrechnungsdimensionen"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:113
+#: hrms/hr/doctype/expense_claim/expense_claim.js:121
 msgid "Accounting Ledger"
 msgstr "Hauptbuch"
 
@@ -1352,7 +1352,7 @@ msgstr "Genehmigung"
 msgid "Approval Status"
 msgstr "Genehmigungsstatus"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:104
+#: hrms/hr/doctype/expense_claim/expense_claim.py:118
 msgid "Approval Status must be 'Approved' or 'Rejected'"
 msgstr "Genehmigungsstatus muss \"Genehmigt\" oder \"Abgelehnt\" sein"
 
@@ -1783,7 +1783,7 @@ msgstr "Bankkonto Nr"
 msgid "Bank Details"
 msgstr "Bankdaten"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:147
+#: hrms/hr/doctype/expense_claim/expense_claim.js:155
 msgid "Bank Entries"
 msgstr "Bank-Einträge"
 
@@ -1988,7 +1988,7 @@ msgstr "Standardmäßig wird das Endergebnis als Durchschnitt aus Zielergebnis, 
 
 #. Label of the ctc (Currency) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:536
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:550
 msgid "CTC"
 msgstr "CTC"
 
@@ -2680,7 +2680,7 @@ msgstr "Kosten"
 #. Label of the cost_center (Link) field in DocType 'Gratuity'
 #. Label of the cost_center (Link) field in DocType 'Payroll Entry'
 #: hrms/hr/doctype/expense_claim/expense_claim.json
-#: hrms/hr/doctype/expense_claim/expense_claim.py:272
+#: hrms/hr/doctype/expense_claim/expense_claim.py:286
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
 #: hrms/hr/doctype/expense_taxes_and_charges/expense_taxes_and_charges.json
 #: hrms/hr/doctype/travel_request/travel_request.json
@@ -2754,7 +2754,7 @@ msgstr "Motivationsschreiben"
 #: hrms/hr/doctype/employee_advance/employee_advance.js:94
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.js:59
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.js:61
-#: hrms/hr/doctype/expense_claim/expense_claim.js:101
+#: hrms/hr/doctype/expense_claim/expense_claim.js:109
 #: hrms/hr/doctype/job_applicant/job_applicant.js:29
 #: hrms/hr/doctype/job_applicant/job_applicant.js:57
 #: hrms/hr/doctype/vehicle_log/vehicle_log.js:21
@@ -2996,7 +2996,7 @@ msgstr ""
 msgid "Current Work Experience"
 msgstr "Aktuelle Berufserfahrung"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:98
 msgid "Currently, there is no {0} leave period for this date to create/update leave allocation."
 msgstr "Derzeit gibt es keine {0} Abwesenheitperiode für dieses Datum, um eine Abwesenheitszuordnung zu erstellen/zu aktualisieren."
 
@@ -3146,7 +3146,7 @@ msgstr "Geburtsdatum"
 #: hrms/hr/report/employee_exits/employee_exits.py:32
 #: hrms/payroll/doctype/retention_bonus/retention_bonus.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:528
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:542
 #: hrms/payroll/report/salary_register/salary_register.py:128 hrms/setup.py:396
 msgid "Date of Joining"
 msgstr "Eintrittsdatum"
@@ -3443,7 +3443,7 @@ msgstr "Auslieferungsfahrt"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:33
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:515
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:529
 #: hrms/payroll/report/salary_register/salary_register.py:141
 #: hrms/public/js/salary_slip_deductions_report_filters.js:42 hrms/setup.py:402
 #: hrms/templates/generators/job_opening.html:87
@@ -3459,6 +3459,10 @@ msgstr "Abteilungsgenehmiger"
 #: hrms/hr/workspace/recruitment/recruitment.json
 msgid "Department Wise Openings"
 msgstr "Offene Stellen je Abteilung"
+
+#: hrms/hr/doctype/expense_claim/expense_claim.py:96
+msgid "Department {0} does not belong to company: {1}"
+msgstr ""
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:195
 msgid "Department: {0}"
@@ -3614,7 +3618,7 @@ msgstr "Beschreibung einer Stellenausschreibung"
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:522
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:536
 #: hrms/payroll/report/salary_register/salary_register.py:148
 msgid "Designation"
 msgstr "Position"
@@ -4114,7 +4118,7 @@ msgstr "E-Mails Gehaltsabrechnung an Mitarbeiter auf Basis von bevorzugten E-Mai
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:26
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:502
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:516
 #: hrms/payroll/report/income_tax_deductions/income_tax_deductions.py:25
 #: hrms/payroll/report/professional_tax_deductions/professional_tax_deductions.py:21
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:20
@@ -4510,7 +4514,7 @@ msgstr ""
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/report/bank_remittance/bank_remittance.py:32
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:509
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:523
 #: hrms/payroll/report/income_tax_deductions/income_tax_deductions.py:32
 #: hrms/payroll/report/professional_tax_deductions/professional_tax_deductions.py:28
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:27
@@ -5391,7 +5395,7 @@ msgstr ""
 #. Name of a DocType
 #. Label of the expense_type (Data) field in DocType 'Expense Claim Type'
 #. Label of a Link in the Expense Claims Workspace
-#: hrms/hr/doctype/expense_claim/expense_claim.py:482
+#: hrms/hr/doctype/expense_claim/expense_claim.py:496
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
 #: hrms/hr/doctype/expense_claim_type/expense_claim_type.json
 #: hrms/hr/workspace/expense_claims/expense_claims.json
@@ -6488,7 +6492,7 @@ msgstr "Halbtags"
 msgid "Half Day Date"
 msgstr "Halbtagesdatum"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:26
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:27
 msgid "Half Day Date is mandatory"
 msgstr "Das Halbtagesdatum ist obligatorisch"
 
@@ -6496,7 +6500,7 @@ msgstr "Das Halbtagesdatum ist obligatorisch"
 msgid "Half Day Date should be between From Date and To Date"
 msgstr "Halbtages Datum sollte zwischen Von-Datum und eine aktuelle"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:28
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:29
 msgid "Half Day Date should be in between Work From Date and Work End Date"
 msgstr "Das Halbtagesdatum sollte zwischen Arbeitstag und Enddatum liegen"
 
@@ -6619,7 +6623,7 @@ msgstr "Arbeitsfreie Tage in diesem Monat."
 msgid "Holidays this Week."
 msgstr "Arbeitsfreie Tage diese Woche."
 
-#: frontend/src/components/BottomTabs.vue:43
+#: frontend/src/components/BottomTabs.vue:43 hrms/www/jobs/index.py:13
 msgid "Home"
 msgstr "Startseite"
 
@@ -6924,7 +6928,7 @@ msgstr "Einkommensteuerabzüge"
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.json
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:142
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:530
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:544
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Income Tax Slab"
@@ -7197,6 +7201,10 @@ msgstr "Ungültige Kostenstelle"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:323
 msgid "Invalid Dates"
+msgstr ""
+
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:25
+msgid "Invalid Leave Ledger Entry"
 msgstr ""
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:319
@@ -7819,6 +7827,10 @@ msgstr "Abwesenheitsbuch"
 msgid "Leave Ledger Entry"
 msgstr "Ledger-Eintrag verlassen"
 
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:18
+msgid "Leave Ledger Entry's To date needs to be after From date. Currently, From Date is {0} and To Date is {1}"
+msgstr ""
+
 #. Label of the leave_period (Link) field in DocType 'Leave Allocation'
 #. Option for the 'Dates Based On' (Select) field in DocType 'Leave Control
 #. Panel'
@@ -7933,7 +7945,7 @@ msgstr "Die Abwesenheitsart kann entweder ein Ausgleichsurlaub oder ein verdient
 msgid "Leave Type can either be without pay or partial pay"
 msgstr "Die Abwesenheitsart kann entweder unbezahlt oder teilweise bezahlt sein"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:33
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:34
 msgid "Leave Type is mandatory"
 msgstr "Abwesenheitsart ist obligatorisch"
 
@@ -7960,7 +7972,7 @@ msgstr "Unbezahlter Urlaub"
 msgid "Leave Without Pay does not match with approved {} records"
 msgstr "Urlaub ohne Bezahlung stimmt nicht mit genehmigten {} Datensätzen überein"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:41
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:54
 msgid "Leave allocation {0} is linked with the Leave Application {1}"
 msgstr "Das Abwesenheitskontingent {0} ist mit dem Abwesenheitsantrag {1} verknüpft"
 
@@ -8538,7 +8550,7 @@ msgstr "Zahlungsweise"
 msgid "Mode of Travel"
 msgstr "Art des Reisens"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:278
+#: hrms/hr/doctype/expense_claim/expense_claim.py:292
 msgid "Mode of payment is required to make a payment"
 msgstr "Modus der Zahlung ist erforderlich, um eine Zahlung zu leisten"
 
@@ -8625,7 +8637,7 @@ msgstr ""
 msgid "Multiple Shift Assignments"
 msgstr "Mehrere Schichtzuweisungen"
 
-#: hrms/www/jobs/index.py:12
+#: hrms/www/jobs/index.py:15
 msgid "My Account"
 msgstr "Mein Konto"
 
@@ -8788,7 +8800,7 @@ msgstr "Keine Mitarbeiter ausgewählt"
 msgid "No Interview has been scheduled."
 msgstr "Es wurde kein Bewerbungsgespräch geplant."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:104
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:105
 msgid "No Leave Period Found"
 msgstr "Kein Urlaubszeitraum gefunden"
 
@@ -9158,7 +9170,7 @@ msgstr "Es kann nur eine Schichtanforderung mit den Status &quot;Genehmigt&quot;
 msgid "Only Tax Impact (Cannot Claim But Part of Taxable Income)"
 msgstr "Nur Steuerauswirkungen (Anspruch auf einen Teil des zu versteuernden Einkommens)"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:20
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:33
 msgid "Only expired allocation can be cancelled"
 msgstr "Nur abgelaufene Zuordnungen können storniert werden"
 
@@ -9457,7 +9469,7 @@ msgstr "Via Gehaltsabrechnung zahlen"
 msgid "Payable Account"
 msgstr "Verbindlichkeiten-Konto"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:96
+#: hrms/hr/doctype/expense_claim/expense_claim.py:110
 msgid "Payable Account is mandatory to submit an Expense Claim"
 msgstr "Verbindlichkeitskonto ist erforderlich, um eine Auslagenabrechnung zu buchen"
 
@@ -9468,7 +9480,7 @@ msgid "Payables"
 msgstr "Verbindlichkeiten"
 
 #: hrms/hr/doctype/employee_advance/employee_advance.js:50
-#: hrms/hr/doctype/expense_claim/expense_claim.js:97
+#: hrms/hr/doctype/expense_claim/expense_claim.js:105
 #: hrms/hr/doctype/expense_claim/expense_claim_dashboard.py:9
 #: hrms/payroll/doctype/gratuity/gratuity_dashboard.py:10
 msgid "Payment"
@@ -9793,7 +9805,7 @@ msgstr ""
 msgid "Please confirm once you have completed your training"
 msgstr "Bitte bestätigen Sie, sobald Sie Ihre Ausbildung abgeschlossen haben"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:101
 msgid "Please create a new {0} for the date {1} first."
 msgstr "Bitte erstellen Sie zunächst eine neue {0} für das Datum {1}."
 
@@ -9956,7 +9968,7 @@ msgstr "Bitte legen Sie die Email-Vorlage für Statusänderung eines Urlaubsantr
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "Bitte stellen Sie die Beurteilungsvorlage für alle {0} ein oder wählen Sie die Vorlage in der Tabelle Mitarbeiter unten aus."
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:327
+#: hrms/hr/doctype/expense_claim/expense_claim.js:335
 msgid "Please set the Company"
 msgstr "Bitte setzen Sie das Unternehmen"
 
@@ -10989,11 +11001,11 @@ msgstr "Zeile #{0}: Für die Komponente {1} sind die Optionen {2} und {3} aktivi
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "Zeile #{0}: Der Betrag auf dem Stundenzettel überschreibt den Betrag für die Gehaltskomponente {1}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:579
+#: hrms/hr/doctype/expense_claim/expense_claim.py:593
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "Zeile Nr. {0}: Der Betrag darf nicht größer sein als der ausstehende Betrag der Auslagenabrechnung {1}. Der ausstehende Betrag beträgt {2}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:338
+#: hrms/hr/doctype/expense_claim/expense_claim.py:352
 msgid "Row {0}# Allocated amount {1} cannot be greater than unclaimed amount {2}"
 msgstr "Zeile {0} # Der zugewiesene Betrag {1} darf nicht größer sein als der nicht beanspruchte Betrag {2}"
 
@@ -11025,7 +11037,7 @@ msgstr "Zeile {0}: Der gezahlte Betrag {1} ist größer als der ausstehende aufg
 msgid "Row {0}: {1}"
 msgstr "Zeile {0}: {1}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:271
+#: hrms/hr/doctype/expense_claim/expense_claim.py:285
 msgid "Row {0}: {1} is required in the expenses table to book an expense claim."
 msgstr "Zeile {0}: {1} in der Tabelle der Auslagen ist erforderlich, um eine Auslagenabrechnung zu buchen."
 
@@ -11366,7 +11378,7 @@ msgstr "sanktionierte"
 msgid "Sanctioned Amount"
 msgstr "Genehmigter Betrag"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:360
+#: hrms/hr/doctype/expense_claim/expense_claim.py:374
 msgid "Sanctioned Amount cannot be greater than Claim Amount in Row {0}."
 msgstr "Genehmigter Betrag kann nicht größer als geforderter Betrag in Zeile {0} sein."
 
@@ -11472,7 +11484,7 @@ msgstr "Bitte Geschäftsbedingungen auswählen"
 msgid "Select Users"
 msgstr "Wählen Sie Benutzer aus"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:370
+#: hrms/hr/doctype/expense_claim/expense_claim.js:378
 msgid "Select an employee to get the employee advance."
 msgstr "Wählen Sie einen Mitarbeiter aus, um den Mitarbeiter vorab zu erreichen."
 
@@ -11724,7 +11736,7 @@ msgstr ""
 msgid "Set optional filters to fetch employees in the appraisee list"
 msgstr "Legen Sie optionale Filter fest, um Mitarbeiter in der Beurteilungsliste zu finden"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:481
+#: hrms/hr/doctype/expense_claim/expense_claim.py:495
 msgid "Set the default account for the {0} {1}"
 msgstr "Legen Sie das Standardkonto für {0} {1} fest"
 
@@ -12678,7 +12690,7 @@ msgstr "Der Tag des Monats, an dem Abwesenheiten zugeteilt werden sollen"
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
 msgstr "Der Tag/die Tage, für den/die Sie Urlaub beantragen, sind Ferien. Deshalb müssen Sie keinen Urlaub beantragen."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:63
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:64
 msgid "The days between {0} to {1} are not valid holidays."
 msgstr "Die Tage zwischen {0} und {1} sind keine gültigen Feiertage."
 
@@ -12743,7 +12755,7 @@ msgstr "Es gibt keine offenen Stellen im Besetzungsplan {0}"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:37
 #: hrms/payroll/doctype/employee_incentive/employee_incentive.py:20
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:222
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:200
 msgid "There is no Salary Structure assigned to {0}. First assign a Salary Stucture."
 msgstr "{0} ist noch keine Gehaltsstruktur zugewiesen. Weisen Sie zunächst eine Gehaltsstruktur zu."
 
@@ -12760,7 +12772,7 @@ msgstr "Diese Abwesenheiten sind vom Unternehmen genehmigte Urlaubstage, deren I
 msgid "This action will prevent making changes to the linked appraisal feedback/goals."
 msgstr "Diese Aktion verhindert, dass Sie Änderungen an den verknüpften Beurteilungsrückmeldungen/-zielen vornehmen."
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:96
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
 msgid "This compensatory leave will be applicable from {0}."
 msgstr "Dieser Ausgleichsurlaub gilt ab {0}."
 
@@ -12976,10 +12988,6 @@ msgstr "Bis heute kann nicht mehr als Entlastungsdatum des Mitarbeiters sein"
 #: hrms/hr/doctype/leave_application/leave_application.py:177
 msgid "To date cannot be before from date"
 msgstr ""
-
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:13
-msgid "To date needs to be before from date"
-msgstr "Das Datum muss vor dem Datum liegen"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:161
 msgid "To overwrite the salary component amount for a tax component, please enable {0}"
@@ -13271,7 +13279,7 @@ msgstr "Gesamte Steuern und Gebühren"
 msgid "Total Working Hours"
 msgstr "Gesamtarbeitszeit"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:354
+#: hrms/hr/doctype/expense_claim/expense_claim.py:368
 msgid "Total advance amount cannot be greater than total sanctioned amount"
 msgstr "Der gesamte Vorschussbetrag darf nicht höher sein als der Gesamtbetrag der Sanktion"
 
@@ -13887,8 +13895,8 @@ msgstr "Fahrzeug-Serviceartikel"
 #: hrms/hr/doctype/employee_separation/employee_separation.js:19
 #: hrms/hr/doctype/employee_separation/employee_separation.js:28
 #: hrms/hr/doctype/employee_separation/employee_separation.js:35
-#: hrms/hr/doctype/expense_claim/expense_claim.js:125
-#: hrms/hr/doctype/expense_claim/expense_claim.js:156
+#: hrms/hr/doctype/expense_claim/expense_claim.js:133
+#: hrms/hr/doctype/expense_claim/expense_claim.js:164
 #: hrms/hr/doctype/job_applicant/job_applicant.js:42
 msgid "View"
 msgstr "Ansicht"
@@ -14176,7 +14184,7 @@ msgstr "Ja, fortfahren"
 msgid "You are not authorized to approve leaves on Block Dates"
 msgstr "Sie sind nicht berechtigt, Urlaube für geblockte Termine zu genehmigen"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:57
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:58
 msgid "You are not present all day(s) between compensatory leave request days"
 msgstr "Sie sind nicht den ganzen Tag (oder mehreren Tagen) zwischen den Ausgleichsurlaubsantragstagen anwesend"
 
@@ -14216,7 +14224,7 @@ msgstr "Sie können ggf. weitere Details hinzufügen und das Angebot buchen."
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:51
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:52
 msgid "You were only present for Half Day on {}. Cannot apply for a full day compensatory leave"
 msgstr "Sie waren am {} nur für einen halben Tag anwesend. Sie können keinen ganztägigen Ausgleichsurlaub beantragen"
 
@@ -14228,7 +14236,7 @@ msgstr "Ihr Vorstellungsgespräch wird von {0} {1} - {2} auf den {3} {4} - {5} v
 msgid "Your password has expired. Please reset your password to continue"
 msgstr ""
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:99
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
 msgid "active"
 msgstr "aktiv"
 
@@ -14382,7 +14390,7 @@ msgstr "{0} hat {1} aktiviert"
 msgid "{0} is mandatory"
 msgstr "{0} ist zwingend erforderlich"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:68
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:69
 msgid "{0} is not a holiday."
 msgstr "{0} ist kein arbeitsfreier Tag."
 
