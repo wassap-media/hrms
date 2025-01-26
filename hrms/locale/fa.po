@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-19 09:34+0000\n"
-"PO-Revision-Date: 2025-01-21 08:04\n"
+"PO-Revision-Date: 2025-01-26 08:49\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -3918,7 +3918,7 @@ msgstr "موثر از"
 #: hrms/hr/doctype/employee_referral/employee_referral.json
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Email"
-msgstr "پست الکترونیک"
+msgstr "ایمیل"
 
 #. Label of the email_id (Data) field in DocType 'Job Applicant'
 #: hrms/hr/doctype/job_applicant/job_applicant.json
@@ -3958,7 +3958,7 @@ msgstr "ایمیل به {0} ارسال شد"
 #. 'Payroll Settings'
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Emails salary slip to employee based on preferred email selected in Employee"
-msgstr "ایمیل فیش حقوقی به کارمند ارسال می‌شود بر اساس ایمیل ترجیحی انتخاب شده در پروفایل کارمند"
+msgstr "ایمیل فیش حقوقی به کارمند ارسال می‌شود بر اساس ایمیل ترجیحی انتخاب شده در نمایه کارمند"
 
 #. Label of the employee (Link) field in DocType 'Appraisal'
 #. Name of a role
@@ -10170,7 +10170,7 @@ msgstr "مهارت"
 
 #: frontend/src/views/Profile.vue:17
 msgid "Profile"
-msgstr "مشخصات"
+msgstr "نمایه"
 
 #: hrms/hr/report/project_profitability/project_profitability.py:183
 msgid "Profit"
@@ -10989,7 +10989,7 @@ msgstr "ردیف #{0}: نمی توان مقدار یا فرمول را برای 
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:105
 msgid "Row #{0}: The {1} Component has the options {2} and {3} enabled."
-msgstr "ردیف #{0}: مؤلفه {1} دارای گزینه های {2} و {3} فعال است."
+msgstr "ردیف #{0}: مؤلفه {1} دارای گزینه‌های {2} و {3} فعال است."
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:129
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
@@ -12298,7 +12298,7 @@ msgstr "وضعیت"
 
 #: hrms/setup.py:401
 msgid "Stock Options"
-msgstr "گزینه های موجودی"
+msgstr "گزینه‌های موجودی"
 
 #. Description of the 'Block Days' (Section Break) field in DocType 'Leave
 #. Block List'
@@ -14208,7 +14208,7 @@ msgstr "شما فقط می توانید اسناد JPG، PNG، PDF، TXT یا Mi
 
 #: frontend/src/views/attendance/Dashboard.vue:29
 msgid "You have no upcoming shifts"
-msgstr ""
+msgstr "هیچ شیفت آتی ندارید"
 
 #: hrms/overrides/employee_master.py:83
 msgid "You may add additional details, if any, and submit the offer."
