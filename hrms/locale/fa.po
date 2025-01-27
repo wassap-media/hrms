@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-19 09:34+0000\n"
-"PO-Revision-Date: 2025-01-26 08:49\n"
+"PO-Revision-Date: 2025-01-27 09:59\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -3764,7 +3764,7 @@ msgstr "دانلود قالب"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 msgid "Draft"
-msgstr "پیش نویس"
+msgstr "پیش‌نویس"
 
 #. Label of a Link in the Expense Claims Workspace
 #: hrms/hr/workspace/expense_claims/expense_claims.json
@@ -14488,7 +14488,7 @@ msgstr "{} فعال"
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "{} Draft"
-msgstr "{} پیش نویس"
+msgstr "{} پیش‌نویس"
 
 #. Count format of shortcut in the Employee Lifecycle Workspace
 #. Count format of shortcut in the HR Workspace
