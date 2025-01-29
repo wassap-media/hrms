@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-01-28 09:56\n"
+"PO-Revision-Date: 2025-01-29 09:54\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -9539,7 +9539,7 @@ msgstr "مراکز هزینه حقوق و دستمزد"
 #. Label of a shortcut in the Overview Workspace
 #: hrms/hr/workspace/overview/overview.json
 msgid "Payroll Dashboard"
-msgstr ""
+msgstr "داشبورد حقوق و دستمزد"
 
 #. Label of the payroll_date (Date) field in DocType 'Additional Salary'
 #. Label of the payroll_date (Date) field in DocType 'Employee Incentive'
