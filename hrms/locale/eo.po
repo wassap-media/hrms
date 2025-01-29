@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2024-12-15 09:34+0000\n"
-"PO-Revision-Date: 2024-12-18 01:32\n"
+"POT-Creation-Date: 2025-01-26 09:33+0000\n"
+"PO-Revision-Date: 2025-01-28 09:56\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Esperanto\n"
 "MIME-Version: 1.0\n"
@@ -272,8 +272,8 @@ msgstr "crwdns148472:0crwdne148472:0"
 msgid "<span class=\"h4\"><b>Masters &amp; Transactions</b></span>"
 msgstr "crwdns148474:0crwdne148474:0"
 
-#. Header text in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
+#. Header text in the Overview Workspace
+#: hrms/hr/workspace/overview/overview.json
 msgid "<span class=\"h4\"><b>Reports &amp; Masters</b></span>"
 msgstr "crwdns148476:0crwdne148476:0"
 
@@ -284,21 +284,20 @@ msgstr "crwdns148478:0crwdne148478:0"
 
 #. Header text in the Employee Lifecycle Workspace
 #. Header text in the Expense Claims Workspace
-#. Header text in the HR Workspace
 #. Header text in the Leaves Workspace
+#. Header text in the Overview Workspace
 #. Header text in the Performance Workspace
 #. Header text in the Recruitment Workspace
 #. Header text in the Shift & Attendance Workspace
-#. Header text in the Payroll Workspace
 #. Header text in the Salary Payout Workspace
 #. Header text in the Tax & Benefits Workspace
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
 #: hrms/hr/workspace/expense_claims/expense_claims.json
-#: hrms/hr/workspace/hr/hr.json hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/hr/workspace/performance/performance.json
 #: hrms/hr/workspace/recruitment/recruitment.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
-#: hrms/payroll/workspace/payroll/payroll.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "<span class=\"h4\"><b>Your Shortcuts</b></span>"
@@ -455,7 +454,7 @@ msgstr "crwdns143238:0crwdne143238:0"
 msgid "Accounting Dimensions"
 msgstr "crwdns140872:0crwdne140872:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:113
+#: hrms/hr/doctype/expense_claim/expense_claim.js:121
 msgid "Accounting Ledger"
 msgstr "crwdns104874:0crwdne104874:0"
 
@@ -519,21 +518,19 @@ msgstr "crwdns140880:0crwdne140880:0"
 #: hrms/hr/doctype/job_requisition/job_requisition.js:78
 #: hrms/hr/doctype/job_requisition/job_requisition.js:81
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:45
-#: hrms/hr/doctype/leave_allocation/leave_allocation.js:93
-#: hrms/hr/doctype/shift_type/shift_type.js:18
-#: hrms/hr/doctype/shift_type/shift_type.js:52
+#: hrms/hr/doctype/leave_allocation/leave_allocation.js:114
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:159
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.js:77
 msgid "Actions"
 msgstr "crwdns104890:0crwdne104890:0"
 
 #. Option for the 'Status' (Select) field in DocType 'Shift Assignment'
-#. Option for the 'Status' (Select) field in DocType 'Shift Assignment
-#. Schedule'
 #. Option for the 'Status' (Select) field in DocType 'Shift Assignment Tool'
+#. Option for the 'Shift Status' (Select) field in DocType 'Shift Schedule
+#. Assignment'
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.js:44
 #: hrms/hr/report/employee_leave_balance_summary/employee_leave_balance_summary.js:40
 #: hrms/hr/report/leave_ledger/leave_ledger.js:38
@@ -816,7 +813,7 @@ msgstr "crwdns105002:0crwdne105002:0"
 msgid "Allocation"
 msgstr "crwdns105004:0crwdne105004:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.js:107
+#: hrms/hr/doctype/leave_allocation/leave_allocation.js:128
 msgid "Allocation Expired!"
 msgstr "crwdns105008:0crwdne105008:0"
 
@@ -836,6 +833,11 @@ msgstr "crwdns140926:0crwdne140926:0"
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Allow Geolocation Tracking"
 msgstr "crwdns140928:0crwdne140928:0"
+
+#. Label of the applicable_after (Int) field in DocType 'Leave Type'
+#: hrms/hr/doctype/leave_type/leave_type.json
+msgid "Allow Leave Application After (Working Days)"
+msgstr "crwdns151968:0crwdne151968:0"
 
 #. Label of the allow_multiple_shift_assignments (Check) field in DocType 'HR
 #. Settings'
@@ -921,6 +923,7 @@ msgstr "crwdns140946:0crwdne140946:0"
 #. Label of the amended_from (Link) field in DocType 'Leave Policy Assignment'
 #. Label of the amended_from (Link) field in DocType 'Shift Assignment'
 #. Label of the amended_from (Link) field in DocType 'Shift Request'
+#. Label of the amended_from (Link) field in DocType 'Shift Schedule'
 #. Label of the amended_from (Link) field in DocType 'Staffing Plan'
 #. Label of the amended_from (Link) field in DocType 'Training Event'
 #. Label of the amended_from (Link) field in DocType 'Training Feedback'
@@ -973,6 +976,7 @@ msgstr "crwdns140946:0crwdne140946:0"
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.json
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
 #: hrms/hr/doctype/shift_request/shift_request.json
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
 #: hrms/hr/doctype/staffing_plan/staffing_plan.json
 #: hrms/hr/doctype/training_event/training_event.json
 #: hrms/hr/doctype/training_feedback/training_feedback.json
@@ -1073,7 +1077,7 @@ msgstr "crwdns105154:0{0}crwdnd105154:0{1}crwdnd105154:0{2}crwdne105154:0"
 msgid "Annual Allocation"
 msgstr "crwdns140960:0crwdne140960:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.py:356
+#: hrms/hr/doctype/leave_allocation/leave_allocation.py:369
 msgid "Annual Allocation Exceeded"
 msgstr "crwdns149070:0crwdne149070:0"
 
@@ -1095,11 +1099,6 @@ msgstr "crwdns140964:0crwdne140964:0"
 #: hrms/hr/doctype/appraisal/appraisal.json
 msgid "Any other remarks, noteworthy effort that should go in the records"
 msgstr "crwdns140966:0crwdne140966:0"
-
-#. Label of the applicable_after (Int) field in DocType 'Leave Type'
-#: hrms/hr/doctype/leave_type/leave_type.json
-msgid "Applicable After (Working Days)"
-msgstr "crwdns140968:0crwdne140968:0"
 
 #. Label of the applicable_earnings_component (Table MultiSelect) field in
 #. DocType 'Gratuity Rule'
@@ -1346,12 +1345,12 @@ msgstr "crwdns140994:0crwdne140994:0"
 msgid "Approval Status"
 msgstr "crwdns140996:0crwdne140996:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:104
+#: hrms/hr/doctype/expense_claim/expense_claim.py:118
 msgid "Approval Status must be 'Approved' or 'Rejected'"
 msgstr "crwdns105280:0crwdne105280:0"
 
 #: frontend/src/components/RequestActionSheet.vue:108
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:108
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:119
 msgid "Approve"
 msgstr "crwdns140998:0crwdne140998:0"
 
@@ -1443,14 +1442,16 @@ msgid "Assign Salary Structure to {0} employee(s)?"
 msgstr "crwdns141014:0{0}crwdne141014:0"
 
 #. Option for the 'Action' (Select) field in DocType 'Shift Assignment Tool'
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:99
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:110
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 msgid "Assign Shift"
 msgstr "crwdns141016:0crwdne141016:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:236
-msgid "Assign Shift to {0} employee(s)?"
-msgstr "crwdns141018:0{0}crwdne141018:0"
+#. Option for the 'Action' (Select) field in DocType 'Shift Assignment Tool'
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:114
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
+msgid "Assign Shift Schedule"
+msgstr "crwdns151970:0crwdne151970:0"
 
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.js:53
 msgid "Assign Structure"
@@ -1460,14 +1461,6 @@ msgstr "crwdns141020:0crwdne141020:0"
 msgid "Assigning Salary Structure"
 msgstr "crwdns141022:0crwdne141022:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:249
-msgid "Assigning Shift"
-msgstr "crwdns141024:0crwdne141024:0"
-
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:175
-msgid "Assigning Shift..."
-msgstr "crwdns141026:0crwdne141026:0"
-
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.py:113
 msgid "Assigning Structure..."
 msgstr "crwdns141028:0crwdne141028:0"
@@ -1475,6 +1468,10 @@ msgstr "crwdns141028:0crwdne141028:0"
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:282
 msgid "Assigning Structures..."
 msgstr "crwdns105316:0crwdne105316:0"
+
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:270
+msgid "Assigning..."
+msgstr "crwdns151972:0crwdne151972:0"
 
 #. Label of the assignment_based_on (Select) field in DocType 'Leave Policy
 #. Assignment'
@@ -1521,8 +1518,8 @@ msgstr "crwdns141038:0crwdne141038:0"
 
 #. Name of a DocType
 #. Label of the attendance (Select) field in DocType 'Training Event Employee'
-#. Label of a Card Break in the HR Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Card Break in the Overview Workspace
+#. Label of a Link in the Overview Workspace
 #. Label of a Card Break in the Shift & Attendance Workspace
 #. Label of a Link in the Shift & Attendance Workspace
 #. Label of a shortcut in the Shift & Attendance Workspace
@@ -1531,7 +1528,7 @@ msgstr "crwdns141038:0crwdne141038:0"
 #: frontend/src/components/BottomTabs.vue:48
 #: hrms/hr/doctype/attendance/attendance.json
 #: hrms/hr/doctype/training_event_employee/training_event_employee.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 #: hrms/overrides/dashboard_overrides.py:10
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
@@ -1543,11 +1540,6 @@ msgstr "crwdns105332:0crwdne105332:0"
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Attendance Count"
 msgstr "crwdns105340:0crwdne105340:0"
-
-#. Label of a shortcut in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
-msgid "Attendance Dashboard"
-msgstr "crwdns105342:0crwdne105342:0"
 
 #. Label of the attendance_date (Date) field in DocType 'Attendance'
 #: hrms/hr/doctype/attendance/attendance.json
@@ -1577,11 +1569,11 @@ msgstr "crwdns105354:0crwdne105354:0"
 
 #. Label of the attendance_request (Link) field in DocType 'Attendance'
 #. Name of a DocType
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #. Label of a Link in the Shift & Attendance Workspace
 #: hrms/hr/doctype/attendance/attendance.json
 #: hrms/hr/doctype/attendance_request/attendance_request.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Attendance Request"
 msgstr "crwdns105358:0crwdne105358:0"
@@ -1637,7 +1629,7 @@ msgstr "crwdns141046:0crwdne141046:0"
 msgid "Attendance from {0} to {1} has already been marked for the Employee {2}"
 msgstr "crwdns105382:0{0}crwdnd105382:0{1}crwdnd105382:0{2}crwdne105382:0"
 
-#: hrms/hr/doctype/shift_type/shift_type.js:47
+#: hrms/hr/doctype/shift_type/shift_type.js:34
 msgid "Attendance has been marked as per employee check-ins"
 msgstr "crwdns105384:0crwdne105384:0"
 
@@ -1779,7 +1771,7 @@ msgstr "crwdns141080:0crwdne141080:0"
 msgid "Bank Details"
 msgstr "crwdns141082:0crwdne141082:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:147
+#: hrms/hr/doctype/expense_claim/expense_claim.js:155
 msgid "Bank Entries"
 msgstr "crwdns105434:0crwdne105434:0"
 
@@ -1932,7 +1924,7 @@ msgstr "crwdns105494:0crwdne105494:0"
 #. Label of the branch (Link) field in DocType 'Employee Attendance Tool'
 #. Label of the branch (Link) field in DocType 'Leave Control Panel'
 #. Label of the branch (Link) field in DocType 'Shift Assignment Tool'
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #. Label of the branch (Link) field in DocType 'Bulk Salary Structure
 #. Assignment'
 #. Label of the branch (Link) field in DocType 'Payroll Entry'
@@ -1941,11 +1933,11 @@ msgstr "crwdns105494:0crwdne105494:0"
 #: hrms/hr/doctype/appraisee/appraisee.json
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.json
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:171
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:194
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/hr/report/employee_analytics/employee_analytics.py:33
 #: hrms/hr/report/employee_birthday/employee_birthday.py:24
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
@@ -1959,10 +1951,6 @@ msgstr "crwdns105496:0crwdne105496:0"
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:193
 msgid "Branch: {0}"
 msgstr "crwdns105512:0{0}crwdne105512:0"
-
-#: hrms/hr/doctype/shift_type/shift_type.js:9
-msgid "Bulk Assign Shift"
-msgstr "crwdns141110:0crwdne141110:0"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:131
 msgid "Bulk Assignments"
@@ -1988,7 +1976,7 @@ msgstr "crwdns141114:0crwdne141114:0"
 
 #. Label of the ctc (Currency) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:536
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:548
 msgid "CTC"
 msgstr "crwdns105520:0crwdne105520:0"
 
@@ -2060,11 +2048,15 @@ msgstr "crwdns105534:0crwdne105534:0"
 msgid "Cancelled"
 msgstr "crwdns141124:0crwdne141124:0"
 
-#: hrms/api/roster.py:116
+#: hrms/hr/doctype/leave_allocation/leave_allocation.py:320
+msgid "Cannot allocate leaves outside the allocation period {0} - {1}"
+msgstr "crwdns151974:0{0}crwdnd151974:0{1}crwdne151974:0"
+
+#: hrms/api/roster.py:139
 msgid "Cannot break shift after end date"
 msgstr "crwdns148512:0crwdne148512:0"
 
-#: hrms/api/roster.py:118
+#: hrms/api/roster.py:141
 msgid "Cannot break shift before start date"
 msgstr "crwdns148514:0crwdne148514:0"
 
@@ -2176,7 +2168,7 @@ msgid "Check Vacancies On Job Offer Creation"
 msgstr "crwdns141136:0crwdne141136:0"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:332
-#: hrms/hr/utils.py:841
+#: hrms/hr/utils.py:846
 msgid "Check {0} for more details"
 msgstr "crwdns105598:0{0}crwdne105598:0"
 
@@ -2260,7 +2252,7 @@ msgstr "crwdns141148:0crwdne141148:0"
 msgid "Cleared"
 msgstr "crwdns141150:0crwdne141150:0"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.js:297
+#: hrms/payroll/doctype/salary_slip/salary_slip.js:292
 msgid "Click {0} to change the configuration and then resave salary slip"
 msgstr "crwdns141152:0{0}crwdne141152:0"
 
@@ -2355,14 +2347,14 @@ msgstr "crwdns105658:0crwdne105658:0"
 #. Label of the company (Link) field in DocType 'Leave Period'
 #. Label of the company (Link) field in DocType 'Leave Policy Assignment'
 #. Label of the company (Link) field in DocType 'Shift Assignment'
-#. Label of the company (Link) field in DocType 'Shift Assignment Schedule'
 #. Label of the company (Link) field in DocType 'Shift Assignment Tool'
 #. Label of the company (Link) field in DocType 'Shift Request'
+#. Label of the company (Link) field in DocType 'Shift Schedule Assignment'
 #. Label of the company (Link) field in DocType 'Staffing Plan'
 #. Label of the company (Link) field in DocType 'Training Event'
 #. Label of the company (Link) field in DocType 'Training Program'
 #. Label of the company (Link) field in DocType 'Travel Request'
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #. Label of the company (Link) field in DocType 'Additional Salary'
 #. Label of the company (Link) field in DocType 'Bulk Salary Structure
 #. Assignment'
@@ -2418,9 +2410,9 @@ msgstr "crwdns105658:0crwdne105658:0"
 #: hrms/hr/doctype/leave_period/leave_period.json
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.json
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/hr/doctype/shift_request/shift_request.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/doctype/staffing_plan/staffing_plan.json
 #: hrms/hr/doctype/training_event/training_event.json
 #: hrms/hr/doctype/training_program/training_program.json
@@ -2445,7 +2437,7 @@ msgstr "crwdns105658:0crwdne105658:0"
 #: hrms/hr/report/recruitment_analytics/recruitment_analytics.js:9
 #: hrms/hr/report/shift_attendance/shift_attendance.js:40
 #: hrms/hr/report/shift_attendance/shift_attendance.py:104
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.json
@@ -2484,11 +2476,12 @@ msgstr "crwdns151176:0crwdne151176:0"
 
 #. Name of a DocType
 #. Label of the compensatory_request (Link) field in DocType 'Leave Allocation'
-#. Label of a Link in the HR Workspace
 #. Label of a Link in the Leaves Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.json
 #: hrms/hr/doctype/leave_allocation/leave_allocation.json
-#: hrms/hr/workspace/hr/hr.json hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Compensatory Leave Request"
 msgstr "crwdns105768:0crwdne105768:0"
 
@@ -2607,7 +2600,7 @@ msgstr "crwdns105826:0crwdne105826:0"
 #. Label of the consider_marked_attendance_on_holidays (Check) field in DocType
 #. 'Payroll Settings'
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
-#: hrms/payroll/doctype/salary_slip/salary_slip.js:287
+#: hrms/payroll/doctype/salary_slip/salary_slip.js:282
 msgid "Consider Marked Attendance on Holidays"
 msgstr "crwdns141186:0crwdne141186:0"
 
@@ -2618,7 +2611,7 @@ msgstr "crwdns105830:0crwdne105830:0"
 #. Label of the consider_unmarked_attendance_as (Select) field in DocType
 #. 'Payroll Settings'
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
-#: hrms/payroll/doctype/salary_slip/salary_slip.js:287
+#: hrms/payroll/doctype/salary_slip/salary_slip.js:282
 msgid "Consider Unmarked Attendance As"
 msgstr "crwdns141188:0crwdne141188:0"
 
@@ -2676,7 +2669,7 @@ msgstr "crwdns105850:0crwdne105850:0"
 #. Label of the cost_center (Link) field in DocType 'Gratuity'
 #. Label of the cost_center (Link) field in DocType 'Payroll Entry'
 #: hrms/hr/doctype/expense_claim/expense_claim.json
-#: hrms/hr/doctype/expense_claim/expense_claim.py:272
+#: hrms/hr/doctype/expense_claim/expense_claim.py:286
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
 #: hrms/hr/doctype/expense_taxes_and_charges/expense_taxes_and_charges.json
 #: hrms/hr/doctype/travel_request/travel_request.json
@@ -2702,10 +2695,6 @@ msgstr "crwdns141204:0crwdne141204:0"
 #: hrms/hr/doctype/travel_request/travel_request.json
 msgid "Costing Details"
 msgstr "crwdns141206:0crwdne141206:0"
-
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:156
-msgid "Could not find any salary slip(s) for the employee {0}"
-msgstr "crwdns149170:0{0}crwdne149170:0"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:1484
 msgid "Could not submit some Salary Slips: {}"
@@ -2750,7 +2739,7 @@ msgstr "crwdns141216:0crwdne141216:0"
 #: hrms/hr/doctype/employee_advance/employee_advance.js:94
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.js:59
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.js:61
-#: hrms/hr/doctype/expense_claim/expense_claim.js:101
+#: hrms/hr/doctype/expense_claim/expense_claim.js:109
 #: hrms/hr/doctype/job_applicant/job_applicant.js:29
 #: hrms/hr/doctype/job_applicant/job_applicant.js:57
 #: hrms/hr/doctype/vehicle_log/vehicle_log.js:21
@@ -2824,9 +2813,9 @@ msgstr "crwdns105926:0crwdne105926:0"
 msgid "Create Separate Payment Entry Against Benefit Claim"
 msgstr "crwdns141222:0crwdne141222:0"
 
-#. Label of the create_shifts_after (Date) field in DocType 'Shift Assignment
-#. Schedule'
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
+#. Label of the create_shifts_after (Date) field in DocType 'Shift Schedule
+#. Assignment'
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 msgid "Create Shifts After"
 msgstr "crwdns148520:0crwdne148520:0"
 
@@ -2834,7 +2823,7 @@ msgstr "crwdns148520:0crwdne148520:0"
 msgid "Creating Appraisals"
 msgstr "crwdns105932:0crwdne105932:0"
 
-#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:438
+#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:437
 msgid "Creating Payment Entries......"
 msgstr "crwdns105934:0crwdne105934:0"
 
@@ -2842,11 +2831,15 @@ msgstr "crwdns105934:0crwdne105934:0"
 msgid "Creating Salary Slips..."
 msgstr "crwdns105936:0crwdne105936:0"
 
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:240
+msgid "Creating {0}..."
+msgstr "crwdns151976:0{0}crwdne151976:0"
+
 #: hrms/hr/report/leave_ledger/leave_ledger.py:41
 msgid "Creation Date"
 msgstr "crwdns141224:0crwdne141224:0"
 
-#: hrms/hr/utils.py:850
+#: hrms/hr/utils.py:855
 msgid "Creation Failed"
 msgstr "crwdns105938:0crwdne105938:0"
 
@@ -2854,9 +2847,9 @@ msgstr "crwdns105938:0crwdne105938:0"
 msgid "Creation of Salary Structure Assignments has been queued. It may take a few minutes."
 msgstr "crwdns141226:0crwdne141226:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:148
-msgid "Creation of Shift Assignments has been queued. It may take a few minutes."
-msgstr "crwdns141228:0crwdne141228:0"
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:194
+msgid "Creation of {0} has been queued. It may take a few minutes."
+msgstr "crwdns151978:0{0}crwdne151978:0"
 
 #. Label of the criteria (Data) field in DocType 'Employee Feedback Criteria'
 #. Label of the criteria (Link) field in DocType 'Employee Feedback Rating'
@@ -2988,7 +2981,7 @@ msgstr "crwdns141248:0crwdne141248:0"
 msgid "Current Work Experience"
 msgstr "crwdns141250:0crwdne141250:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:98
 msgid "Currently, there is no {0} leave period for this date to create/update leave allocation."
 msgstr "crwdns106016:0{0}crwdne106016:0"
 
@@ -3044,12 +3037,12 @@ msgstr "crwdns106030:0crwdne106030:0"
 #. Summary'
 #. Name of a DocType
 #. Label of a Link in the Employee Lifecycle Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/doctype/daily_work_summary/daily_work_summary.json
 #: hrms/hr/doctype/daily_work_summary_group/daily_work_summary_group.json
 #: hrms/hr/page/team_updates/team_updates.js:12
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Daily Work Summary Group"
 msgstr "crwdns106034:0crwdne106034:0"
 
@@ -3060,10 +3053,10 @@ msgstr "crwdns106040:0crwdne106040:0"
 
 #. Name of a report
 #. Label of a Link in the Employee Lifecycle Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/report/daily_work_summary_replies/daily_work_summary_replies.json
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Daily Work Summary Replies"
 msgstr "crwdns106042:0crwdne106042:0"
 
@@ -3072,13 +3065,11 @@ msgstr "crwdns106042:0crwdne106042:0"
 #. Label of a shortcut in the Expense Claims Workspace
 #. Label of a shortcut in the Recruitment Workspace
 #. Label of a shortcut in the Shift & Attendance Workspace
-#. Label of a shortcut in the Payroll Workspace
 #: hrms/hr/doctype/expense_claim/expense_claim.json
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
 #: hrms/hr/workspace/expense_claims/expense_claims.json
 #: hrms/hr/workspace/recruitment/recruitment.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
-#: hrms/payroll/workspace/payroll/payroll.json
 msgid "Dashboard"
 msgstr "crwdns106044:0crwdne106044:0"
 
@@ -3138,7 +3129,7 @@ msgstr "crwdns106070:0crwdne106070:0"
 #: hrms/hr/report/employee_exits/employee_exits.py:32
 #: hrms/payroll/doctype/retention_bonus/retention_bonus.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:528
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:540
 #: hrms/payroll/report/salary_register/salary_register.py:128 hrms/setup.py:396
 msgid "Date of Joining"
 msgstr "crwdns106074:0crwdne106074:0"
@@ -3283,7 +3274,7 @@ msgstr "crwdns148486:0crwdne148486:0"
 msgid "Default Salary Structure"
 msgstr "crwdns141286:0crwdne141286:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:181
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:204
 #: hrms/setup.py:207
 msgid "Default Shift"
 msgstr "crwdns141288:0crwdne141288:0"
@@ -3351,7 +3342,7 @@ msgstr "crwdns141294:0crwdne141294:0"
 #. Label of the department (Link) field in DocType 'Training Event Employee'
 #. Label of the department (Link) field in DocType 'Training Feedback'
 #. Label of the department (Link) field in DocType 'Training Result Employee'
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #. Label of the department (Link) field in DocType 'Additional Salary'
 #. Label of the department (Link) field in DocType 'Bulk Salary Structure
 #. Assignment'
@@ -3398,7 +3389,7 @@ msgstr "crwdns141294:0crwdne141294:0"
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 #: hrms/hr/doctype/leave_encashment/leave_encashment.json
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:176
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:199
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/hr/doctype/shift_request/shift_request.json
 #: hrms/hr/doctype/staffing_plan/staffing_plan.json
@@ -3420,7 +3411,7 @@ msgstr "crwdns141294:0crwdne141294:0"
 #: hrms/hr/report/leave_ledger/leave_ledger.js:54
 #: hrms/hr/report/shift_attendance/shift_attendance.js:34
 #: hrms/hr/report/shift_attendance/shift_attendance.py:97
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.json
@@ -3435,7 +3426,7 @@ msgstr "crwdns141294:0crwdne141294:0"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:33
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:515
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:527
 #: hrms/payroll/report/salary_register/salary_register.py:141
 #: hrms/public/js/salary_slip_deductions_report_filters.js:42 hrms/setup.py:402
 #: hrms/templates/generators/job_opening.html:87
@@ -3451,6 +3442,10 @@ msgstr "crwdns106236:0crwdne106236:0"
 #: hrms/hr/workspace/recruitment/recruitment.json
 msgid "Department Wise Openings"
 msgstr "crwdns106238:0crwdne106238:0"
+
+#: hrms/hr/doctype/expense_claim/expense_claim.py:96
+msgid "Department {0} does not belong to company: {1}"
+msgstr "crwdns152304:0{0}crwdnd152304:0{1}crwdne152304:0"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:195
 msgid "Department: {0}"
@@ -3562,7 +3557,7 @@ msgstr "crwdns141300:0crwdne141300:0"
 #. Label of the designation (Link) field in DocType 'Leave Control Panel'
 #. Label of the designation (Link) field in DocType 'Shift Assignment Tool'
 #. Label of the designation (Link) field in DocType 'Staffing Plan Detail'
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #. Label of the designation (Link) field in DocType 'Bulk Salary Structure
 #. Assignment'
 #. Label of the designation (Data) field in DocType 'Gratuity'
@@ -3599,14 +3594,14 @@ msgstr "crwdns141300:0crwdne141300:0"
 #: hrms/hr/report/employee_exits/employee_exits.js:33
 #: hrms/hr/report/employee_exits/employee_exits.py:72
 #: hrms/hr/report/recruitment_analytics/recruitment_analytics.py:58
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 #: hrms/payroll/doctype/gratuity/gratuity.json
 #: hrms/payroll/doctype/payroll_employee_detail/payroll_employee_detail.json
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:522
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:534
 #: hrms/payroll/report/salary_register/salary_register.py:148
 msgid "Designation"
 msgstr "crwdns106292:0crwdne106292:0"
@@ -3679,7 +3674,7 @@ msgstr "crwdns106378:0{0}crwdnd106378:0{1}crwdne106378:0"
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.json
 #: hrms/payroll/doctype/salary_component/salary_component.json
-#: hrms/payroll/doctype/salary_slip/salary_slip.js:291
+#: hrms/payroll/doctype/salary_slip/salary_slip.js:286
 msgid "Disabled"
 msgstr "crwdns141310:0crwdne141310:0"
 
@@ -3976,16 +3971,16 @@ msgstr "crwdns141362:0crwdne141362:0"
 #. Label of the employee (Link) field in DocType 'Leave Ledger Entry'
 #. Label of the employee (Link) field in DocType 'Leave Policy Assignment'
 #. Label of the employee (Link) field in DocType 'Shift Assignment'
-#. Label of the employee (Link) field in DocType 'Shift Assignment Schedule'
 #. Label of the employee (Link) field in DocType 'Shift Request'
+#. Label of the employee (Link) field in DocType 'Shift Schedule Assignment'
 #. Label of the employee (Link) field in DocType 'Training Event Employee'
 #. Label of the employee (Link) field in DocType 'Training Feedback'
 #. Label of the employee (Link) field in DocType 'Training Result Employee'
 #. Label of the employee (Link) field in DocType 'Travel Request'
 #. Label of the employee (Link) field in DocType 'Vehicle Log'
-#. Label of a Card Break in the HR Workspace
-#. Label of a Link in the HR Workspace
-#. Label of a shortcut in the HR Workspace
+#. Label of a Card Break in the Overview Workspace
+#. Label of a Link in the Overview Workspace
+#. Label of a shortcut in the Overview Workspace
 #. Label of the employee (Link) field in DocType 'Additional Salary'
 #. Label of the employee (Link) field in DocType 'Employee Benefit Application'
 #. Label of the employee (Link) field in DocType 'Employee Benefit Claim'
@@ -4048,11 +4043,12 @@ msgstr "crwdns141362:0crwdne141362:0"
 #: hrms/hr/doctype/leave_type/leave_type.json
 #: hrms/hr/doctype/pwa_notification/pwa_notification.json
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:161
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:202
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:184
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:225
 #: hrms/hr/doctype/shift_location/shift_location.json
 #: hrms/hr/doctype/shift_request/shift_request.json
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/doctype/shift_type/shift_type.json
 #: hrms/hr/doctype/training_event_employee/training_event_employee.json
 #: hrms/hr/doctype/training_feedback/training_feedback.json
@@ -4086,7 +4082,7 @@ msgstr "crwdns141362:0crwdne141362:0"
 #: hrms/hr/report/unpaid_expense_claim/unpaid_expense_claim.py:18
 #: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:57
 #: hrms/hr/report/vehicle_expenses/vehicle_expenses.py:55
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.js:159
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.json
@@ -4101,11 +4097,11 @@ msgstr "crwdns141362:0crwdne141362:0"
 #: hrms/payroll/doctype/retention_bonus/retention_bonus.json
 #: hrms/payroll/doctype/salary_component/salary_component.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:197
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:196
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:26
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:502
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:514
 #: hrms/payroll/report/income_tax_deductions/income_tax_deductions.py:25
 #: hrms/payroll/report/professional_tax_deductions/professional_tax_deductions.py:21
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:20
@@ -4125,11 +4121,11 @@ msgstr "crwdns106578:0crwdne106578:0"
 #. Advance'
 #. Label of a Link in the Expense Claims Workspace
 #. Label of a shortcut in the Expense Claims Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 #: hrms/hr/doctype/expense_claim_advance/expense_claim_advance.json
 #: hrms/hr/workspace/expense_claims/expense_claims.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Employee Advance"
 msgstr "crwdns106580:0crwdne106580:0"
 
@@ -4139,10 +4135,10 @@ msgstr "crwdns151202:0crwdne151202:0"
 
 #. Name of a report
 #. Label of a Link in the Expense Claims Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/report/employee_advance_summary/employee_advance_summary.json
 #: hrms/hr/workspace/expense_claims/expense_claims.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Employee Advance Summary"
 msgstr "crwdns106586:0crwdne106586:0"
 
@@ -4152,10 +4148,10 @@ msgstr "crwdns106588:0crwdne106588:0"
 
 #. Name of a report
 #. Label of a Link in the Employee Lifecycle Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/report/employee_analytics/employee_analytics.json
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Employee Analytics"
 msgstr "crwdns106590:0crwdne106590:0"
 
@@ -4194,10 +4190,10 @@ msgstr "crwdns106606:0crwdne106606:0"
 
 #. Name of a report
 #. Label of a Link in the Employee Lifecycle Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/report/employee_birthday/employee_birthday.json
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Employee Birthday"
 msgstr "crwdns106610:0crwdne106610:0"
 
@@ -4207,11 +4203,11 @@ msgid "Employee Boarding Activity"
 msgstr "crwdns106612:0crwdne106612:0"
 
 #. Name of a DocType
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #. Label of a Link in the Shift & Attendance Workspace
 #. Label of a shortcut in the Shift & Attendance Workspace
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Employee Checkin"
 msgstr "crwdns106614:0crwdne106614:0"
@@ -4235,6 +4231,8 @@ msgstr "crwdns106618:0crwdne106618:0"
 #. and Final Statement'
 #. Label of the employee_details_section (Section Break) field in DocType
 #. 'Shift Assignment'
+#. Label of the shift_details_section (Section Break) field in DocType 'Shift
+#. Schedule Assignment'
 #. Label of the employee_details (Section Break) field in DocType 'Travel
 #. Request'
 #. Label of the employee_section (Section Break) field in DocType 'Employee
@@ -4247,6 +4245,7 @@ msgstr "crwdns106618:0crwdne106618:0"
 #: hrms/hr/doctype/exit_interview/exit_interview.json
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.json
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/doctype/travel_request/travel_request.json
 #: hrms/payroll/doctype/employee_other_income/employee_other_income.json
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
@@ -4268,10 +4267,10 @@ msgstr "crwdns141368:0crwdne141368:0"
 
 #. Name of a report
 #. Label of a Link in the Employee Lifecycle Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/report/employee_exits/employee_exits.json
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Employee Exits"
 msgstr "crwdns106640:0crwdne106640:0"
 
@@ -4296,7 +4295,7 @@ msgstr "crwdns106646:0crwdne106646:0"
 #. Template'
 #. Label of the employee_grade (Link) field in DocType 'Leave Control Panel'
 #. Label of the grade (Link) field in DocType 'Shift Assignment Tool'
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #. Label of the grade (Link) field in DocType 'Bulk Salary Structure
 #. Assignment'
 #: hrms/hr/doctype/employee_grade/employee_grade.json
@@ -4306,7 +4305,7 @@ msgstr "crwdns106646:0crwdne106646:0"
 #: hrms/hr/doctype/employee_separation_template/employee_separation_template.json
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 msgid "Employee Grade"
 msgstr "crwdns106650:0crwdne106650:0"
@@ -4319,8 +4318,8 @@ msgstr "crwdns106650:0crwdne106650:0"
 msgid "Employee Grievance"
 msgstr "crwdns106664:0crwdne106664:0"
 
-#. Label of a Link in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
+#. Label of a Link in the Overview Workspace
+#: hrms/hr/workspace/overview/overview.json
 msgid "Employee Group"
 msgstr "crwdns143254:0crwdne143254:0"
 
@@ -4355,26 +4354,28 @@ msgstr "crwdns141372:0crwdne141372:0"
 
 #. Name of a report
 #. Label of a Link in the Employee Lifecycle Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/report/employee_information/employee_information.json
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Employee Information"
 msgstr "crwdns106682:0crwdne106682:0"
 
 #. Name of a report
-#. Label of a Link in the HR Workspace
 #. Label of a Link in the Leaves Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.json
-#: hrms/hr/workspace/hr/hr.json hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Employee Leave Balance"
 msgstr "crwdns106684:0crwdne106684:0"
 
 #. Name of a report
-#. Label of a Link in the HR Workspace
 #. Label of a Link in the Leaves Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/report/employee_leave_balance_summary/employee_leave_balance_summary.json
-#: hrms/hr/workspace/hr/hr.json hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Employee Leave Balance Summary"
 msgstr "crwdns106686:0crwdne106686:0"
 
@@ -4382,11 +4383,6 @@ msgstr "crwdns106686:0crwdne106686:0"
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
 msgid "Employee Lifecycle"
 msgstr "crwdns106688:0crwdne106688:0"
-
-#. Label of a shortcut in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
-msgid "Employee Lifecycle Dashboard"
-msgstr "crwdns106690:0crwdne106690:0"
 
 #: hrms/setup.py:771
 msgid "Employee Loan"
@@ -4418,9 +4414,9 @@ msgstr "crwdns148896:0crwdne148896:0"
 #. Label of the employee_name (Data) field in DocType 'Leave Encashment'
 #. Label of the employee_name (Data) field in DocType 'Leave Ledger Entry'
 #. Label of the employee_name (Data) field in DocType 'Shift Assignment'
-#. Label of the employee_name (Data) field in DocType 'Shift Assignment
-#. Schedule'
 #. Label of the employee_name (Data) field in DocType 'Shift Request'
+#. Label of the employee_name (Data) field in DocType 'Shift Schedule
+#. Assignment'
 #. Label of the employee_name (Read Only) field in DocType 'Training Event
 #. Employee'
 #. Label of the employee_name (Read Only) field in DocType 'Training Feedback'
@@ -4467,9 +4463,9 @@ msgstr "crwdns148896:0crwdne148896:0"
 #: hrms/hr/doctype/leave_encashment/leave_encashment.json
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:166
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:189
 #: hrms/hr/doctype/shift_request/shift_request.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/doctype/training_event_employee/training_event_employee.json
 #: hrms/hr/doctype/training_feedback/training_feedback.json
 #: hrms/hr/doctype/training_result_employee/training_result_employee.json
@@ -4498,7 +4494,7 @@ msgstr "crwdns148896:0crwdne148896:0"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/report/bank_remittance/bank_remittance.py:32
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:509
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:521
 #: hrms/payroll/report/income_tax_deductions/income_tax_deductions.py:32
 #: hrms/payroll/report/professional_tax_deductions/professional_tax_deductions.py:28
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:27
@@ -4735,7 +4731,7 @@ msgstr "crwdns141394:0crwdne141394:0"
 msgid "Employee records are created using the selected option"
 msgstr "crwdns141396:0crwdne141396:0"
 
-#: hrms/hr/doctype/shift_type/shift_type.py:169
+#: hrms/hr/doctype/shift_type/shift_type.py:168
 msgid "Employee was marked Absent due to missing Employee Checkins."
 msgstr "crwdns106882:0crwdne106882:0"
 
@@ -4817,8 +4813,8 @@ msgstr "crwdns106910:0crwdne106910:0"
 msgid "Employees HTML"
 msgstr "crwdns141398:0crwdne141398:0"
 
-#. Label of a Link in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
+#. Label of a Link in the Overview Workspace
+#: hrms/hr/workspace/overview/overview.json
 msgid "Employees Working on a Holiday"
 msgstr "crwdns106924:0crwdne106924:0"
 
@@ -4883,10 +4879,10 @@ msgid "Enable Push Notifications"
 msgstr "crwdns151206:0crwdne151206:0"
 
 #. Label of the enabled (Check) field in DocType 'Daily Work Summary Group'
-#. Label of the enabled (Check) field in DocType 'Shift Assignment Schedule'
+#. Label of the enabled (Check) field in DocType 'Shift Schedule Assignment'
 #: hrms/hr/doctype/daily_work_summary_group/daily_work_summary_group.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
-#: hrms/payroll/doctype/salary_slip/salary_slip.js:290
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
+#: hrms/payroll/doctype/salary_slip/salary_slip.js:285
 msgid "Enabled"
 msgstr "crwdns141406:0crwdne141406:0"
 
@@ -5003,7 +4999,7 @@ msgstr "crwdns107002:0crwdne107002:0"
 msgid "Enter the Standard Working Hours for a normal work day. These hours will be used in calculations of reports such as Employee Hours Utilization and Project Profitability analysis."
 msgstr "crwdns107004:0crwdne107004:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.js:201
+#: hrms/hr/doctype/leave_allocation/leave_allocation.js:222
 msgid "Enter the number of leaves you want to allocate for the period."
 msgstr "crwdns107006:0crwdne107006:0"
 
@@ -5027,7 +5023,7 @@ msgid "Error"
 msgstr "crwdns107008:0crwdne107008:0"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:334
-#: hrms/hr/utils.py:843
+#: hrms/hr/utils.py:848
 msgid "Error Log"
 msgstr "crwdns107010:0crwdne107010:0"
 
@@ -5110,21 +5106,18 @@ msgstr "crwdns107034:0crwdne107034:0"
 msgid "Event Status"
 msgstr "crwdns141428:0crwdne141428:0"
 
-#. Option for the 'Frequency' (Select) field in DocType 'Shift Assignment
-#. Schedule'
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
+#. Option for the 'Frequency' (Select) field in DocType 'Shift Schedule'
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
 msgid "Every 2 Weeks"
 msgstr "crwdns148524:0crwdne148524:0"
 
-#. Option for the 'Frequency' (Select) field in DocType 'Shift Assignment
-#. Schedule'
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
+#. Option for the 'Frequency' (Select) field in DocType 'Shift Schedule'
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
 msgid "Every 3 Weeks"
 msgstr "crwdns148526:0crwdne148526:0"
 
-#. Option for the 'Frequency' (Select) field in DocType 'Shift Assignment
-#. Schedule'
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
+#. Option for the 'Frequency' (Select) field in DocType 'Shift Schedule'
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
 msgid "Every 4 Weeks"
 msgstr "crwdns148528:0crwdne148528:0"
 
@@ -5134,9 +5127,8 @@ msgstr "crwdns148528:0crwdne148528:0"
 msgid "Every Valid Check-in and Check-out"
 msgstr "crwdns141430:0crwdne141430:0"
 
-#. Option for the 'Frequency' (Select) field in DocType 'Shift Assignment
-#. Schedule'
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
+#. Option for the 'Frequency' (Select) field in DocType 'Shift Schedule'
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
 msgid "Every Week"
 msgstr "crwdns148530:0crwdne148530:0"
 
@@ -5349,14 +5341,15 @@ msgstr "crwdns141464:0crwdne141464:0"
 #. Name of a DocType
 #. Label of a Link in the Expense Claims Workspace
 #. Label of a shortcut in the Expense Claims Workspace
-#. Label of a Card Break in the HR Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Card Break in the Overview Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/doctype/employee_advance/employee_advance.js:62
 #: hrms/hr/doctype/expense_claim/expense_claim.json
 #: hrms/hr/doctype/vehicle_log/vehicle_log.js:17
 #: hrms/hr/report/unpaid_expense_claim/unpaid_expense_claim.py:20
 #: hrms/hr/workspace/expense_claims/expense_claims.json
-#: hrms/hr/workspace/hr/hr.json hrms/public/js/erpnext/delivery_trip.js:8
+#: hrms/hr/workspace/overview/overview.json
+#: hrms/public/js/erpnext/delivery_trip.js:8
 msgid "Expense Claim"
 msgstr "crwdns107130:0crwdne107130:0"
 
@@ -5383,7 +5376,7 @@ msgstr "crwdns151220:0crwdne151220:0"
 #. Name of a DocType
 #. Label of the expense_type (Data) field in DocType 'Expense Claim Type'
 #. Label of a Link in the Expense Claims Workspace
-#: hrms/hr/doctype/expense_claim/expense_claim.py:482
+#: hrms/hr/doctype/expense_claim/expense_claim.py:496
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
 #: hrms/hr/doctype/expense_claim_type/expense_claim_type.json
 #: hrms/hr/workspace/expense_claims/expense_claims.json
@@ -5404,11 +5397,6 @@ msgstr "crwdns107148:0{0}crwdne107148:0"
 #: hrms/hr/workspace/expense_claims/expense_claims.json
 msgid "Expense Claims"
 msgstr "crwdns107150:0crwdne107150:0"
-
-#. Label of a shortcut in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
-msgid "Expense Claims Dashboard"
-msgstr "crwdns107152:0crwdne107152:0"
 
 #. Label of the expense_date (Date) field in DocType 'Expense Claim Detail'
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
@@ -5497,7 +5485,7 @@ msgstr "crwdns107184:0crwdne107184:0"
 msgid "Failed"
 msgstr "crwdns141484:0crwdne141484:0"
 
-#: hrms/hr/utils.py:838
+#: hrms/hr/utils.py:843
 msgid "Failed to create/submit {0} for employees:"
 msgstr "crwdns107188:0{0}crwdne107188:0"
 
@@ -5829,9 +5817,9 @@ msgstr "crwdns107314:0crwdne107314:0"
 msgid "Frappe HR"
 msgstr "crwdns151228:0crwdne151228:0"
 
-#. Label of the frequency (Select) field in DocType 'Shift Assignment Schedule'
+#. Label of the frequency (Select) field in DocType 'Shift Schedule'
 #. Label of the frequency (Select) field in DocType 'Vehicle Service'
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
 #: hrms/hr/doctype/vehicle_service/vehicle_service.json
 msgid "Frequency"
 msgstr "crwdns141546:0crwdne141546:0"
@@ -5875,7 +5863,7 @@ msgstr "crwdns141548:0crwdne141548:0"
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
 #: hrms/hr/doctype/leave_period/leave_period.json
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:212
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:235
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/hr/doctype/shift_request/shift_request.json
 #: hrms/hr/doctype/staffing_plan/staffing_plan.json
@@ -5898,7 +5886,7 @@ msgid "From Date"
 msgstr "crwdns107324:0crwdne107324:0"
 
 #: hrms/hr/doctype/staffing_plan/staffing_plan.py:29
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:259
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:258
 msgid "From Date cannot be greater than To Date"
 msgstr "crwdns107346:0crwdne107346:0"
 
@@ -6277,8 +6265,7 @@ msgstr "crwdns107500:0crwdne107500:0"
 msgid "Guest"
 msgstr "crwdns107502:0crwdne107502:0"
 
-#. Name of a Workspace
-#: hrms/hr/workspace/hr/hr.json hrms/setup.py:315
+#: hrms/setup.py:315
 msgid "HR"
 msgstr "crwdns107504:0crwdne107504:0"
 
@@ -6290,8 +6277,8 @@ msgstr "crwdns148898:0crwdne148898:0"
 msgid "HR & Payroll Settings"
 msgstr "crwdns148900:0crwdne148900:0"
 
-#. Label of a shortcut in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
+#. Label of a shortcut in the Overview Workspace
+#: hrms/hr/workspace/overview/overview.json
 msgid "HR Dashboard"
 msgstr "crwdns107506:0crwdne107506:0"
 
@@ -6338,9 +6325,10 @@ msgstr "crwdns107506:0crwdne107506:0"
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.json
 #: hrms/hr/doctype/leave_type/leave_type.json
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
 #: hrms/hr/doctype/shift_location/shift_location.json
 #: hrms/hr/doctype/shift_request/shift_request.json
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/doctype/shift_type/shift_type.json hrms/hr/doctype/skill/skill.json
 #: hrms/hr/doctype/staffing_plan/staffing_plan.json
 #: hrms/hr/doctype/training_event/training_event.json
@@ -6370,10 +6358,10 @@ msgid "HR Manager"
 msgstr "crwdns107508:0crwdne107508:0"
 
 #. Name of a DocType
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 #: hrms/hr/doctype/leave_application/leave_application.py:165
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "HR Settings"
 msgstr "crwdns107510:0crwdne107510:0"
 
@@ -6421,10 +6409,11 @@ msgstr "crwdns107510:0crwdne107510:0"
 #: hrms/hr/doctype/leave_type/leave_type.json
 #: hrms/hr/doctype/offer_term/offer_term.json
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/hr/doctype/shift_location/shift_location.json
 #: hrms/hr/doctype/shift_request/shift_request.json
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/doctype/shift_type/shift_type.json
 #: hrms/hr/doctype/staffing_plan/staffing_plan.json
 #: hrms/hr/doctype/upload_attendance/upload_attendance.json
@@ -6478,7 +6467,7 @@ msgstr "crwdns141600:0crwdne141600:0"
 msgid "Half Day Date"
 msgstr "crwdns141602:0crwdne141602:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:26
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:27
 msgid "Half Day Date is mandatory"
 msgstr "crwdns107554:0crwdne107554:0"
 
@@ -6486,7 +6475,7 @@ msgstr "crwdns107554:0crwdne107554:0"
 msgid "Half Day Date should be between From Date and To Date"
 msgstr "crwdns107556:0crwdne107556:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:28
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:29
 msgid "Half Day Date should be in between Work From Date and Work End Date"
 msgstr "crwdns107558:0crwdne107558:0"
 
@@ -6559,11 +6548,6 @@ msgstr "crwdns107578:0crwdne107578:0"
 msgid "Hiring Settings"
 msgstr "crwdns141614:0crwdne141614:0"
 
-#. Label of a chart in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
-msgid "Hiring vs Attrition Count"
-msgstr "crwdns107582:0crwdne107582:0"
-
 #. Option for the 'Status' (Select) field in DocType 'Job Applicant'
 #: hrms/hr/doctype/job_applicant/job_applicant.json
 msgid "Hold"
@@ -6609,7 +6593,7 @@ msgstr "crwdns107604:0crwdne107604:0"
 msgid "Holidays this Week."
 msgstr "crwdns107606:0crwdne107606:0"
 
-#: frontend/src/components/BottomTabs.vue:43
+#: frontend/src/components/BottomTabs.vue:43 hrms/www/jobs/index.py:13
 msgid "Home"
 msgstr "crwdns151240:0crwdne151240:0"
 
@@ -6809,12 +6793,12 @@ msgid "In case of any error during this background process, the system will add 
 msgstr "crwdns107688:0crwdne107688:0"
 
 #. Option for the 'Status' (Select) field in DocType 'Shift Assignment'
-#. Option for the 'Status' (Select) field in DocType 'Shift Assignment
-#. Schedule'
 #. Option for the 'Status' (Select) field in DocType 'Shift Assignment Tool'
+#. Option for the 'Shift Status' (Select) field in DocType 'Shift Schedule
+#. Assignment'
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.js:45
 #: hrms/hr/report/employee_leave_balance_summary/employee_leave_balance_summary.js:41
 #: hrms/hr/report/leave_ledger/leave_ledger.js:39
@@ -6914,7 +6898,7 @@ msgstr "crwdns107716:0crwdne107716:0"
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.json
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:142
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:530
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:542
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Income Tax Slab"
@@ -7173,6 +7157,10 @@ msgstr "crwdns141714:0crwdne141714:0"
 msgid "Invalid"
 msgstr "crwdns141716:0crwdne141716:0"
 
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:183
+msgid "Invalid Action"
+msgstr "crwdns151980:0crwdne151980:0"
+
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:164
 msgid "Invalid Additional Salary"
 msgstr "crwdns141718:0crwdne141718:0"
@@ -7180,6 +7168,14 @@ msgstr "crwdns141718:0crwdne141718:0"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:142
 msgid "Invalid Cost Center"
 msgstr "crwdns151884:0crwdne151884:0"
+
+#: hrms/hr/doctype/leave_allocation/leave_allocation.py:323
+msgid "Invalid Dates"
+msgstr "crwdns151982:0crwdne151982:0"
+
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:25
+msgid "Invalid Leave Ledger Entry"
+msgstr "crwdns152170:0crwdne152170:0"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:319
 msgid "Invalid Payroll Payable Account. The account currency must be {0} or {1}"
@@ -7554,8 +7550,8 @@ msgstr "crwdns108012:0crwdne108012:0"
 msgid "Key Performance Area"
 msgstr "crwdns141776:0crwdne141776:0"
 
-#. Label of a Card Break in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
+#. Label of a Card Break in the Overview Workspace
+#: hrms/hr/workspace/overview/overview.json
 msgid "Key Reports"
 msgstr "crwdns108020:0crwdne108020:0"
 
@@ -7669,13 +7665,13 @@ msgstr "crwdns141798:0crwdne141798:0"
 
 #. Label of the leave_application (Link) field in DocType 'Attendance'
 #. Name of a DocType
-#. Label of a Link in the HR Workspace
-#. Label of a shortcut in the HR Workspace
 #. Label of a Link in the Leaves Workspace
 #. Label of a shortcut in the Leaves Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/doctype/attendance/attendance.json
 #: hrms/hr/doctype/leave_application/leave_application.json
-#: hrms/hr/workspace/hr/hr.json hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Leave Application"
 msgstr "crwdns108064:0crwdne108064:0"
 
@@ -7801,6 +7797,10 @@ msgstr "crwdns141820:0crwdne141820:0"
 msgid "Leave Ledger Entry"
 msgstr "crwdns108116:0crwdne108116:0"
 
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:18
+msgid "Leave Ledger Entry's To date needs to be after From date. Currently, From Date is {0} and To Date is {1}"
+msgstr "crwdns152172:0{0}crwdnd152172:0{1}crwdne152172:0"
+
 #. Label of the leave_period (Link) field in DocType 'Leave Allocation'
 #. Option for the 'Dates Based On' (Select) field in DocType 'Leave Control
 #. Panel'
@@ -7915,7 +7915,7 @@ msgstr "crwdns108184:0crwdne108184:0"
 msgid "Leave Type can either be without pay or partial pay"
 msgstr "crwdns108186:0crwdne108186:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:33
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:34
 msgid "Leave Type is mandatory"
 msgstr "crwdns108188:0crwdne108188:0"
 
@@ -7923,7 +7923,7 @@ msgstr "crwdns108188:0crwdne108188:0"
 msgid "Leave Type {0} cannot be allocated since it is leave without pay"
 msgstr "crwdns108190:0{0}crwdne108190:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.py:466
+#: hrms/hr/doctype/leave_allocation/leave_allocation.py:479
 msgid "Leave Type {0} cannot be carry-forwarded"
 msgstr "crwdns108192:0{0}crwdne108192:0"
 
@@ -7942,7 +7942,7 @@ msgstr "crwdns108196:0crwdne108196:0"
 msgid "Leave Without Pay does not match with approved {} records"
 msgstr "crwdns108200:0crwdne108200:0"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:41
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:54
 msgid "Leave allocation {0} is linked with the Leave Application {1}"
 msgstr "crwdns108202:0{0}crwdnd108202:0{1}crwdne108202:0"
 
@@ -7986,16 +7986,17 @@ msgid "Leave(s) Taken"
 msgstr "crwdns108220:0crwdne108220:0"
 
 #. Label of the leaves (Float) field in DocType 'Leave Ledger Entry'
-#. Label of a Card Break in the HR Workspace
 #. Name of a Workspace
+#. Label of a Card Break in the Overview Workspace
 #. Label of the leave_details_section (Tab Break) field in DocType 'Salary
 #. Slip'
 #: frontend/src/components/BottomTabs.vue:53
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
 #: hrms/hr/doctype/leave_policy/leave_policy_dashboard.py:8
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment_dashboard.py:8
-#: hrms/hr/report/leave_ledger/leave_ledger.py:59 hrms/hr/workspace/hr/hr.json
+#: hrms/hr/report/leave_ledger/leave_ledger.py:59
 #: hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Leaves"
 msgstr "crwdns108222:0crwdne108222:0"
@@ -8102,7 +8103,7 @@ msgstr "crwdns108270:0crwdne108270:0"
 msgid "Loan Repayment Entry"
 msgstr "crwdns141852:0crwdne141852:0"
 
-#: hrms/hr/utils.py:726
+#: hrms/hr/utils.py:730
 msgid "Loan cannot be repayed from salary for Employee {0} because salary is processed in currency {1}"
 msgstr "crwdns108274:0{0}crwdnd108274:0{1}crwdne108274:0"
 
@@ -8202,8 +8203,8 @@ msgid "Mandatory"
 msgstr "crwdns108302:0crwdne108302:0"
 
 #: hrms/public/js/utils/index.js:37
-msgid "Mandatory fields required for this action"
-msgstr "crwdns141864:0crwdne141864:0"
+msgid "Mandatory fields required for this action:"
+msgstr "crwdns151984:0crwdne151984:0"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.js:192
 msgid "Mandatory fields required in {0}"
@@ -8230,7 +8231,7 @@ msgstr "crwdns108308:0crwdne108308:0"
 #: hrms/hr/doctype/attendance/attendance_list.js:25
 #: hrms/hr/doctype/attendance/attendance_list.js:128
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.js:174
-#: hrms/hr/doctype/shift_type/shift_type.js:22
+#: hrms/hr/doctype/shift_type/shift_type.js:13
 msgid "Mark Attendance"
 msgstr "crwdns108310:0crwdne108310:0"
 
@@ -8392,8 +8393,8 @@ msgstr "crwdns141902:0crwdne141902:0"
 
 #. Label of the max_leaves_allowed (Float) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
-msgid "Maximum Leave Allocation Allowed"
-msgstr "crwdns141904:0crwdne141904:0"
+msgid "Maximum Leave Allocation Allowed per Leave Period"
+msgstr "crwdns151986:0crwdne151986:0"
 
 #: hrms/payroll/doctype/employee_benefit_claim/employee_benefit_claim.py:65
 msgid "Maximum amount eligible for the component {0} exceeds {1}"
@@ -8468,7 +8469,13 @@ msgstr "crwdns141910:0crwdne141910:0"
 msgid "Minimum Year for Gratuity"
 msgstr "crwdns141912:0crwdne141912:0"
 
-#: hrms/hr/utils.py:822
+#. Description of the 'Allow Leave Application After (Working Days)' (Int)
+#. field in DocType 'Leave Type'
+#: hrms/hr/doctype/leave_type/leave_type.json
+msgid "Minimum working days required since Date of Joining to apply for this leave"
+msgstr "crwdns151988:0crwdne151988:0"
+
+#: hrms/hr/utils.py:827
 msgid "Missing Field"
 msgstr "crwdns141914:0crwdne141914:0"
 
@@ -8481,7 +8488,7 @@ msgstr "crwdns108406:0crwdne108406:0"
 msgid "Missing Mandatory Field"
 msgstr "crwdns141916:0crwdne141916:0"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:167
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:165
 msgid "Missing Opening Entries"
 msgstr "crwdns149172:0crwdne149172:0"
 
@@ -8514,7 +8521,7 @@ msgstr "crwdns141922:0crwdne141922:0"
 msgid "Mode of Travel"
 msgstr "crwdns141924:0crwdne141924:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:278
+#: hrms/hr/doctype/expense_claim/expense_claim.py:292
 msgid "Mode of payment is required to make a payment"
 msgstr "crwdns108422:0crwdne108422:0"
 
@@ -8569,10 +8576,10 @@ msgid "Monthly"
 msgstr "crwdns141930:0crwdne141930:0"
 
 #. Name of a report
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #. Label of a Link in the Shift & Attendance Workspace
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Monthly Attendance Sheet"
 msgstr "crwdns108450:0crwdne108450:0"
@@ -8601,7 +8608,7 @@ msgstr "crwdns108460:0{0}crwdnd108460:0{1}crwdnd108460:0{2}crwdne108460:0"
 msgid "Multiple Shift Assignments"
 msgstr "crwdns108462:0crwdne108462:0"
 
-#: hrms/www/jobs/index.py:12
+#: hrms/www/jobs/index.py:15
 msgid "My Account"
 msgstr "crwdns108464:0crwdne108464:0"
 
@@ -8726,8 +8733,8 @@ msgid "New Leaves Allocated (In Days)"
 msgstr "crwdns141950:0crwdne141950:0"
 
 #. Description of the 'Create Shifts After' (Date) field in DocType 'Shift
-#. Assignment Schedule'
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
+#. Schedule Assignment'
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 msgid "New shift assignments will be created after this date."
 msgstr "crwdns148538:0crwdne148538:0"
 
@@ -8756,7 +8763,7 @@ msgstr "crwdns108518:0crwdne108518:0"
 msgid "No Employee found for the given employee field value. '{}': {}"
 msgstr "crwdns108520:0crwdne108520:0"
 
-#: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.py:111 hrms/hr/utils.py:828
+#: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.py:111 hrms/hr/utils.py:833
 msgid "No Employees Selected"
 msgstr "crwdns108522:0crwdne108522:0"
 
@@ -8764,7 +8771,7 @@ msgstr "crwdns108522:0crwdne108522:0"
 msgid "No Interview has been scheduled."
 msgstr "crwdns141954:0crwdne141954:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:104
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:105
 msgid "No Leave Period Found"
 msgstr "crwdns108524:0crwdne108524:0"
 
@@ -8772,7 +8779,7 @@ msgstr "crwdns108524:0crwdne108524:0"
 msgid "No Leaves Allocated to Employee: {0} for Leave Type: {1}"
 msgstr "crwdns108526:0{0}crwdnd108526:0{1}crwdne108526:0"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:266
+#: hrms/payroll/doctype/gratuity/gratuity.py:267
 msgid "No Salary Slip found for Employee: {0}"
 msgstr "crwdns141956:0{0}crwdne141956:0"
 
@@ -8788,7 +8795,7 @@ msgstr "crwdns108530:0{0}crwdnd108530:0{1}crwdne108530:0"
 msgid "No Salary Structures"
 msgstr "crwdns141958:0crwdne141958:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:190
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:255
 msgid "No Shift Requests Selected"
 msgstr "crwdns141960:0crwdne141960:0"
 
@@ -8808,15 +8815,15 @@ msgstr "crwdns108536:0{0}crwdne108536:0"
 msgid "No additional expenses has been added"
 msgstr "crwdns108538:0crwdne108538:0"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:282
+#: hrms/payroll/doctype/gratuity/gratuity.py:283
 msgid "No applicable Earning component found in last salary slip for Gratuity Rule: {0}"
 msgstr "crwdns141962:0{0}crwdne141962:0"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:295
+#: hrms/payroll/doctype/gratuity/gratuity.py:296
 msgid "No applicable Earning components found for Gratuity Rule: {0}"
 msgstr "crwdns141964:0{0}crwdne141964:0"
 
-#: hrms/payroll/doctype/gratuity/gratuity.py:255
+#: hrms/payroll/doctype/gratuity/gratuity.py:256
 msgid "No applicable slab found for the calculation of gratuity amount as per the Gratuity Rule: {0}"
 msgstr "crwdns141966:0{0}crwdne141966:0"
 
@@ -8939,7 +8946,7 @@ msgstr "crwdns108584:0crwdne108584:0"
 msgid "Not Started"
 msgstr "crwdns141984:0crwdne141984:0"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.js:287
+#: hrms/payroll/doctype/salary_slip/salary_slip.js:282
 msgid "Note"
 msgstr "crwdns141986:0crwdne141986:0"
 
@@ -9134,7 +9141,7 @@ msgstr "crwdns108662:0crwdne108662:0"
 msgid "Only Tax Impact (Cannot Claim But Part of Taxable Income)"
 msgstr "crwdns142022:0crwdne142022:0"
 
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:20
+#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:33
 msgid "Only expired allocation can be cancelled"
 msgstr "crwdns108666:0crwdne108666:0"
 
@@ -9220,8 +9227,8 @@ msgstr "crwdns108698:0crwdne108698:0"
 msgid "Other Details"
 msgstr "crwdns142030:0crwdne142030:0"
 
-#. Label of a Card Break in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
+#. Label of a Card Break in the Overview Workspace
+#: hrms/hr/workspace/overview/overview.json
 msgid "Other Reports"
 msgstr "crwdns108706:0crwdne108706:0"
 
@@ -9252,8 +9259,8 @@ msgstr "crwdns108714:0crwdne108714:0"
 msgid "Out of 5"
 msgstr "crwdns142036:0crwdne142036:0"
 
-#. Label of a chart in the Payroll Workspace
-#: hrms/payroll/workspace/payroll/payroll.json
+#. Label of a chart in the Salary Payout Workspace
+#: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Outgoing Salary"
 msgstr "crwdns108720:0crwdne108720:0"
 
@@ -9287,11 +9294,13 @@ msgstr "crwdns108732:0crwdne108732:0"
 
 #. Label of the employee_details_tab (Tab Break) field in DocType 'Appraisal'
 #. Label of the overview_tab (Tab Break) field in DocType 'Appraisal Cycle'
+#. Name of a Workspace
 #. Label of the select_payroll_period (Tab Break) field in DocType 'Payroll
 #. Entry'
 #. Label of the overview_tab (Tab Break) field in DocType 'Salary Component'
 #: hrms/hr/doctype/appraisal/appraisal.json
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/doctype/salary_component/salary_component.json
 msgid "Overview"
@@ -9373,7 +9382,7 @@ msgstr "crwdns142050:0crwdne142050:0"
 msgid "Part-time"
 msgstr "crwdns108778:0crwdne108778:0"
 
-#: hrms/hr/utils.py:847 hrms/public/js/utils/index.js:154
+#: hrms/hr/utils.py:852 hrms/public/js/utils/index.js:154
 msgid "Partial Success"
 msgstr "crwdns108780:0crwdne108780:0"
 
@@ -9433,7 +9442,7 @@ msgstr "crwdns142062:0crwdne142062:0"
 msgid "Payable Account"
 msgstr "crwdns142064:0crwdne142064:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:96
+#: hrms/hr/doctype/expense_claim/expense_claim.py:110
 msgid "Payable Account is mandatory to submit an Expense Claim"
 msgstr "crwdns108806:0crwdne108806:0"
 
@@ -9444,7 +9453,7 @@ msgid "Payables"
 msgstr "crwdns142066:0crwdne142066:0"
 
 #: hrms/hr/doctype/employee_advance/employee_advance.js:50
-#: hrms/hr/doctype/expense_claim/expense_claim.js:97
+#: hrms/hr/doctype/expense_claim/expense_claim.js:105
 #: hrms/hr/doctype/expense_claim/expense_claim_dashboard.py:9
 #: hrms/payroll/doctype/gratuity/gratuity_dashboard.py:10
 msgid "Payment"
@@ -9457,7 +9466,7 @@ msgstr "crwdns108810:0crwdne108810:0"
 msgid "Payment Account"
 msgstr "crwdns142068:0crwdne142068:0"
 
-#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:441
+#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:440
 msgid "Payment Account is mandatory"
 msgstr "crwdns108816:0crwdne108816:0"
 
@@ -9482,7 +9491,7 @@ msgstr "crwdns142070:0crwdne142070:0"
 msgid "Payment Days Dependency"
 msgstr "crwdns108826:0crwdne108826:0"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.js:287
+#: hrms/payroll/doctype/salary_slip/salary_slip.js:282
 msgid "Payment Days calculations are based on these Payroll Settings"
 msgstr "crwdns142072:0crwdne142072:0"
 
@@ -9505,17 +9514,15 @@ msgid "Payment of {0} from {1} to {2}"
 msgstr "crwdns108834:0{0}crwdnd108834:0{1}crwdnd108834:0{2}crwdne108834:0"
 
 #. Label of the payroll (Section Break) field in DocType 'Leave Encashment'
-#. Name of a Workspace
 #. Label of a Card Break in the Salary Payout Workspace
 #: hrms/hr/doctype/leave_encashment/leave_encashment.json
 #: hrms/overrides/dashboard_overrides.py:37
 #: hrms/overrides/dashboard_overrides.py:77
-#: hrms/payroll/workspace/payroll/payroll.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Payroll"
 msgstr "crwdns108836:0crwdne108836:0"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.js:287
+#: hrms/payroll/doctype/salary_slip/salary_slip.js:282
 msgid "Payroll Based On"
 msgstr "crwdns142078:0crwdne142078:0"
 
@@ -9528,6 +9535,11 @@ msgstr "crwdns148908:0crwdne148908:0"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 msgid "Payroll Cost Centers"
 msgstr "crwdns142080:0crwdne142080:0"
+
+#. Label of a shortcut in the Overview Workspace
+#: hrms/hr/workspace/overview/overview.json
+msgid "Payroll Dashboard"
+msgstr "crwdns152330:0crwdne152330:0"
 
 #. Label of the payroll_date (Date) field in DocType 'Additional Salary'
 #. Label of the payroll_date (Date) field in DocType 'Employee Incentive'
@@ -9545,13 +9557,11 @@ msgstr "crwdns108848:0crwdne108848:0"
 
 #. Name of a DocType
 #. Label of the payroll_entry (Link) field in DocType 'Salary Slip'
-#. Label of a Link in the Payroll Workspace
 #. Label of a Link in the Salary Payout Workspace
 #. Label of a shortcut in the Salary Payout Workspace
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.js:61
-#: hrms/payroll/workspace/payroll/payroll.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Payroll Entry"
 msgstr "crwdns108850:0crwdne108850:0"
@@ -9637,10 +9647,10 @@ msgstr "crwdns142088:0crwdne142088:0"
 msgid "Payroll Reports"
 msgstr "crwdns108892:0crwdne108892:0"
 
+#. Label of a Link in the Overview Workspace
 #. Name of a DocType
-#. Label of a Link in the Payroll Workspace
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
-#: hrms/payroll/workspace/payroll/payroll.json
 msgid "Payroll Settings"
 msgstr "crwdns108894:0crwdne108894:0"
 
@@ -9745,7 +9755,7 @@ msgstr "crwdns148542:0crwdne148542:0"
 msgid "Planned number of Positions"
 msgstr "crwdns142106:0crwdne142106:0"
 
-#: hrms/hr/doctype/shift_type/shift_type.js:27
+#: hrms/hr/doctype/shift_type/shift_type.js:16
 msgid "Please Enable Auto Attendance and complete the setup first."
 msgstr "crwdns108938:0crwdne108938:0"
 
@@ -9769,7 +9779,7 @@ msgstr "crwdns108946:0{0}crwdnd108946:0{1}crwdne108946:0"
 msgid "Please confirm once you have completed your training"
 msgstr "crwdns108948:0crwdne108948:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:101
 msgid "Please create a new {0} for the date {1} first."
 msgstr "crwdns108950:0{0}crwdnd108950:0{1}crwdne108950:0"
 
@@ -9810,11 +9820,15 @@ msgstr "crwdns143274:0crwdne143274:0"
 msgid "Please select From Date."
 msgstr "crwdns142110:0crwdne142110:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:144
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:167
+msgid "Please select Shift Schedule and assignment date(s)."
+msgstr "crwdns151990:0crwdne151990:0"
+
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:160
 msgid "Please select Shift Type and assignment date(s)."
 msgstr "crwdns142112:0crwdne142112:0"
 
-#: hrms/hr/utils.py:720
+#: hrms/hr/utils.py:724
 msgid "Please select a Company"
 msgstr "crwdns108964:0crwdne108964:0"
 
@@ -9835,15 +9849,15 @@ msgstr "crwdns108970:0crwdne108970:0"
 msgid "Please select a date."
 msgstr "crwdns108972:0crwdne108972:0"
 
-#: hrms/hr/utils.py:717
+#: hrms/hr/utils.py:721
 msgid "Please select an Applicant"
 msgstr "crwdns108974:0crwdne108974:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:189
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:254
 msgid "Please select at least one Shift Request to perform this action."
 msgstr "crwdns142114:0crwdne142114:0"
 
-#: hrms/hr/utils.py:827
+#: hrms/hr/utils.py:832
 msgid "Please select at least one employee to perform this action."
 msgstr "crwdns142116:0crwdne142116:0"
 
@@ -9928,7 +9942,7 @@ msgstr "crwdns109008:0crwdne109008:0"
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "crwdns109010:0{0}crwdne109010:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:327
+#: hrms/hr/doctype/expense_claim/expense_claim.js:335
 msgid "Please set the Company"
 msgstr "crwdns109012:0crwdne109012:0"
 
@@ -9957,8 +9971,8 @@ msgstr "crwdns109022:0{0}crwdnd109022:0{1}crwdne109022:0"
 msgid "Please set {0} for the Employee: {1}"
 msgstr "crwdns109024:0{0}crwdnd109024:0{1}crwdne109024:0"
 
-#: hrms/hr/doctype/shift_type/shift_type.js:33
-#: hrms/hr/doctype/shift_type/shift_type.js:38
+#: hrms/hr/doctype/shift_type/shift_type.js:21
+#: hrms/hr/doctype/shift_type/shift_type.js:26
 msgid "Please set {0}."
 msgstr "crwdns109026:0{0}crwdne109026:0"
 
@@ -9978,7 +9992,7 @@ msgstr "crwdns109032:0crwdne109032:0"
 msgid "Please specify the job applicant to be updated."
 msgstr "crwdns109034:0crwdne109034:0"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:158
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:156
 msgid "Please specify {0} and {1} (if any), for the correct tax calculation in future salary slips."
 msgstr "crwdns149176:0{0}crwdnd149176:0{1}crwdne149176:0"
 
@@ -10047,7 +10061,7 @@ msgid "Present Records"
 msgstr "crwdns109070:0crwdne109070:0"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:155
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:194
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:193
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.js:73
 msgid "Preview Salary Slip"
 msgstr "crwdns109072:0crwdne109072:0"
@@ -10095,9 +10109,9 @@ msgstr "crwdns142136:0crwdne142136:0"
 msgid "Process Payroll Accounting Entry based on Employee"
 msgstr "crwdns142138:0crwdne142138:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:112
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:119
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:121
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:123
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:130
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:132
 msgid "Process Requests"
 msgstr "crwdns142140:0crwdne142140:0"
 
@@ -10106,19 +10120,19 @@ msgstr "crwdns142140:0crwdne142140:0"
 msgid "Process Shift Requests"
 msgstr "crwdns142142:0crwdne142142:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:266
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:289
 msgid "Process {0} Shift Request(s) as <b>{1}</b>?"
 msgstr "crwdns142144:0{0}crwdnd142144:0{1}crwdne142144:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:282
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:305
 msgid "Processing Requests"
 msgstr "crwdns142146:0crwdne142146:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:228
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:293
 msgid "Processing Requests..."
 msgstr "crwdns142148:0crwdne142148:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:200
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:265
 msgid "Processing of Shift Requests has been queued. It may take a few minutes."
 msgstr "crwdns142150:0crwdne142150:0"
 
@@ -10280,9 +10294,7 @@ msgstr "crwdns142172:0crwdne142172:0"
 msgid "Quick Filters"
 msgstr "crwdns142174:0crwdne142174:0"
 
-#. Label of a Card Break in the Payroll Workspace
 #: frontend/src/components/QuickLinks.vue:3 frontend/src/views/Home.vue:6
-#: hrms/payroll/workspace/payroll/payroll.json
 msgid "Quick Links"
 msgstr "crwdns109150:0crwdne109150:0"
 
@@ -10403,17 +10415,13 @@ msgid "Recruitment"
 msgstr "crwdns109188:0crwdne109188:0"
 
 #. Name of a report
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #. Label of a Link in the Recruitment Workspace
 #: hrms/hr/report/recruitment_analytics/recruitment_analytics.json
-#: hrms/hr/workspace/hr/hr.json hrms/hr/workspace/recruitment/recruitment.json
+#: hrms/hr/workspace/overview/overview.json
+#: hrms/hr/workspace/recruitment/recruitment.json
 msgid "Recruitment Analytics"
 msgstr "crwdns109190:0crwdne109190:0"
-
-#. Label of a shortcut in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
-msgid "Recruitment Dashboard"
-msgstr "crwdns109192:0crwdne109192:0"
 
 #. Option for the 'Roster Color' (Select) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
@@ -10457,7 +10465,7 @@ msgstr "crwdns142200:0crwdne142200:0"
 msgid "Reference Document Type"
 msgstr "crwdns142202:0crwdne142202:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.py:355
+#: hrms/hr/doctype/leave_allocation/leave_allocation.py:368
 #: hrms/hr/doctype/leave_application/leave_application.py:483
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:137
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:91
@@ -10514,7 +10522,7 @@ msgid "Refuelling Details"
 msgstr "crwdns142218:0crwdne142218:0"
 
 #: frontend/src/components/RequestActionSheet.vue:96
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:115
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:126
 msgid "Reject"
 msgstr "crwdns142220:0crwdne142220:0"
 
@@ -10642,7 +10650,7 @@ msgstr "crwdns109282:0crwdne109282:0"
 msgid "Repay From Salary"
 msgstr "crwdns148910:0crwdne148910:0"
 
-#: hrms/hr/utils.py:732
+#: hrms/hr/utils.py:736
 msgid "Repay From Salary can be selected only for term loans"
 msgstr "crwdns109284:0crwdne109284:0"
 
@@ -10652,9 +10660,8 @@ msgstr "crwdns109284:0crwdne109284:0"
 msgid "Repay Unclaimed Amount from Salary"
 msgstr "crwdns142244:0crwdne142244:0"
 
-#. Label of the repeat_on_days (Table) field in DocType 'Shift Assignment
-#. Schedule'
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
+#. Label of the repeat_on_days (Table) field in DocType 'Shift Schedule'
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
 msgid "Repeat On Days"
 msgstr "crwdns148546:0crwdne148546:0"
 
@@ -10897,8 +10904,8 @@ msgid "Role Allowed to Create Backdated Leave Application"
 msgstr "crwdns142294:0crwdne142294:0"
 
 #. Label of a shortcut in the Shift & Attendance Workspace
-#: hrms/hr/doctype/shift_assignment/shift_assignment_list.js:12
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
+#: hrms/public/js/utils/index.js:250 hrms/public/js/utils/index.js:271
 msgid "Roster"
 msgstr "crwdns148548:0crwdne148548:0"
 
@@ -10962,11 +10969,11 @@ msgstr "crwdns109390:0#{0}crwdnd109390:0{1}crwdnd109390:0{2}crwdnd109390:0{3}crw
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "crwdns109392:0#{0}crwdnd109392:0{1}crwdne109392:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:579
+#: hrms/hr/doctype/expense_claim/expense_claim.py:593
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "crwdns109394:0{0}crwdnd109394:0{1}crwdnd109394:0{2}crwdne109394:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:338
+#: hrms/hr/doctype/expense_claim/expense_claim.py:352
 msgid "Row {0}# Allocated amount {1} cannot be greater than unclaimed amount {2}"
 msgstr "crwdns109396:0{0}crwdnd109396:0{1}crwdnd109396:0{2}crwdne109396:0"
 
@@ -10998,7 +11005,7 @@ msgstr "crwdns109406:0{0}crwdnd109406:0{1}crwdnd109406:0{2}crwdnd109406:0{3}crwd
 msgid "Row {0}: {1}"
 msgstr "crwdns142312:0{0}crwdnd142312:0{1}crwdne142312:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:271
+#: hrms/hr/doctype/expense_claim/expense_claim.py:285
 msgid "Row {0}: {1} is required in the expenses table to book an expense claim."
 msgstr "crwdns109408:0{0}crwdnd109408:0{1}crwdne109408:0"
 
@@ -11114,11 +11121,9 @@ msgid "Salary Range"
 msgstr "crwdns109452:0crwdne109452:0"
 
 #. Name of a report
-#. Label of a shortcut in the Payroll Workspace
 #. Label of a Link in the Salary Payout Workspace
 #. Label of a shortcut in the Salary Payout Workspace
 #: hrms/payroll/report/salary_register/salary_register.json
-#: hrms/payroll/workspace/payroll/payroll.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Salary Register"
 msgstr "crwdns109454:0crwdne109454:0"
@@ -11128,14 +11133,12 @@ msgstr "crwdns109454:0crwdne109454:0"
 #. Label of the column_break_rnoq (Section Break) field in DocType 'Payroll
 #. Settings'
 #. Name of a DocType
-#. Label of a Link in the Payroll Workspace
 #. Label of a Link in the Salary Payout Workspace
 #. Label of a shortcut in the Salary Payout Workspace
 #: hrms/hr/doctype/leave_application/leave_application.json
 #: hrms/payroll/doctype/employee_benefit_claim/employee_benefit_claim.json
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/workspace/payroll/payroll.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json hrms/setup.py:302
 msgid "Salary Slip"
 msgstr "crwdns109456:0crwdne109456:0"
@@ -11339,7 +11342,7 @@ msgstr "crwdns151336:0crwdne151336:0"
 msgid "Sanctioned Amount"
 msgstr "crwdns109542:0crwdne109542:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:360
+#: hrms/hr/doctype/expense_claim/expense_claim.py:374
 msgid "Sanctioned Amount cannot be greater than Claim Amount in Row {0}."
 msgstr "crwdns109546:0{0}crwdne109546:0"
 
@@ -11347,11 +11350,6 @@ msgstr "crwdns109546:0{0}crwdne109546:0"
 #: hrms/hr/doctype/leave_block_list/leave_block_list.js:62
 msgid "Saturday"
 msgstr "crwdns109548:0crwdne109548:0"
-
-#. Label of the schedule (Link) field in DocType 'Shift Assignment'
-#: hrms/hr/doctype/shift_assignment/shift_assignment.json
-msgid "Schedule"
-msgstr "crwdns148552:0crwdne148552:0"
 
 #. Option for the 'Status' (Select) field in DocType 'Exit Interview'
 #. Option for the 'Event Status' (Select) field in DocType 'Training Event'
@@ -11404,7 +11402,7 @@ msgstr "crwdns109568:0crwdne109568:0"
 #. Salary Structure Assignment'
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.json
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:102
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:105
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 msgid "Select Employees"
@@ -11435,7 +11433,7 @@ msgstr "crwdns151338:0crwdne151338:0"
 msgid "Select Property"
 msgstr "crwdns109582:0crwdne109582:0"
 
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:123
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:134
 msgid "Select Shift Requests"
 msgstr "crwdns142360:0crwdne142360:0"
 
@@ -11450,11 +11448,11 @@ msgstr "crwdns142362:0crwdne142362:0"
 msgid "Select Users"
 msgstr "crwdns142364:0crwdne142364:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:370
+#: hrms/hr/doctype/expense_claim/expense_claim.js:378
 msgid "Select an employee to get the employee advance."
 msgstr "crwdns109588:0crwdne109588:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.js:179
+#: hrms/hr/doctype/leave_allocation/leave_allocation.js:200
 msgid "Select the Employee for which you want to allocate leaves."
 msgstr "crwdns109590:0crwdne109590:0"
 
@@ -11462,15 +11460,15 @@ msgstr "crwdns109590:0crwdne109590:0"
 msgid "Select the Employee."
 msgstr "crwdns109592:0crwdne109592:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.js:184
+#: hrms/hr/doctype/leave_allocation/leave_allocation.js:205
 msgid "Select the Leave Type like Sick leave, Privilege Leave, Casual Leave, etc."
 msgstr "crwdns109594:0crwdne109594:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.js:196
+#: hrms/hr/doctype/leave_allocation/leave_allocation.js:217
 msgid "Select the date after which this Leave Allocation will expire."
 msgstr "crwdns109596:0crwdne109596:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.js:191
+#: hrms/hr/doctype/leave_allocation/leave_allocation.js:212
 msgid "Select the date from which this Leave Allocation will be valid."
 msgstr "crwdns109598:0crwdne109598:0"
 
@@ -11482,9 +11480,9 @@ msgstr "crwdns109600:0crwdne109600:0"
 msgid "Select the start date for your Leave Application."
 msgstr "crwdns109602:0crwdne109602:0"
 
-#. Description of the 'Enabled' (Check) field in DocType 'Shift Assignment
-#. Schedule'
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
+#. Description of the 'Enabled' (Check) field in DocType 'Shift Schedule
+#. Assignment'
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 msgid "Select this if you want shift assignments to be automatically created indefinitely."
 msgstr "crwdns148554:0crwdne148554:0"
 
@@ -11702,7 +11700,7 @@ msgstr "crwdns149178:0crwdne149178:0"
 msgid "Set optional filters to fetch employees in the appraisee list"
 msgstr "crwdns142410:0crwdne142410:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:481
+#: hrms/hr/doctype/expense_claim/expense_claim.py:495
 msgid "Set the default account for the {0} {1}"
 msgstr "crwdns109690:0{0}crwdnd109690:0{1}crwdne109690:0"
 
@@ -11727,11 +11725,10 @@ msgstr "crwdns142908:0{0}crwdne142908:0"
 
 #. Label of the settings_section (Section Break) field in DocType 'Appraisal
 #. Cycle'
-#. Label of a Card Break in the HR Workspace
-#. Label of a Card Break in the Payroll Workspace
+#. Label of a Card Break in the Overview Workspace
 #: frontend/src/views/AppSettings.vue:17 frontend/src/views/Profile.vue:87
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.json
-#: hrms/hr/workspace/hr/hr.json hrms/payroll/workspace/payroll/payroll.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Settings"
 msgstr "crwdns109696:0crwdne109696:0"
 
@@ -11753,13 +11750,14 @@ msgstr "crwdns109702:0crwdne109702:0"
 msgid "Settled"
 msgstr "crwdns142418:0crwdne142418:0"
 
-#. Label of a Card Break in the HR Workspace
 #. Label of a Card Break in the Leaves Workspace
-#: hrms/hr/workspace/hr/hr.json hrms/hr/workspace/leaves/leaves.json
+#. Label of a Card Break in the Overview Workspace
+#: hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Setup"
 msgstr "crwdns109706:0crwdne109706:0"
 
-#: hrms/hr/utils.py:681
+#: hrms/hr/utils.py:685
 msgid "Shared with the user {0} with 'submit' permisions"
 msgstr "crwdns148500:0{0}crwdne148500:0"
 
@@ -11823,18 +11821,9 @@ msgstr "crwdns151344:0crwdne151344:0"
 
 #. Name of a DocType
 #. Label of a Link in the Shift & Attendance Workspace
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
-#: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
-msgid "Shift Assignment Schedule"
-msgstr "crwdns148556:0crwdne148556:0"
-
-#. Name of a DocType
-#. Label of a Link in the Shift & Attendance Workspace
-#: hrms/hr/doctype/shift_assignment/shift_assignment_list.js:4
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
-#: hrms/hr/doctype/shift_request/shift_request_list.js:3
-#: hrms/hr/doctype/shift_type/shift_type_list.js:3
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
+#: hrms/public/js/utils/index.js:238 hrms/public/js/utils/index.js:260
 msgid "Shift Assignment Tool"
 msgstr "crwdns142426:0crwdne142426:0"
 
@@ -11851,10 +11840,10 @@ msgstr "crwdns109736:0crwdne109736:0"
 
 #. Label of the shift_details_section (Section Break) field in DocType 'Shift
 #. Assignment'
-#. Label of the shift_details_section (Section Break) field in DocType 'Shift
-#. Assignment Schedule'
+#. Label of the schedule_settings_section (Section Break) field in DocType
+#. 'Shift Schedule Assignment'
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 msgid "Shift Details"
 msgstr "crwdns148558:0crwdne148558:0"
 
@@ -11868,10 +11857,15 @@ msgid "Shift End Time"
 msgstr "crwdns109740:0crwdne109740:0"
 
 #. Label of the shift_location (Link) field in DocType 'Shift Assignment'
+#. Label of the shift_location (Link) field in DocType 'Shift Assignment Tool'
 #. Name of a DocType
+#. Label of the shift_location (Link) field in DocType 'Shift Schedule
+#. Assignment'
 #. Label of a Link in the Shift & Attendance Workspace
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/hr/doctype/shift_location/shift_location.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Shift Location"
 msgstr "crwdns149148:0crwdne149148:0"
@@ -11881,7 +11875,7 @@ msgstr "crwdns149148:0crwdne149148:0"
 #. Label of a Link in the Shift & Attendance Workspace
 #. Label of a shortcut in the Shift & Attendance Workspace
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:197
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:220
 #: hrms/hr/doctype/shift_request/shift_request.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Shift Request"
@@ -11908,6 +11902,28 @@ msgstr "crwdns142434:0crwdne142434:0"
 msgid "Shift Requests starting after this date will be excluded."
 msgstr "crwdns142436:0crwdne142436:0"
 
+#. Label of the shift_schedule (Link) field in DocType 'Shift Assignment Tool'
+#. Name of a DocType
+#. Label of the shift_schedule (Link) field in DocType 'Shift Schedule
+#. Assignment'
+#. Label of a Link in the Shift & Attendance Workspace
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
+#: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
+msgid "Shift Schedule"
+msgstr "crwdns151992:0crwdne151992:0"
+
+#. Label of the shift_schedule_assignment (Link) field in DocType 'Shift
+#. Assignment'
+#. Name of a DocType
+#. Label of a Link in the Shift & Attendance Workspace
+#: hrms/hr/doctype/shift_assignment/shift_assignment.json
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
+#: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
+msgid "Shift Schedule Assignment"
+msgstr "crwdns151994:0crwdne151994:0"
+
 #. Label of the shift_settings_section (Section Break) field in DocType 'HR
 #. Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
@@ -11923,27 +11939,38 @@ msgstr "crwdns142440:0crwdne142440:0"
 msgid "Shift Start Time"
 msgstr "crwdns109752:0crwdne109752:0"
 
+#. Label of the shift_status (Select) field in DocType 'Shift Schedule
+#. Assignment'
+#: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
+msgid "Shift Status"
+msgstr "crwdns151996:0crwdne151996:0"
+
 #. Label of the shift_timings_section (Section Break) field in DocType
 #. 'Employee Checkin'
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
 msgid "Shift Timings"
 msgstr "crwdns142442:0crwdne142442:0"
 
+#: hrms/public/js/utils/index.js:246 hrms/public/js/utils/index.js:254
+#: hrms/public/js/utils/index.js:268 hrms/public/js/utils/index.js:275
+msgid "Shift Tools"
+msgstr "crwdns151998:0crwdne151998:0"
+
 #. Label of the shift_type (Link) field in DocType 'Shift Assignment'
-#. Label of the shift_type (Link) field in DocType 'Shift Assignment Schedule'
 #. Label of the shift_type (Link) field in DocType 'Shift Assignment Tool'
 #. Label of the shift_type_filter (Link) field in DocType 'Shift Assignment
 #. Tool'
 #. Label of the shift_type (Link) field in DocType 'Shift Request'
+#. Label of the shift_type (Link) field in DocType 'Shift Schedule'
 #. Name of a DocType
 #. Label of a Link in the Shift & Attendance Workspace
 #: frontend/src/views/attendance/ShiftAssignmentList.vue:24
 #: frontend/src/views/attendance/ShiftRequestList.vue:42
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:207
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:230
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/hr/doctype/shift_request/shift_request.json
+#: hrms/hr/doctype/shift_schedule/shift_schedule.json
 #: hrms/hr/doctype/shift_type/shift_type.json
 #: hrms/hr/report/shift_attendance/shift_attendance.js:28
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
@@ -11975,7 +12002,7 @@ msgstr "crwdns142444:0crwdne142444:0"
 msgid "Show Leaves Of All Department Members In Calendar"
 msgstr "crwdns142446:0crwdne142446:0"
 
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:205
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:204
 msgid "Show Salary Slip"
 msgstr "crwdns109770:0crwdne109770:0"
 
@@ -12054,7 +12081,7 @@ msgstr "crwdns142456:0crwdne142456:0"
 msgid "Source and Rating"
 msgstr "crwdns142458:0crwdne142458:0"
 
-#: hrms/api/roster.py:84
+#: hrms/api/roster.py:100
 msgid "Source and target shifts cannot be the same"
 msgstr "crwdns148560:0crwdne148560:0"
 
@@ -12188,8 +12215,6 @@ msgstr "crwdns142468:0crwdne142468:0"
 #. Label of the status (Select) field in DocType 'Job Requisition'
 #. Label of the status (Select) field in DocType 'Leave Application'
 #. Label of the status (Select) field in DocType 'Shift Assignment'
-#. Label of the shift_status (Select) field in DocType 'Shift Assignment
-#. Schedule'
 #. Label of the status (Select) field in DocType 'Shift Assignment Tool'
 #. Label of the status (Select) field in DocType 'Shift Request'
 #. Label of the status (Select) field in DocType 'Training Event Employee'
@@ -12226,7 +12251,6 @@ msgstr "crwdns142468:0crwdne142468:0"
 #: hrms/hr/doctype/job_requisition/job_requisition.json
 #: hrms/hr/doctype/leave_application/leave_application.json
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
-#: hrms/hr/doctype/shift_assignment_schedule/shift_assignment_schedule.json
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/hr/doctype/shift_request/shift_request.json
 #: hrms/hr/doctype/training_event_employee/training_event_employee.json
@@ -12328,7 +12352,7 @@ msgstr "crwdns109954:0crwdne109954:0"
 msgid "Submitted"
 msgstr "crwdns142480:0crwdne142480:0"
 
-#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:410
+#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:409
 msgid "Submitting Salary Slips and creating Journal Entry..."
 msgstr "crwdns109966:0crwdne109966:0"
 
@@ -12347,13 +12371,13 @@ msgstr "crwdns109970:0{1}crwdnd109970:0{2}crwdnd109970:0{0}crwdnd109970:0{3}crwd
 #: frontend/src/components/RequestActionSheet.vue:309
 #: frontend/src/views/AppSettings.vue:95
 #: hrms/hr/doctype/employee_referral/employee_referral.py:54
-#: hrms/hr/utils.py:852
+#: hrms/hr/utils.py:857
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:1479
 #: hrms/public/js/utils/index.js:139
 msgid "Success"
 msgstr "crwdns109972:0crwdne109972:0"
 
-#: hrms/hr/utils.py:855
+#: hrms/hr/utils.py:860
 msgid "Successfully created {0} for employees:"
 msgstr "crwdns142482:0{0}crwdne142482:0"
 
@@ -12489,7 +12513,7 @@ msgstr "crwdns110006:0crwdne110006:0"
 #. Label of the tax_deducted_till_date (Currency) field in DocType 'Salary
 #. Structure Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:162
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:160
 msgid "Tax Deducted Till Date"
 msgstr "crwdns110008:0crwdne110008:0"
 
@@ -12534,7 +12558,7 @@ msgstr "crwdns142504:0crwdne142504:0"
 #. Label of the taxable_earnings_till_date (Currency) field in DocType 'Salary
 #. Structure Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:161
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:159
 msgid "Taxable Earnings Till Date"
 msgstr "crwdns110026:0crwdne110026:0"
 
@@ -12584,8 +12608,7 @@ msgstr "crwdns151350:0crwdne151350:0"
 msgid "Team Requests"
 msgstr "crwdns151352:0crwdne151352:0"
 
-#. Label of a Link in the HR Workspace
-#: hrms/hr/page/team_updates/team_updates.js:4 hrms/hr/workspace/hr/hr.json
+#: hrms/hr/page/team_updates/team_updates.js:4
 msgid "Team Updates"
 msgstr "crwdns110040:0crwdne110040:0"
 
@@ -12630,7 +12653,7 @@ msgstr "crwdns142522:0crwdne142522:0"
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
 msgstr "crwdns110060:0crwdne110060:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:63
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:64
 msgid "The days between {0} to {1} are not valid holidays."
 msgstr "crwdns110062:0{0}crwdnd110062:0{1}crwdne110062:0"
 
@@ -12695,7 +12718,7 @@ msgstr "crwdns110082:0{0}crwdne110082:0"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:37
 #: hrms/payroll/doctype/employee_incentive/employee_incentive.py:20
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:222
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:202
 msgid "There is no Salary Structure assigned to {0}. First assign a Salary Stucture."
 msgstr "crwdns110084:0{0}crwdne110084:0"
 
@@ -12712,7 +12735,7 @@ msgstr "crwdns142536:0crwdne142536:0"
 msgid "This action will prevent making changes to the linked appraisal feedback/goals."
 msgstr "crwdns110090:0crwdne110090:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:96
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
 msgid "This compensatory leave will be applicable from {0}."
 msgstr "crwdns110092:0{0}crwdne110092:0"
 
@@ -12752,7 +12775,7 @@ msgstr "crwdns142538:0crwdne142538:0"
 msgid "This will overwrite the tax component {0} in the salary slip and tax won't be calculated based on the Income Tax Slabs"
 msgstr "crwdns142540:0{0}crwdne142540:0"
 
-#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:401
+#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:400
 msgid "This will submit Salary Slips and create accrual Journal Entry. Do you want to proceed?"
 msgstr "crwdns110108:0crwdne110108:0"
 
@@ -12861,7 +12884,7 @@ msgstr "crwdns142554:0crwdne142554:0"
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
 #: hrms/hr/doctype/leave_period/leave_period.json
-#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:217
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:240
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/hr/doctype/shift_request/shift_request.json
 #: hrms/hr/doctype/staffing_plan/staffing_plan.json
@@ -12928,10 +12951,6 @@ msgstr "crwdns110192:0crwdne110192:0"
 #: hrms/hr/doctype/leave_application/leave_application.py:177
 msgid "To date cannot be before from date"
 msgstr "crwdns110194:0crwdne110194:0"
-
-#: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:13
-msgid "To date needs to be before from date"
-msgstr "crwdns110196:0crwdne110196:0"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:161
 msgid "To overwrite the salary component amount for a tax component, please enable {0}"
@@ -13223,7 +13242,7 @@ msgstr "crwdns142620:0crwdne142620:0"
 msgid "Total Working Hours"
 msgstr "crwdns110298:0crwdne110298:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:354
+#: hrms/hr/doctype/expense_claim/expense_claim.py:368
 msgid "Total advance amount cannot be greater than total sanctioned amount"
 msgstr "crwdns110302:0crwdne110302:0"
 
@@ -13249,7 +13268,7 @@ msgstr "crwdns142622:0crwdne142622:0"
 msgid "Total in words (Company Currency)"
 msgstr "crwdns142624:0crwdne142624:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.py:351
+#: hrms/hr/doctype/leave_allocation/leave_allocation.py:364
 msgid "Total leaves allocated cannot exceed annual allocation of {0}."
 msgstr "crwdns149072:0{0}crwdne149072:0"
 
@@ -13429,7 +13448,7 @@ msgstr "crwdns142650:0crwdne142650:0"
 msgid "Transactions"
 msgstr "crwdns110396:0crwdne110396:0"
 
-#: hrms/hr/utils.py:703
+#: hrms/hr/utils.py:707
 msgid "Transactions cannot be created for an Inactive Employee {0}."
 msgstr "crwdns110398:0{0}crwdne110398:0"
 
@@ -13469,10 +13488,10 @@ msgstr "crwdns110410:0crwdne110410:0"
 
 #. Name of a DocType
 #. Label of a Link in the Expense Claims Workspace
-#. Label of a Link in the HR Workspace
+#. Label of a Link in the Overview Workspace
 #: hrms/hr/doctype/travel_request/travel_request.json
 #: hrms/hr/workspace/expense_claims/expense_claims.json
-#: hrms/hr/workspace/hr/hr.json
+#: hrms/hr/workspace/overview/overview.json
 msgid "Travel Request"
 msgstr "crwdns110414:0crwdne110414:0"
 
@@ -13760,7 +13779,7 @@ msgstr "crwdns110534:0crwdne110534:0"
 msgid "Validate Attendance"
 msgstr "crwdns142698:0crwdne142698:0"
 
-#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:384
+#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:383
 msgid "Validating Employee Attendance..."
 msgstr "crwdns110538:0crwdne110538:0"
 
@@ -13839,11 +13858,9 @@ msgstr "crwdns110568:0crwdne110568:0"
 #: hrms/hr/doctype/employee_separation/employee_separation.js:19
 #: hrms/hr/doctype/employee_separation/employee_separation.js:28
 #: hrms/hr/doctype/employee_separation/employee_separation.js:35
-#: hrms/hr/doctype/expense_claim/expense_claim.js:125
-#: hrms/hr/doctype/expense_claim/expense_claim.js:156
+#: hrms/hr/doctype/expense_claim/expense_claim.js:133
+#: hrms/hr/doctype/expense_claim/expense_claim.js:164
 #: hrms/hr/doctype/job_applicant/job_applicant.js:42
-#: hrms/hr/doctype/shift_assignment/shift_assignment_list.js:8
-#: hrms/hr/doctype/shift_assignment/shift_assignment_list.js:16
 msgid "View"
 msgstr "crwdns110572:0crwdne110572:0"
 
@@ -13889,7 +13906,7 @@ msgstr "crwdns110578:0crwdne110578:0"
 #: hrms/hr/doctype/leave_application/leave_application.py:406
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:153
 #: hrms/payroll/doctype/salary_component/salary_component.py:56
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:322
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:321
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:52
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:132
 msgid "Warning"
@@ -14130,7 +14147,7 @@ msgstr "crwdns110674:0crwdne110674:0"
 msgid "You are not authorized to approve leaves on Block Dates"
 msgstr "crwdns110676:0crwdne110676:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:57
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:58
 msgid "You are not present all day(s) between compensatory leave request days"
 msgstr "crwdns110678:0crwdne110678:0"
 
@@ -14170,7 +14187,7 @@ msgstr "crwdns110692:0crwdne110692:0"
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr "crwdns149150:0{0}crwdne149150:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:51
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:52
 msgid "You were only present for Half Day on {}. Cannot apply for a full day compensatory leave"
 msgstr "crwdns110694:0crwdne110694:0"
 
@@ -14182,7 +14199,7 @@ msgstr "crwdns110696:0{0}crwdnd110696:0{1}crwdnd110696:0{2}crwdnd110696:0{3}crwd
 msgid "Your password has expired. Please reset your password to continue"
 msgstr "crwdns151382:0crwdne151382:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:99
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:100
 msgid "active"
 msgstr "crwdns110698:0crwdne110698:0"
 
@@ -14262,7 +14279,7 @@ msgstr "crwdns142774:0crwdne142774:0"
 msgid "{0} & {1}"
 msgstr "crwdns110716:0{0}crwdnd110716:0{1}crwdne110716:0"
 
-#: frontend/src/components/ExpenseClaimItem.vue:86
+#: frontend/src/components/ExpenseClaimItem.vue:84
 msgid "{0} & {1} more"
 msgstr "crwdns151392:0{0}crwdnd151392:0{1}crwdne151392:0"
 
@@ -14286,7 +14303,7 @@ msgstr "crwdns110722:0{0}crwdne110722:0"
 msgid "{0} Row #{1}: Formula is set but {2} is disabled for the Salary Component {3}."
 msgstr "crwdns110724:0{0}crwdnd110724:0#{1}crwdnd110724:0{2}crwdnd110724:0{3}crwdne110724:0"
 
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:320
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:319
 msgid "{0} Row #{1}: {2} needs to be enabled for the formula to be considered."
 msgstr "crwdns110726:0{0}crwdnd110726:0#{1}crwdnd110726:0{2}crwdne110726:0"
 
@@ -14336,7 +14353,7 @@ msgstr "crwdns142778:0{0}crwdnd142778:0{1}crwdne142778:0"
 msgid "{0} is mandatory"
 msgstr "crwdns110740:0{0}crwdne110740:0"
 
-#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:68
+#: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:69
 msgid "{0} is not a holiday."
 msgstr "crwdns110742:0{0}crwdne110742:0"
 
@@ -14352,11 +14369,15 @@ msgstr "crwdns110746:0{0}crwdne110746:0"
 msgid "{0} is not in a valid Payroll Period"
 msgstr "crwdns110748:0{0}crwdne110748:0"
 
-#: hrms/hr/utils.py:822
+#: hrms/hr/utils.py:827
 msgid "{0} is required"
 msgstr "crwdns110750:0{0}crwdne110750:0"
 
-#: hrms/hr/doctype/leave_allocation/leave_allocation.py:345
+#: hrms/hr/doctype/leave_allocation/leave_allocation.py:358
+msgid "{0} leaves allocated successfully"
+msgstr "crwdns152000:0{0}crwdne152000:0"
+
+#: hrms/hr/doctype/leave_allocation/leave_allocation.py:353
 msgid "{0} leaves were manually allocated by {1} on {2}"
 msgstr "crwdns149074:0{0}crwdnd149074:0{1}crwdnd149074:0{2}crwdne149074:0"
 
@@ -14376,6 +14397,10 @@ msgstr "crwdns151402:0{0}crwdne151402:0"
 #: frontend/src/components/RequestActionSheet.vue:280
 msgid "{0} successfully!"
 msgstr "crwdns151404:0{0}crwdne151404:0"
+
+#: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:261
+msgid "{0} to {1} employee(s)?"
+msgstr "crwdns152002:0{0}crwdnd152002:0{1}crwdne152002:0"
 
 #: frontend/src/components/FormView.vue:549
 msgid "{0} updated successfully!"
@@ -14422,8 +14447,8 @@ msgstr "crwdns143290:0crwdne143290:0"
 msgid "{} Accepted"
 msgstr "crwdns143292:0crwdne143292:0"
 
-#. Count format of shortcut in the HR Workspace
-#: hrms/hr/workspace/hr/hr.json
+#. Count format of shortcut in the Overview Workspace
+#: hrms/hr/workspace/overview/overview.json
 msgid "{} Active"
 msgstr "crwdns143294:0crwdne143294:0"
 
@@ -14435,11 +14460,12 @@ msgid "{} Draft"
 msgstr "crwdns143296:0crwdne143296:0"
 
 #. Count format of shortcut in the Employee Lifecycle Workspace
-#. Count format of shortcut in the HR Workspace
 #. Count format of shortcut in the Leaves Workspace
+#. Count format of shortcut in the Overview Workspace
 #. Count format of shortcut in the Recruitment Workspace
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
-#: hrms/hr/workspace/hr/hr.json hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/leaves/leaves.json
+#: hrms/hr/workspace/overview/overview.json
 #: hrms/hr/workspace/recruitment/recruitment.json
 msgid "{} Open"
 msgstr "crwdns142794:0crwdne142794:0"
