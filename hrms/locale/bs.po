@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-01-28 09:56\n"
+"PO-Revision-Date: 2025-01-31 10:47\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -1754,12 +1754,12 @@ msgstr ""
 
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:55
 msgid "Bank"
-msgstr ""
+msgstr "Banka"
 
 #. Label of the bank_account (Link) field in DocType 'Payroll Entry'
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 msgid "Bank Account"
-msgstr ""
+msgstr "Bankovni Račun"
 
 #. Label of the bank_account_no (Data) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
@@ -6612,7 +6612,7 @@ msgstr ""
 #. Label of the hours (Float) field in DocType 'Training Result Employee'
 #: hrms/hr/doctype/training_result_employee/training_result_employee.json
 msgid "Hours"
-msgstr ""
+msgstr "Sati"
 
 #: hrms/regional/india/utils.py:184
 msgid "House rent paid days overlapping with {0}"
