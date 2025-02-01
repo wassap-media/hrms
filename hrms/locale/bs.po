@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-01-31 10:47\n"
+"PO-Revision-Date: 2025-02-01 11:03\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -402,7 +402,7 @@ msgstr ""
 
 #: hrms/overrides/company.py:124
 msgid "Account {0} does not belong to company: {1}"
-msgstr ""
+msgstr "Račun {0} ne pripada kompaniji: {1}"
 
 #: hrms/hr/doctype/expense_claim_type/expense_claim_type.py:29
 msgid "Account {0} does not match with Company {1}"
@@ -1198,7 +1198,7 @@ msgstr ""
 #. Label of a Card Break in the Recruitment Workspace
 #: hrms/hr/workspace/recruitment/recruitment.json
 msgid "Appointment"
-msgstr ""
+msgstr "Imenovanje"
 
 #. Label of the appointment_date (Date) field in DocType 'Appointment Letter'
 #: hrms/hr/doctype/appointment_letter/appointment_letter.json
@@ -1425,7 +1425,7 @@ msgstr ""
 #. Label of the asset_name (Data) field in DocType 'Full and Final Asset'
 #: hrms/hr/doctype/full_and_final_asset/full_and_final_asset.json
 msgid "Asset Name"
-msgstr ""
+msgstr "Naziv Imovine"
 
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.py:88
 msgid "Asset Recovery Cost for {0}: {1}"
@@ -1769,7 +1769,7 @@ msgstr ""
 #. Label of the section_break_75 (Tab Break) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Bank Details"
-msgstr ""
+msgstr "Bankovni Detalji"
 
 #: hrms/hr/doctype/expense_claim/expense_claim.js:155
 msgid "Bank Entries"
@@ -1946,7 +1946,7 @@ msgstr ""
 #: hrms/payroll/report/salary_register/salary_register.py:134
 #: hrms/public/js/salary_slip_deductions_report_filters.js:48
 msgid "Branch"
-msgstr ""
+msgstr "Podružnica"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:193
 msgid "Branch: {0}"
@@ -2139,12 +2139,12 @@ msgstr ""
 #. Label of a Link in the Salary Payout Workspace
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Chart of Accounts"
-msgstr ""
+msgstr "Kontni Plan"
 
 #. Label of a Link in the Salary Payout Workspace
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Chart of Cost Centers"
-msgstr ""
+msgstr "Tabela Troškovnih Centara"
 
 #: hrms/public/js/utils/index.js:147
 msgid "Check <a href='/app/List/Error Log?reference_doctype={0}'>{1}</a> for more details"
@@ -2243,7 +2243,7 @@ msgstr ""
 #. Label of the clearance_date (Date) field in DocType 'Expense Claim'
 #: hrms/hr/doctype/expense_claim/expense_claim.json
 msgid "Clearance Date"
-msgstr ""
+msgstr "Datum Poravnanja"
 
 #. Option for the 'Status' (Select) field in DocType 'Interview'
 #. Option for the 'Result' (Select) field in DocType 'Interview Feedback'
@@ -2285,7 +2285,7 @@ msgstr ""
 
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.py:78
 msgid "Closing Balance"
-msgstr ""
+msgstr "Stanje pri Zatvaranju"
 
 #. Label of the closing_notes (Text) field in DocType 'Appointment Letter'
 #. Label of the closing_notes (Text) field in DocType 'Appointment Letter
@@ -2677,13 +2677,13 @@ msgstr ""
 #: hrms/payroll/doctype/gratuity/gratuity.json
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 msgid "Cost Center"
-msgstr ""
+msgstr "Troškovni Centar"
 
 #. Label of the payroll_cost_centers (Table) field in DocType 'Salary Structure
 #. Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 msgid "Cost Centers"
-msgstr ""
+msgstr "Troškovni Centri"
 
 #. Label of the costings (Table) field in DocType 'Travel Request'
 #: hrms/hr/doctype/travel_request/travel_request.json
@@ -2768,7 +2768,7 @@ msgstr ""
 
 #: hrms/hr/doctype/job_offer/job_offer.js:45
 msgid "Create Employee"
-msgstr ""
+msgstr "Kreiraj Zaposlenog"
 
 #: hrms/hr/doctype/interview_round/interview_round.js:7
 #: hrms/hr/doctype/job_applicant/job_applicant.js:95
@@ -2795,7 +2795,7 @@ msgstr ""
 
 #: hrms/payroll/doctype/gratuity/gratuity.js:36
 msgid "Create Payment Entry"
-msgstr ""
+msgstr "Kreiraj unos Plaćanja"
 
 #: hrms/public/js/erpnext/timesheet.js:8
 msgid "Create Salary Slip"
@@ -2994,7 +2994,7 @@ msgstr ""
 #: hrms/hr/report/project_profitability/project_profitability.js:31
 #: hrms/hr/report/project_profitability/project_profitability.py:133
 msgid "Customer"
-msgstr ""
+msgstr "Kupac"
 
 #. Option for the 'Roster Color' (Select) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
@@ -5317,7 +5317,7 @@ msgstr ""
 #: hrms/hr/doctype/vehicle_service/vehicle_service.json
 #: hrms/overrides/dashboard_overrides.py:34
 msgid "Expense"
-msgstr ""
+msgstr "Troškovi"
 
 #. Label of the expense_account (Link) field in DocType 'Gratuity'
 #: hrms/payroll/doctype/gratuity/gratuity.json
@@ -5646,7 +5646,7 @@ msgstr ""
 
 #: hrms/hr/report/vehicle_expenses/vehicle_expenses.js:7
 msgid "Filter Based On"
-msgstr ""
+msgstr "Filter na Osnovu"
 
 #. Label of the section_break_17 (Section Break) field in DocType 'Payroll
 #. Entry'
@@ -6022,7 +6022,7 @@ msgstr "Spol"
 #: hrms/hr/workspace/expense_claims/expense_claims.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "General Ledger"
-msgstr ""
+msgstr "Knjigovodstveni Registar"
 
 #. Label of the geolocation (Geolocation) field in DocType 'Employee Checkin'
 #. Label of the geolocation (Geolocation) field in DocType 'Shift Location'
@@ -6496,7 +6496,7 @@ msgstr ""
 #. Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Half-Yearly"
-msgstr ""
+msgstr "Polugodišnje"
 
 #. Label of the has_certificate (Check) field in DocType 'Training Event'
 #: hrms/hr/doctype/training_event/training_event.json
@@ -8968,7 +8968,7 @@ msgstr ""
 #: hrms/hr/doctype/job_applicant/job_applicant.json
 #: hrms/hr/doctype/leave_allocation/leave_allocation.json
 msgid "Notes"
-msgstr ""
+msgstr "Napomene"
 
 #: hrms/hr/employee_property_update.js:176
 msgid "Nothing to change"
@@ -9266,7 +9266,7 @@ msgstr ""
 
 #: hrms/hr/report/unpaid_expense_claim/unpaid_expense_claim.py:23
 msgid "Outstanding Amount"
-msgstr ""
+msgstr "Nepodmireni Iznos"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:291
 msgid "Over Allocation"
@@ -9361,7 +9361,7 @@ msgstr ""
 #: hrms/hr/report/unpaid_expense_claim/unpaid_expense_claim.py:22
 #: hrms/payroll/doctype/gratuity/gratuity.json
 msgid "Paid Amount"
-msgstr ""
+msgstr "Plaćeni Iznos"
 
 #. Label of the paid_via_salary_slip (Check) field in DocType 'Full and Final
 #. Outstanding Statement'
@@ -10269,7 +10269,7 @@ msgstr ""
 #: hrms/hr/doctype/leave_type/leave_type.json
 #: hrms/hr/doctype/vehicle_service/vehicle_service.json
 msgid "Quarterly"
-msgstr ""
+msgstr "Kvartalno"
 
 #. Label of the questionnaire_email_sent (Check) field in DocType 'Exit
 #. Interview'
@@ -10280,7 +10280,7 @@ msgstr ""
 #. Option for the 'Status' (Select) field in DocType 'Payroll Entry'
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 msgid "Queued"
-msgstr ""
+msgstr "U redu"
 
 #. Label of the quick_filters_section (Section Break) field in DocType 'Leave
 #. Control Panel'
@@ -10311,7 +10311,7 @@ msgstr ""
 #. Label of the rate (Float) field in DocType 'Expense Taxes and Charges'
 #: hrms/hr/doctype/expense_taxes_and_charges/expense_taxes_and_charges.json
 msgid "Rate"
-msgstr ""
+msgstr "Cjena"
 
 #. Label of the rate_goals_manually (Check) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
@@ -11358,7 +11358,7 @@ msgstr ""
 #: hrms/hr/doctype/training_event/training_event.json
 #: hrms/hr/doctype/training_program/training_program.json
 msgid "Scheduled"
-msgstr ""
+msgstr "Zakazano"
 
 #. Label of the scheduled_on (Date) field in DocType 'Interview'
 #: hrms/hr/doctype/interview/interview.json
@@ -11581,7 +11581,7 @@ msgstr ""
 #. Option for the 'Status' (Select) field in DocType 'Daily Work Summary'
 #: hrms/hr/doctype/daily_work_summary/daily_work_summary.json
 msgid "Sent"
-msgstr ""
+msgstr "Poslano"
 
 #: hrms/hr/doctype/exit_interview/exit_interview.py:132
 msgid "Sent Successfully: {0}"
@@ -12160,7 +12160,7 @@ msgstr ""
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/report/salary_register/salary_register.py:162
 msgid "Start Date"
-msgstr ""
+msgstr "Start Datum"
 
 #. Label of the start_time (Time) field in DocType 'Shift Type'
 #. Label of the start_time (Datetime) field in DocType 'Training Event'
@@ -12264,7 +12264,7 @@ msgstr ""
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: hrms/setup.py:401
 msgid "Stock Options"
@@ -12291,7 +12291,7 @@ msgstr ""
 #: hrms/hr/doctype/daily_work_summary_group/daily_work_summary_group.json
 #: hrms/hr/doctype/employee_grievance/employee_grievance.json
 msgid "Subject"
-msgstr ""
+msgstr "Predmet"
 
 #. Label of the submission_date (Date) field in DocType 'Employee Tax Exemption
 #. Proof Submission'
@@ -12375,7 +12375,7 @@ msgstr ""
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:1479
 #: hrms/public/js/utils/index.js:139
 msgid "Success"
-msgstr ""
+msgstr "Uspjeh"
 
 #: hrms/hr/utils.py:860
 msgid "Successfully created {0} for employees:"
@@ -12482,7 +12482,7 @@ msgstr ""
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 msgid "System Manager"
-msgstr ""
+msgstr "Upravitelj Sistema"
 
 #. Option for the 'Work Experience Calculation Method' (Select) field in
 #. DocType 'Gratuity Rule'
@@ -12628,7 +12628,7 @@ msgstr ""
 #. Label of the terms (Text Editor) field in DocType 'Job Offer'
 #: hrms/hr/doctype/job_offer/job_offer.json
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Odredbe i Uslovi"
 
 #: hrms/templates/emails/training_event.html:20
 msgid "Thank you"
@@ -12789,7 +12789,7 @@ msgstr ""
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Time"
-msgstr ""
+msgstr "Vrijeme"
 
 #: hrms/hr/dashboard_chart_source/hiring_vs_attrition_count/hiring_vs_attrition_count.js:28
 msgid "Time Interval"
@@ -12856,7 +12856,7 @@ msgstr ""
 
 #: hrms/payroll/report/salary_register/salary_register.js:16
 msgid "To"
-msgstr ""
+msgstr "Do"
 
 #. Label of the to_amount (Currency) field in DocType 'Taxable Salary Slab'
 #: hrms/payroll/doctype/taxable_salary_slab/taxable_salary_slab.json
@@ -12902,7 +12902,7 @@ msgstr ""
 #: hrms/payroll/doctype/salary_withholding_cycle/salary_withholding_cycle.json
 #: hrms/payroll/report/bank_remittance/bank_remittance.js:22
 msgid "To Date"
-msgstr ""
+msgstr "Do Datuma"
 
 #: frontend/src/views/attendance/ShiftRequestForm.vue:90
 #: frontend/src/views/leave/Form.vue:165
@@ -12983,7 +12983,7 @@ msgstr ""
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:40
 #: hrms/payroll/report/salary_payments_based_on_payment_mode/salary_payments_based_on_payment_mode.py:40
 msgid "Total"
-msgstr ""
+msgstr "Ukupno"
 
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:121
 msgid "Total Absent"
@@ -13523,7 +13523,7 @@ msgstr ""
 #: hrms/payroll/doctype/salary_component/salary_component.json
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.js:12
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 #. Label of the type_of_proof (Data) field in DocType 'Employee Tax Exemption
 #. Proof Submission Detail'
@@ -13748,16 +13748,16 @@ msgstr ""
 #: hrms/hr/doctype/goal/goal.json hrms/hr/doctype/interviewer/interviewer.json
 #: hrms/hr/report/daily_work_summary_replies/daily_work_summary_replies.py:20
 msgid "User"
-msgstr ""
+msgstr "Korisnik"
 
 #. Label of the users (Table) field in DocType 'Daily Work Summary Group'
 #: hrms/hr/doctype/daily_work_summary_group/daily_work_summary_group.json
 msgid "Users"
-msgstr ""
+msgstr "Korisnici"
 
 #: hrms/hr/report/project_profitability/project_profitability.py:188
 msgid "Utilization"
-msgstr ""
+msgstr "Iskorištenost"
 
 #. Label of the vacancies (Int) field in DocType 'Job Opening'
 #. Label of the vacancies (Int) field in DocType 'Staffing Plan Detail'
@@ -13951,7 +13951,7 @@ msgstr ""
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 msgid "Weekly"
-msgstr ""
+msgstr "Sedmično"
 
 #. Label of the per_weightage (Float) field in DocType 'Appraisal Goal'
 #. Label of the per_weightage (Percent) field in DocType 'Appraisal KRA'
@@ -14124,7 +14124,7 @@ msgstr ""
 #: hrms/hr/doctype/leave_type/leave_type.json
 #: hrms/hr/doctype/vehicle_service/vehicle_service.json
 msgid "Yearly"
-msgstr ""
+msgstr "Godišnje"
 
 #. Option for the 'Roster Color' (Select) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
@@ -14137,7 +14137,7 @@ msgstr ""
 #: frontend/src/components/FormView.vue:305
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 msgid "Yes"
-msgstr ""
+msgstr "Da"
 
 #: hrms/hr/doctype/hr_settings/hr_settings.py:84
 msgid "Yes, Proceed"
@@ -14468,7 +14468,7 @@ msgstr ""
 #: hrms/hr/workspace/overview/overview.json
 #: hrms/hr/workspace/recruitment/recruitment.json
 msgid "{} Open"
-msgstr ""
+msgstr "{} Otvori"
 
 #. Count format of shortcut in the Employee Lifecycle Workspace
 #. Count format of shortcut in the Expense Claims Workspace
