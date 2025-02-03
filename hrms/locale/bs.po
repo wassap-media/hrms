@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-02-02 11:11\n"
+"PO-Revision-Date: 2025-02-03 11:17\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -3941,7 +3941,7 @@ msgstr "Šablon e-pošte"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:661
 msgid "Email sent to {0}"
-msgstr ""
+msgstr "E-pošta poslana {0}"
 
 #. Description of the 'Email Salary Slip to Employee' (Check) field in DocType
 #. 'Payroll Settings'
@@ -4144,7 +4144,7 @@ msgstr ""
 
 #: frontend/src/views/employee_advance/List.vue:5 hrms/overrides/company.py:113
 msgid "Employee Advances"
-msgstr ""
+msgstr "Predujam Zaposlenika"
 
 #. Name of a report
 #. Label of a Link in the Employee Lifecycle Workspace
@@ -4321,7 +4321,7 @@ msgstr ""
 #. Label of a Link in the Overview Workspace
 #: hrms/hr/workspace/overview/overview.json
 msgid "Employee Group"
-msgstr ""
+msgstr "Grupa Zaposlenih"
 
 #. Name of a DocType
 #: hrms/hr/doctype/employee_health_insurance/employee_health_insurance.json
@@ -4502,7 +4502,7 @@ msgstr ""
 #: hrms/payroll/report/salary_register/salary_register.py:122
 #: hrms/public/js/templates/employees_with_unmarked_attendance.html:18
 msgid "Employee Name"
-msgstr ""
+msgstr "Ime Zaposlenika"
 
 #. Label of the emp_created_by (Select) field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
@@ -5322,7 +5322,7 @@ msgstr "Troškovi"
 #. Label of the expense_account (Link) field in DocType 'Gratuity'
 #: hrms/payroll/doctype/gratuity/gratuity.json
 msgid "Expense Account"
-msgstr ""
+msgstr "Račun Troškova"
 
 #. Name of a role
 #. Label of the expense_approver (Link) field in DocType 'Expense Claim'
@@ -6759,7 +6759,7 @@ msgstr "Dnevnik uvoza"
 
 #: hrms/hr/doctype/upload_attendance/upload_attendance.js:67
 msgid "Import Successful"
-msgstr ""
+msgstr "Import je uspješan"
 
 #: hrms/hr/doctype/upload_attendance/upload_attendance.js:50
 msgid "Importing {0} of {1}"
@@ -6820,7 +6820,7 @@ msgstr ""
 #. Label of a Card Break in the Salary Payout Workspace
 #: hrms/payroll/workspace/salary_payout/salary_payout.json hrms/setup.py:407
 msgid "Incentives"
-msgstr ""
+msgstr "Poticaj"
 
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:63
 msgid "Include Company Descendants"
@@ -8882,7 +8882,7 @@ msgstr ""
 
 #: hrms/hr/report/employee_advance_summary/employee_advance_summary.py:17
 msgid "No record found"
-msgstr ""
+msgstr "Nije pronađen nijedan zapis"
 
 #: hrms/hr/doctype/daily_work_summary/daily_work_summary.py:102
 msgid "No replies from"
@@ -8944,7 +8944,7 @@ msgstr "Nije dozvoljeno"
 #. Option for the 'Status' (Select) field in DocType 'Appraisal Cycle'
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.json
 msgid "Not Started"
-msgstr ""
+msgstr "Nije Započeto"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.js:282
 msgid "Note"
@@ -9352,7 +9352,7 @@ msgstr ""
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.json
 #: hrms/payroll/doctype/gratuity/gratuity.json
 msgid "Paid"
-msgstr ""
+msgstr "Plaćeno"
 
 #. Label of the paid_amount (Currency) field in DocType 'Employee Advance'
 #. Label of the paid_amount (Currency) field in DocType 'Gratuity'
@@ -11621,12 +11621,12 @@ msgstr ""
 #: hrms/hr/doctype/vehicle_log/vehicle_log.json
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
 msgid "Series"
-msgstr ""
+msgstr "Numeričke Serije"
 
 #. Option for the 'Type' (Select) field in DocType 'Vehicle Service'
 #: hrms/hr/doctype/vehicle_service/vehicle_service.json
 msgid "Service"
-msgstr ""
+msgstr "Servis"
 
 #. Label of the service_details (Section Break) field in DocType 'Vehicle Log'
 #: hrms/hr/doctype/vehicle_log/vehicle_log.json
