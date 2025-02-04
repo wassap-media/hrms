@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-02-03 11:17\n"
+"PO-Revision-Date: 2025-02-04 11:13\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -5726,7 +5726,7 @@ msgstr ""
 #. Name of a role
 #: hrms/hr/doctype/vehicle_log/vehicle_log.json
 msgid "Fleet Manager"
-msgstr ""
+msgstr "Upravitelj Voznog Parka"
 
 #. Label of the flexible_benefits_tab (Tab Break) field in DocType 'Salary
 #. Component'
@@ -5888,7 +5888,7 @@ msgstr "Od datuma"
 #: hrms/hr/doctype/staffing_plan/staffing_plan.py:29
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:258
 msgid "From Date cannot be greater than To Date"
-msgstr ""
+msgstr "Od Datuma ne može biti kasnije od Do Datuma"
 
 #: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:30
 msgid "From Date must come before To Date"
@@ -5910,7 +5910,7 @@ msgstr ""
 #. Label of the from_time (Time) field in DocType 'Interview'
 #: hrms/hr/doctype/interview/interview.json
 msgid "From Time"
-msgstr ""
+msgstr "Od Vremena"
 
 #. Label of the from_user (Link) field in DocType 'PWA Notification'
 #: hrms/hr/doctype/pwa_notification/pwa_notification.json
@@ -6157,7 +6157,7 @@ msgstr ""
 #. Label of the grand_total (Currency) field in DocType 'Expense Claim'
 #: hrms/hr/doctype/expense_claim/expense_claim.json
 msgid "Grand Total"
-msgstr ""
+msgstr "Ukupni Iznos"
 
 #. Name of a DocType
 #. Label of the details_tab (Tab Break) field in DocType 'Gratuity'
@@ -7167,7 +7167,7 @@ msgstr ""
 
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:142
 msgid "Invalid Cost Center"
-msgstr ""
+msgstr "Nevažeći Centar Troškova"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:323
 msgid "Invalid Dates"
@@ -7265,7 +7265,7 @@ msgstr ""
 #. Label of the is_group (Check) field in DocType 'Goal'
 #: hrms/hr/doctype/goal/goal.json hrms/hr/doctype/goal/goal_tree.js:51
 msgid "Is Group"
-msgstr ""
+msgstr "Grupa"
 
 #. Label of the is_income_tax_component (Check) field in DocType 'Salary
 #. Component'
@@ -8121,7 +8121,7 @@ msgstr ""
 #: hrms/hr/report/vehicle_expenses/vehicle_expenses.py:33
 #: hrms/templates/generators/job_opening.html:66
 msgid "Location"
-msgstr ""
+msgstr "Lokacija"
 
 #. Label of the device_id (Data) field in DocType 'Employee Checkin'
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
@@ -8131,7 +8131,7 @@ msgstr ""
 #. Label of the location_name (Data) field in DocType 'Shift Location'
 #: hrms/hr/doctype/shift_location/shift_location.json
 msgid "Location Name"
-msgstr ""
+msgstr "Naziv Lokacije"
 
 #. Label of the lodging_required (Check) field in DocType 'Travel Itinerary'
 #: hrms/hr/doctype/travel_itinerary/travel_itinerary.json
@@ -8169,7 +8169,7 @@ msgstr ""
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
 #: hrms/hr/doctype/shift_location/shift_location.json
 msgid "Longitude"
-msgstr ""
+msgstr "Geografska Dužina"
 
 #: frontend/src/components/CheckInPanel.vue:133
 msgid "Longitude: {0}°"
@@ -8190,7 +8190,7 @@ msgstr ""
 #: hrms/hr/doctype/vehicle_log/vehicle_log.json
 #: hrms/hr/report/vehicle_expenses/vehicle_expenses.py:31
 msgid "Make"
-msgstr ""
+msgstr "Marka"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.js:163
 msgid "Make Bank Entry"
@@ -8299,7 +8299,7 @@ msgstr ""
 #: hrms/hr/workspace/performance/performance.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Masters"
-msgstr ""
+msgstr "Postavke"
 
 #. Label of the max_amount_eligible (Currency) field in DocType 'Employee
 #. Benefit Claim'
@@ -8698,7 +8698,7 @@ msgstr ""
 #. Label of the new_company (Link) field in DocType 'Employee Transfer'
 #: hrms/hr/doctype/employee_transfer/employee_transfer.json
 msgid "New Company"
-msgstr ""
+msgstr "Nova Kompanija"
 
 #. Label of the new_employee_id (Link) field in DocType 'Employee Transfer'
 #: hrms/hr/doctype/employee_transfer/employee_transfer.json
@@ -9440,7 +9440,7 @@ msgstr ""
 #: hrms/hr/doctype/expense_claim/expense_claim.json
 #: hrms/payroll/doctype/gratuity/gratuity.json
 msgid "Payable Account"
-msgstr ""
+msgstr "Račun Plaćanja"
 
 #: hrms/hr/doctype/expense_claim/expense_claim.py:110
 msgid "Payable Account is mandatory to submit an Expense Claim"
@@ -9450,14 +9450,14 @@ msgstr ""
 #. Final Statement'
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.json
 msgid "Payables"
-msgstr ""
+msgstr "Obveze"
 
 #: hrms/hr/doctype/employee_advance/employee_advance.js:50
 #: hrms/hr/doctype/expense_claim/expense_claim.js:105
 #: hrms/hr/doctype/expense_claim/expense_claim_dashboard.py:9
 #: hrms/payroll/doctype/gratuity/gratuity_dashboard.py:10
 msgid "Payment"
-msgstr ""
+msgstr "Plaćanje"
 
 #. Label of the payment_account (Link) field in DocType 'Payroll Entry'
 #. Label of the payment_account (Link) field in DocType 'Salary Structure'
@@ -9502,7 +9502,7 @@ msgstr ""
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Payment Entry"
-msgstr ""
+msgstr "Unos Plaćanja"
 
 #. Label of the section_break_5 (Tab Break) field in DocType 'Gratuity'
 #: hrms/payroll/doctype/gratuity/gratuity.json
@@ -10426,7 +10426,7 @@ msgstr ""
 #. Option for the 'Roster Color' (Select) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Red"
-msgstr ""
+msgstr "Crvena"
 
 #. Label of the reference (Link) field in DocType 'Full and Final Asset'
 #: hrms/hr/doctype/expense_claim/expense_claim_dashboard.py:10
@@ -10607,7 +10607,7 @@ msgstr ""
 #. Label of the remarks (Text) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
 msgid "Remarks"
-msgstr ""
+msgstr "Napomene"
 
 #. Label of the remind_before (Time) field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
@@ -10690,7 +10690,7 @@ msgstr ""
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Reports"
-msgstr ""
+msgstr "Izvještaji"
 
 #. Label of the reports_to (Link) field in DocType 'Employee Grievance'
 #. Label of the reports_to (Link) field in DocType 'Exit Interview'
@@ -10808,7 +10808,7 @@ msgstr "Rezultat"
 #: hrms/hr/doctype/employee_referral/employee_referral.json
 #: hrms/hr/doctype/job_applicant/job_applicant.json
 msgid "Resume"
-msgstr ""
+msgstr "Nastavi"
 
 #. Label of the resume_attachment (Attach) field in DocType 'Job Applicant'
 #: hrms/hr/doctype/job_applicant/job_applicant.json
@@ -10987,7 +10987,7 @@ msgstr ""
 
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:139
 msgid "Row {0}: Cost Center {1} does not belong to Company {2}"
-msgstr ""
+msgstr "Red {0}: Centar Troškova {1} ne pripada kompaniji {2}"
 
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule.py:15
 msgid "Row {0}: From (Year) can not be greater than To (Year)"
@@ -12407,7 +12407,7 @@ msgstr ""
 #: hrms/hr/doctype/training_program/training_program.json
 #: hrms/hr/doctype/vehicle_log/vehicle_log.json
 msgid "Supplier"
-msgstr ""
+msgstr "Dobavljač"
 
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.js:46
 #: hrms/hr/report/employee_leave_balance_summary/employee_leave_balance_summary.js:42
@@ -13278,7 +13278,7 @@ msgstr ""
 
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:148
 msgid "Total percentage against cost centers should be 100"
-msgstr ""
+msgstr "Ukupan zbir postotaka prema centrima troškova treba da bude 100"
 
 #. Description of the 'Year To Date' (Currency) field in DocType 'Salary
 #. Detail'
@@ -13654,7 +13654,7 @@ msgstr ""
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.js:226
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.js:235
 msgid "Update"
-msgstr ""
+msgstr "Ažuriraj"
 
 #: frontend/src/components/ExpensesTable.vue:123
 msgid "Update Expense"
@@ -13862,7 +13862,7 @@ msgstr ""
 #: hrms/hr/doctype/expense_claim/expense_claim.js:164
 #: hrms/hr/doctype/job_applicant/job_applicant.js:42
 msgid "View"
-msgstr ""
+msgstr "Pogled"
 
 #: frontend/src/components/Holidays.vue:10
 msgid "View All"
