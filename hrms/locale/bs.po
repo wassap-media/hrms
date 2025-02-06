@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-02-05 11:15\n"
+"PO-Revision-Date: 2025-02-06 11:44\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -7492,7 +7492,7 @@ msgstr ""
 #: hrms/payroll/doctype/salary_withholding_cycle/salary_withholding_cycle.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Journal Entry"
-msgstr ""
+msgstr "Unos u Dnevnik"
 
 #. Label of a Card Break in the Employee Lifecycle Workspace
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
@@ -7553,7 +7553,7 @@ msgstr ""
 #. Label of a Card Break in the Overview Workspace
 #: hrms/hr/workspace/overview/overview.json
 msgid "Key Reports"
-msgstr ""
+msgstr "Ključni Izvještaji"
 
 #. Description of the 'Goal' (Small Text) field in DocType 'Appraisal Goal'
 #: hrms/hr/doctype/appraisal_goal/appraisal_goal.json
@@ -7627,7 +7627,7 @@ msgstr ""
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
 #: hrms/hr/doctype/shift_location/shift_location.json
 msgid "Latitude"
-msgstr ""
+msgstr "Geografska Širina"
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:83
 msgid "Latitude and longitude values are required for checking in."
@@ -8503,7 +8503,7 @@ msgstr ""
 #. Label of the mode_of_payment (Select) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Mode Of Payment"
-msgstr ""
+msgstr "Način Plaćanja"
 
 #. Label of the mode_of_payment (Link) field in DocType 'Employee Advance'
 #. Label of the mode_of_payment (Link) field in DocType 'Expense Claim'
@@ -8514,7 +8514,7 @@ msgstr ""
 #: hrms/payroll/doctype/gratuity/gratuity.json
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 msgid "Mode of Payment"
-msgstr ""
+msgstr "Način Plaćanja"
 
 #. Label of the mode_of_travel (Select) field in DocType 'Travel Itinerary'
 #: hrms/hr/doctype/travel_itinerary/travel_itinerary.json
@@ -9596,7 +9596,7 @@ msgstr ""
 #: hrms/patches/post_install/updates_for_multi_currency_payroll.py:65
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:106
 msgid "Payroll Payable"
-msgstr ""
+msgstr "Isplata Plaća"
 
 #. Label of the payroll_payable_account (Link) field in DocType 'Bulk Salary
 #. Structure Assignment'
@@ -9688,7 +9688,7 @@ msgstr ""
 #. Label of the pending_amount (Currency) field in DocType 'Employee Advance'
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Pending Amount"
-msgstr ""
+msgstr "Iznos na Čekanju"
 
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.py:60
 msgid "Pending Asset Returns"
