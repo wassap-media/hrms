@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-02-06 11:44\n"
+"PO-Revision-Date: 2025-02-07 12:04\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -8214,7 +8214,7 @@ msgstr "Obavezna polja su obavezna u {0}"
 #. DocType 'Gratuity Rule'
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule.json
 msgid "Manual"
-msgstr ""
+msgstr "Manual"
 
 #. Option for the 'KRA Evaluation Method' (Select) field in DocType 'Appraisal
 #. Cycle'
@@ -11020,7 +11020,7 @@ msgstr "Pravila"
 #: frontend/src/components/BottomTabs.vue:63
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
 msgid "Salary"
-msgstr ""
+msgstr "Plata"
 
 #. Label of the salary_component (Link) field in DocType 'Additional Salary'
 #. Label of the salary_component (Link) field in DocType 'Employee Incentive'
@@ -11390,7 +11390,7 @@ msgstr ""
 #: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:86
 #: hrms/public/js/hierarchy_chart/hierarchy_chart_mobile.js:77
 msgid "Select Company"
-msgstr ""
+msgstr "Odaberi Kompaniju"
 
 #. Label of the unmarked_attendance_section (Section Break) field in DocType
 #. 'Employee Attendance Tool'
@@ -13020,7 +13020,7 @@ msgstr ""
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.json
 #: hrms/payroll/doctype/gratuity/gratuity.json
 msgid "Total Amount"
-msgstr ""
+msgstr "Ukupan Iznos"
 
 #. Label of the total_amount_reimbursed (Currency) field in DocType 'Expense
 #. Claim'
@@ -13879,7 +13879,7 @@ msgstr ""
 
 #: hrms/public/js/utils/leave_utils.js:5
 msgid "View Ledger"
-msgstr ""
+msgstr "Prikaži Registar"
 
 #: frontend/src/components/RequestList.vue:27
 #: frontend/src/views/expense_claim/Dashboard.vue:41
