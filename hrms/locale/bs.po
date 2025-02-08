@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-02-07 12:04\n"
+"PO-Revision-Date: 2025-02-08 12:36\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -10233,7 +10233,7 @@ msgstr ""
 #. Label of the purpose (Small Text) field in DocType 'Employee Advance'
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Purpose"
-msgstr ""
+msgstr "Svrha"
 
 #. Label of the section_break_8 (Section Break) field in DocType 'Employee
 #. Advance'
@@ -10386,7 +10386,7 @@ msgstr ""
 #. Final Statement'
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.json
 msgid "Receivables"
-msgstr ""
+msgstr "Potraživanja"
 
 #: frontend/src/views/attendance/Dashboard.vue:14
 msgid "Recent Attendance Requests"
@@ -10479,7 +10479,7 @@ msgstr "Referenca: {0}"
 #: hrms/hr/doctype/job_opening/job_opening.json
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
 msgid "References"
-msgstr ""
+msgstr "Reference"
 
 #. Label of the referral_payment_status (Select) field in DocType 'Employee
 #. Referral'
@@ -10602,7 +10602,7 @@ msgstr ""
 #: hrms/hr/doctype/expense_claim/expense_claim.json
 #: hrms/hr/doctype/full_and_final_outstanding_statement/full_and_final_outstanding_statement.json
 msgid "Remark"
-msgstr ""
+msgstr "Napomena"
 
 #. Label of the remarks (Text) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
@@ -10863,7 +10863,7 @@ msgstr "Vraćeno"
 #. Label of the return_amount (Currency) field in DocType 'Employee Advance'
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Returned Amount"
-msgstr ""
+msgstr "Vraćeni Iznos"
 
 #: hrms/hr/doctype/hr_settings/hr_settings.js:41
 msgid "Review various other settings related to Employee Leaves and Expense Claim"
@@ -12852,7 +12852,7 @@ msgstr ""
 #: hrms/hr/doctype/kra/kra.json hrms/hr/doctype/leave_policy/leave_policy.json
 #: hrms/hr/report/employee_advance_summary/employee_advance_summary.py:40
 msgid "Title"
-msgstr ""
+msgstr "Naziv"
 
 #: hrms/payroll/report/salary_register/salary_register.js:16
 msgid "To"
@@ -13442,7 +13442,7 @@ msgstr ""
 #: hrms/hr/report/leave_ledger/leave_ledger.js:60
 #: hrms/hr/report/leave_ledger/leave_ledger.py:72
 msgid "Transaction Type"
-msgstr ""
+msgstr "Tip Transakcije"
 
 #: hrms/hr/doctype/leave_period/leave_period_dashboard.py:7
 msgid "Transactions"
