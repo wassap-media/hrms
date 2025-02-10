@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-01-31 10:47\n"
+"PO-Revision-Date: 2025-02-10 12:52\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -217,7 +217,7 @@ msgstr "<b>Exempel:</b> SAL- {first_name} - {date_of_birth.year} <br> Detta komm
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:279
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:287
 msgid "<b>Total Leaves Allocated</b> are more than the number of days in the allocation period"
-msgstr "<b>Totalt Tilldelade Ledigheter</b> är fler dagar än antal dagar i tilldelning period"
+msgstr "<b>Totalt Tilldelad Frånvaro</b> är fler dagar än antal dagar i tilldelning period"
 
 #. Content of the 'Help' (HTML) field in DocType 'Salary Component'
 #: hrms/payroll/doctype/salary_component/salary_component.json
@@ -610,7 +610,7 @@ msgstr "Faktiska Uttagbara Dagar"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:398
 msgid "Actual balances aren't available because the leave application spans over different leave allocations. You can still apply for leaves which would be compensated during the next allocation."
-msgstr "Faktisk saldon är inte tillgängliga eftersom ledighet ansökan sträcker sig över olika ledighet tilldelningar. Du kan fortfarande ansöka om ledighet som skulle kompenseras vid nästa tilldelning."
+msgstr "Faktiska saldon är inte tillgängliga eftersom frånvaro ansökan sträcker sig över olika frånvaro tilldelningar. Du kan fortfarande ansöka om frånvaro som skulle kompenseras vid nästa tilldelning."
 
 #. Label of the add_day_wise_dates (Button) field in DocType 'Leave Block List'
 #: hrms/hr/doctype/leave_block_list/leave_block_list.json
@@ -1605,7 +1605,7 @@ msgstr "Närvaro Begäran"
 
 #: frontend/src/views/attendance/AttendanceRequestList.vue:5
 msgid "Attendance Request History"
-msgstr "Närvarobegäran Historik"
+msgstr "Närvaro Begäran Historik"
 
 #. Label of the attendance_settings_section (Section Break) field in DocType
 #. 'HR Settings'
@@ -6657,7 +6657,7 @@ msgstr "IFSC"
 
 #: hrms/payroll/report/bank_remittance/bank_remittance.py:48
 msgid "IFSC Code"
-msgstr "IFS Kod"
+msgstr "IFSC Kod"
 
 #. Option for the 'Log Type' (Select) field in DocType 'Employee Checkin'
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
