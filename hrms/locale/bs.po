@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-02-10 12:52\n"
+"PO-Revision-Date: 2025-02-11 13:22\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -4169,7 +4169,7 @@ msgstr ""
 
 #: frontend/src/views/employee_advance/List.vue:5 hrms/overrides/company.py:113
 msgid "Employee Advances"
-msgstr "Predujam Zaposlenika"
+msgstr "Avans Zaposlenika"
 
 #. Name of a report
 #. Label of a Link in the Employee Lifecycle Workspace
@@ -8718,7 +8718,7 @@ msgstr ""
 #: hrms/hr/employee_property_update.js:114
 #: hrms/hr/employee_property_update.js:159
 msgid "New"
-msgstr ""
+msgstr "Novi"
 
 #. Label of the new_company (Link) field in DocType 'Employee Transfer'
 #: hrms/hr/doctype/employee_transfer/employee_transfer.json
@@ -9236,7 +9236,7 @@ msgstr ""
 #. Option for the 'Roster Color' (Select) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Orange"
-msgstr ""
+msgstr "Narandžasta"
 
 #: hrms/hr/page/organizational_chart/organizational_chart.js:4
 msgid "Organizational Chart"
@@ -11353,12 +11353,12 @@ msgstr "Prodajna Faktura"
 
 #: hrms/hr/doctype/expense_claim_type/expense_claim_type.py:22
 msgid "Same Company is entered more than once"
-msgstr ""
+msgstr "Ista kompanija se upisuje više puta"
 
 #: frontend/src/components/ExpenseItems.vue:23
 #: frontend/src/components/ExpensesTable.vue:42
 msgid "Sanctioned"
-msgstr ""
+msgstr "Sankcionisano"
 
 #. Label of the sanctioned_amount (Currency) field in DocType 'Expense Claim
 #. Detail'
@@ -13347,7 +13347,7 @@ msgstr ""
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Totals"
-msgstr ""
+msgstr "Ukupno"
 
 #. Option for the 'Mode of Travel' (Select) field in DocType 'Travel Itinerary'
 #: hrms/hr/doctype/travel_itinerary/travel_itinerary.json
@@ -14086,7 +14086,7 @@ msgstr ""
 #: hrms/payroll/doctype/salary_slip_timesheet/salary_slip_timesheet.json
 #: hrms/setup.py:400
 msgid "Working Hours"
-msgstr ""
+msgstr "Radno Vrijeme"
 
 #. Label of the working_hours_calculation_based_on (Select) field in DocType
 #. 'Shift Type'
@@ -14154,7 +14154,7 @@ msgstr "Godišnje"
 #. Option for the 'Roster Color' (Select) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Yellow"
-msgstr ""
+msgstr "Žuta"
 
 #. Option for the 'Is Active' (Select) field in DocType 'Salary Structure'
 #. Option for the 'Is Default' (Select) field in DocType 'Salary Structure'
@@ -14376,7 +14376,7 @@ msgstr ""
 
 #: hrms/hr/report/employee_analytics/employee_analytics.py:14
 msgid "{0} is mandatory"
-msgstr ""
+msgstr "{0} je obavezan"
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:69
 msgid "{0} is not a holiday."
@@ -14396,7 +14396,7 @@ msgstr ""
 
 #: hrms/hr/utils.py:827
 msgid "{0} is required"
-msgstr ""
+msgstr "{0} je obavezan"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:358
 msgid "{0} leaves allocated successfully"
