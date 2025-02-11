@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-02-05 11:15\n"
+"PO-Revision-Date: 2025-02-11 13:21\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -2740,7 +2740,7 @@ msgstr "Ülke"
 
 #: hrms/overrides/company.py:38
 msgid "Country Fixture Deletion Failed"
-msgstr ""
+msgstr "Ülke Fikstürü Silme İşlemi Başarısız"
 
 #: hrms/overrides/company.py:51
 msgid "Country Setup failed"
