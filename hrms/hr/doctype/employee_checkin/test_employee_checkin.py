@@ -611,6 +611,21 @@ class TestEmployeeCheckin(IntegrationTestCase):
 		log2.reload()
 		self.assertEqual(log2.shift_actual_start, datetime.combine(date, get_time("06:00:00")))
 
+	def test_if_logs_are_marked_invalid(self):
+		# time window is 7 to 13
+		shift = setup_shift_type()
+		emp = make_employee("emp_invalid_log@example.com", company="_Test Company", default_shift=shift.name)
+
+		# checkin log outside shift time window
+		timestamp1 = datetime.combine(getdate(), get_time("06:00:00"))
+		log1 = make_checkin(emp, timestamp1)
+		self.assertTrue(log1.is_invalid)
+
+		# checkin log within shift time window
+		timestamp2 = datetime.combine(getdate(), get_time("07:30:00"))
+		log2 = make_checkin(emp, timestamp2)
+		self.assertFalse(log2.is_invalid)
+
 
 def make_n_checkins(employee, n, hours_to_reverse=1):
 	logs = [make_checkin(employee, now_datetime() - timedelta(hours=hours_to_reverse, minutes=n + 1))]
