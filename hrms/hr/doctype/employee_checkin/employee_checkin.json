@@ -25,6 +25,7 @@
   "shift_timings_section",
   "shift_start",
   "shift_end",
+  "is_invalid",
   "column_break_vyyt",
   "shift_actual_start",
   "shift_actual_end"
@@ -164,10 +165,17 @@
    "fieldname": "fetch_geolocation",
    "fieldtype": "Button",
    "label": "Fetch Geolocation"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_invalid",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Invalid"
   }
  ],
  "links": [],
- "modified": "2024-05-29 21:19:11.550766",
+ "modified": "2025-02-12 04:40:24.362987",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Employee Checkin",

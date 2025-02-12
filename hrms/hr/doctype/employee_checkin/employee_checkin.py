@@ -58,6 +58,7 @@ class EmployeeCheckin(Document):
 			)
 		):
 			self.shift = None
+			self.is_invalid = 1
 			return
 
 		if (
