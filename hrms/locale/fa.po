@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-01-29 09:54\n"
+"PO-Revision-Date: 2025-02-08 12:36\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -594,7 +594,7 @@ msgstr "افزودن تاریخ‌ها بر اساس روز"
 
 #: hrms/hr/employee_property_update.js:43
 msgid "Add Employee Property"
-msgstr "اضافه کردن اموال کارکنان"
+msgstr "افزودن اموال کارکنان"
 
 #: frontend/src/components/ExpensesTable.vue:123
 msgid "Add Expense"
@@ -13862,7 +13862,7 @@ msgstr "آیتم سرویس خودرو"
 #: hrms/hr/doctype/expense_claim/expense_claim.js:164
 #: hrms/hr/doctype/job_applicant/job_applicant.js:42
 msgid "View"
-msgstr "چشم انداز"
+msgstr "نما"
 
 #: frontend/src/components/Holidays.vue:10
 msgid "View All"

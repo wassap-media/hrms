@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-01-26 09:33+0000\n"
-"PO-Revision-Date: 2025-01-28 09:56\n"
+"PO-Revision-Date: 2025-02-11 13:21\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -1739,7 +1739,7 @@ msgstr "Mevcut İzinler"
 #: hrms/hr/doctype/appraisal/appraisal.json
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.js:84
 msgid "Average Feedback Score"
-msgstr ""
+msgstr "Ortalama Geri Bildirim Puanı"
 
 #. Label of the average_rating (Rating) field in DocType 'Interview Feedback'
 #: hrms/hr/doctype/interview_feedback/interview_feedback.json
@@ -1750,7 +1750,7 @@ msgstr "Ortalama Puan"
 #. Description of the 'Final Score' (Float) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
 msgid "Average of Goal Score, Feedback Score, and Self Appraisal Score (out of 5)"
-msgstr ""
+msgstr "Hedef Puanı, Geri Bildirim Puanı ve Öz Değerlendirme Puanının Ortalaması (5 üzerinden)"
 
 #: hrms/public/js/templates/interview_feedback.html:16
 msgid "Average rating of demonstrated skills"
@@ -2740,7 +2740,7 @@ msgstr "Ülke"
 
 #: hrms/overrides/company.py:38
 msgid "Country Fixture Deletion Failed"
-msgstr ""
+msgstr "Ülke Fikstürü Silme İşlemi Başarısız"
 
 #: hrms/overrides/company.py:51
 msgid "Country Setup failed"
@@ -5970,7 +5970,7 @@ msgstr "Yakıt Gideri"
 
 #: hrms/hr/report/vehicle_expenses/vehicle_expenses.py:165
 msgid "Fuel Expenses"
-msgstr ""
+msgstr "Yakıt Giderleri"
 
 #. Label of the price (Currency) field in DocType 'Vehicle Log'
 #: hrms/hr/doctype/vehicle_log/vehicle_log.json
@@ -7809,7 +7809,7 @@ msgstr "Gündem Muhafaza Miktarını Bırak"
 
 #: frontend/src/views/leave/List.vue:5
 msgid "Leave History"
-msgstr ""
+msgstr "İzin Geçmişi"
 
 #. Name of a report
 #: hrms/hr/report/leave_ledger/leave_ledger.json
@@ -9299,7 +9299,7 @@ msgstr ""
 
 #: hrms/public/js/templates/interview_feedback.html:4
 msgid "Overall Average Rating"
-msgstr ""
+msgstr "Genel Ortalama Puan"
 
 #: hrms/hr/doctype/attendance_request/attendance_request.py:57
 msgid "Overlapping Attendance Request"
@@ -9510,7 +9510,7 @@ msgstr "Ödeme Günleri"
 #. Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Payment Days Calculation Help"
-msgstr ""
+msgstr "Hakediş Günleri Hesaplama Yardımı"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:114
 msgid "Payment Days Dependency"
@@ -12631,7 +12631,7 @@ msgstr ""
 
 #: frontend/src/components/RequestPanel.vue:36
 msgid "Team Requests"
-msgstr ""
+msgstr "Ekip Talepleri"
 
 #: hrms/hr/page/team_updates/team_updates.js:4
 msgid "Team Updates"
@@ -12858,7 +12858,7 @@ msgstr "Zaman Çizelgesi"
 #. Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Timesheet Details"
-msgstr ""
+msgstr "Zaman Çizelgesi Detayı"
 
 #: hrms/hr/notification/training_scheduled/training_scheduled.html:29
 msgid "Timing"
@@ -13566,7 +13566,7 @@ msgstr ""
 
 #: hrms/hr/doctype/goal/goal.js:55
 msgid "Unarchive"
-msgstr ""
+msgstr "Arşivden Çıkar"
 
 #. Label of the unclaimed_amount (Currency) field in DocType 'Expense Claim
 #. Advance'
@@ -13664,7 +13664,7 @@ msgstr "Kullanılmayan İzinler"
 
 #: frontend/src/components/Holidays.vue:4
 msgid "Upcoming Holidays"
-msgstr ""
+msgstr "Yaklaşan Tatiller"
 
 #: hrms/controllers/employee_reminders.py:69
 msgid "Upcoming Holidays Reminder"
@@ -13672,7 +13672,7 @@ msgstr "Yaklaşan Tatiller"
 
 #: frontend/src/views/attendance/Dashboard.vue:23
 msgid "Upcoming Shifts"
-msgstr ""
+msgstr "Yaklaşan Vardiyalar"
 
 #: hrms/hr/doctype/goal/goal_tree.js:251
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.js:208
@@ -13683,7 +13683,7 @@ msgstr "Güncelle"
 
 #: frontend/src/components/ExpensesTable.vue:123
 msgid "Update Expense"
-msgstr ""
+msgstr "Harcamayı Güncelle"
 
 #: hrms/hr/doctype/interview/interview.py:71
 msgid "Update Job Applicant"
@@ -13707,7 +13707,7 @@ msgstr "Durumu Güncelle"
 
 #: frontend/src/components/ExpenseTaxesTable.vue:118
 msgid "Update Tax"
-msgstr ""
+msgstr "Vergiyi Güncelle"
 
 #: hrms/hr/doctype/attendance_request/attendance_request.py:95
 msgid "Updated status from {0} to {1} for date {2} in the attendance record {3}"
