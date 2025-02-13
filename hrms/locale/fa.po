@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-02-09 09:33+0000\n"
-"PO-Revision-Date: 2025-02-12 13:37\n"
+"PO-Revision-Date: 2025-02-13 13:50\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -495,7 +495,7 @@ msgstr "تنظیمات حساب ها"
 
 #: hrms/payroll/doctype/salary_component/salary_component.py:57
 msgid "Accounts not set for Salary Component {0}"
-msgstr ""
+msgstr "حساب‌ها برای مؤلفه حقوق {0} تنظیم نشده است"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:593
 msgid "Accrual Journal Entry for salaries from {0} to {1}"
@@ -780,7 +780,7 @@ msgstr "تخصیص مرخصی"
 
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:192
 msgid "Allocate leaves to {0} employee(s)?"
-msgstr ""
+msgstr "مرخصی را به {0} کارمند(ها) اختصاص دهید؟"
 
 #. Label of the allocate_on_day (Select) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
@@ -844,7 +844,7 @@ msgstr "اجازه درخواست مرخصی بعد از (روزهای کاری)
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 #: hrms/hr/doctype/shift_assignment/shift_assignment.py:105
 msgid "Allow Multiple Shift Assignments for Same Date"
-msgstr "به تکالیف شیفت چندگانه برای همان تاریخ اجازه دهید"
+msgstr "اجازه تخصیص چندین شیفت برای یک تاریخ"
 
 #. Label of the allow_negative (Check) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
@@ -1958,7 +1958,7 @@ msgstr "اختصاص انبوه"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment_list.js:3
 msgid "Bulk Leave Policy Assignment"
-msgstr "واگذاری سیاست مرخصی انبوه"
+msgstr "تخصیص انبوه سیاست مرخصی"
 
 #. Name of a DocType
 #. Label of a Link in the Salary Payout Workspace
@@ -1966,7 +1966,7 @@ msgstr "واگذاری سیاست مرخصی انبوه"
 #: hrms/payroll/doctype/salary_structure/salary_structure_list.js:3
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Bulk Salary Structure Assignment"
-msgstr "تخصیص ساختار حقوق و دستمزد انبوه"
+msgstr "تخصیص انبوه ساختار حقوق و دستمزد"
 
 #. Description of the 'Calculate Final Score based on Formula' (Check) field in
 #. DocType 'Appraisal Cycle'
@@ -2213,7 +2213,7 @@ msgstr "تاریخ مطالبه"
 #: frontend/src/views/Home.vue:47
 #: frontend/src/views/expense_claim/Dashboard.vue:17
 msgid "Claim an Expense"
-msgstr ""
+msgstr "مطالبه یک هزینه"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
 #: hrms/hr/doctype/employee_advance/employee_advance.json
@@ -3262,7 +3262,7 @@ msgstr "حساب پیش پرداخت پیش فرض کارمند"
 
 #: hrms/setup.py:73
 msgid "Default Expense Claim Payable Account"
-msgstr ""
+msgstr "حساب پرداختی پیش‌فرض برای مطالبه هزینه"
 
 #: hrms/overrides/company.py:133 hrms/setup.py:96
 msgid "Default Payroll Payable Account"
@@ -3718,7 +3718,7 @@ msgstr "وضعیت سند"
 
 #: frontend/src/components/RequestActionSheet.vue:292
 msgid "Document {0} failed!"
-msgstr ""
+msgstr "سند {0} ناموفق بود!"
 
 #. Option for the 'Travel Type' (Select) field in DocType 'Travel Request'
 #: hrms/hr/doctype/travel_request/travel_request.json
@@ -3835,7 +3835,7 @@ msgstr "مرخصی‌های کسب‌شده به‌طور خودکار از طر
 
 #: hrms/hr/doctype/leave_type/leave_type.js:47
 msgid "Earned Leaves are leaves earned by an Employee after working with the company for a certain amount of time. Enabling this will allocate leaves on pro-rata basis by automatically updating Leave Allocation for leaves of this type at intervals set by 'Earned Leave Frequency."
-msgstr "مرخصی های کسب شده مرخصی هایی است که کارمند پس از مدت زمان مشخصی با شرکت به دست می آورد. با فعال کردن این مورد، برگ‌ها را با به‌روزرسانی خودکار «تخصیص مرخصی» برای برگ‌هایی از این نوع در فواصل زمانی تعیین‌شده توسط «تعداد مرخصی کسب‌شده» به‌صورت متناسب تخصیص می‌دهد."
+msgstr "مرخصی‌های کسب‌شده، مرخصی‌هایی هستند که یک کارمند پس از کار کردن در شرکت برای مدت زمان معینی به دست می‌آورد. فعال کردن این گزینه، مرخصی‌ها را بر اساس نسبت کارکرد تخصیص داده و به‌صورت خودکار تخصیص مرخصی را در فواصل زمانی تعیین‌شده توسط 'تناوب مرخصی کسب‌شده' به‌روزرسانی می‌کند."
 
 #. Option for the 'Type' (Select) field in DocType 'Salary Component'
 #: hrms/payroll/doctype/salary_component/salary_component.json
@@ -4386,7 +4386,7 @@ msgstr "چرخه حیات کارمند"
 
 #: hrms/setup.py:772
 msgid "Employee Loan"
-msgstr ""
+msgstr "وام کارمند"
 
 #. Label of the employee_name (Data) field in DocType 'Appraisal'
 #. Label of the employee_name (Data) field in DocType 'Appraisee'
@@ -4745,7 +4745,7 @@ msgstr "کارمند {0} قبلاً یک درخواست حضور {1} دارد ک
 
 #: hrms/hr/doctype/shift_assignment/shift_assignment.py:140
 msgid "Employee {0} already has an active Shift {1}: {2} that overlaps within this period."
-msgstr "کارمند {0} قبلاً یک Shift فعال {1} دارد: {2} که در این دوره همپوشانی دارد."
+msgstr "کارمند {0} از قبل شیفت فعال {1}: {2} دارد که در این بازه زمانی تداخل دارد."
 
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.py:152
 msgid "Employee {0} already submitted an application {1} for the payroll period {2}"
@@ -5370,7 +5370,7 @@ msgstr "جزئیات مطالبه هزینه"
 
 #: frontend/src/components/ExpenseClaimSummary.vue:3
 msgid "Expense Claim Summary"
-msgstr ""
+msgstr "خلاصه مطالبه هزینه"
 
 #. Label of the expense_type (Link) field in DocType 'Expense Claim Detail'
 #. Name of a DocType
@@ -5465,7 +5465,7 @@ msgstr "مرخصی(های) منقضی شده"
 
 #: hrms/hr/doctype/leave_application/leave_application_dashboard.html:8
 msgid "Expired Leaves"
-msgstr ""
+msgstr "مرخصی‌های منقضی شده"
 
 #. Label of the explanation (Small Text) field in DocType 'Attendance Request'
 #: hrms/hr/doctype/attendance_request/attendance_request.json
@@ -5507,7 +5507,7 @@ msgstr ""
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:332
 msgid "Failed to submit some leave policy assignments:"
-msgstr "برخی از تکالیف خط مشی مرخصی ارائه نشد:"
+msgstr "ناموفق در ارسال برخی از تخصیص‌های سیاست مرخصی:"
 
 #: hrms/hr/doctype/interview/interview.py:205
 msgid "Failed to update the Job Applicant status"
@@ -5822,7 +5822,7 @@ msgstr ""
 #: hrms/hr/doctype/shift_schedule/shift_schedule.json
 #: hrms/hr/doctype/vehicle_service/vehicle_service.json
 msgid "Frequency"
-msgstr "فرکانس"
+msgstr "تناوب"
 
 #: frontend/src/components/AttendanceCalendar.vue:117
 #: hrms/hr/doctype/leave_block_list/leave_block_list.js:57
@@ -6536,7 +6536,7 @@ msgstr "سلام {}! این ایمیل برای یادآوری تعطیلات آ
 
 #: frontend/src/components/CheckInPanel.vue:4
 msgid "Hey, {0} 👋"
-msgstr ""
+msgstr "سلام، {0}👋"
 
 #: hrms/hr/dashboard_chart_source/hiring_vs_attrition_count/hiring_vs_attrition_count.py:44
 msgid "Hiring Count"
@@ -6953,7 +6953,7 @@ msgstr ""
 #: frontend/src/components/InstallPrompt.vue:5
 #: frontend/src/components/InstallPrompt.vue:28
 msgid "Install Frappe HR"
-msgstr ""
+msgstr "نصب Frappe HR"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:414
 msgid "Insufficient Balance"
@@ -7073,15 +7073,15 @@ msgstr "زمان مصاحبه با موفقیت تغییر کرد"
 #: hrms/hr/doctype/job_applicant/job_applicant_dashboard.html:8
 #: hrms/hr/workspace/recruitment/recruitment.json
 msgid "Interview Round"
-msgstr "دور مصاحبه"
+msgstr "مرحله مصاحبه"
 
 #: hrms/hr/doctype/job_applicant/job_applicant.py:72
 msgid "Interview Round {0} is only applicable for the Designation {1}"
-msgstr "دور مصاحبه {0} فقط برای نقش سازمانی {1} قابل اجرا است"
+msgstr "مرحله مصاحبه {0} فقط برای نقش سازمانی {1} قابل اجرا است"
 
 #: hrms/hr/doctype/interview/interview.py:52
 msgid "Interview Round {0} is only for Designation {1}. Job Applicant has applied for the role {2}"
-msgstr "دور مصاحبه {0} فقط برای تعیین {1} است. متقاضی کار برای نقش {2} درخواست داده است"
+msgstr "مرحله مصاحبه {0} فقط برای تعیین {1} است. متقاضی کار برای نقش {2} درخواست داده است"
 
 #: hrms/hr/doctype/interview_feedback/interview_feedback.py:40
 msgid "Interview Scheduled Date"
@@ -7155,7 +7155,7 @@ msgstr "معرفی"
 #. Option for the 'Status' (Select) field in DocType 'Employee Grievance'
 #: hrms/hr/doctype/employee_grievance/employee_grievance.json
 msgid "Invalid"
-msgstr "بی اعتبار"
+msgstr "نامعتبر"
 
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:183
 msgid "Invalid Action"
@@ -7171,7 +7171,7 @@ msgstr "مرکز هزینه نامعتبر است"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:323
 msgid "Invalid Dates"
-msgstr ""
+msgstr "تاریخ های نامعتبر"
 
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:25
 msgid "Invalid Leave Ledger Entry"
@@ -7183,7 +7183,7 @@ msgstr "حساب پرداختی حقوق و دستمزد نامعتبر است. 
 
 #: hrms/hr/doctype/expense_claim/expense_claim.py:624
 msgid "Invalid parameters provided. Please pass the required arguments."
-msgstr ""
+msgstr "پارامترهای نامعتبر ارائه شده است. لطفا آرگومان های مورد نیاز را ارسال کنید."
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Grievance'
 #: hrms/hr/doctype/employee_grievance/employee_grievance.json
@@ -7370,7 +7370,7 @@ msgstr "متقاضی کار {0} با موفقیت ایجاد شد."
 
 #: hrms/hr/doctype/interview/interview.py:39
 msgid "Job Applicants are not allowed to appear twice for the same Interview round. Interview {0} already scheduled for Job Applicant {1}"
-msgstr "متقاضیان کار مجاز به حضور دو بار برای یک دور مصاحبه نیستند. مصاحبه {0} از قبل برای متقاضی شغل برنامه ریزی شده است {1}"
+msgstr "متقاضیان کار مجاز به حضور دو بار برای یک مرحله مصاحبه نیستند. مصاحبه {0} از قبل برای متقاضی شغل برنامه ریزی شده است {1}"
 
 #. Label of the job_application_route (Data) field in DocType 'Job Opening'
 #: hrms/hr/doctype/job_opening/job_opening.json
@@ -8029,7 +8029,7 @@ msgstr "مرخصی در سال"
 
 #: hrms/hr/doctype/leave_type/leave_type.js:30
 msgid "Leaves you can avail against a holiday you worked on. You can claim Compensatory Off Leave using Compensatory Leave Request. Click {0} to know more"
-msgstr ""
+msgstr "مرخصی‌هایی که می‌توانید در مقابل تعطیلاتی که در آن کار کرده‌اید استفاده کنید. شما می‌توانید مرخصی جبرانی را با استفاده از درخواست مرخصی جبرانی مطالبه کنید. برای کسب اطلاعات بیشتر روی {0} کلیک کنید"
 
 #. Label of the lft (Int) field in DocType 'Goal'
 #: hrms/hr/doctype/goal/goal.json
@@ -8622,11 +8622,11 @@ msgstr "حساب من"
 
 #: frontend/src/views/employee_advance/List.vue:17
 msgid "My Advances"
-msgstr ""
+msgstr "پیش‌پرداخت‌های من"
 
 #: frontend/src/views/expense_claim/List.vue:18
 msgid "My Claims"
-msgstr ""
+msgstr "مطالبات من"
 
 #: frontend/src/views/leave/List.vue:17
 msgid "My Leaves"
@@ -8723,7 +8723,7 @@ msgstr ""
 
 #: hrms/public/js/templates/performance_feedback.html:26
 msgid "New Feedback"
-msgstr ""
+msgstr "بازخورد جدید"
 
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.py:60
 msgid "New Leave(s) Allocated"
@@ -8744,7 +8744,7 @@ msgstr "مرخصی های جدید اختصاص داده شده (بر حسب ر�
 #. Schedule Assignment'
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 msgid "New shift assignments will be created after this date."
-msgstr ""
+msgstr "تخصیص‌های شیفت جدید پس از این تاریخ ایجاد خواهد شد."
 
 #: frontend/src/components/FormView.vue:53
 msgid "New {0}"
@@ -8789,7 +8789,7 @@ msgstr "هیچ مرخصی به کارمند اختصاص داده نشده اس�
 
 #: hrms/payroll/doctype/gratuity/gratuity.py:267
 msgid "No Salary Slip found for Employee: {0}"
-msgstr ""
+msgstr "هیچ فیش حقوقی برای کارمند: {0} یافت نشد"
 
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.py:116
 msgid "No Salary Structure Assignment found for employee {0} on or before {1}"
@@ -8801,11 +8801,11 @@ msgstr "هیچ ساختار حقوقی به کارمند {0} در تاریخ م�
 
 #: hrms/payroll/doctype/salary_component/salary_component.js:99
 msgid "No Salary Structures"
-msgstr ""
+msgstr "بدون ساختار حقوق و دستمزد"
 
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:255
 msgid "No Shift Requests Selected"
-msgstr ""
+msgstr "هیچ درخواست شیفتی انتخاب نشد"
 
 #: hrms/hr/doctype/job_opening/job_opening.js:32
 msgid "No Staffing Plans found for this Designation"
@@ -11273,7 +11273,7 @@ msgstr "تخصیص ساختار حقوق و دستمزد"
 
 #: hrms/public/js/utils/payroll_utils.js:31
 msgid "Salary Structure Assignment field"
-msgstr ""
+msgstr "فیلد تخصیص ساختار حقوق و دستمزد"
 
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:44
 msgid "Salary Structure Assignment for Employee already exists"
@@ -11317,7 +11317,7 @@ msgstr "کسر حقوق"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_withholding_cycle/salary_withholding_cycle.json
 msgid "Salary Withholding Cycle"
-msgstr ""
+msgstr "چرخه کسر حقوق"
 
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.py:39
 msgid "Salary Withholding {0} already exists for employee {1} for the selected period"
@@ -11431,7 +11431,7 @@ msgstr "انتخاب کارمندان"
 
 #: hrms/hr/doctype/interview/interview.js:209
 msgid "Select Interview Round First"
-msgstr "ابتدا دور مصاحبه را انتخاب کنید"
+msgstr "ابتدا مرحله مصاحبه را انتخاب کنید"
 
 #: hrms/hr/doctype/interview_feedback/interview_feedback.js:49
 msgid "Select Interview first"
@@ -11505,7 +11505,7 @@ msgstr "تاریخ شروع درخواست مرخصی خود را انتخاب �
 #. Assignment'
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 msgid "Select this if you want shift assignments to be automatically created indefinitely."
-msgstr ""
+msgstr "این گزینه را انتخاب کنید اگر می‌خواهید تخصیص شیفت‌ها به‌صورت نامحدود به‌طور خودکار ایجاد شوند."
 
 #: hrms/hr/doctype/leave_application/leave_application.js:291
 msgid "Select type of leave the employee wants to apply for, like Sick Leave, Privilege Leave, Casual Leave, etc."
@@ -11683,7 +11683,7 @@ msgstr "From(Year) و \"To(Year)\" را روی 0 بدون محدودیت بال�
 #. 'Bulk Salary Structure Assignment'
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 msgid "Set Assignment Details"
-msgstr ""
+msgstr "تنظیم جزئیات تخصیص"
 
 #. Label of the attendance_details_section (Section Break) field in DocType
 #. 'Employee Attendance Tool'
@@ -11746,7 +11746,7 @@ msgstr "در صورت لزوم وضعیت را روی {0} تنظیم کنید."
 
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.js:200
 msgid "Set {0} for selected employees"
-msgstr ""
+msgstr "تنظیم {0} برای کارمندان انتخاب شده"
 
 #. Label of the settings_section (Section Break) field in DocType 'Appraisal
 #. Cycle'
@@ -11815,7 +11815,7 @@ msgstr "شیفت پایان واقعی"
 
 #: hrms/hr/report/shift_attendance/shift_attendance.py:117
 msgid "Shift Actual End Time"
-msgstr "تغییر زمان پایان واقعی"
+msgstr "زمان پایان واقعی شیفت"
 
 #. Label of the shift_actual_start (Datetime) field in DocType 'Employee
 #. Checkin'
@@ -11825,7 +11825,7 @@ msgstr "شروع واقعی شیفت"
 
 #: hrms/hr/report/shift_attendance/shift_attendance.py:111
 msgid "Shift Actual Start Time"
-msgstr "تغییر زمان شروع واقعی"
+msgstr "زمان شروع واقعی شیفت"
 
 #. Name of a DocType
 #. Label of a Link in the Shift & Attendance Workspace
@@ -11838,11 +11838,11 @@ msgstr "تخصیص شیفت"
 #. DocType 'Shift Assignment Tool'
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 msgid "Shift Assignment Details"
-msgstr ""
+msgstr "جزئیات تخصیص شیفت"
 
 #: frontend/src/views/attendance/ShiftAssignmentList.vue:5
 msgid "Shift Assignment History"
-msgstr ""
+msgstr "تاریخچه تخصیص شیفت"
 
 #. Name of a DocType
 #. Label of a Link in the Shift & Attendance Workspace
@@ -11850,7 +11850,7 @@ msgstr ""
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 #: hrms/public/js/utils/index.js:238 hrms/public/js/utils/index.js:260
 msgid "Shift Assignment Tool"
-msgstr ""
+msgstr "ابزار تخصیص شیفت"
 
 #: hrms/hr/doctype/shift_request/shift_request.py:51
 msgid "Shift Assignment: {0} created for Employee: {1}"
@@ -11870,7 +11870,7 @@ msgstr "حضور و غیاب شیفت"
 #: hrms/hr/doctype/shift_assignment/shift_assignment.json
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 msgid "Shift Details"
-msgstr ""
+msgstr "جزئیات شیفت"
 
 #. Label of the shift_end (Datetime) field in DocType 'Employee Checkin'
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
@@ -11914,7 +11914,7 @@ msgstr "تایید کننده درخواست شیفت"
 #. 'Shift Assignment Tool'
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 msgid "Shift Request Filters"
-msgstr ""
+msgstr "فیلترهای درخواست شیفت"
 
 #. Description of the 'From Date' (Date) field in DocType 'Shift Assignment
 #. Tool'
@@ -11947,13 +11947,13 @@ msgstr "زمان‌بندی شیفت"
 #: hrms/hr/doctype/shift_schedule_assignment/shift_schedule_assignment.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Shift Schedule Assignment"
-msgstr ""
+msgstr "تخصیص زمان‌بندی شیفت"
 
 #. Label of the shift_settings_section (Section Break) field in DocType 'HR
 #. Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Shift Settings"
-msgstr "تنظیمات Shift"
+msgstr "تنظیمات شیفت"
 
 #. Label of the shift_start (Datetime) field in DocType 'Employee Checkin'
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
@@ -12004,7 +12004,7 @@ msgstr "نوع شیفت"
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.js:34
 msgid "Shift has been successfully updated to {0}."
-msgstr ""
+msgstr "شیفت با موفقیت به {0} به روز شد."
 
 #. Label of a Card Break in the Shift & Attendance Workspace
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
@@ -12358,7 +12358,7 @@ msgstr "ارائه فیش حقوقی"
 
 #: hrms/hr/doctype/leave_application/leave_application.js:108
 msgid "Submit this Leave Application to confirm."
-msgstr ""
+msgstr "برای تایید این درخواست مرخصی را ارسال کنید."
 
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.py:39
 msgid "Submit this to create the Employee record"
@@ -12623,15 +12623,15 @@ msgstr ""
 
 #: frontend/src/views/expense_claim/List.vue:18
 msgid "Team Claims"
-msgstr ""
+msgstr "مطالبات تیم"
 
 #: frontend/src/views/leave/List.vue:17
 msgid "Team Leaves"
-msgstr ""
+msgstr "مرخصی‌های تیم"
 
 #: frontend/src/components/RequestPanel.vue:36
 msgid "Team Requests"
-msgstr ""
+msgstr "درخواست های تیم"
 
 #: hrms/hr/page/team_updates/team_updates.js:4
 msgid "Team Updates"
@@ -13000,7 +13000,7 @@ msgstr "امروز {0} در شرکت ما! 🎉"
 
 #: hrms/controllers/employee_reminders.py:241
 msgid "Today {0} completed {1} year(s) at our Company! 🎉"
-msgstr ""
+msgstr "امروز {0} {1} سال(ها) را در شرکت ما تکمیل کرد! 🎉"
 
 #. Label of the total (Currency) field in DocType 'Expense Taxes and Charges'
 #: hrms/hr/doctype/expense_taxes_and_charges/expense_taxes_and_charges.json
@@ -13055,7 +13055,7 @@ msgstr ""
 
 #: hrms/payroll/doctype/gratuity/gratuity.py:102
 msgid "Total Amount cannot be zero"
-msgstr ""
+msgstr "مبلغ کل نمی تواند صفر باشد"
 
 #. Label of the total_asset_recovery_cost (Currency) field in DocType 'Full and
 #. Final Statement'
@@ -13703,7 +13703,7 @@ msgstr "به روز رسانی پاسخ"
 
 #: hrms/payroll/doctype/salary_component/salary_component.js:104
 msgid "Update Salary Structures"
-msgstr ""
+msgstr "به روز رسانی ساختارهای حقوق و دستمزد"
 
 #: hrms/hr/doctype/goal/goal_list.js:35
 msgid "Update Status"
@@ -13904,7 +13904,7 @@ msgstr "مشاهده اهداف"
 
 #: frontend/src/components/LeaveBalance.vue:14
 msgid "View Leave History"
-msgstr ""
+msgstr "مشاهده تاریخچه مرخصی"
 
 #: hrms/public/js/utils/leave_utils.js:5
 msgid "View Ledger"
@@ -13917,12 +13917,12 @@ msgstr "مشاهده لیست"
 
 #: frontend/src/views/Home.vue:57
 msgid "View Salary Slips"
-msgstr ""
+msgstr "مشاهده فیش‌های حقوقی"
 
 #. Option for the 'Roster Color' (Select) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Violet"
-msgstr ""
+msgstr "بنفش"
 
 #: hrms/patches/v15_0/notify_about_loan_app_separation.py:16
 msgid "WARNING: Loan Management module has been separated from ERPNext."
@@ -13955,7 +13955,7 @@ msgstr "هشدار: درخواست مرخصی شامل تاریخ های بلو�
 
 #: hrms/hr/doctype/shift_assignment/shift_assignment.py:91
 msgid "Warning: {0} already has an active Shift Assignment {1} for some/all of these dates."
-msgstr "اخطار: {0} در حال حاضر یک Shift Assignment فعال {1} برای برخی/همه این تاریخ ها دارد."
+msgstr "اخطار: {0} در حال حاضر یک تخصیص شیفت فعال {1} برای برخی/همه این تاریخ ها دارد."
 
 #: hrms/setup.py:391
 msgid "Website Listing"
@@ -14346,7 +14346,7 @@ msgstr "{0} از قبل برای کارمند {1} و دوره {2} وجود دا�
 
 #: hrms/hr/doctype/shift_assignment/shift_assignment.py:99
 msgid "{0} already has an active Shift Assignment {1} for some/all of these dates."
-msgstr "{0} قبلاً یک Shift Assignment فعال {1} برای برخی/همه این تاریخ ها دارد."
+msgstr "{0} از قبل یک تخصیص شیفت فعال {1} برای برخی/همه این تاریخ ها دارد."
 
 #: hrms/hr/doctype/leave_application/leave_application.py:151
 msgid "{0} applicable after {1} working days"
@@ -14513,7 +14513,7 @@ msgstr "{} انتظار"
 #. Count format of shortcut in the Expense Claims Workspace
 #: hrms/hr/workspace/expense_claims/expense_claims.json
 msgid "{} Unclaimed"
-msgstr ""
+msgstr "{} مطالبه نشده"
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:233
 msgid "{} is an invalid Attendance Status."

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-02-09 09:33+0000\n"
-"PO-Revision-Date: 2025-02-12 13:37\n"
+"PO-Revision-Date: 2025-02-13 13:50\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -9867,7 +9867,7 @@ msgstr ""
 
 #: hrms/hr/utils.py:724
 msgid "Please select a Company"
-msgstr ""
+msgstr "Odaberi Kompaniju"
 
 #: hrms/public/js/hierarchy_chart/hierarchy_chart_mobile.js:233
 msgid "Please select a company first"
