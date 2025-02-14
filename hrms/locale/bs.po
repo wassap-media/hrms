@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-02-09 09:33+0000\n"
-"PO-Revision-Date: 2025-02-13 13:50\n"
+"PO-Revision-Date: 2025-02-14 13:50\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -2169,7 +2169,7 @@ msgstr "Kontni Plan"
 #. Label of a Link in the Salary Payout Workspace
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Chart of Cost Centers"
-msgstr "Tabela Troškovnih Centara"
+msgstr "Tabela Centara Troškova"
 
 #: hrms/public/js/utils/index.js:147
 msgid "Check <a href='/app/List/Error Log?reference_doctype={0}'>{1}</a> for more details"
@@ -6047,7 +6047,7 @@ msgstr "Spol"
 #: hrms/hr/workspace/expense_claims/expense_claims.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "General Ledger"
-msgstr "Knjigovodstveni Registar"
+msgstr "Registar Knjigovodstva"
 
 #. Label of the geolocation (Geolocation) field in DocType 'Employee Checkin'
 #. Label of the geolocation (Geolocation) field in DocType 'Shift Location'
@@ -7521,7 +7521,7 @@ msgstr ""
 #: hrms/payroll/doctype/salary_withholding_cycle/salary_withholding_cycle.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Journal Entry"
-msgstr "Unos u Dnevnik"
+msgstr "Unos Dnevnika"
 
 #. Label of a Card Break in the Employee Lifecycle Workspace
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
@@ -8219,7 +8219,7 @@ msgstr ""
 #: hrms/hr/doctype/vehicle_log/vehicle_log.json
 #: hrms/hr/report/vehicle_expenses/vehicle_expenses.py:31
 msgid "Make"
-msgstr "Napravi"
+msgstr "Marka"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.js:163
 msgid "Make Bank Entry"
@@ -10631,7 +10631,7 @@ msgstr ""
 
 #: frontend/src/components/FormView.vue:43
 msgid "Reload"
-msgstr "Ponovo učitaj"
+msgstr "Ponovo Učitaj"
 
 #. Label of the remaining_benefit (Currency) field in DocType 'Employee Benefit
 #. Application'
@@ -11780,7 +11780,7 @@ msgstr ""
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.json
 #: hrms/hr/workspace/overview/overview.json
 msgid "Settings"
-msgstr ""
+msgstr "Postavke"
 
 #: hrms/hr/doctype/exit_interview/exit_interview.py:125
 msgid "Settings Missing"
@@ -11798,7 +11798,7 @@ msgstr ""
 #. Outstanding Statement'
 #: hrms/hr/doctype/full_and_final_outstanding_statement/full_and_final_outstanding_statement.json
 msgid "Settled"
-msgstr ""
+msgstr "Usaglašeno"
 
 #. Label of a Card Break in the Leaves Workspace
 #. Label of a Card Break in the Overview Workspace
@@ -11826,7 +11826,7 @@ msgstr ""
 #: hrms/hr/report/shift_attendance/shift_attendance.py:205
 #: hrms/overrides/dashboard_overrides.py:33
 msgid "Shift"
-msgstr ""
+msgstr "Smjena"
 
 #. Name of a Workspace
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
@@ -12361,7 +12361,7 @@ msgstr ""
 #: hrms/hr/doctype/job_requisition/job_requisition.js:75
 #: hrms/public/js/performance/performance_feedback.js:99
 msgid "Submit"
-msgstr ""
+msgstr "Potvrdi"
 
 #: hrms/hr/doctype/interview/interview.js:57
 #: hrms/hr/doctype/interview/interview.js:61
@@ -12957,7 +12957,7 @@ msgstr "Do Datuma"
 #: frontend/src/views/attendance/ShiftRequestForm.vue:90
 #: frontend/src/views/leave/Form.vue:165
 msgid "To Date cannot be before From Date"
-msgstr ""
+msgstr "Do datuma ne može biti prije Od datuma"
 
 #: hrms/hr/doctype/upload_attendance/upload_attendance.py:30
 msgid "To Date should be greater than From Date"
@@ -13477,7 +13477,7 @@ msgstr ""
 #. Statement'
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.json
 msgid "Transaction Date"
-msgstr ""
+msgstr "Datum Transakcije"
 
 #. Label of the transaction_name (Dynamic Link) field in DocType 'Leave Ledger
 #. Entry'
@@ -13655,7 +13655,7 @@ msgstr ""
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.json
 #: hrms/payroll/doctype/gratuity/gratuity.json
 msgid "Unpaid"
-msgstr ""
+msgstr "Neplaćeno"
 
 #. Name of a report
 #. Label of a Link in the Expense Claims Workspace
