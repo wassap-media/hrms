@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-02-09 09:33+0000\n"
-"PO-Revision-Date: 2025-02-15 14:07\n"
+"PO-Revision-Date: 2025-02-16 14:04\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -1983,7 +1983,7 @@ msgstr "Mass Tilldelningar"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment_list.js:3
 msgid "Bulk Leave Policy Assignment"
-msgstr "Mass Frånvaro Regel Tilldelning"
+msgstr "Mass Frånvaro Princip Tilldelning"
 
 #. Name of a DocType
 #. Label of a Link in the Salary Payout Workspace
@@ -2956,7 +2956,7 @@ msgstr "Aktuell"
 #. Label of the current_ctc (Currency) field in DocType 'Employee Promotion'
 #: hrms/hr/doctype/employee_promotion/employee_promotion.json
 msgid "Current CTC"
-msgstr "Aktuell Kostnad för Bolag"
+msgstr "Aktuell Årslön (CTC)"
 
 #. Label of the current_count (Int) field in DocType 'Staffing Plan Detail'
 #: hrms/hr/doctype/staffing_plan_detail/staffing_plan_detail.json
@@ -3796,7 +3796,7 @@ msgstr "Kopiera Post"
 
 #: hrms/hr/doctype/job_requisition/job_requisition.py:35
 msgid "Duplicate Job Requisition"
-msgstr "Kopiera Jobb Rekvisition"
+msgstr "Duplicera Jobb Ansökan"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:140
 msgid "Duplicate Overwritten Salary"
@@ -7064,7 +7064,7 @@ msgstr "Intervju Återkoppling Påminnelse"
 
 #: hrms/hr/doctype/interview/interview.py:340
 msgid "Interview Feedback {0} submitted successfully"
-msgstr "Intervju Återkoppling {0} godkännd"
+msgstr "Intervju Återkoppling {0} skickad"
 
 #: hrms/hr/doctype/interview/interview.py:87
 msgid "Interview Not Rescheduled"
@@ -7261,7 +7261,7 @@ msgstr "Är Vidarebefodrad"
 #. Label of the is_compensatory (Check) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Is Compensatory"
-msgstr "Är Kompensation Frånvaro"
+msgstr "Är Kompensation"
 
 #: hrms/hr/doctype/leave_type/leave_type.py:40
 msgid "Is Compensatory Leave"
@@ -10255,7 +10255,7 @@ msgstr "Egenskap är redan tillagd"
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Provident Fund Deductions"
-msgstr "Pension Fond Avdrag"
+msgstr "Försäkring Fond Avdrag"
 
 #. Label of the publish_applications_received (Check) field in DocType 'Job
 #. Opening'
@@ -10930,7 +10930,7 @@ msgstr "Recensent Namn"
 #. Label of the revised_ctc (Currency) field in DocType 'Employee Promotion'
 #: hrms/hr/doctype/employee_promotion/employee_promotion.json
 msgid "Revised CTC"
-msgstr "Reviderad Kostnad till Bolag (CTC)"
+msgstr "Reviderad Årslön (CTC)"
 
 #. Label of the rgt (Int) field in DocType 'Goal'
 #: hrms/hr/doctype/goal/goal.json
@@ -11567,7 +11567,7 @@ msgstr "Själv Resultat"
 #. Option for the 'Type' (Select) field in DocType 'Training Event'
 #: hrms/hr/doctype/training_event/training_event.json
 msgid "Self-Study"
-msgstr "Självstudie"
+msgstr "Självlärd"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:809
 msgid "Self-approval for leaves is not allowed"
@@ -12854,7 +12854,7 @@ msgstr "Tidrapport"
 #. field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Time after the end of shift during which check-out is considered for attendance."
-msgstr "Tid efter Avslutad Skift under vilken Stämpling anses vara Närvaro."
+msgstr "Tid efter Avslutad Skift under vilken Utstämpling anses vara Närvaro."
 
 #. Description of the 'Time to Fill' (Duration) field in DocType 'Job
 #. Requisition'
@@ -13043,7 +13043,7 @@ msgstr "Totalt Frånvarande"
 #. Exemption Proof Submission'
 #: hrms/payroll/doctype/employee_tax_exemption_proof_submission/employee_tax_exemption_proof_submission.json
 msgid "Total Actual Amount"
-msgstr "Totalt Faktisk kostnad"
+msgstr "Totalt Faktisk Belopp"
 
 #. Label of the total_advance_amount (Currency) field in DocType 'Expense
 #. Claim'
@@ -13591,7 +13591,7 @@ msgstr "Kunde inte hämta din position"
 
 #: hrms/hr/doctype/goal/goal.js:55
 msgid "Unarchive"
-msgstr "Oarkivera"
+msgstr "Avarkivera"
 
 #. Label of the unclaimed_amount (Currency) field in DocType 'Expense Claim
 #. Advance'
