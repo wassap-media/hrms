@@ -1,8 +1,8 @@
 frappe.listview_settings["Employee Checkin"] = {
-	add_fields: ["is_invalid"],
+	add_fields: ["offshift"],
 	get_indicator: function (doc) {
-		if (doc.is_invalid) {
-			return [__("Invalid"), "red", "is_invalid,=,1"];
+		if (doc.offshift) {
+			return [__("Off-Shift"), "yellow", "offshift,=,1"];
 		}
 	},
 	onload: function (listview) {

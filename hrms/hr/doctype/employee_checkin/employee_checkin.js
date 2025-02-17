@@ -3,10 +3,10 @@
 
 frappe.ui.form.on("Employee Checkin", {
 	refresh: async (frm) => {
-		if (frm.doc.is_invalid) {
+		if (frm.doc.offshift) {
 			frm.dashboard.set_headline(
 				__(
-					"No valid shift found for this log time. If shift is assigned to the employee, adjust time window of the shift and fetch shift again.",
+					"This check-in is outside assigned shift hours and will not be considered for attendance. If a shift is assigned, adjust its time window and Fetch Shift again.",
 				),
 			);
 		}
