@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-02-09 09:33+0000\n"
-"PO-Revision-Date: 2025-02-12 13:37\n"
+"POT-Creation-Date: 2025-02-16 09:33+0000\n"
+"PO-Revision-Date: 2025-02-17 14:16\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Esperanto\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "crwdns104718:0crwdne104718:0"
 msgid "% Utilization (B / T)"
 msgstr "crwdns104720:0crwdne104720:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:135
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:140
 msgid "'employee_field_value' and 'timestamp' are required."
 msgstr "crwdns104722:0crwdne104722:0"
 
@@ -2154,11 +2154,11 @@ msgstr "crwdns141134:0{0}crwdnd141134:0{1}crwdne141134:0"
 msgid "Check Error Log {0} for more details."
 msgstr "crwdns105594:0{0}crwdne105594:0"
 
-#: frontend/src/components/CheckInPanel.vue:124
+#: frontend/src/components/CheckInPanel.vue:123
 msgid "Check In"
 msgstr "crwdns151166:0crwdne151166:0"
 
-#: frontend/src/components/CheckInPanel.vue:123
+#: frontend/src/components/CheckInPanel.vue:122
 msgid "Check Out"
 msgstr "crwdns151168:0crwdne151168:0"
 
@@ -2172,7 +2172,7 @@ msgstr "crwdns141136:0crwdne141136:0"
 msgid "Check {0} for more details"
 msgstr "crwdns105598:0{0}crwdne105598:0"
 
-#: frontend/src/components/CheckInPanel.vue:160
+#: frontend/src/components/CheckInPanel.vue:159
 msgid "Check-in"
 msgstr "crwdns151170:0crwdne151170:0"
 
@@ -2181,7 +2181,7 @@ msgstr "crwdns151170:0crwdne151170:0"
 msgid "Check-in Date"
 msgstr "crwdns141138:0crwdne141138:0"
 
-#: frontend/src/components/CheckInPanel.vue:160
+#: frontend/src/components/CheckInPanel.vue:159
 msgid "Check-out"
 msgstr "crwdns151172:0crwdne151172:0"
 
@@ -4731,11 +4731,11 @@ msgstr "crwdns141394:0crwdne141394:0"
 msgid "Employee records are created using the selected option"
 msgstr "crwdns141396:0crwdne141396:0"
 
-#: hrms/hr/doctype/shift_type/shift_type.py:185
+#: hrms/hr/doctype/shift_type/shift_type.py:186
 msgid "Employee was marked Absent due to missing Employee Checkins."
 msgstr "crwdns106882:0crwdne106882:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:223
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:228
 msgid "Employee was marked Absent for not meeting the working hours threshold."
 msgstr "crwdns106884:0crwdne106884:0"
 
@@ -5007,7 +5007,7 @@ msgstr "crwdns107006:0crwdne107006:0"
 msgid "Enter {0}"
 msgstr "crwdns151212:0{0}crwdne151212:0"
 
-#: frontend/src/components/CheckInPanel.vue:183
+#: frontend/src/components/CheckInPanel.vue:182
 #: frontend/src/components/FormView.vue:530
 #: frontend/src/components/FormView.vue:557
 #: frontend/src/components/FormView.vue:579
@@ -5604,11 +5604,11 @@ msgstr "crwdns107236:0{0}crwdne107236:0"
 msgid "Fetch Geolocation"
 msgstr "crwdns141506:0crwdne141506:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:25
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:32
 msgid "Fetch Shift"
 msgstr "crwdns143570:0crwdne143570:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin_list.js:3
+#: hrms/hr/doctype/employee_checkin/employee_checkin_list.js:9
 msgid "Fetch Shifts"
 msgstr "crwdns143572:0crwdne143572:0"
 
@@ -5617,7 +5617,7 @@ msgstr "crwdns143572:0crwdne143572:0"
 msgid "Fetching Employees"
 msgstr "crwdns107238:0crwdne107238:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:30
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:37
 msgid "Fetching Shift"
 msgstr "crwdns143574:0crwdne143574:0"
 
@@ -6035,7 +6035,7 @@ msgstr "crwdns141566:0crwdne141566:0"
 msgid "Geolocation Error"
 msgstr "crwdns141568:0crwdne141568:0"
 
-#: frontend/src/components/CheckInPanel.vue:144
+#: frontend/src/components/CheckInPanel.vue:143
 #: hrms/public/js/utils/index.js:185
 msgid "Geolocation is not supported by your current browser"
 msgstr "crwdns141570:0crwdne141570:0"
@@ -6259,11 +6259,6 @@ msgstr "crwdns107498:0crwdne107498:0"
 #: hrms/hr/doctype/goal/goal.js:13
 msgid "Group goal's progress is auto-calculated based on the child goals."
 msgstr "crwdns107500:0crwdne107500:0"
-
-#. Name of a role
-#: hrms/hr/doctype/job_opening/job_opening.json
-msgid "Guest"
-msgstr "crwdns107502:0crwdne107502:0"
 
 #: hrms/setup.py:315
 msgid "HR"
@@ -7153,6 +7148,7 @@ msgid "Introduction"
 msgstr "crwdns141714:0crwdne141714:0"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Grievance'
+#: hrms/hr/doctype/employee_checkin/employee_checkin_list.js:5
 #: hrms/hr/doctype/employee_grievance/employee_grievance.json
 msgid "Invalid"
 msgstr "crwdns141716:0crwdne141716:0"
@@ -7276,6 +7272,11 @@ msgstr "crwdns107880:0crwdne107880:0"
 #: hrms/payroll/doctype/salary_component/salary_component.json
 msgid "Is Income Tax Component"
 msgstr "crwdns141742:0crwdne141742:0"
+
+#. Label of the is_invalid (Check) field in DocType 'Employee Checkin'
+#: hrms/hr/doctype/employee_checkin/employee_checkin.json
+msgid "Is Invalid"
+msgstr "crwdns152458:0crwdne152458:0"
 
 #. Label of the is_lwp (Check) field in DocType 'Leave Ledger Entry'
 #. Label of the is_lwp (Check) field in DocType 'Leave Type'
@@ -7633,11 +7634,11 @@ msgstr "crwdns141794:0crwdne141794:0"
 msgid "Latitude"
 msgstr "crwdns141796:0crwdne141796:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:83
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:88
 msgid "Latitude and longitude values are required for checking in."
 msgstr "crwdns149142:0crwdne149142:0"
 
-#: frontend/src/components/CheckInPanel.vue:132
+#: frontend/src/components/CheckInPanel.vue:131
 msgid "Latitude: {0}°"
 msgstr "crwdns151248:0{0}crwdne151248:0"
 
@@ -8111,7 +8112,7 @@ msgstr "crwdns141852:0crwdne141852:0"
 msgid "Loan cannot be repayed from salary for Employee {0} because salary is processed in currency {1}"
 msgstr "crwdns108274:0{0}crwdnd108274:0{1}crwdne108274:0"
 
-#: frontend/src/components/CheckInPanel.vue:146
+#: frontend/src/components/CheckInPanel.vue:145
 msgid "Locating..."
 msgstr "crwdns151254:0crwdne151254:0"
 
@@ -8152,7 +8153,7 @@ msgstr "crwdns151256:0crwdne151256:0"
 msgid "Log Type"
 msgstr "crwdns141858:0crwdne141858:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:67
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:71
 msgid "Log Type is required for check-ins falling in the shift: {0}."
 msgstr "crwdns108288:0{0}crwdne108288:0"
 
@@ -8175,7 +8176,7 @@ msgstr "crwdns151262:0crwdne151262:0"
 msgid "Longitude"
 msgstr "crwdns141860:0crwdne141860:0"
 
-#: frontend/src/components/CheckInPanel.vue:133
+#: frontend/src/components/CheckInPanel.vue:132
 msgid "Longitude: {0}°"
 msgstr "crwdns151264:0{0}crwdne151264:0"
 
@@ -8767,7 +8768,7 @@ msgstr "crwdns108516:0crwdne108516:0"
 msgid "No Employee Found"
 msgstr "crwdns108518:0crwdne108518:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:147
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:152
 msgid "No Employee found for the given employee field value. '{}': {}"
 msgstr "crwdns108520:0crwdne108520:0"
 
@@ -8900,9 +8901,13 @@ msgstr "crwdns108566:0crwdne108566:0"
 msgid "No salary slip found to submit for the above selected criteria OR salary slip already submitted"
 msgstr "crwdns108568:0crwdne108568:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:43
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:50
 msgid "No valid shift found for log time"
 msgstr "crwdns152406:0crwdne152406:0"
+
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:8
+msgid "No valid shift found for this log time. If shift is assigned to the employee, adjust time window of the shift and fetch shift again."
+msgstr "crwdns152460:0crwdne152460:0"
 
 #: hrms/public/js/utils/index.js:48
 msgid "No {0} Selected"
@@ -10396,7 +10401,7 @@ msgstr "crwdns142192:0crwdne142192:0"
 msgid "Reason for Withholding Salary"
 msgstr "crwdns143276:0crwdne143276:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:313
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:318
 msgid "Reason for skipping auto attendance:"
 msgstr "crwdns109184:0crwdne109184:0"
 
@@ -12002,7 +12007,7 @@ msgstr "crwdns151998:0crwdne151998:0"
 msgid "Shift Type"
 msgstr "crwdns109754:0crwdne109754:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:34
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:41
 msgid "Shift has been successfully updated to {0}."
 msgstr "crwdns143576:0{0}crwdne143576:0"
 
@@ -12389,7 +12394,7 @@ msgstr "crwdns109968:0crwdne109968:0"
 msgid "Subsidiary companies have already planned for {1} vacancies at a budget of {2}. Staffing Plan for {0} should allocate more vacancies and budget for {3} than planned for its subsidiary companies"
 msgstr "crwdns109970:0{1}crwdnd109970:0{2}crwdnd109970:0{0}crwdnd109970:0{3}crwdne109970:0"
 
-#: frontend/src/components/CheckInPanel.vue:174
+#: frontend/src/components/CheckInPanel.vue:173
 #: frontend/src/components/FormView.vue:515
 #: frontend/src/components/FormView.vue:548
 #: frontend/src/components/FormView.vue:570
@@ -12764,7 +12769,7 @@ msgstr "crwdns110090:0crwdne110090:0"
 msgid "This compensatory leave will be applicable from {0}."
 msgstr "crwdns110092:0{0}crwdne110092:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:43
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:46
 msgid "This employee already has a log with the same timestamp.{0}"
 msgstr "crwdns110094:0{0}crwdne110094:0"
 
@@ -14212,7 +14217,7 @@ msgstr "crwdns151380:0crwdne151380:0"
 msgid "You may add additional details, if any, and submit the offer."
 msgstr "crwdns110692:0crwdne110692:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:110
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:115
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr "crwdns149150:0{0}crwdne149150:0"
 
@@ -14369,7 +14374,7 @@ msgstr "crwdns151396:0{0}crwdne151396:0"
 msgid "{0} deleted successfully!"
 msgstr "crwdns151398:0{0}crwdne151398:0"
 
-#: frontend/src/components/CheckInPanel.vue:184
+#: frontend/src/components/CheckInPanel.vue:183
 #: frontend/src/components/RequestActionSheet.vue:290
 msgid "{0} failed!"
 msgstr "crwdns151400:0{0}crwdne151400:0"
@@ -14419,7 +14424,7 @@ msgstr "crwdns110752:0{0}crwdne110752:0"
 msgid "{0} of {1} Completed"
 msgstr "crwdns110754:0{0}crwdnd110754:0{1}crwdne110754:0"
 
-#: frontend/src/components/CheckInPanel.vue:175
+#: frontend/src/components/CheckInPanel.vue:174
 msgid "{0} successful!"
 msgstr "crwdns151402:0{0}crwdne151402:0"
 
@@ -14515,7 +14520,7 @@ msgstr "crwdns143298:0crwdne143298:0"
 msgid "{} Unclaimed"
 msgstr "crwdns143300:0crwdne143300:0"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:233
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:238
 msgid "{} is an invalid Attendance Status."
 msgstr "crwdns110770:0crwdne110770:0"
 
