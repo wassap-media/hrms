@@ -58,7 +58,7 @@ class EmployeeCheckin(Document):
 			)
 		):
 			self.shift = None
-			self.is_invalid = 1
+			self.offshift = 1
 			return
 
 		if (
@@ -73,7 +73,7 @@ class EmployeeCheckin(Document):
 				)
 			)
 		if not self.attendance:
-			self.is_invalid = 0
+			self.offshift = 0
 			self.shift = shift_actual_timings.shift_type.name
 			self.shift_actual_start = shift_actual_timings.actual_start
 			self.shift_actual_end = shift_actual_timings.actual_end
