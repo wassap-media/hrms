@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-02-09 09:33+0000\n"
-"PO-Revision-Date: 2025-02-12 13:37\n"
+"PO-Revision-Date: 2025-02-16 14:04\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -793,11 +793,11 @@ msgstr "Alla erfodrade uppgifter för att skapa Personal är inte klara ännu."
 #. Control Panel'
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 msgid "Allocate Based On Leave Policy"
-msgstr "Tilldela Baserat På Ledighet Regel"
+msgstr "Tilldela Baserat På Frånvaro Princip"
 
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:176
 msgid "Allocate Leave"
-msgstr "Tilldela Ledighet"
+msgstr "Tilldela Frånvaro"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:66
 msgid "Allocate Leaves"
@@ -824,11 +824,11 @@ msgstr "Tilldelad Frånvaro"
 
 #: hrms/hr/utils.py:409
 msgid "Allocated {0} leave(s) via scheduler on {1} based on the 'Allocate on Day' option set to {2}"
-msgstr "Tilldelade {0} ledighet(er) via schemaläggare {1} baserat på \"Tilldela\" alternativ  angiven till {2}"
+msgstr "Tilldelad {0} frånvaro via schemaläggare {1} baserat på \"Tilldela\" alternativ angiven till {2}"
 
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:205
 msgid "Allocating Leave"
-msgstr "Tilldelar Ledighet"
+msgstr "Tilldelar Frånvaro"
 
 #. Label of the section_break_6 (Section Break) field in DocType 'Leave
 #. Allocation'
@@ -862,7 +862,7 @@ msgstr "Tillåt Geolokalisering Spårning"
 #. Label of the applicable_after (Int) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Allow Leave Application After (Working Days)"
-msgstr "Tillåt Ledighet Ansökan Efter (Arbetsdagar)"
+msgstr "Tillåt Frånvaro Ansökan Efter (Arbetsdagar)"
 
 #. Label of the allow_multiple_shift_assignments (Check) field in DocType 'HR
 #. Settings'
@@ -906,7 +906,7 @@ msgstr "Tillåt Utstämpling efter Skift Sluttid (Minuter)"
 #. Block List'
 #: hrms/hr/doctype/leave_block_list/leave_block_list.json
 msgid "Allow the following users to approve Leave Applications for block days."
-msgstr "Tillåt följande användarna att godkänna Ledighet Ansökningar för spärrade dagar."
+msgstr "Tillåt följande användarna att godkänna Frånvaro Ansökningar för spärrade dagar."
 
 #. Description of the 'Allow Over Allocation' (Check) field in DocType 'Leave
 #. Type'
@@ -1080,7 +1080,7 @@ msgstr "Förskott Belopp"
 #. Advance'
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Amount scheduled for deduction via salary"
-msgstr ""
+msgstr "Belopp planerad för avdrag via lön"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:32
 msgid "Amount should not be less than zero"
@@ -1186,7 +1186,7 @@ msgstr "Ansökan Period kan inte vara över två Tilldelning poster"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:203
 msgid "Application period cannot be outside leave allocation period"
-msgstr "Ansökan Period kan inte vara utanför Ledighet Tilldelning tid"
+msgstr "Ansökan Period kan inte vara utanför Frånvaro Tilldelning tid"
 
 #: hrms/templates/generators/job_opening.html:162
 msgid "Applications Received"
@@ -1712,7 +1712,7 @@ msgstr "Automatiska Närvaro Inställningar"
 #. Label of the auto_leave_encashment (Check) field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Auto Leave Encashment"
-msgstr "Automatiskt Ledighet Uttag"
+msgstr "Automatiskt Frånvaro Uttag"
 
 #. Option for the 'KRA Evaluation Method' (Select) field in DocType 'Appraisal
 #. Cycle'
@@ -1775,7 +1775,7 @@ msgstr "Inväntar Svar"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:166
 msgid "Backdated Leave Application is restricted. Please set the {} in {}"
-msgstr "Ledighet Ansökan i efterhand är begränsad. Ange {} i {}"
+msgstr "Frånvaro Ansökan i efter hand är begränsad. Ange {} i {}"
 
 #: hrms/payroll/report/salary_payments_via_ecs/salary_payments_via_ecs.py:55
 msgid "Bank"
@@ -1983,7 +1983,7 @@ msgstr "Mass Tilldelningar"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment_list.js:3
 msgid "Bulk Leave Policy Assignment"
-msgstr "Mass Ledighet Regel Tilldelning"
+msgstr "Mass Frånvaro Princip Tilldelning"
 
 #. Name of a DocType
 #. Label of a Link in the Salary Payout Workspace
@@ -2111,7 +2111,7 @@ msgstr "Kan inte skapa eller ändra transaktioner mot utvärderingscykel med sta
 
 #: hrms/hr/doctype/leave_application/leave_application.py:566
 msgid "Cannot find active Leave Period"
-msgstr "Kan inte hitta aktiv Ledighet Period"
+msgstr "Kan inte hitta aktiv Frånvaro Period"
 
 #: hrms/hr/doctype/attendance/attendance.py:142
 msgid "Cannot mark attendance for an Inactive employee {0}"
@@ -2141,11 +2141,11 @@ msgstr "Vidarebefodra"
 #. Allocation'
 #: hrms/hr/doctype/leave_allocation/leave_allocation.json
 msgid "Carry Forwarded Leaves"
-msgstr "Vidarebefodra Frånvaro"
+msgstr "Vidarebefordra Frånvaro"
 
 #: hrms/setup.py:340 hrms/setup.py:341
 msgid "Casual Leave"
-msgstr "Oplanerad Ledighet"
+msgstr "Oplanerad Frånvaro"
 
 #. Label of the cause_of_grievance (Text) field in DocType 'Employee Grievance'
 #: hrms/hr/doctype/employee_grievance/employee_grievance.json
@@ -2642,7 +2642,7 @@ msgstr "Inkludera Ej Registrerad Närvaro som"
 
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.js:53
 msgid "Consolidate Leave Types"
-msgstr "Konsolidera Ledighet Typer"
+msgstr "Konsolidera Frånvaro Typer"
 
 #. Label of the prefered_email (Data) field in DocType 'Travel Request'
 #: hrms/hr/doctype/travel_request/travel_request.json
@@ -2956,7 +2956,7 @@ msgstr "Aktuell"
 #. Label of the current_ctc (Currency) field in DocType 'Employee Promotion'
 #: hrms/hr/doctype/employee_promotion/employee_promotion.json
 msgid "Current CTC"
-msgstr "Aktuell Kostnad för Bolag"
+msgstr "Aktuell Årslön (CTC)"
 
 #. Label of the current_count (Int) field in DocType 'Staffing Plan Detail'
 #: hrms/hr/doctype/staffing_plan_detail/staffing_plan_detail.json
@@ -3008,7 +3008,7 @@ msgstr "Aktuell Arbetsliv Erfarenhet"
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:98
 msgid "Currently, there is no {0} leave period for this date to create/update leave allocation."
-msgstr "För närvarande finns det ingen {0} ledighet period för detta datum för att skapa/uppdatera ledighet tilldelning."
+msgstr "För närvarande finns det ingen {0} frånvaro period för detta datum för att skapa/uppdatera frånvaro tilldelning."
 
 #. Option for the 'Dates Based On' (Select) field in DocType 'Leave Control
 #. Panel'
@@ -3796,7 +3796,7 @@ msgstr "Kopiera Post"
 
 #: hrms/hr/doctype/job_requisition/job_requisition.py:35
 msgid "Duplicate Job Requisition"
-msgstr "Kopiera Jobb Rekvisition"
+msgstr "Duplicera Jobb Ansökan"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:140
 msgid "Duplicate Overwritten Salary"
@@ -3839,7 +3839,7 @@ msgstr "Tidiga Utstämplingar"
 #. Label of the earned_leave (Section Break) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Earned Leave"
-msgstr "Intjänad Ledighet"
+msgstr "Intjänad Frånvaro"
 
 #. Label of the earned_leave_frequency (Select) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
@@ -4849,7 +4849,7 @@ msgstr "Personal kan inte ge återkoppling till sig själva. Använd {0} iställ
 
 #: hrms/hr/doctype/hr_settings/hr_settings.py:79
 msgid "Employees will miss holiday reminders from {} until {}. <br> Do you want to proceed with this change?"
-msgstr "Personal kommer att missa ledighet påminnelser från {} till {}. <br> Vill du fortsätta med denna ändring?"
+msgstr "Personal kommer att missa frånvaro påminnelser från {} till {}. <br> Vill du fortsätta med denna ändring?"
 
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.js:167
 msgid "Employees without Feedback: {0}"
@@ -4938,7 +4938,7 @@ msgstr "Uttag Dagar"
 
 #: hrms/hr/doctype/leave_encashment/leave_encashment.py:135
 msgid "Encashment Days cannot exceed {0} {1} as per Leave Type settings"
-msgstr "Uttag Dagar får inte överstiga {0} {1} enligt Ledighet Typ Inställningar"
+msgstr "Uttag Dagar får inte överstiga {0} {1} enligt Frånvaro Typ Inställningar"
 
 #: hrms/hr/doctype/leave_encashment/leave_encashment.py:125
 msgid "Encashment Limit Applied"
@@ -5532,7 +5532,7 @@ msgstr "Kunde inte ange standard inställningarna för land {0}."
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:332
 msgid "Failed to submit some leave policy assignments:"
-msgstr "Misslyckades att godkänna några ledighet regel tilldelningar:"
+msgstr "Misslyckades att godkänna några frånvaro princip tilldelningar:"
 
 #: hrms/hr/doctype/interview/interview.py:205
 msgid "Failed to update the Job Applicant status"
@@ -5794,7 +5794,7 @@ msgstr "För Personal"
 #: hrms/hr/doctype/leave_type/leave_type.json
 #, python-format
 msgid "For a day of leave taken, if you still pay (say) 50% of the daily salary, then enter 0.50 in this field."
-msgstr "Föruttagen ledig dag, om du fortfarande betalar (säg) 50 % av dagslön, skriv då 0,50 i detta fält."
+msgstr "För uttagen frånvaro dag, om du fortfarande betalar (säg) 50 % av dagslön, skriv då 0,50 i detta fält."
 
 #. Label of the formula (Code) field in DocType 'Salary Component'
 #. Label of the formula (Code) field in DocType 'Salary Detail'
@@ -5832,7 +5832,7 @@ msgstr "Andel av Daglig Lön för Halvdag"
 #. 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Fraction of Daily Salary per Leave"
-msgstr "Andel Daglig Lön per Ledighet"
+msgstr "Andel Daglig Lön per Frånvaro"
 
 #: hrms/hr/report/project_profitability/project_profitability.py:191
 msgid "Fractional Cost"
@@ -6603,7 +6603,7 @@ msgstr "Helg Lista"
 #. Label of the optional_holiday_list (Link) field in DocType 'Leave Period'
 #: hrms/hr/doctype/leave_period/leave_period.json
 msgid "Holiday List for Optional Leave"
-msgstr "Helg Lista för Valfri Ledighet"
+msgstr "Helg Lista för Valfri Frånvaro"
 
 #. Label of the send_holiday_reminders (Check) field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
@@ -6986,7 +6986,7 @@ msgstr "Otillräckligt Saldo"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:412
 msgid "Insufficient leave balance for Leave Type {0}"
-msgstr "Otillräckligt Ledighet Saldo för Ledighet Typ {0}"
+msgstr "Otillräckligt Frånvaro Saldo för Frånvaro Typ {0}"
 
 #. Name of a DocType
 #. Label of the interest (Data) field in DocType 'Interest'
@@ -7064,7 +7064,7 @@ msgstr "Intervju Återkoppling Påminnelse"
 
 #: hrms/hr/doctype/interview/interview.py:340
 msgid "Interview Feedback {0} submitted successfully"
-msgstr "Intervju Återkoppling {0} godkännd"
+msgstr "Intervju Återkoppling {0} skickad"
 
 #: hrms/hr/doctype/interview/interview.py:87
 msgid "Interview Not Rescheduled"
@@ -7200,7 +7200,7 @@ msgstr "Ogiltiga Datum"
 
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:25
 msgid "Invalid Leave Ledger Entry"
-msgstr "Ogiltig Ledighet Register Post"
+msgstr "Ogiltig Frånvaro Register Post"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:319
 msgid "Invalid Payroll Payable Account. The account currency must be {0} or {1}"
@@ -7208,7 +7208,7 @@ msgstr "Ogiltig Löne Konto. Konto valuta måste vara {0} eller {1}"
 
 #: hrms/hr/doctype/expense_claim/expense_claim.py:624
 msgid "Invalid parameters provided. Please pass the required arguments."
-msgstr ""
+msgstr "Ogiltiga parametrar angivna. Skicka erfordrade argument."
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Grievance'
 #: hrms/hr/doctype/employee_grievance/employee_grievance.json
@@ -7261,11 +7261,11 @@ msgstr "Är Vidarebefodrad"
 #. Label of the is_compensatory (Check) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Is Compensatory"
-msgstr "Är Kompensation Ledighet"
+msgstr "Är Kompensation"
 
 #: hrms/hr/doctype/leave_type/leave_type.py:40
 msgid "Is Compensatory Leave"
-msgstr "Är Kompensation Ledighet"
+msgstr "Är Kompensation Frånvaro"
 
 #. Label of the is_default (Select) field in DocType 'Salary Structure'
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
@@ -7276,7 +7276,7 @@ msgstr "Är Standard"
 #: hrms/hr/doctype/leave_type/leave_type.json
 #: hrms/hr/doctype/leave_type/leave_type.py:40
 msgid "Is Earned Leave"
-msgstr "Är Intjänad Ledighet"
+msgstr "Är Intjänad Frånvaro"
 
 #. Label of the is_expired (Check) field in DocType 'Leave Ledger Entry'
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
@@ -7318,7 +7318,7 @@ msgstr "Är Erfordrad"
 #. Label of the is_optional_leave (Check) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Is Optional Leave"
-msgstr "Är Valfri Ledighet"
+msgstr "Är Valfri Frånvaro"
 
 #. Label of the is_paid (Check) field in DocType 'Expense Claim'
 #: hrms/hr/doctype/expense_claim/expense_claim.json
@@ -7328,7 +7328,7 @@ msgstr "Är Betald"
 #. Label of the is_ppl (Check) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Is Partially Paid Leave"
-msgstr "Är Delvis Betald Ledighet"
+msgstr "Är Delvis Betald Frånvaro"
 
 #. Label of the is_recurring (Check) field in DocType 'Additional Salary'
 #: hrms/payroll/doctype/additional_salary/additional_salary.json
@@ -7671,7 +7671,7 @@ msgstr "Latitud: {0}°"
 #: hrms/overrides/dashboard_overrides.py:12
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Leave"
-msgstr "Ledighet"
+msgstr "Frånvaro"
 
 #. Label of the leave_allocation (Link) field in DocType 'Compensatory Leave
 #. Request'
@@ -7690,7 +7690,7 @@ msgstr "Frånvaro Tilldelning"
 #. 'Leave Policy'
 #: hrms/hr/doctype/leave_policy/leave_policy.json
 msgid "Leave Allocations"
-msgstr "Ledighet Tilldelningar"
+msgstr "Frånvaro Tilldelningar"
 
 #. Label of the leave_application (Link) field in DocType 'Attendance'
 #. Name of a DocType
@@ -7706,7 +7706,7 @@ msgstr "Skapa Frånvaro Ansökan"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:719
 msgid "Leave Application period cannot be across two non-consecutive leave allocations {0} and {1}."
-msgstr "Ledighet Ansökan Period kan inte vara över två ej efterföljande ledighet tilldelningar {0} och {1}."
+msgstr "Frånvaro Ansökan Period kan inte vara över två ej efterföljande frånvaro tilldelningar {0} och {1}."
 
 #: hrms/setup.py:425 hrms/setup.py:427 hrms/setup.py:487
 msgid "Leave Approval Notification"
@@ -7716,7 +7716,7 @@ msgstr "Ledighet Godkännande Avisering"
 #. 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Leave Approval Notification Template"
-msgstr "Ledighet Godkännande Avisering Mall"
+msgstr "Frånvaro Godkännande Avisering Mall"
 
 #. Label of the leave_approver (Link) field in DocType 'Leave Application'
 #. Name of a role
@@ -7729,23 +7729,23 @@ msgstr "Ledighet Godkännare"
 #. DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Leave Approver Mandatory In Leave Application"
-msgstr "Ledighet Godkännare Erfordras i Ledighet Ansökan"
+msgstr "Frånvaro Godkännare Erfordras i Frånvaro Ansökan"
 
 #. Label of the leave_approver_name (Data) field in DocType 'Leave Application'
 #: hrms/hr/doctype/leave_application/leave_application.json
 msgid "Leave Approver Name"
-msgstr "Ledighet Godkännare Namn"
+msgstr "Frånvaro Godkännare Namn"
 
 #. Label of the leave_balance (Float) field in DocType 'Leave Encashment'
 #: frontend/src/components/LeaveBalance.vue:4
 #: hrms/hr/doctype/leave_encashment/leave_encashment.json
 msgid "Leave Balance"
-msgstr "Ledighet Saldo"
+msgstr "Frånvaro Saldo"
 
 #. Label of the leave_balance (Float) field in DocType 'Leave Application'
 #: hrms/hr/doctype/leave_application/leave_application.json
 msgid "Leave Balance Before Application"
-msgstr "Ledighet Saldo Före Ansökan"
+msgstr "Frånvaro Saldo Före Ansökan"
 
 #. Name of a DocType
 #. Label of a Link in the Leaves Workspace
@@ -7757,34 +7757,34 @@ msgstr "Frånvaro Spärr Lista"
 #. Name of a DocType
 #: hrms/hr/doctype/leave_block_list_allow/leave_block_list_allow.json
 msgid "Leave Block List Allow"
-msgstr "Ledighet Spärr Lista Tillåt"
+msgstr "Frånvaro Spärr Lista Tillåt"
 
 #. Label of the leave_block_list_allowed (Table) field in DocType 'Leave Block
 #. List'
 #: hrms/hr/doctype/leave_block_list/leave_block_list.json
 msgid "Leave Block List Allowed"
-msgstr "Ledighet Spärr Lista Tillåtna Användare"
+msgstr "Frånvaro Spärr Lista Tillåtna Användare"
 
 #. Name of a DocType
 #: hrms/hr/doctype/leave_block_list_date/leave_block_list_date.json
 msgid "Leave Block List Date"
-msgstr "Ledighet Spärr Lista Datum"
+msgstr "Frånvaro Spärr Lista Datum"
 
 #. Label of the leave_block_list_dates (Table) field in DocType 'Leave Block
 #. List'
 #: hrms/hr/doctype/leave_block_list/leave_block_list.json
 msgid "Leave Block List Dates"
-msgstr "Ledighet Spärr Lista Datum"
+msgstr "Frånvaro Spärr Lista Datum"
 
 #. Label of the leave_block_list_name (Data) field in DocType 'Leave Block
 #. List'
 #: hrms/hr/doctype/leave_block_list/leave_block_list.json
 msgid "Leave Block List Name"
-msgstr "Ledighet Spärr Lista Namn"
+msgstr "Frånvaro Spärr Lista Namn"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:1289
 msgid "Leave Blocked"
-msgstr "Ledighet Spärrad"
+msgstr "Frånvaro Spärrad"
 
 #. Name of a DocType
 #. Label of a Link in the Leaves Workspace
@@ -7796,7 +7796,7 @@ msgstr "Frånvaro Översikt Panel"
 #. Label of the leave_details (Table) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Leave Details"
-msgstr "Ledighet Detaljer"
+msgstr "Frånvaro Detaljer"
 
 #. Name of a DocType
 #. Label of a Link in the Leaves Workspace
@@ -7809,26 +7809,26 @@ msgstr "Frånvaro Uttag"
 #. 'Salary Structure'
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 msgid "Leave Encashment Amount Per Day"
-msgstr "Ledighet Uttag Belopp per dag"
+msgstr "Frånvaro Uttag Belopp per dag"
 
 #: frontend/src/views/leave/List.vue:5
 msgid "Leave History"
-msgstr "Ledighet Historik"
+msgstr "Frånvaro Historik"
 
 #. Name of a report
 #: hrms/hr/report/leave_ledger/leave_ledger.json
 msgid "Leave Ledger"
-msgstr "Ledighet Register"
+msgstr "Frånvaro Register"
 
 #. Name of a DocType
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
 #: hrms/hr/report/leave_ledger/leave_ledger.py:21
 msgid "Leave Ledger Entry"
-msgstr "Ledighet Register Post"
+msgstr "Frånvaro Register Post"
 
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:18
 msgid "Leave Ledger Entry's To date needs to be after From date. Currently, From Date is {0} and To Date is {1}"
-msgstr "Ledighet Register Post Till datum måste vara efter Från datum. För närvarande Från Datum är {0} och Till Datum är {1}"
+msgstr "Frånvaro Register Post Till datum måste vara efter Från datum. För närvarande Från Datum är {0} och Till Datum är {1}"
 
 #. Label of the leave_period (Link) field in DocType 'Leave Allocation'
 #. Option for the 'Dates Based On' (Select) field in DocType 'Leave Control
@@ -7874,31 +7874,31 @@ msgstr "Frånvaro Princip Tilldelning"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:65
 msgid "Leave Policy Assignment Overlap"
-msgstr "Ledighet Princip Tilldelning Överlappar"
+msgstr "Frånvaro Princip Tilldelning Överlappar"
 
 #. Name of a DocType
 #: hrms/hr/doctype/leave_policy_detail/leave_policy_detail.json
 msgid "Leave Policy Detail"
-msgstr "Ledighet Regel Detalj"
+msgstr "Frånvaro Princip Detalj"
 
 #. Label of the leave_policy_details (Table) field in DocType 'Leave Policy'
 #: hrms/hr/doctype/leave_policy/leave_policy.json
 msgid "Leave Policy Details"
-msgstr "Ledighet Regel Detaljer"
+msgstr "Frånvaro Princip Detaljer"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:59
 msgid "Leave Policy: {0} already assigned for Employee {1} for period {2} to {3}"
-msgstr "Ledighet Regel: {0} redan tilldelad för personal {1} för period {2} till {3}"
+msgstr "Frånvaro Princip: {0} redan tilldelad för personal {1} för period {2} till {3}"
 
 #: hrms/setup.py:434 hrms/setup.py:436 hrms/setup.py:488
 msgid "Leave Status Notification"
-msgstr "Ledighet Status Avisering"
+msgstr "Frånvaro Status Avisering"
 
 #. Label of the leave_status_notification_template (Link) field in DocType 'HR
 #. Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Leave Status Notification Template"
-msgstr "Ledighet Status Avisering Mall"
+msgstr "Frånvaro Status Avisering Mall"
 
 #. Label of the leave_type (Link) field in DocType 'Attendance'
 #. Label of the leave_type (Link) field in DocType 'Compensatory Leave Request'
@@ -7934,76 +7934,76 @@ msgstr "Frånvaro Typ"
 #. Label of the leave_type_name (Data) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Leave Type Name"
-msgstr "Ledighet Typ Namn"
+msgstr "Frånvaro Typ Namn"
 
 #: hrms/hr/doctype/leave_type/leave_type.py:33
 msgid "Leave Type can either be compensatory or earned leave."
-msgstr "Ledighet Typ kan antingen vara kompenserande eller intjänad ledighet."
+msgstr "Frånvaro Typ kan antingen vara kompenserande eller intjänad frånvaro."
 
 #: hrms/hr/doctype/leave_type/leave_type.py:45
 msgid "Leave Type can either be without pay or partial pay"
-msgstr "Ledighet Typ kan antingen vara obetald eller delbetald"
+msgstr "Frånvaro Typ kan antingen vara obetald eller delbetald"
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:34
 msgid "Leave Type is mandatory"
-msgstr "Ledighet Typ erfodras"
+msgstr "Frånvaro Typ erfodras"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:184
 msgid "Leave Type {0} cannot be allocated since it is leave without pay"
-msgstr "Ledighet Typ {0} kan inte tilldelas eftersom det är obetald ledighet"
+msgstr "Frånvaro Typ {0} kan inte tilldelas eftersom det är obetald ledighet"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:479
 msgid "Leave Type {0} cannot be carry-forwarded"
-msgstr "Ledighet Typ {0} kan inte vidarebefordras"
+msgstr "Frånvaro Typ {0} kan inte vidarebefordras"
 
 #: hrms/hr/doctype/leave_encashment/leave_encashment.py:101
 msgid "Leave Type {0} is not encashable"
-msgstr "Ledighet Typ {0} är inte uttagbar"
+msgstr "Frånvaro Typ {0} är inte uttagbar"
 
 #. Label of the leave_without_pay (Float) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/report/salary_register/salary_register.py:174 hrms/setup.py:374
 #: hrms/setup.py:375
 msgid "Leave Without Pay"
-msgstr "Obetald Ledighet"
+msgstr "Obetald Frånvaro"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:469
 msgid "Leave Without Pay does not match with approved {} records"
-msgstr "Obetald Ledighet stämmer inte med godkända {} poster"
+msgstr "Obetald Frånvaro stämmer inte med godkända {} poster"
 
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:54
 msgid "Leave allocation {0} is linked with the Leave Application {1}"
-msgstr "Ledighet Tilldelning {0} är länkad till Ledighet Ansökan {1}"
+msgstr "Frånvaro Tilldelning {0} är länkad till Frånvaro Ansökan {1}"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:85
 msgid "Leave already have been assigned for this Leave Policy Assignment"
-msgstr "Ledighet är redan tilldelad denna Ledighet Regel Tilldelning"
+msgstr "Frånvaro är redan tilldelad denna Frånvaro Princip Tilldelning"
 
 #. Label of the leave_and_expense_claim_settings (Section Break) field in
 #. DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Leave and Expense Claim Settings"
-msgstr "Ledighet och Utgift Inställningar"
+msgstr "Frånvaro och Utgift Inställningar"
 
 #: hrms/hr/doctype/leave_type/leave_type.py:26
 msgid "Leave application is linked with leave allocations {0}. Leave application cannot be set as leave without pay"
-msgstr "Ledighet ansökan är kopplad till ledighets tilldelningar {0}.Ledighet ansökan kan inte anges som ledighet utan lön"
+msgstr "Frånvaro ansökan är kopplad till frånvaro tilldelningar {0}. Frånvaro ansökan kan inte anges som frånvaro utan lön"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:224
 msgid "Leave cannot be allocated before {0}, as leave balance has already been carry-forwarded in the future leave allocation record {1}"
-msgstr "Ledighet kan inte tilldelas före {0}, eftersom Ledighet Saldo redan har vidarebefordrats framtida ledighet tilldelning poster {1}"
+msgstr "Frånvaro kan inte tilldelas före {0}, eftersom Frånvaro Saldo redan har vidarebefordrats framtida frånvaro tilldelning poster {1}"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:244
 msgid "Leave cannot be applied/cancelled before {0}, as leave balance has already been carry-forwarded in the future leave allocation record {1}"
-msgstr "Ledighet inte kan tillämpas/annulleras före {0}, eftersom Ledighet Saldo redan är vidarebefordrad framtida ledighet tilldelning poster {1}"
+msgstr "Frånvaro inte kan tillämpas/annulleras före {0}, eftersom Frånvaro Saldo redan är vidarebefordrad framtida frånvaro tilldelning poster {1}"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:482
 msgid "Leave of type {0} cannot be longer than {1}."
-msgstr "Ledighet av typ {0} får inte vara längre än {1}."
+msgstr "Frånvaro av typ {0} får inte vara längre än {1}."
 
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.py:72
 msgid "Leave(s) Expired"
-msgstr "Ledighet(er) har gått ut"
+msgstr "Frånvaro har gått ut"
 
 #. Label of the pending_leaves (Float) field in DocType 'Salary Slip Leave'
 #: hrms/payroll/doctype/salary_slip_leave/salary_slip_leave.json
@@ -8012,7 +8012,7 @@ msgstr "Frånvaro som väntar på Godkännande"
 
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.py:66
 msgid "Leave(s) Taken"
-msgstr "Ledighet Uttagen"
+msgstr "Frånvaro Uttagen"
 
 #. Label of the leaves (Float) field in DocType 'Leave Ledger Entry'
 #. Name of a Workspace
@@ -8301,7 +8301,7 @@ msgstr "Ange närvaro baserat på 'Personal Stämplingar' för Personal som till
 
 #: hrms/hr/doctype/shift_type/shift_type.py:33
 msgid "Mark attendance for existing check-in/out logs before changing shift settings"
-msgstr ""
+msgstr "Markera närvaro för befintliga instämpling/utstämpling loggar innan skiftbytet"
 
 #: hrms/hr/doctype/goal/goal_tree.js:262
 msgid "Mark {0} as Completed?"
@@ -8405,7 +8405,7 @@ msgstr "Maximum Tillåten Frånvaro i Följd"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:492
 msgid "Maximum Consecutive Leaves Exceeded"
-msgstr "Maximum Antal Konsekutiv Ledighet Överskriden"
+msgstr "Maximum Antal Konsekutiv Frånvaro Överskriden"
 
 #. Label of the max_encashable_leaves (Int) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
@@ -8456,7 +8456,7 @@ msgstr "Maximum antal uttagbar frånvaro för {0} är {1}"
 
 #: hrms/hr/doctype/leave_policy/leave_policy.py:19
 msgid "Maximum leave allowed in the leave type {0} is {1}"
-msgstr "Maximum Tillåten Ledighet i Ledighet Typ {0} är {1}"
+msgstr "Maximum Tillåten Frånvaro i Frånvaro Typ {0} är {1}"
 
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:16
 #: hrms/public/js/salary_slip_deductions_report_filters.js:23
@@ -8500,13 +8500,13 @@ msgstr "Minimum Beskattningsbar Inkomst"
 #. Rule'
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule.json
 msgid "Minimum Year for Gratuity"
-msgstr "Minimum antal år för Dricks"
+msgstr "Minimum antal år för Belöning"
 
 #. Description of the 'Allow Leave Application After (Working Days)' (Int)
 #. field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Minimum working days required since Date of Joining to apply for this leave"
-msgstr "Minimum antal arbetsdagar som erfordras sedan tillträde för att ansöka om denna ledighet"
+msgstr "Minimum antal arbetsdagar som erfordras sedan tillträde för att ansöka om denna frånvaro"
 
 #: hrms/hr/utils.py:827
 msgid "Missing Field"
@@ -8752,7 +8752,7 @@ msgstr "Ny Återkoppling"
 
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.py:60
 msgid "New Leave(s) Allocated"
-msgstr "Nya Ledighet(er) Tilldelade"
+msgstr "Ny Frånvaro Tilldelad"
 
 #. Label of the new_leaves_allocated (Float) field in DocType 'Leave
 #. Allocation'
@@ -8806,7 +8806,7 @@ msgstr "Ingen intervju är schemalagd."
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:105
 msgid "No Leave Period Found"
-msgstr "Ingen Ledighet Period Hittades"
+msgstr "Ingen Frånvaro Period Hittades"
 
 #: hrms/hr/doctype/leave_encashment/leave_encashment.py:145
 msgid "No Leaves Allocated to Employee: {0} for Leave Type: {1}"
@@ -8850,15 +8850,15 @@ msgstr "Inga extra kostnader har lagts till"
 
 #: hrms/payroll/doctype/gratuity/gratuity.py:283
 msgid "No applicable Earning component found in last salary slip for Gratuity Rule: {0}"
-msgstr "Ingen tillämplig komponent hittades i senaste lönespecifikation för Dricks Regel: {0}"
+msgstr "Ingen tillämplig komponent hittades i senaste lönespecifikation för Belöning Regel: {0}"
 
 #: hrms/payroll/doctype/gratuity/gratuity.py:296
 msgid "No applicable Earning components found for Gratuity Rule: {0}"
-msgstr "Ingen tillämplig inkomst komponent hittades för Dricks Regel: {0}"
+msgstr "Ingen tillämplig inkomst komponent hittades för Belöning Regel: {0}"
 
 #: hrms/payroll/doctype/gratuity/gratuity.py:256
 msgid "No applicable slab found for the calculation of gratuity amount as per the Gratuity Rule: {0}"
-msgstr "Ingen tillämplig tabell hittades för beräkning av Dricks Belopp i Dricks Regel: {0}"
+msgstr "Ingen tillämplig tabell hittades för beräkning av Belöning Belopp i Belöning Regel: {0}"
 
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:52
 msgid "No attendance records found for this criteria."
@@ -8927,7 +8927,7 @@ msgstr "Ingen Lönespecifikation hittad att godkänna för ovanstående valda kr
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.js:43
 msgid "No valid shift found for log time"
-msgstr ""
+msgstr "Inget giltigt skift hittades för loggtid"
 
 #: hrms/public/js/utils/index.js:48
 msgid "No {0} Selected"
@@ -9126,7 +9126,7 @@ msgstr "Spärrad"
 #: frontend/src/components/AttendanceCalendar.vue:80
 #: hrms/hr/doctype/attendance/attendance.json
 msgid "On Leave"
-msgstr "Ledig"
+msgstr "Frånvarande"
 
 #. Label of a Card Break in the Employee Lifecycle Workspace
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
@@ -9167,7 +9167,7 @@ msgstr "Endast intervjuer med status Klar eller Avvisad kan godkännas."
 
 #: hrms/hr/doctype/leave_application/leave_application.py:103
 msgid "Only Leave Applications with status 'Approved' and 'Rejected' can be submitted"
-msgstr "Endast Ledighet Ansökan med status 'Godkänd' och 'Avvisad' kan skickas in"
+msgstr "Endast Frånvaro Ansökan med status 'Godkänd' och 'Avvisad' kan skickas in"
 
 #: hrms/hr/doctype/shift_request/shift_request.py:36
 msgid "Only Shift Request with status 'Approved' and 'Rejected' can be submitted"
@@ -9188,7 +9188,7 @@ msgstr "Endast intervjuare kan lämna Återkoppling"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:174
 msgid "Only users with the {0} role can create backdated leave applications"
-msgstr "Endast Användare med {0} roll kan skapa efterdaterade ledighet ansökningar"
+msgstr "Endast Användare med {0} roll kan skapa efterdaterade frånvaro ansökningar"
 
 #: hrms/hr/doctype/goal/goal_list.js:110
 msgid "Only {0} Goals can be {1}"
@@ -9239,7 +9239,7 @@ msgstr "Jobb Erbjudande Stängd"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:572
 msgid "Optional Holiday List not set for leave period {0}"
-msgstr "Valfri helg lista inte angiven för ledighet period {0}"
+msgstr "Valfri helg lista inte angiven för frånvaro period {0}"
 
 #: hrms/hr/doctype/leave_type/leave_type.js:23
 msgid "Optional Leaves are holidays that Employees can choose to avail from a list of holidays published by the company."
@@ -9948,7 +9948,7 @@ msgstr "Ange Grund och HRA Komponent i Bolag {0}"
 
 #: hrms/hr/doctype/leave_encashment/leave_encashment.py:49
 msgid "Please set Earning Component for Leave type: {0}."
-msgstr "Ange Inkomst Komponent för Ledighet Typ: {0}."
+msgstr "Ange Inkomst Komponent för Frånvaro Typ: {0}."
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:453
 msgid "Please set Payroll based on in Payroll settings"
@@ -9969,11 +9969,11 @@ msgstr "Ange konto i Lönekomponent {0}"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:627
 msgid "Please set default template for Leave Approval Notification in HR Settings."
-msgstr "Ange Standard Mall för Ledighet Godkännande Avisering i Personal Inställningar."
+msgstr "Ange Standard Mall för Frånvaro Godkännande Avisering i Personal Inställningar."
 
 #: hrms/hr/doctype/leave_application/leave_application.py:602
 msgid "Please set default template for Leave Status Notification in HR Settings."
-msgstr "Ange Standard Mall för Ledighet Status Avisering i Personal Inställningar."
+msgstr "Ange Standard Mall för Frånvaro Status Avisering i Personal Inställningar."
 
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.py:137
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
@@ -10101,7 +10101,7 @@ msgstr "Nuvarande Poster"
 #. Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Prevent self approval for leaves even if user has permissions"
-msgstr ""
+msgstr "Förhindra självgodkännande för frånvaro även om användare har behörighet"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:155
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:193
@@ -10130,7 +10130,7 @@ msgstr "Utskrift Detaljer"
 
 #: hrms/setup.py:366 hrms/setup.py:367
 msgid "Privilege Leave"
-msgstr "Privilegierad Ledighet"
+msgstr "Privilegierad Frånvaro"
 
 #: hrms/setup.py:384
 msgid "Probation"
@@ -10255,7 +10255,7 @@ msgstr "Egenskap är redan tillagd"
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "Provident Fund Deductions"
-msgstr "Pension Fond Avdrag"
+msgstr "Försäkring Fond Avdrag"
 
 #. Label of the publish_applications_received (Check) field in DocType 'Job
 #. Opening'
@@ -10750,11 +10750,11 @@ msgstr "Begär Närvaro"
 
 #: frontend/src/views/Home.vue:42
 msgid "Request Leave"
-msgstr "Begär Ledighet"
+msgstr "Begär Frånvaro"
 
 #: frontend/src/views/leave/Dashboard.vue:17
 msgid "Request a Leave"
-msgstr "Begär Ledighet"
+msgstr "Begär Frånvaro"
 
 #: frontend/src/views/attendance/Dashboard.vue:35
 msgid "Request a Shift"
@@ -10837,7 +10837,7 @@ msgstr "Ansvar"
 #. 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Restrict Backdated Leave Application"
-msgstr "Begränsa Efterdaterad Ledighet Ansökan"
+msgstr "Begränsa Efterdaterad Frånvaro Ansökan"
 
 #. Label of the result (Select) field in DocType 'Interview Feedback'
 #: hrms/hr/doctype/interview/interview.js:149
@@ -10930,7 +10930,7 @@ msgstr "Recensent Namn"
 #. Label of the revised_ctc (Currency) field in DocType 'Employee Promotion'
 #: hrms/hr/doctype/employee_promotion/employee_promotion.json
 msgid "Revised CTC"
-msgstr "Reviderad Kostnad till Bolag (CTC)"
+msgstr "Reviderad Årslön (CTC)"
 
 #. Label of the rgt (Int) field in DocType 'Goal'
 #: hrms/hr/doctype/goal/goal.json
@@ -10947,7 +10947,7 @@ msgstr "Roll"
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 #: hrms/hr/doctype/leave_application/leave_application.py:167
 msgid "Role Allowed to Create Backdated Leave Application"
-msgstr "Roll tillåten för att skapa Efterdaterad Ledighet Ansökan"
+msgstr "Roll tillåten för att skapa Efterdaterad Frånvaro Ansökan"
 
 #. Label of a shortcut in the Shift & Attendance Workspace
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
@@ -11208,7 +11208,7 @@ msgstr "Lönespecifikation"
 #. Name of a DocType
 #: hrms/payroll/doctype/salary_slip_leave/salary_slip_leave.json
 msgid "Salary Slip Leave"
-msgstr "Lönespecifikation Ledighet"
+msgstr "Lönespecifikation Frånvaro"
 
 #. Name of a DocType
 #: hrms/payroll/doctype/salary_slip_loan/salary_slip_loan.json
@@ -11350,7 +11350,7 @@ msgstr "Lön innehållande {0} finns redan för {1} för vald period"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:327
 msgid "Salary already processed for period between {0} and {1}, Leave application period cannot be between this date range."
-msgstr "Lön redan behandlad för period mellan {0} och {1} Ledighet ansökning period kan inte vara mellan detta datum intervall."
+msgstr "Lön redan behandlad för period mellan {0} och {1} Frånvaro ansökning period kan inte vara mellan detta datum intervall."
 
 #. Description of the 'Earnings & Deductions' (Tab Break) field in DocType
 #. 'Salary Structure'
@@ -11500,7 +11500,7 @@ msgstr "Välj Personal att hämta Personal Förskott."
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:200
 msgid "Select the Employee for which you want to allocate leaves."
-msgstr "Välj anställd som du vill tilldela ledighet för."
+msgstr "Välj anställd som du vill tilldela frånvaro för."
 
 #: hrms/hr/doctype/leave_application/leave_application.js:286
 msgid "Select the Employee."
@@ -11508,23 +11508,23 @@ msgstr "Välj Personal."
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:205
 msgid "Select the Leave Type like Sick leave, Privilege Leave, Casual Leave, etc."
-msgstr "Välj ledighet typ som sjukledighet, privilegieledighet, tillfällig ledighet, osv."
+msgstr "Välj Frånvaro Typ som sjukfrånvaro, privilegiefrånvaro, tillfällig frånvaro, osv."
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:217
 msgid "Select the date after which this Leave Allocation will expire."
-msgstr "Välj datum efter vilket denna ledighetsallokering ska upphöra."
+msgstr "Välj datum efter vilket denna frånvaro tilldelning ska upphöra."
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:212
 msgid "Select the date from which this Leave Allocation will be valid."
-msgstr "Välj datum från vilket denna ledighetstilldelning ska gälla."
+msgstr "Välj datum från vilket denna frånvaro tilldelning ska gälla."
 
 #: hrms/hr/doctype/leave_application/leave_application.js:303
 msgid "Select the end date for your Leave Application."
-msgstr "Välj slut datum för Ledighet."
+msgstr "Välj slut datum för Frånvaro."
 
 #: hrms/hr/doctype/leave_application/leave_application.js:298
 msgid "Select the start date for your Leave Application."
-msgstr "Välj start datum för Ledighet."
+msgstr "Välj start datum för Frånvaro."
 
 #. Description of the 'Enabled' (Check) field in DocType 'Shift Schedule
 #. Assignment'
@@ -11534,7 +11534,7 @@ msgstr "Välj detta för att skift tilldelningar ska skapas automatiskt på obes
 
 #: hrms/hr/doctype/leave_application/leave_application.js:291
 msgid "Select type of leave the employee wants to apply for, like Sick Leave, Privilege Leave, Casual Leave, etc."
-msgstr "Välj typ av ledighet dpersonal vill ansöka om, t.ex. sjukledighet, privilegieledighet, tillfällig ledighet, osv."
+msgstr "Välj typ av frånvaro personal kommer att ansöka om, t. ex. sjuk frånvaro, privilegierad frånvaro, tillfällig frånvaro osv."
 
 #: hrms/hr/doctype/leave_application/leave_application.js:313
 msgid "Select your Leave Approver i.e. the person who approves or rejects your leaves."
@@ -11567,11 +11567,11 @@ msgstr "Själv Resultat"
 #. Option for the 'Type' (Select) field in DocType 'Training Event'
 #: hrms/hr/doctype/training_event/training_event.json
 msgid "Self-Study"
-msgstr "Självstudie"
+msgstr "Självlärd"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:809
 msgid "Self-approval for leaves is not allowed"
-msgstr ""
+msgstr "Självgodkännande av frånvaro är inte tillåtet"
 
 #. Option for the 'Type' (Select) field in DocType 'Training Event'
 #: hrms/hr/doctype/training_event/training_event.json
@@ -11606,7 +11606,7 @@ msgstr "Skicka Intervju Påminnelse"
 #. Label of the send_leave_notification (Check) field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Send Leave Notification"
-msgstr "Skicka Ledighet Meddelande"
+msgstr "Skicka Frånvaro Meddelande"
 
 #. Label of the sender (Link) field in DocType 'HR Settings'
 #. Label of the hiring_sender (Link) field in DocType 'HR Settings'
@@ -11720,7 +11720,7 @@ msgstr "Ange Närvaro Detaljer"
 #. Control Panel'
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 msgid "Set Leave Details"
-msgstr "Ange Ledighet Detaljer"
+msgstr "Ange Frånvaro Detaljer"
 
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.py:75
 msgid "Set Relieving Date for Employee: {0}"
@@ -12044,7 +12044,7 @@ msgstr "Visa Personal"
 #. 'Payroll Settings'
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Show Leave Balances in Salary Slip"
-msgstr "Visa Ledighet Saldo på Lönespecifikation"
+msgstr "Visa Frånvaro Saldo på Lönespecifikation"
 
 #. Label of the show_leaves_of_all_department_members_in_calendar (Check) field
 #. in DocType 'HR Settings'
@@ -12062,7 +12062,7 @@ msgstr "Visning"
 
 #: hrms/setup.py:358 hrms/setup.py:359
 msgid "Sick Leave"
-msgstr "Sjuk Ledighet"
+msgstr "Sjuk Frånvaro"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:120
 msgid "Single Assignment"
@@ -12324,7 +12324,7 @@ msgstr "Lager Optioner"
 #. Block List'
 #: hrms/hr/doctype/leave_block_list/leave_block_list.json
 msgid "Stop users from making Leave Applications on following days."
-msgstr "Tillåt inte Användare att skapa Ledighet Ansökningar på följande dagar."
+msgstr "Tillåt inte Användare att skapa Frånvaro Ansökningar på följande dagar."
 
 #. Option for the 'Determine Check-in and Check-out' (Select) field in DocType
 #. 'Shift Type'
@@ -12701,7 +12701,7 @@ msgstr "Dag i Månaden då frånvaro ska tilldelas"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:370
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
-msgstr "Dag(ar) som man ansöker om ledighet är helg dagar. Du behöver inte ansöka om ledighet."
+msgstr "Dag(ar) som man ansöker om frånvaro är helg dagar. Du behöver inte ansöka om frånvaro."
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:64
 msgid "The days between {0} to {1} are not valid holidays."
@@ -12713,7 +12713,7 @@ msgstr "Första godkännare i lista kommer att anges som standard Godkännare."
 
 #: hrms/hr/doctype/leave_type/leave_type.py:50
 msgid "The fraction of Daily Salary per Leave should be between 0 and 1"
-msgstr "Bråkdel av dagslön per ledighet ska vara mellan 0 och 1"
+msgstr "Bråkdel av dagslön per frånvaro ska vara mellan 0 och 1"
 
 #. Description of the 'Fraction of Daily Salary for Half Day' (Float) field in
 #. DocType 'Payroll Settings'
@@ -12779,7 +12779,7 @@ msgstr "Det finns ingen personal med Löneart: {0}. Tilldela {1} till personal f
 #. Description of the 'Is Optional Leave' (Check) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "These leaves are holidays permitted by the company however, availing it is optional for an Employee."
-msgstr "Dessa Ledigheter är helgdagar som är tillåtna av Bolaget, men att använda dem är valfri för Personal."
+msgstr "Dessa Frånvaro är helgdagar som är tillåtna av Bolaget, men att använda dem är valfri för Personal."
 
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.js:130
 msgid "This action will prevent making changes to the linked appraisal feedback/goals."
@@ -12787,7 +12787,7 @@ msgstr "Denna åtgärd förhindrar att ändringar görs i länkad återkoppling/
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:97
 msgid "This compensatory leave will be applicable from {0}."
-msgstr "Denna kompensationsledighet gäller från och med {0}."
+msgstr "Denna kompensation frånvaro gäller från och med {0}."
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:43
 msgid "This employee already has a log with the same timestamp.{0}"
@@ -12854,7 +12854,7 @@ msgstr "Tidrapport"
 #. field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Time after the end of shift during which check-out is considered for attendance."
-msgstr "Tid efter Avslutad Skift under vilken Stämpling anses vara Närvaro."
+msgstr "Tid efter Avslutad Skift under vilken Utstämpling anses vara Närvaro."
 
 #. Description of the 'Time to Fill' (Duration) field in DocType 'Job
 #. Requisition'
@@ -12979,7 +12979,7 @@ msgstr "För att tillåta detta, aktivera {0} under {1}."
 
 #: hrms/hr/doctype/leave_application/leave_application.js:308
 msgid "To apply for a Half Day check 'Half Day' and select the Half Day Date"
-msgstr "För att ansöka om halv dag ledighet, välj här <b>Halv Dag</b> och välj ochså datum till halv dag ledighet."
+msgstr "För att ansöka om halv dag frånvaro, välj här <b>Halv Dag</b> och välj också datum till halv dag frånvaro."
 
 #: hrms/hr/doctype/leave_period/leave_period.py:20
 msgid "To date can not be equal or less than from date"
@@ -13043,7 +13043,7 @@ msgstr "Totalt Frånvarande"
 #. Exemption Proof Submission'
 #: hrms/payroll/doctype/employee_tax_exemption_proof_submission/employee_tax_exemption_proof_submission.json
 msgid "Total Actual Amount"
-msgstr "Totalt Faktisk kostnad"
+msgstr "Totalt Faktisk Belopp"
 
 #. Label of the total_advance_amount (Currency) field in DocType 'Expense
 #. Claim'
@@ -13200,7 +13200,7 @@ msgstr "Totalt Sena Ankomster"
 #. Label of the total_leave_days (Float) field in DocType 'Leave Application'
 #: hrms/hr/doctype/leave_application/leave_application.json
 msgid "Total Leave Days"
-msgstr "Totalt Ledighet Dagar"
+msgstr "Totalt Frånvaro Dagar"
 
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:120
 msgid "Total Leaves"
@@ -13208,7 +13208,7 @@ msgstr "Totalt Frånvaro"
 
 #: hrms/hr/report/leave_ledger/leave_ledger.py:193
 msgid "Total Leaves ({0})"
-msgstr "Totalt Antal Ledigheter ({0})"
+msgstr "Totalt Antal Frånvaro ({0})"
 
 #. Label of the total_leaves_allocated (Float) field in DocType 'Leave
 #. Allocation'
@@ -13302,7 +13302,7 @@ msgstr "Totalt tilldelad frånvaro är mer än maximum tillåtet för {0} frånv
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:161
 msgid "Total allocated leaves {0} cannot be less than already approved leaves {1} for the period"
-msgstr "Totalt antal tilldelade ledigheter {0} kan inte vara mindre än redan godkänd ledighet {1} för period"
+msgstr "Totalt antal tilldelad frånvaro {0} kan inte vara mindre än redan godkänd frånvaro {1} för period"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:170
 msgid "Total flexible benefit component amount {0} should not be less than max benefits {1}"
@@ -13591,7 +13591,7 @@ msgstr "Kunde inte hämta din position"
 
 #: hrms/hr/doctype/goal/goal.js:55
 msgid "Unarchive"
-msgstr "Oarkivera"
+msgstr "Avarkivera"
 
 #. Label of the unclaimed_amount (Currency) field in DocType 'Expense Claim
 #. Advance'
@@ -13631,7 +13631,7 @@ msgstr "Oregistrerad Närvaro för dagar"
 
 #: hrms/hr/doctype/shift_type/shift_type.py:32
 msgid "Unmarked Check-in Logs Found"
-msgstr ""
+msgstr "Omärkta stämplingsloggar hittade"
 
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:129
 #: hrms/public/js/templates/employees_with_unmarked_attendance.html:19
@@ -13689,7 +13689,7 @@ msgstr "Ej Spårade Timmar (U)"
 #. Label of the unused_leaves (Float) field in DocType 'Leave Allocation'
 #: hrms/hr/doctype/leave_allocation/leave_allocation.json
 msgid "Unused leaves"
-msgstr "Oanvänd Ledighet"
+msgstr "Oanvänd Frånvaro"
 
 #: frontend/src/components/Holidays.vue:4
 msgid "Upcoming Holidays"
@@ -13929,7 +13929,7 @@ msgstr "Visa Mål"
 
 #: frontend/src/components/LeaveBalance.vue:14
 msgid "View Leave History"
-msgstr "Visa Ledighetshistorik"
+msgstr "Visa Frånvaro Historik"
 
 #: hrms/public/js/utils/leave_utils.js:5
 msgid "View Ledger"
@@ -13968,15 +13968,15 @@ msgstr "Varning"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:397
 msgid "Warning: Insufficient leave balance for Leave Type {0} in this allocation."
-msgstr "Varning: Otillräckligt Ledighet Saldo för Ledighet Typ {0} i denna tilldelning."
+msgstr "Varning: Otillräckligt Frånvaro Saldo för Frånvaro Typ {0} i denna tilldelning."
 
 #: hrms/hr/doctype/leave_application/leave_application.py:405
 msgid "Warning: Insufficient leave balance for Leave Type {0}."
-msgstr "Varning: Otillräckligt Ledighet Saldo för Ledighet Typ {0}."
+msgstr "Varning: Otillräckligt Frånvaro Saldo för Frånvaro Typ {0}."
 
 #: hrms/hr/doctype/leave_application/leave_application.py:343
 msgid "Warning: Leave application contains following block dates"
-msgstr "Varning: Ledighet Ansökan innehåller följande spärrade datum"
+msgstr "Varning: Frånvaro Ansökan innehåller följande spärrade datum"
 
 #: hrms/hr/doctype/shift_assignment/shift_assignment.py:91
 msgid "Warning: {0} already has an active Shift Assignment {1} for some/all of these dates."
@@ -14203,7 +14203,7 @@ msgstr "Behörighet saknas för att godkänna frånvaro på Spärrad Datum"
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:58
 msgid "You are not present all day(s) between compensatory leave request days"
-msgstr "Du är inte närvarande hela dagen/dagarna mellan de dagar du begär kompensationsledighet för"
+msgstr "Du är inte närvarande hela dagen/dagarna mellan de dagar du begär kompensation frånvaro för"
 
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.py:101
 msgid "You can claim only an amount of {0}, the rest amount {1} should be in the application as pro-rata component"
@@ -14223,7 +14223,7 @@ msgstr "Du kan bara planera för upp till {0} lediga platser och budget {1} för
 
 #: hrms/hr/doctype/leave_encashment/leave_encashment.py:37
 msgid "You can only submit Leave Encashment for a valid encashment amount"
-msgstr "Du kan bara ansöka om Ledighet Uttag för giltig Uttag Belopp"
+msgstr "Du kan bara ansöka om Frånvaro Uttag för giltig Uttag Belopp"
 
 #: hrms/api/__init__.py:683
 msgid "You can only upload JPG, PNG, PDF, TXT or Microsoft documents."
@@ -14429,7 +14429,7 @@ msgstr "{0} erfodras"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:358
 msgid "{0} leaves allocated successfully"
-msgstr "{0} frånvaro tilldelad"
+msgstr "{0} Frånvaro tilldelad"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:353
 msgid "{0} leaves were manually allocated by {1} on {2}"
