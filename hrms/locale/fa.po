@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-02-09 09:33+0000\n"
-"PO-Revision-Date: 2025-02-13 13:50\n"
+"POT-Creation-Date: 2025-02-16 09:33+0000\n"
+"PO-Revision-Date: 2025-02-17 14:16\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "% استفاده (B + NB) / T"
 msgid "% Utilization (B / T)"
 msgstr "% استفاده (B / T)"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:135
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:140
 msgid "'employee_field_value' and 'timestamp' are required."
 msgstr "'employee_field_value' و 'timestamp' مورد نیاز است."
 
@@ -2154,11 +2154,11 @@ msgstr ""
 msgid "Check Error Log {0} for more details."
 msgstr "برای جزئیات بیشتر، Log خطا {0} را بررسی کنید."
 
-#: frontend/src/components/CheckInPanel.vue:124
+#: frontend/src/components/CheckInPanel.vue:123
 msgid "Check In"
 msgstr ""
 
-#: frontend/src/components/CheckInPanel.vue:123
+#: frontend/src/components/CheckInPanel.vue:122
 msgid "Check Out"
 msgstr ""
 
@@ -2172,7 +2172,7 @@ msgstr "موقعیت های خالی را در ایجاد پیشنهاد شغل�
 msgid "Check {0} for more details"
 msgstr "برای جزئیات بیشتر، {0} را بررسی کنید"
 
-#: frontend/src/components/CheckInPanel.vue:160
+#: frontend/src/components/CheckInPanel.vue:159
 msgid "Check-in"
 msgstr ""
 
@@ -2181,7 +2181,7 @@ msgstr ""
 msgid "Check-in Date"
 msgstr "تاریخ ورود"
 
-#: frontend/src/components/CheckInPanel.vue:160
+#: frontend/src/components/CheckInPanel.vue:159
 msgid "Check-out"
 msgstr ""
 
@@ -4731,11 +4731,11 @@ msgstr "نام کارمند"
 msgid "Employee records are created using the selected option"
 msgstr "رکوردهای کارمندان با استفاده از گزینه انتخاب شده ایجاد می شود"
 
-#: hrms/hr/doctype/shift_type/shift_type.py:185
+#: hrms/hr/doctype/shift_type/shift_type.py:186
 msgid "Employee was marked Absent due to missing Employee Checkins."
 msgstr "کارمند به دلیل عدم حضور کارمند، غایب علامت‌گذاری شد."
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:223
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:228
 msgid "Employee was marked Absent for not meeting the working hours threshold."
 msgstr "کارمند به دلیل عدم رعایت آستانه ساعات کاری، غایب علامت‌گذاری شد."
 
@@ -5007,7 +5007,7 @@ msgstr "تعداد مرخصی هایی را که می خواهید برای دو
 msgid "Enter {0}"
 msgstr ""
 
-#: frontend/src/components/CheckInPanel.vue:183
+#: frontend/src/components/CheckInPanel.vue:182
 #: frontend/src/components/FormView.vue:530
 #: frontend/src/components/FormView.vue:557
 #: frontend/src/components/FormView.vue:579
@@ -5604,11 +5604,11 @@ msgstr "بازخورد {0} با موفقیت اضافه شد"
 msgid "Fetch Geolocation"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:25
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:32
 msgid "Fetch Shift"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin_list.js:3
+#: hrms/hr/doctype/employee_checkin/employee_checkin_list.js:9
 msgid "Fetch Shifts"
 msgstr ""
 
@@ -5617,7 +5617,7 @@ msgstr ""
 msgid "Fetching Employees"
 msgstr "واکشی کارکنان"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:30
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:37
 msgid "Fetching Shift"
 msgstr ""
 
@@ -6035,7 +6035,7 @@ msgstr "موقعیت جغرافیایی"
 msgid "Geolocation Error"
 msgstr ""
 
-#: frontend/src/components/CheckInPanel.vue:144
+#: frontend/src/components/CheckInPanel.vue:143
 #: hrms/public/js/utils/index.js:185
 msgid "Geolocation is not supported by your current browser"
 msgstr ""
@@ -6259,11 +6259,6 @@ msgstr "دسته بندی بر اساس"
 #: hrms/hr/doctype/goal/goal.js:13
 msgid "Group goal's progress is auto-calculated based on the child goals."
 msgstr "پیشرفت هدف گروه به صورت خودکار بر اساس اهداف فرزند محاسبه می شود."
-
-#. Name of a role
-#: hrms/hr/doctype/job_opening/job_opening.json
-msgid "Guest"
-msgstr "مهمان"
 
 #: hrms/setup.py:315
 msgid "HR"
@@ -7153,6 +7148,7 @@ msgid "Introduction"
 msgstr "معرفی"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Grievance'
+#: hrms/hr/doctype/employee_checkin/employee_checkin_list.js:5
 #: hrms/hr/doctype/employee_grievance/employee_grievance.json
 msgid "Invalid"
 msgstr "نامعتبر"
@@ -7276,6 +7272,11 @@ msgstr "گروه است"
 #: hrms/payroll/doctype/salary_component/salary_component.json
 msgid "Is Income Tax Component"
 msgstr "جزء مالیات بر درآمد است"
+
+#. Label of the is_invalid (Check) field in DocType 'Employee Checkin'
+#: hrms/hr/doctype/employee_checkin/employee_checkin.json
+msgid "Is Invalid"
+msgstr ""
 
 #. Label of the is_lwp (Check) field in DocType 'Leave Ledger Entry'
 #. Label of the is_lwp (Check) field in DocType 'Leave Type'
@@ -7633,11 +7634,11 @@ msgstr "دوره مهلت ورود دیرهنگام"
 msgid "Latitude"
 msgstr "عرض جغرافیایی"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:83
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:88
 msgid "Latitude and longitude values are required for checking in."
 msgstr ""
 
-#: frontend/src/components/CheckInPanel.vue:132
+#: frontend/src/components/CheckInPanel.vue:131
 msgid "Latitude: {0}°"
 msgstr "عرض جغرافیایی: {0}°"
 
@@ -8111,7 +8112,7 @@ msgstr "ثبت بازپرداخت وام"
 msgid "Loan cannot be repayed from salary for Employee {0} because salary is processed in currency {1}"
 msgstr "وام از حقوق کارمند {0} قابل بازپرداخت نیست زیرا حقوق به ارز {1} پردازش می شود"
 
-#: frontend/src/components/CheckInPanel.vue:146
+#: frontend/src/components/CheckInPanel.vue:145
 msgid "Locating..."
 msgstr ""
 
@@ -8152,7 +8153,7 @@ msgstr ""
 msgid "Log Type"
 msgstr "نوع لاگ"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:67
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:71
 msgid "Log Type is required for check-ins falling in the shift: {0}."
 msgstr "نوع گزارش برای اعلام حضور در شیفت مورد نیاز است: {0}."
 
@@ -8175,7 +8176,7 @@ msgstr ""
 msgid "Longitude"
 msgstr "طول جغرافیایی"
 
-#: frontend/src/components/CheckInPanel.vue:133
+#: frontend/src/components/CheckInPanel.vue:132
 msgid "Longitude: {0}°"
 msgstr "طول جغرافیایی: {0}°"
 
@@ -8767,7 +8768,7 @@ msgstr "اطلاعاتی وجود ندارد"
 msgid "No Employee Found"
 msgstr "هیچ کارمندی پیدا نشد"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:147
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:152
 msgid "No Employee found for the given employee field value. '{}': {}"
 msgstr "هیچ کارمندی برای مقدار فیلد کارمند داده شده پیدا نشد. '{}': {}"
 
@@ -8900,8 +8901,12 @@ msgstr "هیچ پاسخی از طرف"
 msgid "No salary slip found to submit for the above selected criteria OR salary slip already submitted"
 msgstr "هیچ فیش حقوقی برای ارائه برای معیارهای انتخابی بالا یا فیش حقوقی که قبلاً ارسال شده است یافت نشد"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:43
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:50
 msgid "No valid shift found for log time"
+msgstr ""
+
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:8
+msgid "No valid shift found for this log time. If shift is assigned to the employee, adjust time window of the shift and fetch shift again."
 msgstr ""
 
 #: hrms/public/js/utils/index.js:48
@@ -10396,7 +10401,7 @@ msgstr "دلیل درخواست"
 msgid "Reason for Withholding Salary"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:313
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:318
 msgid "Reason for skipping auto attendance:"
 msgstr "دلیل عدم حضور خودکار:"
 
@@ -12002,7 +12007,7 @@ msgstr "ابزارهای شیفت"
 msgid "Shift Type"
 msgstr "نوع شیفت"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:34
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:41
 msgid "Shift has been successfully updated to {0}."
 msgstr "شیفت با موفقیت به {0} به روز شد."
 
@@ -12389,7 +12394,7 @@ msgstr "ارسال فیش حقوقی..."
 msgid "Subsidiary companies have already planned for {1} vacancies at a budget of {2}. Staffing Plan for {0} should allocate more vacancies and budget for {3} than planned for its subsidiary companies"
 msgstr "شرکت های تابعه قبلاً برای {1} جای خالی با بودجه {2} برنامه ریزی کرده اند. طرح کارکنان برای {0} باید تعداد بیشتری از مشاغل و بودجه برای {3} نسبت به شرکت های تابعه خود اختصاص دهد"
 
-#: frontend/src/components/CheckInPanel.vue:174
+#: frontend/src/components/CheckInPanel.vue:173
 #: frontend/src/components/FormView.vue:515
 #: frontend/src/components/FormView.vue:548
 #: frontend/src/components/FormView.vue:570
@@ -12764,7 +12769,7 @@ msgstr "این اقدام از ایجاد تغییرات در بازخورد/ا�
 msgid "This compensatory leave will be applicable from {0}."
 msgstr "این مرخصی جبرانی از {0} قابل اجرا خواهد بود."
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:43
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:46
 msgid "This employee already has a log with the same timestamp.{0}"
 msgstr "این کارمند قبلاً گزارشی با همان مهر زمانی دارد.{0}"
 
@@ -14212,7 +14217,7 @@ msgstr "هیچ شیفت آتی ندارید"
 msgid "You may add additional details, if any, and submit the offer."
 msgstr "شما می توانید جزئیات بیشتری را در صورت وجود اضافه کنید و پیشنهاد را ارسال کنید."
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:110
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:115
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr ""
 
@@ -14369,7 +14374,7 @@ msgstr "{0} با موفقیت ایجاد شد!"
 msgid "{0} deleted successfully!"
 msgstr "{0} با موفقیت حذف شد!"
 
-#: frontend/src/components/CheckInPanel.vue:184
+#: frontend/src/components/CheckInPanel.vue:183
 #: frontend/src/components/RequestActionSheet.vue:290
 msgid "{0} failed!"
 msgstr ""
@@ -14419,7 +14424,7 @@ msgstr "{0} باید ارسال شود"
 msgid "{0} of {1} Completed"
 msgstr "{0} از {1} تکمیل شد"
 
-#: frontend/src/components/CheckInPanel.vue:175
+#: frontend/src/components/CheckInPanel.vue:174
 msgid "{0} successful!"
 msgstr "{0} موفق!"
 
@@ -14515,7 +14520,7 @@ msgstr "{} انتظار"
 msgid "{} Unclaimed"
 msgstr "{} مطالبه نشده"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:233
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:238
 msgid "{} is an invalid Attendance Status."
 msgstr "{} یک وضعیت حضور نامعتبر است."
 

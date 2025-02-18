@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-02-09 09:33+0000\n"
-"PO-Revision-Date: 2025-02-12 13:37\n"
+"POT-Creation-Date: 2025-02-16 09:33+0000\n"
+"PO-Revision-Date: 2025-02-17 14:16\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "% Kullanım (B + NB) / T"
 msgid "% Utilization (B / T)"
 msgstr "% Kullanım (B / T)"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:135
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:140
 msgid "'employee_field_value' and 'timestamp' are required."
 msgstr "'employee_field_value' ve 'timestamp' gereklidir."
 
@@ -2179,11 +2179,11 @@ msgstr "Daha fazla ayrıntı için <a href='/app/List/Error Log?reference_doctyp
 msgid "Check Error Log {0} for more details."
 msgstr "Daha fazla ayrıntı için Hata Günlüğü {0} adresini kontrol edin."
 
-#: frontend/src/components/CheckInPanel.vue:124
+#: frontend/src/components/CheckInPanel.vue:123
 msgid "Check In"
 msgstr "Giriş"
 
-#: frontend/src/components/CheckInPanel.vue:123
+#: frontend/src/components/CheckInPanel.vue:122
 msgid "Check Out"
 msgstr "Çıkış"
 
@@ -2197,7 +2197,7 @@ msgstr "İş Teklifi Oluşturmada Açık Pozisyonları Kontrol Et"
 msgid "Check {0} for more details"
 msgstr "Daha fazla ayrıntı için {0} adresini kontrol edin"
 
-#: frontend/src/components/CheckInPanel.vue:160
+#: frontend/src/components/CheckInPanel.vue:159
 msgid "Check-in"
 msgstr "Giriş"
 
@@ -2206,7 +2206,7 @@ msgstr "Giriş"
 msgid "Check-in Date"
 msgstr "Giriş Tarihi"
 
-#: frontend/src/components/CheckInPanel.vue:160
+#: frontend/src/components/CheckInPanel.vue:159
 msgid "Check-out"
 msgstr "Çıkış"
 
@@ -4756,11 +4756,11 @@ msgstr "Personel Adı"
 msgid "Employee records are created using the selected option"
 msgstr "Personel kayıtları seçilen ayara göre oluşturulacaktır"
 
-#: hrms/hr/doctype/shift_type/shift_type.py:185
+#: hrms/hr/doctype/shift_type/shift_type.py:186
 msgid "Employee was marked Absent due to missing Employee Checkins."
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:223
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:228
 msgid "Employee was marked Absent for not meeting the working hours threshold."
 msgstr ""
 
@@ -5032,7 +5032,7 @@ msgstr "Dönem için tahsis etmek istediğiniz izin sayısını girin."
 msgid "Enter {0}"
 msgstr ""
 
-#: frontend/src/components/CheckInPanel.vue:183
+#: frontend/src/components/CheckInPanel.vue:182
 #: frontend/src/components/FormView.vue:530
 #: frontend/src/components/FormView.vue:557
 #: frontend/src/components/FormView.vue:579
@@ -5629,11 +5629,11 @@ msgstr "Geri bildirim {0} başarıyla eklendi"
 msgid "Fetch Geolocation"
 msgstr "Coğrafi Konumu Getir"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:25
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:32
 msgid "Fetch Shift"
 msgstr "Vardiyayı Getir"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin_list.js:3
+#: hrms/hr/doctype/employee_checkin/employee_checkin_list.js:9
 msgid "Fetch Shifts"
 msgstr "Vardiyaları Getir"
 
@@ -5642,7 +5642,7 @@ msgstr "Vardiyaları Getir"
 msgid "Fetching Employees"
 msgstr "Personelleri Getir"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:30
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:37
 msgid "Fetching Shift"
 msgstr "Vardiya Getiriliyor"
 
@@ -6060,7 +6060,7 @@ msgstr "Coğrafi Konum"
 msgid "Geolocation Error"
 msgstr "Coğrafi Konum Hatası"
 
-#: frontend/src/components/CheckInPanel.vue:144
+#: frontend/src/components/CheckInPanel.vue:143
 #: hrms/public/js/utils/index.js:185
 msgid "Geolocation is not supported by your current browser"
 msgstr "Coğrafi konum, mevcut tarayıcınız tarafından desteklenmiyor"
@@ -6284,11 +6284,6 @@ msgstr "Grup"
 #: hrms/hr/doctype/goal/goal.js:13
 msgid "Group goal's progress is auto-calculated based on the child goals."
 msgstr ""
-
-#. Name of a role
-#: hrms/hr/doctype/job_opening/job_opening.json
-msgid "Guest"
-msgstr "Misafir"
 
 #: hrms/setup.py:315
 msgid "HR"
@@ -7178,6 +7173,7 @@ msgid "Introduction"
 msgstr "Tanıtım/Giriş"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Grievance'
+#: hrms/hr/doctype/employee_checkin/employee_checkin_list.js:5
 #: hrms/hr/doctype/employee_grievance/employee_grievance.json
 msgid "Invalid"
 msgstr "Geçersiz"
@@ -7301,6 +7297,11 @@ msgstr "Grup"
 #: hrms/payroll/doctype/salary_component/salary_component.json
 msgid "Is Income Tax Component"
 msgstr "Gelir Vergisi Bileşenleri"
+
+#. Label of the is_invalid (Check) field in DocType 'Employee Checkin'
+#: hrms/hr/doctype/employee_checkin/employee_checkin.json
+msgid "Is Invalid"
+msgstr ""
 
 #. Label of the is_lwp (Check) field in DocType 'Leave Ledger Entry'
 #. Label of the is_lwp (Check) field in DocType 'Leave Type'
@@ -7658,11 +7659,11 @@ msgstr "Geç Giriş Grace Dönemi"
 msgid "Latitude"
 msgstr "Enlem"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:83
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:88
 msgid "Latitude and longitude values are required for checking in."
 msgstr ""
 
-#: frontend/src/components/CheckInPanel.vue:132
+#: frontend/src/components/CheckInPanel.vue:131
 msgid "Latitude: {0}°"
 msgstr ""
 
@@ -8136,7 +8137,7 @@ msgstr "Kredi Geri Ödeme Girişi"
 msgid "Loan cannot be repayed from salary for Employee {0} because salary is processed in currency {1}"
 msgstr ""
 
-#: frontend/src/components/CheckInPanel.vue:146
+#: frontend/src/components/CheckInPanel.vue:145
 msgid "Locating..."
 msgstr "Bulunuyor..."
 
@@ -8177,7 +8178,7 @@ msgstr "Çıkış Yap"
 msgid "Log Type"
 msgstr "Giriş Türü"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:67
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:71
 msgid "Log Type is required for check-ins falling in the shift: {0}."
 msgstr "Vardiyaya giriş check-in işlemleri için Günlük Tipi gereklidir: {0}."
 
@@ -8200,7 +8201,7 @@ msgstr "Frappe HR'ye giriş yapın"
 msgid "Longitude"
 msgstr "Boylam"
 
-#: frontend/src/components/CheckInPanel.vue:133
+#: frontend/src/components/CheckInPanel.vue:132
 msgid "Longitude: {0}°"
 msgstr "Boylam: {0}°"
 
@@ -8792,7 +8793,7 @@ msgstr "Hiç Veri yok"
 msgid "No Employee Found"
 msgstr "Çalışan Bulunamadı"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:147
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:152
 msgid "No Employee found for the given employee field value. '{}': {}"
 msgstr "verilen çalışanın saha değeri için çalışan bulunamadı. &#39;{}&#39;: {}"
 
@@ -8925,8 +8926,12 @@ msgstr "Şundan yanıt yok"
 msgid "No salary slip found to submit for the above selected criteria OR salary slip already submitted"
 msgstr "Yukarıdaki özelliklere göre maaş fişi bulunmayan VEYA maaş fişi zaten gönderildi"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:43
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:50
 msgid "No valid shift found for log time"
+msgstr ""
+
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:8
+msgid "No valid shift found for this log time. If shift is assigned to the employee, adjust time window of the shift and fetch shift again."
 msgstr ""
 
 #: hrms/public/js/utils/index.js:48
@@ -10421,7 +10426,7 @@ msgstr "Talep Nedeni"
 msgid "Reason for Withholding Salary"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:313
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:318
 msgid "Reason for skipping auto attendance:"
 msgstr ""
 
@@ -12027,7 +12032,7 @@ msgstr "Vardiya Araçları"
 msgid "Shift Type"
 msgstr "Vardiya Türü"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.js:34
+#: hrms/hr/doctype/employee_checkin/employee_checkin.js:41
 msgid "Shift has been successfully updated to {0}."
 msgstr "Vardiya başarıyla {0} olarak güncellendi."
 
@@ -12414,7 +12419,7 @@ msgstr "Maaş Fişleri Gönderiliyor ..."
 msgid "Subsidiary companies have already planned for {1} vacancies at a budget of {2}. Staffing Plan for {0} should allocate more vacancies and budget for {3} than planned for its subsidiary companies"
 msgstr "Bağlı şirketler zaten {1} pozisyon için {2} bütçesiyle planlama yapmış durumda. {0} için Personel Planı, bağlı şirketler için planlanan pozisyon ve bütçeden daha fazlasını {3} için tahsis etmelidir"
 
-#: frontend/src/components/CheckInPanel.vue:174
+#: frontend/src/components/CheckInPanel.vue:173
 #: frontend/src/components/FormView.vue:515
 #: frontend/src/components/FormView.vue:548
 #: frontend/src/components/FormView.vue:570
@@ -12789,7 +12794,7 @@ msgstr "Bu eylem, bağlantılı değerlendirme geri bildirimlerinde/hedeflerinde
 msgid "This compensatory leave will be applicable from {0}."
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:43
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:46
 msgid "This employee already has a log with the same timestamp.{0}"
 msgstr "Bu çalışanın zaten aynı zaman damgasına sahip bir günlüğü var. {0}"
 
@@ -14237,7 +14242,7 @@ msgstr ""
 msgid "You may add additional details, if any, and submit the offer."
 msgstr "Varsa ek bilgilerinizi ekleyip teklifinizi kaydedebilirsiniz."
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:110
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:115
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr ""
 
@@ -14394,7 +14399,7 @@ msgstr "{0} başarıyla oluşturuldu!"
 msgid "{0} deleted successfully!"
 msgstr "{0} başarıyla silindi!"
 
-#: frontend/src/components/CheckInPanel.vue:184
+#: frontend/src/components/CheckInPanel.vue:183
 #: frontend/src/components/RequestActionSheet.vue:290
 msgid "{0} failed!"
 msgstr "{0} başarısız oldu!"
@@ -14444,7 +14449,7 @@ msgstr "{0} gönderilmelidir"
 msgid "{0} of {1} Completed"
 msgstr "{0} / {1} Tamamlandı"
 
-#: frontend/src/components/CheckInPanel.vue:175
+#: frontend/src/components/CheckInPanel.vue:174
 msgid "{0} successful!"
 msgstr "{0} başarılı!"
 
@@ -14540,7 +14545,7 @@ msgstr "{} Bekliyor"
 msgid "{} Unclaimed"
 msgstr "{} Talep Edilmemiş"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:233
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:238
 msgid "{} is an invalid Attendance Status."
 msgstr "{} geçersiz bir Devamlılık Durumudur."
 
