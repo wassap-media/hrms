@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-02-16 09:33+0000\n"
-"PO-Revision-Date: 2025-02-19 15:03\n"
+"PO-Revision-Date: 2025-02-23 15:56\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -793,7 +793,7 @@ msgstr "Svi obavezni zadaci za kreiranje personala još nisu završeni."
 #. Control Panel'
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 msgid "Allocate Based On Leave Policy"
-msgstr "Dodijeli na osnovu Politike Odsustva"
+msgstr "Dodijeli na osnovu Pravila Odsustva"
 
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:176
 msgid "Allocate Leave"
@@ -5302,7 +5302,7 @@ msgstr "Otkazni Upitnik na Čekanju"
 #: hrms/hr/doctype/exit_interview/exit_interview.py:121
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Exit Questionnaire Web Form"
-msgstr "Web Obrazac Otkaznog Intervjua"
+msgstr "Web Forma Otkaznog Intervjua"
 
 #: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:120
 #: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:124
@@ -5662,7 +5662,7 @@ msgstr "Pregled Datoteke"
 #: hrms/hr/doctype/leave_application/leave_application.js:99
 #: hrms/hr/doctype/leave_encashment/leave_encashment.js:28
 msgid "Fill the form and save it"
-msgstr "Popuni obrazac i sačuvaj ga"
+msgstr "Popuni formu i spremi je"
 
 #. Option for the 'Status' (Select) field in DocType 'Job Requisition'
 #: hrms/hr/doctype/job_requisition/job_requisition.json
@@ -7180,7 +7180,7 @@ msgstr "Nevažeći"
 
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:183
 msgid "Invalid Action"
-msgstr "Nevažeća akcija"
+msgstr "Nevažeća Akcija"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:164
 msgid "Invalid Additional Salary"
@@ -7871,21 +7871,21 @@ msgstr "Pravila Odsustva"
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.json
 #: hrms/hr/workspace/leaves/leaves.json
 msgid "Leave Policy Assignment"
-msgstr "Dodjela Politike Odsustva"
+msgstr "Dodjela Pravila Odsustva"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:65
 msgid "Leave Policy Assignment Overlap"
-msgstr "Preklapanje Dodjela Politike Odsustva"
+msgstr "Preklapanje Dodjela Pravila Odsustva"
 
 #. Name of a DocType
 #: hrms/hr/doctype/leave_policy_detail/leave_policy_detail.json
 msgid "Leave Policy Detail"
-msgstr "Detalj Politike Odsustva"
+msgstr "Detalj Pravila Odsustva"
 
 #. Label of the leave_policy_details (Table) field in DocType 'Leave Policy'
 #: hrms/hr/doctype/leave_policy/leave_policy.json
 msgid "Leave Policy Details"
-msgstr "Detalji Politike Odsustva"
+msgstr "Detalji Pravila Odsustva"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:59
 msgid "Leave Policy: {0} already assigned for Employee {1} for period {2} to {3}"
@@ -8184,7 +8184,7 @@ msgstr "Tip Zapisnika je obavezan za prijave koje padaju u smjeni: {0}."
 
 #: frontend/src/views/Login.vue:34
 msgid "Login"
-msgstr "Prijava"
+msgstr "Prijave"
 
 #: frontend/src/views/InvalidEmployee.vue:7
 msgid "Login Failed"
@@ -9026,7 +9026,7 @@ msgstr "Šablon Obaveštenja"
 
 #: frontend/src/views/Notifications.vue:17
 msgid "Notifications"
-msgstr "Obavijesti"
+msgstr "Obavještenja"
 
 #. Label of the notify_users_by_email (Check) field in DocType 'Employee
 #. Onboarding'
@@ -10328,7 +10328,7 @@ msgstr "E-pošta Upitnika poslana"
 #. Option for the 'Status' (Select) field in DocType 'Payroll Entry'
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 msgid "Queued"
-msgstr "U redu"
+msgstr "U Redu"
 
 #. Label of the quick_filters_section (Section Break) field in DocType 'Leave
 #. Control Panel'
@@ -10359,7 +10359,7 @@ msgstr "Zatraženo od"
 #. Label of the rate (Float) field in DocType 'Expense Taxes and Charges'
 #: hrms/hr/doctype/expense_taxes_and_charges/expense_taxes_and_charges.json
 msgid "Rate"
-msgstr "Cjena"
+msgstr "Cijena"
 
 #. Label of the rate_goals_manually (Check) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
@@ -11006,7 +11006,7 @@ msgstr "Ruta"
 #. Opening'
 #: hrms/hr/doctype/job_opening/job_opening.json
 msgid "Route to the custom Job Application Webform"
-msgstr "Usmjeri na prilagođeni Web Obrazac Zahtjeva za Posao"
+msgstr "Usmjeri na prilagođenu Web Formu Zahtjeva za Posao"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:86
 msgid "Row #{0}: Cannot set amount or formula for Salary Component {1} with Variable Based On Taxable Salary"
@@ -13925,7 +13925,7 @@ msgstr "Pogled"
 
 #: frontend/src/components/Holidays.vue:10
 msgid "View All"
-msgstr "Pogledaj sve"
+msgstr "Prikaži Sve"
 
 #: hrms/hr/doctype/appraisal/appraisal.js:56
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.js:22
