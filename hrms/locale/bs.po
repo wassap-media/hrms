@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-02-16 09:33+0000\n"
-"PO-Revision-Date: 2025-02-23 15:56\n"
+"PO-Revision-Date: 2025-02-24 16:14\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -13333,7 +13333,7 @@ msgstr "Ukupan broj dodijeljenog odsustva je obavezan za vrstu odsustva {0}"
 
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:148
 msgid "Total percentage against cost centers should be 100"
-msgstr "Ukupan zbir postotaka prema centrima troškova treba da bude 100"
+msgstr "Ukupna procentulna suma naspram Centara Troškova treba da bude 100"
 
 #. Description of the 'Year To Date' (Currency) field in DocType 'Salary
 #. Detail'
