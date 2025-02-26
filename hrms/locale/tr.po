@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-02-16 09:33+0000\n"
-"PO-Revision-Date: 2025-02-17 14:16\n"
+"PO-Revision-Date: 2025-02-26 16:32\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -846,7 +846,7 @@ msgstr "Tahsis Süresi Bitti!"
 #. 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Allow Employee Checkin from Mobile App"
-msgstr "Personel Giriş/Çıkışı Mobil Uygulama ile Yapmasına İzin Ver"
+msgstr "Personelin Giriş/Çıkışı Mobil Uygulama ile Yapmasına İzin Ver"
 
 #. Label of the allow_encashment (Check) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
@@ -2091,7 +2091,7 @@ msgstr "Vardiya Ataması: {0} Devamlılık: {1} ile bağlantılı olduğu için 
 
 #: hrms/hr/doctype/shift_assignment/shift_assignment.py:53
 msgid "Cannot cancel Shift Assignment: {0} as it is linked to Employee Checkin: {1}"
-msgstr "Vardiya Ataması {0}, Personel Giriş/Çıkışı {1} ile bağlantılı olduğu için iptal edilemez"
+msgstr "Vardiya Ataması {0}, Personel Hareketi {1} ile bağlantılı olduğu için iptal edilemez"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:270
 msgid "Cannot create Salary Slip for Employee joining after Payroll Period"
@@ -4235,7 +4235,7 @@ msgstr "Çalışan Yatılı Etkinliği"
 #: hrms/hr/workspace/overview/overview.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Employee Checkin"
-msgstr "Personel Giriş/Çıkış"
+msgstr "Personel Hareketi"
 
 #: frontend/src/views/attendance/EmployeeCheckinList.vue:5
 msgid "Employee Checkin History"
@@ -8298,7 +8298,7 @@ msgstr ""
 #. Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Mark attendance based on 'Employee Checkin' for Employees assigned to this shift."
-msgstr "Bu vardiyaya atanan personel için ‘Personel Giriş/Çıkış’a göre devamlılığı işaretle."
+msgstr "Bu vardiyaya atanan personel için Personel Hareketine göre devamlılığı işaretle."
 
 #: hrms/hr/doctype/shift_type/shift_type.py:33
 msgid "Mark attendance for existing check-in/out logs before changing shift settings"
