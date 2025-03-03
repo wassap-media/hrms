@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-02-23 09:34+0000\n"
-"PO-Revision-Date: 2025-02-28 16:53\n"
+"PO-Revision-Date: 2025-03-02 17:19\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -537,7 +537,7 @@ msgstr "Obračunski Nalog Knjiženja za plate od {0} do {1}"
 #: hrms/hr/doctype/full_and_final_asset/full_and_final_asset.json
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 msgid "Action"
-msgstr "Akcija"
+msgstr "Radnja"
 
 #: hrms/hr/doctype/attendance_request/attendance_warnings.html:8
 msgid "Action on Submission"
@@ -890,7 +890,7 @@ msgstr "Dozvoli Prekomjernu Dodjelu"
 #. Label of the allow_tax_exemption (Check) field in DocType 'Income Tax Slab'
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.json
 msgid "Allow Tax Exemption"
-msgstr "Dozvoli oslobađanje od poreza"
+msgstr "Dozvoli Izuzeće od Poreza"
 
 #. Label of the allow_user (Link) field in DocType 'Leave Block List Allow'
 #: hrms/hr/doctype/leave_block_list_allow/leave_block_list_allow.json
@@ -2646,7 +2646,7 @@ msgstr "Uzmi u obzir obilježeno prisustvo ya vrijeme praznika"
 
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:40
 msgid "Consider Tax Exemption Declaration"
-msgstr "Uzmi u obzir Deklaraciju o oslobađanju plaćanja poreza"
+msgstr "Uzmi u Obzir Deklaraciju Izuzeća Plaćanja Poreza"
 
 #. Label of the consider_unmarked_attendance_as (Select) field in DocType
 #. 'Payroll Settings'
@@ -3245,7 +3245,7 @@ msgstr "Odbij Porez na Nezatražene Beneficije Personala"
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Deduct Tax For Unsubmitted Tax Exemption Proof"
-msgstr "Odbijte porez za nepodneseni dokaz o oslobođenju od poreza"
+msgstr "Odbij Porez za Nepodneseni Dokaz Izuzeća od Poreza"
 
 #. Option for the 'Type' (Select) field in DocType 'Salary Component'
 #: hrms/payroll/doctype/salary_component/salary_component.json
@@ -4425,7 +4425,7 @@ msgstr "Sažetak Stanja Odsustva"
 #. Name of a Workspace
 #: hrms/hr/workspace/employee_lifecycle/employee_lifecycle.json
 msgid "Employee Lifecycle"
-msgstr "Životni Ciklus"
+msgstr "Radni Vijek"
 
 #: hrms/setup.py:772
 msgid "Employee Loan"
@@ -4696,7 +4696,7 @@ msgstr "Status"
 #. Name of a DocType
 #: hrms/payroll/doctype/employee_tax_exemption_category/employee_tax_exemption_category.json
 msgid "Employee Tax Exemption Category"
-msgstr "Kategorija Oslobođenja od Poreza"
+msgstr "Kategorija Izuzeća od Poreza"
 
 #. Name of a DocType
 #. Label of a Link in the Tax & Benefits Workspace
@@ -4704,33 +4704,33 @@ msgstr "Kategorija Oslobođenja od Poreza"
 #: hrms/payroll/doctype/employee_tax_exemption_declaration/employee_tax_exemption_declaration.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Employee Tax Exemption Declaration"
-msgstr "Deklaracija Oslobađanju od Poreza"
+msgstr "Deklaracija Izuzeća od Poreza"
 
 #. Name of a DocType
 #. Label of a Link in the Tax & Benefits Workspace
 #: hrms/payroll/doctype/employee_tax_exemption_declaration_category/employee_tax_exemption_declaration_category.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Employee Tax Exemption Declaration Category"
-msgstr "Kategorija Deklaracije Oslobađanju od Poreza"
+msgstr "Kategorija Deklaracije Izuzeća od Poreza"
 
 #. Name of a DocType
 #. Label of a Link in the Tax & Benefits Workspace
 #: hrms/payroll/doctype/employee_tax_exemption_proof_submission/employee_tax_exemption_proof_submission.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Employee Tax Exemption Proof Submission"
-msgstr "Podnošenje Dokaza o Oslobađanju od Poreza"
+msgstr "Podnošenje Dokaza o Izuzeća od Poreza"
 
 #. Name of a DocType
 #: hrms/payroll/doctype/employee_tax_exemption_proof_submission_detail/employee_tax_exemption_proof_submission_detail.json
 msgid "Employee Tax Exemption Proof Submission Detail"
-msgstr "Detalji Podnošenja Dokaza o Oslobađanju od Poreza"
+msgstr "Detalji Podnošenja Dokaza Izuzeća od Poreza"
 
 #. Name of a DocType
 #. Label of a Link in the Tax & Benefits Workspace
 #: hrms/payroll/doctype/employee_tax_exemption_sub_category/employee_tax_exemption_sub_category.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Employee Tax Exemption Sub Category"
-msgstr "Podkategorija Oslobođenja od Poreza"
+msgstr "Podkategorija Izuzeća od Poreza"
 
 #. Name of a DocType
 #: hrms/hr/doctype/employee_training/employee_training.json
@@ -6395,7 +6395,7 @@ msgstr "Nadzorna Ploča Resursa"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 msgid "HR Manager"
-msgstr "HR Upravitelj"
+msgstr "Personalni Upravitelj"
 
 #. Name of a DocType
 #. Label of a Link in the Overview Workspace
@@ -6477,7 +6477,7 @@ msgstr "Postavke Resursa"
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 msgid "HR User"
-msgstr "HR Korisnik"
+msgstr "Personalni Korisnik"
 
 #: hrms/config/desktop.py:5
 msgid "HRMS"
@@ -6715,7 +6715,7 @@ msgstr "Ako je navedeno, puni iznos će biti odbijen od oporezivog prihoda prije
 #. Tax Slab'
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.json
 msgid "If enabled, Tax Exemption Declaration will be considered for income tax calculation."
-msgstr "Ako je omogućeno, Deklaracija Oslobađanja od Poreza će se uzeti u obzir za obračun poreza na platu."
+msgstr "Ako je omogućeno, Deklaracija Izuzeća od Poreza će se uzeti u obzir za obračun poreza na platu."
 
 #. Description of the 'Mark Auto Attendance on Holidays' (Check) field in
 #. DocType 'Shift Type'
@@ -7199,7 +7199,7 @@ msgstr "Nevažeći"
 
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.py:183
 msgid "Invalid Action"
-msgstr "Nevažeća Akcija"
+msgstr "Nevažeća Radnja"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:164
 msgid "Invalid Additional Salary"
@@ -8111,7 +8111,7 @@ msgstr "Registarski Broj"
 
 #: hrms/overrides/dashboard_overrides.py:16
 msgid "Lifecycle"
-msgstr "Životni Ciklus"
+msgstr "Radni Vijek"
 
 #. Option for the 'Roster Color' (Select) field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
@@ -8390,11 +8390,11 @@ msgstr "Maksimalne Beneficije (Godišnje)"
 #: hrms/payroll/doctype/employee_tax_exemption_category/employee_tax_exemption_category.json
 #: hrms/payroll/doctype/employee_tax_exemption_sub_category/employee_tax_exemption_sub_category.json
 msgid "Max Exemption Amount"
-msgstr "Maksimalni Oslobođeni Iznos"
+msgstr "Maksimalni Izuzeti Iznos"
 
 #: hrms/payroll/doctype/employee_tax_exemption_sub_category/employee_tax_exemption_sub_category.py:18
 msgid "Max Exemption Amount cannot be greater than maximum exemption amount {0} of Tax Exemption Category {1}"
-msgstr "Maksimalni Oslobođeni Iznos ne može biti veći od maksimalnog iznosa oslobođenja {0} Kategorije Oslobođenja od Poreza {1}"
+msgstr "Maksimalni Izuzeti Iznos ne može biti veći od maksimalnog iznosa izuzeća {0} Kategorije Izuzeća od Poreza {1}"
 
 #. Label of the max_taxable_income (Currency) field in DocType 'Income Tax Slab
 #. Other Charges'
@@ -8442,7 +8442,7 @@ msgstr "Maksimalni Izuzeti Iznos"
 #. Proof Submission Detail'
 #: hrms/payroll/doctype/employee_tax_exemption_proof_submission_detail/employee_tax_exemption_proof_submission_detail.json
 msgid "Maximum Exemption Amount"
-msgstr "Maksimalni Oslobođeni Iznos"
+msgstr "Maksimalni Izuzeti Iznos"
 
 #. Label of the max_leaves_allowed (Float) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
@@ -12240,7 +12240,7 @@ msgstr "Plan Zapošljavanja {0} već postoji za poziciju {1}"
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Standard Tax Exemption Amount"
-msgstr "Standardni Iznos Oslobođenja od Poreza"
+msgstr "Standardni Iznos Izuzeća od Poreza"
 
 #. Label of the standard_working_hours (Float) field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
@@ -12643,7 +12643,7 @@ msgstr "Odbijen Porez do Datuma"
 #. Exemption Sub Category'
 #: hrms/payroll/doctype/employee_tax_exemption_sub_category/employee_tax_exemption_sub_category.json
 msgid "Tax Exemption Category"
-msgstr "Kategorija Oslobođenja od Poreza"
+msgstr "Kategorija Izuzeća od Poreza"
 
 #. Label of the section_break_8 (Tab Break) field in DocType 'Employee Tax
 #. Exemption Declaration'
@@ -12652,13 +12652,13 @@ msgstr "Kategorija Oslobođenja od Poreza"
 #: hrms/payroll/doctype/employee_tax_exemption_declaration/employee_tax_exemption_declaration.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Tax Exemption Declaration"
-msgstr "Deklaracija Oslobađanju od Poreza"
+msgstr "Deklaracija Izuzeća od Poreza"
 
 #. Label of the tax_exemption_proofs (Table) field in DocType 'Employee Tax
 #. Exemption Proof Submission'
 #: hrms/payroll/doctype/employee_tax_exemption_proof_submission/employee_tax_exemption_proof_submission.json
 msgid "Tax Exemption Proofs"
-msgstr "Dokaz Oslobađanja od Poreza"
+msgstr "Dokaz Izuzeća od Poreza"
 
 #. Label of a Card Break in the Tax & Benefits Workspace
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
@@ -13228,7 +13228,7 @@ msgstr "Ukupna Procijenjena Cijena"
 #: hrms/payroll/doctype/employee_tax_exemption_declaration/employee_tax_exemption_declaration.json
 #: hrms/payroll/doctype/employee_tax_exemption_proof_submission/employee_tax_exemption_proof_submission.json
 msgid "Total Exemption Amount"
-msgstr "Ukupan Oslobođeni Iznos"
+msgstr "Ukupan Izuzeti Iznos"
 
 #: frontend/src/components/ExpenseClaimSummary.vue:9
 msgid "Total Expense Amount"
