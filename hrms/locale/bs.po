@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-03-02 09:34+0000\n"
-"PO-Revision-Date: 2025-03-03 17:36\n"
+"PO-Revision-Date: 2025-03-05 18:10\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -487,7 +487,7 @@ msgstr "Knjigovodstvene Dimenzije"
 
 #: hrms/hr/doctype/expense_claim/expense_claim.js:121
 msgid "Accounting Ledger"
-msgstr "Računovodstvena knjiga"
+msgstr "Knjigovodstveni Registar"
 
 #. Label of a Card Break in the Expense Claims Workspace
 #. Label of a Card Break in the Salary Payout Workspace
@@ -3114,7 +3114,7 @@ msgstr "Odgovori Dnevnog Sažetka Rada"
 #: hrms/hr/workspace/recruitment/recruitment.json
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "Dashboard"
-msgstr "Nadzorna ploča"
+msgstr "Nadzorna Tabla"
 
 #. Label of the date (Date) field in DocType 'Employee Attendance Tool'
 #. Label of the date (Date) field in DocType 'Employee Referral'
@@ -6320,7 +6320,7 @@ msgstr "Postavke Resursa & Obračun Plata"
 #. Label of a shortcut in the Overview Workspace
 #: hrms/hr/workspace/overview/overview.json
 msgid "HR Dashboard"
-msgstr "Nadzorna Ploča Resursa"
+msgstr "Nadzorna Tabla Resursa"
 
 #. Name of a role
 #: hrms/hr/doctype/appointment_letter/appointment_letter.json
@@ -8263,7 +8263,7 @@ msgstr "Obavezna polja su obavezna u {0}"
 #. DocType 'Gratuity Rule'
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule.json
 msgid "Manual"
-msgstr "Manual"
+msgstr "Ručno"
 
 #. Option for the 'KRA Evaluation Method' (Select) field in DocType 'Appraisal
 #. Cycle'
@@ -9621,7 +9621,7 @@ msgstr "Centri Troškova Obračuna Plata"
 #. Label of a shortcut in the Overview Workspace
 #: hrms/hr/workspace/overview/overview.json
 msgid "Payroll Dashboard"
-msgstr "Nadzorna Ploča Obračuna Plate"
+msgstr "Nadzorna Tabla Obračuna Plate"
 
 #. Label of the payroll_date (Date) field in DocType 'Additional Salary'
 #. Label of the payroll_date (Date) field in DocType 'Employee Incentive'
