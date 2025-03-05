@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-03-02 09:34+0000\n"
-"PO-Revision-Date: 2025-03-03 17:37\n"
+"PO-Revision-Date: 2025-03-05 18:10\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -10226,7 +10226,7 @@ msgstr ""
 
 #: frontend/src/views/Profile.vue:17
 msgid "Profile"
-msgstr ""
+msgstr "Профиль"
 
 #: hrms/hr/report/project_profitability/project_profitability.py:183
 msgid "Profit"
