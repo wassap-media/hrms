@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-03-02 09:34+0000\n"
-"PO-Revision-Date: 2025-03-03 17:37\n"
+"POT-Creation-Date: 2025-03-09 09:33+0000\n"
+"PO-Revision-Date: 2025-03-10 18:49\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "% 利用率 (B + NB) / T"
 msgid "% Utilization (B / T)"
 msgstr "% 利用率 (B / T)"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:140
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:150
 msgid "'employee_field_value' and 'timestamp' are required."
 msgstr "&#39;employee_field_value&#39;和&#39;timestamp&#39;是必需的。"
 
@@ -1108,6 +1108,10 @@ msgstr ""
 msgid "An amount of {0} already claimed for the component {1}, set the amount equal or greater than {2}"
 msgstr ""
 
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:54
+msgid "An attendance record is linked to this checkin. Please cancel the attendance before modifying time."
+msgstr ""
+
 #. Label of the annual_allocation (Float) field in DocType 'Leave Policy
 #. Detail'
 #: hrms/hr/doctype/leave_policy_detail/leave_policy_detail.json
@@ -2089,6 +2093,10 @@ msgstr ""
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 msgid "Cancelled"
 msgstr "取消"
+
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:53
+msgid "Cannot Modify Time"
+msgstr ""
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:320
 msgid "Cannot allocate leaves outside the allocation period {0} - {1}"
@@ -4778,7 +4786,7 @@ msgstr ""
 msgid "Employee was marked Absent due to missing Employee Checkins."
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:228
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:238
 msgid "Employee was marked Absent for not meeting the working hours threshold."
 msgstr ""
 
@@ -7678,7 +7686,7 @@ msgstr ""
 msgid "Latitude"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:88
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:98
 msgid "Latitude and longitude values are required for checking in."
 msgstr ""
 
@@ -8197,7 +8205,7 @@ msgstr ""
 msgid "Log Type"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:71
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:81
 msgid "Log Type is required for check-ins falling in the shift: {0}."
 msgstr "签到班次中需要登录类型：{0}。"
 
@@ -8815,7 +8823,7 @@ msgstr "无数据"
 msgid "No Employee Found"
 msgstr "找不到员工"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:152
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:162
 msgid "No Employee found for the given employee field value. '{}': {}"
 msgstr "找不到给定员工字段值的员工。 &#39;{}&#39;：{}"
 
@@ -10479,7 +10487,7 @@ msgstr ""
 msgid "Reason for Withholding Salary"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:318
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:328
 msgid "Reason for skipping auto attendance:"
 msgstr ""
 
@@ -12865,7 +12873,7 @@ msgstr ""
 msgid "This compensatory leave will be applicable from {0}."
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:46
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:47
 msgid "This employee already has a log with the same timestamp.{0}"
 msgstr "此员工已有一个具有相同时间戳的日志。{0}"
 
@@ -14315,7 +14323,7 @@ msgstr ""
 msgid "You may add additional details, if any, and submit the offer."
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:115
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:125
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr ""
 
@@ -14618,7 +14626,7 @@ msgstr ""
 msgid "{} Unclaimed"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:238
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:248
 msgid "{} is an invalid Attendance Status."
 msgstr "{}是无效的出勤状态。"
 
