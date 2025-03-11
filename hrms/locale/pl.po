@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-03-09 09:33+0000\n"
-"PO-Revision-Date: 2025-03-10 18:49\n"
+"PO-Revision-Date: 2025-03-11 19:00\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -43,17 +43,17 @@ msgstr ""
 #: hrms/hr/utils.py:241
 #: hrms/payroll/doctype/payroll_period/payroll_period.py:53
 msgid ") for {0}"
-msgstr ""
+msgstr ") dla {0}"
 
 #. Option for the 'Rounding' (Select) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "0.25"
-msgstr ""
+msgstr "0.25"
 
 #. Option for the 'Rounding' (Select) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "0.5"
-msgstr ""
+msgstr "0.5"
 
 #. Option for the 'Send Emails At' (Select) field in DocType 'Daily Work
 #. Summary Group'
@@ -241,7 +241,26 @@ msgid "<h3>Help</h3>\n\n"
 "<pre><code>Condition: employment_type==\"Intern\"</code></pre>\n"
 "<pre><code>Amount: 1000</code></pre></li>\n"
 "</ol>"
-msgstr ""
+msgstr "<h3>Pomoc</h3>\n\n"
+"<p>Uwagi:</p>\n\n"
+"<ol>\n"
+"<li>Użyj pola <code>podstawa</code> do użycia wynagrodzenia zasadniczego pracownika</li>\n"
+"<li>Użyj skrótów składników wynagrodzenia w warunkach i wzorach. <code>BS = Podstawowa pensja</code></li>\n"
+"<li>W warunkach i formułach użyj nazwy pola dla szczegółów pracownika. <code>Rodzaj zatrudnienia = employment_type</code><code>Oddział = branch</code></li>\n"
+"<li>W warunkach i formułach użyj nazwy pola z odcinka wypłaty. <code>Dni płatności = payment_days</code><code>Urlop bezpłatny = leave_without_pay</code></li>\n"
+"<li>Kwotę bezpośrednią można również wprowadzić na podstawie warunku. Zobacz przykład 3</li></ol>\n\n"
+"<h4>Przykłady</h4>\n"
+"<ol>\n"
+"<li>Obliczanie wynagrodzenia zasadniczego na podstawie <code>podstawy</code>\n"
+"<pre><code>Warunek: podstawa &lt; 10000</code></pre>\n"
+"<pre><code>Wzór: podstawa * .2</code></pre></li>\n"
+"<li>Obliczanie HRA na podstawie wynagrodzenia zasadniczego<code>BS</code> \n"
+"<pre><code>Warunek: BS &gt; 2000</code></pre>\n"
+"<pre><code>Wzór: BS * .1</code></pre></li>\n"
+"<li>Obliczanie TDS na podstawie rodzaju zatrudnienia<code>employment_type</code> \n"
+"<pre><code>Warunek: employment_type==\"Stażysta\"</code></pre>\n"
+"<pre><code>Kwota: 1000</code></pre></li>\n"
+"</ol>"
 
 #. Content of the 'html_6' (HTML) field in DocType 'Taxable Salary Slab'
 #: hrms/payroll/doctype/taxable_salary_slab/taxable_salary_slab.json
@@ -13059,7 +13078,7 @@ msgstr ""
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:179
 #: hrms/hr/doctype/leave_application/leave_application.py:180
 msgid "To date cannot be before from date"
-msgstr ""
+msgstr "To Date nie może być wcześniejsza niż From Date"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:161
 msgid "To overwrite the salary component amount for a tax component, please enable {0}"
