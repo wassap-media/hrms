@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-03-09 09:33+0000\n"
-"PO-Revision-Date: 2025-03-12 05:09\n"
+"PO-Revision-Date: 2025-03-13 05:38\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -621,7 +621,7 @@ msgstr "Stvarna stanja nisu dostupna jer se zahtjev za odsustvo proteže na razl
 #. Label of the add_day_wise_dates (Button) field in DocType 'Leave Block List'
 #: hrms/hr/doctype/leave_block_list/leave_block_list.json
 msgid "Add Day-wise Dates"
-msgstr "Dodaj dane u sedmici"
+msgstr "Dodaj dane u Sedmici"
 
 #: hrms/hr/employee_property_update.js:43
 msgid "Add Employee Property"
