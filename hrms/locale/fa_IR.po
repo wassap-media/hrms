@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-03-09 09:33+0000\n"
-"PO-Revision-Date: 2025-03-12 05:09\n"
+"PO-Revision-Date: 2025-03-16 06:05\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -462,7 +462,7 @@ msgstr "ابعاد حسابداری"
 
 #: hrms/hr/doctype/expense_claim/expense_claim.js:121
 msgid "Accounting Ledger"
-msgstr "دفتر کل حسابداری"
+msgstr "دفتر حسابداری"
 
 #. Label of a Card Break in the Expense Claims Workspace
 #. Label of a Card Break in the Salary Payout Workspace
@@ -2851,7 +2851,7 @@ msgstr "ایجاد ارزیابی ها"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.js:437
 msgid "Creating Payment Entries......"
-msgstr "ایجاد ورودی های پرداخت......"
+msgstr "ایجاد ثبت‌های پرداخت......"
 
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:1446
 msgid "Creating Salary Slips..."
@@ -3853,7 +3853,7 @@ msgstr "مرخصی های به دست آمده"
 
 #: hrms/hr/doctype/leave_type/leave_type.py:34
 msgid "Earned Leaves are allocated as per the configured frequency via scheduler."
-msgstr "مرخصی‌های به دست آمده طبق فرکانس پیکربندی شده از طریق زمان‌بندی تخصیص داده می شوند."
+msgstr "مرخصی‌های به دست آمده طبق فرکانس پیکربندی شده از طریق زمان‌بندی تخصیص داده می‌شوند."
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:143
 msgid "Earned Leaves are auto-allocated via scheduler based on the annual allocation set in the Leave Policy: {0}"
@@ -6050,7 +6050,7 @@ msgstr "جنسیت"
 #: hrms/hr/workspace/expense_claims/expense_claims.json
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 msgid "General Ledger"
-msgstr "دفتر کل مرکزی"
+msgstr "دفتر کل"
 
 #. Label of the geolocation (Geolocation) field in DocType 'Employee Checkin'
 #. Label of the geolocation (Geolocation) field in DocType 'Shift Location'
@@ -8653,7 +8653,7 @@ msgstr "حساب من"
 
 #: frontend/src/views/employee_advance/List.vue:17
 msgid "My Advances"
-msgstr "پیش‌پرداخت‌های من"
+msgstr "پیش پرداخت‌های من"
 
 #: frontend/src/views/expense_claim/List.vue:18
 msgid "My Claims"
@@ -12902,7 +12902,7 @@ msgstr "زمان"
 
 #: hrms/hr/dashboard_chart_source/hiring_vs_attrition_count/hiring_vs_attrition_count.js:28
 msgid "Time Interval"
-msgstr "فاصله زمانی"
+msgstr "بازه زمانی"
 
 #. Label of the time_sheet (Link) field in DocType 'Salary Slip Timesheet'
 #: hrms/payroll/doctype/salary_slip_timesheet/salary_slip_timesheet.json
@@ -13994,7 +13994,7 @@ msgstr "مشاهده تاریخچه مرخصی"
 
 #: hrms/public/js/utils/leave_utils.js:5
 msgid "View Ledger"
-msgstr "مشاهده دفتر کل"
+msgstr "مشاهده دفتر"
 
 #: frontend/src/components/RequestList.vue:27
 #: frontend/src/views/expense_claim/Dashboard.vue:41
