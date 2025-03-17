@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-03-02 09:34+0000\n"
-"PO-Revision-Date: 2025-03-05 18:10\n"
+"POT-Creation-Date: 2025-03-09 09:33+0000\n"
+"PO-Revision-Date: 2025-03-11 19:00\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -36,24 +36,24 @@ msgstr ""
 msgid "% Utilization (B / T)"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:140
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:150
 msgid "'employee_field_value' and 'timestamp' are required."
 msgstr ""
 
 #: hrms/hr/utils.py:241
 #: hrms/payroll/doctype/payroll_period/payroll_period.py:53
 msgid ") for {0}"
-msgstr ""
+msgstr ") dla {0}"
 
 #. Option for the 'Rounding' (Select) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "0.25"
-msgstr ""
+msgstr "0.25"
 
 #. Option for the 'Rounding' (Select) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "0.5"
-msgstr ""
+msgstr "0.5"
 
 #. Option for the 'Send Emails At' (Select) field in DocType 'Daily Work
 #. Summary Group'
@@ -241,7 +241,26 @@ msgid "<h3>Help</h3>\n\n"
 "<pre><code>Condition: employment_type==\"Intern\"</code></pre>\n"
 "<pre><code>Amount: 1000</code></pre></li>\n"
 "</ol>"
-msgstr ""
+msgstr "<h3>Pomoc</h3>\n\n"
+"<p>Uwagi:</p>\n\n"
+"<ol>\n"
+"<li>Użyj pola <code>podstawa</code> do użycia wynagrodzenia zasadniczego pracownika</li>\n"
+"<li>Użyj skrótów składników wynagrodzenia w warunkach i wzorach. <code>BS = Podstawowa pensja</code></li>\n"
+"<li>W warunkach i formułach użyj nazwy pola dla szczegółów pracownika. <code>Rodzaj zatrudnienia = employment_type</code><code>Oddział = branch</code></li>\n"
+"<li>W warunkach i formułach użyj nazwy pola z odcinka wypłaty. <code>Dni płatności = payment_days</code><code>Urlop bezpłatny = leave_without_pay</code></li>\n"
+"<li>Kwotę bezpośrednią można również wprowadzić na podstawie warunku. Zobacz przykład 3</li></ol>\n\n"
+"<h4>Przykłady</h4>\n"
+"<ol>\n"
+"<li>Obliczanie wynagrodzenia zasadniczego na podstawie <code>podstawy</code>\n"
+"<pre><code>Warunek: podstawa &lt; 10000</code></pre>\n"
+"<pre><code>Wzór: podstawa * .2</code></pre></li>\n"
+"<li>Obliczanie HRA na podstawie wynagrodzenia zasadniczego<code>BS</code> \n"
+"<pre><code>Warunek: BS &gt; 2000</code></pre>\n"
+"<pre><code>Wzór: BS * .1</code></pre></li>\n"
+"<li>Obliczanie TDS na podstawie rodzaju zatrudnienia<code>employment_type</code> \n"
+"<pre><code>Warunek: employment_type==\"Stażysta\"</code></pre>\n"
+"<pre><code>Kwota: 1000</code></pre></li>\n"
+"</ol>"
 
 #. Content of the 'html_6' (HTML) field in DocType 'Taxable Salary Slab'
 #: hrms/payroll/doctype/taxable_salary_slab/taxable_salary_slab.json
@@ -1081,6 +1100,10 @@ msgstr ""
 
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.py:58
 msgid "An amount of {0} already claimed for the component {1}, set the amount equal or greater than {2}"
+msgstr ""
+
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:54
+msgid "An attendance record is linked to this checkin. Please cancel the attendance before modifying time."
 msgstr ""
 
 #. Label of the annual_allocation (Float) field in DocType 'Leave Policy
@@ -2065,6 +2088,10 @@ msgstr ""
 msgid "Cancelled"
 msgstr ""
 
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:53
+msgid "Cannot Modify Time"
+msgstr ""
+
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:320
 msgid "Cannot allocate leaves outside the allocation period {0} - {1}"
 msgstr ""
@@ -2641,7 +2668,7 @@ msgstr ""
 
 #: frontend/src/views/Profile.vue:190
 msgid "Contact Information"
-msgstr ""
+msgstr "Informacje kontaktowe"
 
 #. Label of the contact_no (Data) field in DocType 'Employee Referral'
 #: hrms/hr/doctype/employee_referral/employee_referral.json
@@ -4753,7 +4780,7 @@ msgstr ""
 msgid "Employee was marked Absent due to missing Employee Checkins."
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:228
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:238
 msgid "Employee was marked Absent for not meeting the working hours threshold."
 msgstr ""
 
@@ -6049,7 +6076,7 @@ msgstr ""
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
 #: hrms/hr/doctype/shift_location/shift_location.json
 msgid "Geolocation"
-msgstr ""
+msgstr "Geolokalizacja"
 
 #: hrms/public/js/utils/index.js:186 hrms/public/js/utils/index.js:212
 msgid "Geolocation Error"
@@ -7651,9 +7678,9 @@ msgstr ""
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
 #: hrms/hr/doctype/shift_location/shift_location.json
 msgid "Latitude"
-msgstr ""
+msgstr "Szerokość"
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:88
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:98
 msgid "Latitude and longitude values are required for checking in."
 msgstr ""
 
@@ -8172,7 +8199,7 @@ msgstr ""
 msgid "Log Type"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:71
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:81
 msgid "Log Type is required for check-ins falling in the shift: {0}."
 msgstr ""
 
@@ -8790,7 +8817,7 @@ msgstr ""
 msgid "No Employee Found"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:152
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:162
 msgid "No Employee found for the given employee field value. '{}': {}"
 msgstr ""
 
@@ -10454,7 +10481,7 @@ msgstr ""
 msgid "Reason for Withholding Salary"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:318
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:328
 msgid "Reason for skipping auto attendance:"
 msgstr ""
 
@@ -12840,7 +12867,7 @@ msgstr ""
 msgid "This compensatory leave will be applicable from {0}."
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:46
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:47
 msgid "This employee already has a log with the same timestamp.{0}"
 msgstr ""
 
@@ -13051,7 +13078,7 @@ msgstr ""
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:179
 #: hrms/hr/doctype/leave_application/leave_application.py:180
 msgid "To date cannot be before from date"
-msgstr ""
+msgstr "To Date nie może być wcześniejsza niż From Date"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:161
 msgid "To overwrite the salary component amount for a tax component, please enable {0}"
@@ -14290,7 +14317,7 @@ msgstr ""
 msgid "You may add additional details, if any, and submit the offer."
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:115
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:125
 msgid "You must be within {0} meters of your shift location to check in."
 msgstr ""
 
@@ -14593,7 +14620,7 @@ msgstr ""
 msgid "{} Unclaimed"
 msgstr ""
 
-#: hrms/hr/doctype/employee_checkin/employee_checkin.py:238
+#: hrms/hr/doctype/employee_checkin/employee_checkin.py:248
 msgid "{} is an invalid Attendance Status."
 msgstr ""
 
