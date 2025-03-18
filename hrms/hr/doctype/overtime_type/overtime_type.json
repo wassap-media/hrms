@@ -8,16 +8,17 @@
  "field_order": [
   "section_break_pai1",
   "maximum_overtime_hours_allowed",
-  "overtime_salary_component",
   "column_break_meuk",
+  "overtime_salary_component",
+  "section_break_xxdv",
   "overtime_calculation",
+  "column_break_vnde",
   "applicable_salary_component",
   "hourly_rate",
   "pay_rate_multipliers_section",
   "standard_multiplier",
   "applicable_for_public_holiday",
   "public_holiday_multiplier",
-  "column_break_titx",
   "applicable_for_weekend",
   "weekend_multiplier"
  ],
@@ -66,7 +67,7 @@
    "description": "If unchecked, the standard multiplier will be taken as default for the weekend.",
    "fieldname": "applicable_for_weekend",
    "fieldtype": "Check",
-   "label": "Applicable for Weekend",
+   "label": "Apply for Weekend",
    "non_negative": 1,
    "reqd": 1
   },
@@ -79,15 +80,11 @@
    "non_negative": 1
   },
   {
-   "fieldname": "column_break_titx",
-   "fieldtype": "Column Break"
-  },
-  {
    "default": "0",
    "description": "If unchecked, the standard multiplier will be taken as default for Public Holiday.",
    "fieldname": "applicable_for_public_holiday",
    "fieldtype": "Check",
-   "label": "Applicable for Public Holiday"
+   "label": "Apply for Public Holiday"
   },
   {
    "depends_on": "eval: doc.applicable_for_public_holiday == 1",
@@ -114,11 +111,19 @@
    "fieldtype": "Currency",
    "label": "Hourly Rate",
    "mandatory_depends_on": "eval: doc.overtime_calculation == \"Fixed Hourly Rate\";"
+  },
+  {
+   "fieldname": "section_break_xxdv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vnde",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-18 12:37:24.315062",
+ "modified": "2025-03-18 12:44:49.362854",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Overtime Type",

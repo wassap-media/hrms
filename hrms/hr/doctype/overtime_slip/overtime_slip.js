@@ -2,18 +2,32 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Overtime Slip", {
-	employee(frm) {
-		if (frm.doc.employee) {
-			frm.events.set_frequency_and_dates(frm).then(() => {
-				frm.events.get_emp_details_and_overtime_duration(frm);
+	refresh: async (frm) => {
+		if (frm.doc.docstatus === 0) {
+			frm.add_custom_button(__("Fetch Overtime Details"), () => {
+				if (!frm.doc.employee || !frm.doc.posting_date || !frm.doc.company) {
+					frappe.msgprint({
+						title: __("Missing Fields"),
+						message: __(
+							"Please fill in Employee, Posting Date, and Company before fetching overtime details.",
+						),
+						indicator: "orange",
+					});
+				} else {
+					frm.events.get_emp_details_and_overtime_duration(frm);
+				}
 			});
+		}
+	},
+
+	employee(frm) {
+		if (notfrm.doc.employee) {
+			frm.events.set_frequency_and_dates(frm);
 		}
 	},
 	from_date: function (frm) {
 		if (frm.doc.employee && frm.doc.from_date) {
-			frm.events.set_frequency_and_dates(frm).then(() => {
-				frm.events.get_emp_details_and_overtime_duration(frm);
-			});
+			frm.events.set_frequency_and_dates(frm);
 		}
 	},
 	set_frequency_and_dates: function (frm) {
