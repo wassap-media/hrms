@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-03-16 09:33+0000\n"
-"PO-Revision-Date: 2025-03-18 06:01\n"
+"PO-Revision-Date: 2025-03-19 06:25\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -649,13 +649,13 @@ msgstr "Dodaj u Detalje"
 #: hrms/hr/doctype/leave_allocation/leave_allocation.json
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.json
 msgid "Add unused leaves from previous allocations"
-msgstr "Dodajte neiskorištene praznike iz prethodnih dodjela"
+msgstr "Dodaj neiskorištene praznike iz prethodnih dodjela"
 
 #. Description of the 'Carry Forward' (Check) field in DocType 'Leave Control
 #. Panel'
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 msgid "Add unused leaves from previous leave period's allocation to this allocation"
-msgstr "Dodajte neiskorištene praznike iz dodjela prethodnog perioda praznika u ovu dodjelu"
+msgstr "Dodaj neiskorištene praznike iz dodjela prethodnog perioda praznika u ovu dodjelu"
 
 #. Label of the added_on (Datetime) field in DocType 'Employee Performance
 #. Feedback'
@@ -9863,7 +9863,7 @@ msgstr "Dodaj preostale beneficije {0} bilo kojoj od postojećih komponenti"
 
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.py:107
 msgid "Please add the remaining benefits {0} to the application as pro-rata component"
-msgstr "Dodajte preostale beneficije {0} aplikaciji kao proporcionalnu komponentu"
+msgstr "Dodaj preostale beneficije {0} aplikaciji kao proporcionalnu komponentu"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:770
 msgid "Please assign a Salary Structure for Employee {0} applicable from or before {1} first"
