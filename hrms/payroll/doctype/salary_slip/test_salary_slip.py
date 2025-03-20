@@ -1575,7 +1575,6 @@ class TestSalarySlip(IntegrationTestCase):
 		# Check if zero value component is included in salary slip based on component settings
 		self.assertIn("Arrear", earnings)
 		self.assertEqual(earnings["Arrear"], 0.0)
-		self.assertNotIn("Overtime", earnings)
 
 	def test_component_default_amount_against_statistical_component(self):
 		from hrms.payroll.doctype.salary_structure.test_salary_structure import (
@@ -2299,10 +2298,6 @@ def setup_test():
 		"Employee Benefit Claim",
 		"Salary Structure Assignment",
 		"Payroll Period",
-		"Overtime Type",
-		"Overtime Slip",
-		"Shift Type",
-		"Shift Assignment",
 	]:
 		frappe.db.sql("delete from `tab%s`" % dt)
 
