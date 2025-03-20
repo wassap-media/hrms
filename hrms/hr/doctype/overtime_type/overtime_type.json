@@ -11,7 +11,7 @@
   "column_break_meuk",
   "overtime_salary_component",
   "section_break_xxdv",
-  "overtime_calculation",
+  "overtime_calculation_method",
   "column_break_vnde",
   "applicable_salary_component",
   "hourly_rate",
@@ -37,11 +37,11 @@
    "reqd": 1
   },
   {
-   "depends_on": "eval: doc.overtime_calculation == \"Salary Component Based\";",
+   "depends_on": "eval: doc.overtime_calculation_method == \"Salary Component Based\";",
    "fieldname": "applicable_salary_component",
    "fieldtype": "Table MultiSelect",
    "label": "Applicable Salary Component",
-   "mandatory_depends_on": "eval: doc.overtime_calculation == \"Salary Component Based\";",
+   "mandatory_depends_on": "eval: doc.overtime_calculation_method == \"Salary Component Based\";",
    "options": "Overtime Salary Component"
   },
   {
@@ -99,18 +99,11 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Salary Component Based",
-   "fieldname": "overtime_calculation",
-   "fieldtype": "Select",
-   "label": "Overtime Amount Calculation",
-   "options": "Salary Component Based\nFixed Hourly Rate"
-  },
-  {
-   "depends_on": "eval: doc.overtime_calculation == \"Fixed Hourly Rate\";",
+   "depends_on": "eval: doc.overtime_calculation_method == \"Fixed Hourly Rate\";",
    "fieldname": "hourly_rate",
    "fieldtype": "Currency",
    "label": "Hourly Rate",
-   "mandatory_depends_on": "eval: doc.overtime_calculation == \"Fixed Hourly Rate\";"
+   "mandatory_depends_on": "eval: doc.overtime_calculation_method == \"Fixed Hourly Rate\";"
   },
   {
    "fieldname": "section_break_xxdv",
@@ -119,11 +112,18 @@
   {
    "fieldname": "column_break_vnde",
    "fieldtype": "Column Break"
+  },
+  {
+   "default": "Salary Component Based",
+   "fieldname": "overtime_calculation_method",
+   "fieldtype": "Select",
+   "label": "Overtime Amount Calculation",
+   "options": "Salary Component Based\nFixed Hourly Rate"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-18 12:44:49.362854",
+ "modified": "2025-03-19 01:50:42.493991",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Overtime Type",
