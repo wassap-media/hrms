@@ -17,6 +17,7 @@
   "hourly_rate",
   "pay_rate_multipliers_section",
   "standard_multiplier",
+  "column_break_cdtj",
   "applicable_for_public_holiday",
   "public_holiday_multiplier",
   "applicable_for_weekend",
@@ -115,15 +116,20 @@
   },
   {
    "default": "Salary Component Based",
+   "description": "Overtime Hourly Rate Calculation:\n<ol style=\"padding-left:15px;\"><li>Fixed Hourly Rate: Enter a fixed hourly rate manually.</li>\n<li>Salary Component-Based:\n\n(Sum of selected components) \u00f7 (Payment Days) \u00f7 (Standard Daily Hours)</li></ol>",
    "fieldname": "overtime_calculation_method",
    "fieldtype": "Select",
    "label": "Overtime Amount Calculation",
    "options": "Salary Component Based\nFixed Hourly Rate"
+  },
+  {
+   "fieldname": "column_break_cdtj",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-19 01:50:42.493991",
+ "modified": "2025-03-22 06:11:59.329731",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Overtime Type",
