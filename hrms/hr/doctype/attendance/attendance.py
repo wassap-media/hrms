@@ -16,14 +16,12 @@ from frappe.utils import (
 	nowdate,
 )
 
-import hrms
 from hrms.hr.doctype.shift_assignment.shift_assignment import has_overlapping_timings
 from hrms.hr.utils import (
 	get_holiday_dates_for_employee,
 	get_holidays_for_employee,
 	validate_active_employee,
 )
-from hrms.payroll.doctype.salary_slip.salary_slip import convert_str_time_to_hours
 
 
 class DuplicateAttendanceError(frappe.ValidationError):
