@@ -264,17 +264,10 @@ class OvertimeSlip(Document):
 				"Overtime Salary Component", filters={"parent": name}, fields=["salary_component"]
 			)
 			components = [data.salary_component for data in components]
-			self.validate_applicable_components(components, name)
 
 		details["components"] = components
 
 		return details
-
-	def validate_applicable_components(self, applicable_components, overtime_type):
-		if not len(applicable_components):
-			frappe.throw(
-				_("Select applicable components in Overtime Type: {0}").format(frappe.bold(overtime_type))
-			)
 
 	def set_applicable_hourly_rate(self, overtime_types, overtime_type):
 		overtime_type_details = overtime_types[overtime_type]
