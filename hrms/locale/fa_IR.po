@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-03-16 09:33+0000\n"
-"PO-Revision-Date: 2025-03-18 06:01\n"
+"POT-Creation-Date: 2025-03-23 09:34+0000\n"
+"PO-Revision-Date: 2025-03-24 08:22\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -1633,9 +1633,9 @@ msgstr "حضور و غیاب کارمند {0} قبلاً برای یک شیفت 
 msgid "Attendance for employee {0} is already marked for the date {1}: {2}"
 msgstr "حضور کارمند {0} قبلاً برای تاریخ {1} مشخص شده است: {2}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:559
-msgid "Attendance for employee {0} is already marked for this day"
-msgstr "حضور کارمند {0} قبلاً برای این روز مشخص شده است"
+#: hrms/hr/doctype/leave_application/leave_application.py:565
+msgid "Attendance for employee {0} is already marked for the following dates: {1}"
+msgstr ""
 
 #: hrms/hr/doctype/attendance_request/attendance_warnings.html:2
 msgid "Attendance for the following dates will be skipped/overwritten on submission"
@@ -2109,7 +2109,7 @@ msgstr "نمی‌توان یک متقاضی شغل در برابر یک فرصت
 msgid "Cannot create or change transactions against an Appraisal Cycle with status {0}."
 msgstr ""
 
-#: hrms/hr/doctype/leave_application/leave_application.py:566
+#: hrms/hr/doctype/leave_application/leave_application.py:582
 msgid "Cannot find active Leave Period"
 msgstr "نمی‌توان دوره مرخصی فعال را پیدا کرد"
 
@@ -2456,7 +2456,7 @@ msgstr "کمیسیون"
 #: hrms/hr/report/employee_leave_balance_summary/employee_leave_balance_summary.js:16
 #: hrms/hr/report/employees_working_on_a_holiday/employees_working_on_a_holiday.js:34
 #: hrms/hr/report/leave_ledger/leave_ledger.js:46
-#: hrms/hr/report/leave_ledger/leave_ledger.py:104
+#: hrms/hr/report/leave_ledger/leave_ledger.py:103
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:49
 #: hrms/hr/report/project_profitability/project_profitability.js:9
 #: hrms/hr/report/recruitment_analytics/recruitment_analytics.js:9
@@ -3965,7 +3965,7 @@ msgstr "ایمیل ارسال شد به"
 msgid "Email Template"
 msgstr "قالب ایمیل"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:664
+#: hrms/hr/doctype/leave_application/leave_application.py:680
 msgid "Email sent to {0}"
 msgstr "ایمیل به {0} ارسال شد"
 
@@ -5070,7 +5070,7 @@ msgstr "خطا در حذف {0}"
 msgid "Error in formula or condition"
 msgstr "خطا در فرمول یا شرایط"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2202
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2204
 msgid "Error in formula or condition: {0} in Income Tax Slab"
 msgstr "خطا در فرمول یا شرایط: {0} در صفحه مالیات بر درآمد"
 
@@ -5082,7 +5082,7 @@ msgstr "خطا در برخی ردیف ها"
 msgid "Error updating {0}"
 msgstr "خطا در به‌روزرسانی {0}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2281
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2283
 msgid "Error while evaluating the {doctype} {doclink} at row {row_id}. <br><br> <b>Error:</b> {error} <br><br> <b>Hint:</b> {description}"
 msgstr "خطا هنگام ارزیابی {doctype} {doclink} در ردیف {row_id}. <br><br> <b>خطا:</b> {خطا} <br><br> <b>نکته:</b> {description}"
 
@@ -6577,7 +6577,7 @@ msgid "Hold"
 msgstr "منتظر گذاشتن"
 
 #: hrms/hr/doctype/attendance/attendance.py:276
-#: hrms/hr/doctype/leave_application/leave_application.py:1313
+#: hrms/hr/doctype/leave_application/leave_application.py:1329
 #: hrms/hr/report/employees_working_on_a_holiday/employees_working_on_a_holiday.py:46
 msgid "Holiday"
 msgstr "تعطیلات"
@@ -6593,7 +6593,7 @@ msgstr "تعطیلات"
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
 #: hrms/hr/doctype/shift_type/shift_type.json
 #: hrms/hr/report/employees_working_on_a_holiday/employees_working_on_a_holiday.js:22
-#: hrms/hr/report/leave_ledger/leave_ledger.py:111
+#: hrms/hr/report/leave_ledger/leave_ledger.py:110
 #: hrms/hr/workspace/leaves/leaves.json
 msgid "Holiday List"
 msgstr "لیست تعطیلات"
@@ -7257,7 +7257,7 @@ msgstr "برای پاداش ارجاع قابل استفاده است"
 #. Label of the is_carry_forward (Check) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
 #: hrms/hr/doctype/leave_type/leave_type.json
-#: hrms/hr/report/leave_ledger/leave_ledger.py:86
+#: hrms/hr/report/leave_ledger/leave_ledger.py:85
 msgid "Is Carry Forward"
 msgstr "انتقال به دوره بعد است"
 
@@ -7283,7 +7283,7 @@ msgstr "مرخصی به دست آمده است"
 
 #. Label of the is_expired (Check) field in DocType 'Leave Ledger Entry'
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
-#: hrms/hr/report/leave_ledger/leave_ledger.py:92
+#: hrms/hr/report/leave_ledger/leave_ledger.py:91
 msgid "Is Expired"
 msgstr "باطل شده"
 
@@ -7309,7 +7309,7 @@ msgstr "جزء مالیات بر درآمد است"
 #. Label of the is_lwp (Check) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
 #: hrms/hr/doctype/leave_type/leave_type.json
-#: hrms/hr/report/leave_ledger/leave_ledger.py:98
+#: hrms/hr/report/leave_ledger/leave_ledger.py:97
 msgid "Is Leave Without Pay"
 msgstr "مرخصی بدون حقوق است"
 
@@ -7707,7 +7707,7 @@ msgstr "تخصیص‌های مرخصی"
 msgid "Leave Application"
 msgstr "درخواست مرخصی"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:719
+#: hrms/hr/doctype/leave_application/leave_application.py:735
 msgid "Leave Application period cannot be across two non-consecutive leave allocations {0} and {1}."
 msgstr "دوره درخواست مرخصی نمی‌تواند بین دو تخصیص مرخصی غیر متوالی {0} و {1} باشد."
 
@@ -7785,7 +7785,7 @@ msgstr "تاریخ های فهرست بلاک مرخصی"
 msgid "Leave Block List Name"
 msgstr "نام لیست بلوک مرخصی"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:1289
+#: hrms/hr/doctype/leave_application/leave_application.py:1305
 msgid "Leave Blocked"
 msgstr "مسدود شده مرخصی"
 
@@ -8677,7 +8677,7 @@ msgid "Name"
 msgstr "نام"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1221
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2197
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2199
 msgid "Name error"
 msgstr "خطای نام"
 
@@ -9006,7 +9006,7 @@ msgstr "توجه: شیفت در رکوردهای حضور و غیاب موجود
 msgid "Note: Total allocated leaves {0} shouldn't be less than already approved leaves {1} for the period"
 msgstr "توجه: مجموع مرخصی‌های تخصیص‌یافته {0} نباید کمتر از مرخصی‌های تأیید شده قبلی {1} برای دوره باشد"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1887
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1889
 msgid "Note: Your salary slip is password protected, the password to unlock the PDF is of the format {0}."
 msgstr ""
 
@@ -9256,7 +9256,7 @@ msgstr "ترازهای افتتاحیه"
 msgid "Opening closed."
 msgstr "افتتاحیه بسته شده."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:572
+#: hrms/hr/doctype/leave_application/leave_application.py:588
 msgid "Optional Holiday List not set for leave period {0}"
 msgstr "فهرست تعطیلات اختیاری برای دوره مرخصی {0} تنظیم نشده است"
 
@@ -9872,7 +9872,7 @@ msgstr "لطفا نقش سازمانی را وارد کنید"
 msgid "Please reduce {0} to avoid shift time overlapping with itself"
 msgstr ""
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1876
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1878
 msgid "Please see attachment"
 msgstr "لطفا پیوست را ببینید"
 
@@ -10008,11 +10008,11 @@ msgstr "لطفاً یک حساب پیش‌فرض نقدی را در پیش‌ف�
 msgid "Please set account in Salary Component {0}"
 msgstr "لطفاً حساب را در مؤلفه حقوق و دستمزد {0} تنظیم کنید"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:627
+#: hrms/hr/doctype/leave_application/leave_application.py:643
 msgid "Please set default template for Leave Approval Notification in HR Settings."
 msgstr "لطفاً الگوی پیش‌فرض را برای اعلان تأیید خروج در تنظیمات منابع انسانی تنظیم کنید."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:602
+#: hrms/hr/doctype/leave_application/leave_application.py:618
 msgid "Please set default template for Leave Status Notification in HR Settings."
 msgstr "لطفاً الگوی پیش‌فرض را برای اعلان وضعیت مرخصی در تنظیمات HR تنظیم کنید."
 
@@ -11423,7 +11423,7 @@ msgstr "تفکیک حقوق بر اساس درآمد و کسر."
 msgid "Salary components should be part of the Salary Structure."
 msgstr "اجزای حقوق باید بخشی از ساختار حقوق و دستمزد باشد."
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2346
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2348
 msgid "Salary slip emails have been enqueued for sending. Check {0} for status."
 msgstr "ایمیل های فیش حقوقی برای ارسال در نوبت قرار گرفته اند. وضعیت {0} را بررسی کنید."
 
@@ -11628,7 +11628,7 @@ msgstr "امتیاز خود"
 msgid "Self-Study"
 msgstr "خودخوان"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:809
+#: hrms/hr/doctype/leave_application/leave_application.py:825
 msgid "Self-approval for leaves is not allowed"
 msgstr ""
 
@@ -12536,7 +12536,7 @@ msgstr "همگام سازی {0}"
 msgid "Syntax error"
 msgstr "اشتباه نوشتاری"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2200
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2202
 msgid "Syntax error in condition: {0} in Income Tax Slab"
 msgstr "خطای نحوی در شرایط: {0} در Income Tax Slab"
 
@@ -13273,7 +13273,7 @@ msgstr "مجموع روزهای مرخصی"
 msgid "Total Leaves"
 msgstr "کل مرخصی‌ها"
 
-#: hrms/hr/report/leave_ledger/leave_ledger.py:193
+#: hrms/hr/report/leave_ledger/leave_ledger.py:192
 msgid "Total Leaves ({0})"
 msgstr "کل مرخصی‌ها ({0})"
 
@@ -13550,7 +13550,7 @@ msgstr "تاریخ تراکنش"
 #. Entry'
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.json
 #: hrms/hr/report/leave_ledger/leave_ledger.js:66
-#: hrms/hr/report/leave_ledger/leave_ledger.py:79
+#: hrms/hr/report/leave_ledger/leave_ledger.py:78
 msgid "Transaction Name"
 msgstr "نام تراکنش"
 
@@ -14406,7 +14406,7 @@ msgstr "{0} و {1}"
 msgid "{0} & {1} more"
 msgstr ""
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2196
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2198
 msgid "{0} <br> This error can be due to missing or deleted field."
 msgstr "{0} <br> این خطا ممکن است به دلیل گم شدن یا حذف شدن فیلد باشد."
 
@@ -14484,7 +14484,7 @@ msgstr "{0} تعطیلات نیست."
 msgid "{0} is not allowed to submit Interview Feedback for the Interview: {1}"
 msgstr "{0} مجاز به ارسال بازخورد مصاحبه برای مصاحبه نیست: {1}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:580
+#: hrms/hr/doctype/leave_application/leave_application.py:596
 msgid "{0} is not in Optional Holiday List"
 msgstr "{0} در فهرست تعطیلات اختیاری نیست"
 
@@ -14541,7 +14541,7 @@ msgstr ""
 msgid "{0} {1} {2}?"
 msgstr "{0} {1} {2}؟"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1908
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1910
 msgid "{0}: Employee email not found, hence email not sent"
 msgstr "{0}: ایمیل کارمند یافت نشد، بنابراین ایمیل ارسال نشد"
 
