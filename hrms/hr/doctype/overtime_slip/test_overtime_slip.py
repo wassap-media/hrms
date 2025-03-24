@@ -6,6 +6,7 @@ from frappe.tests import IntegrationTestCase
 from frappe.utils import add_days, flt, getdate, today
 
 from erpnext.setup.doctype.employee.test_employee import make_employee
+
 from hrms.hr.doctype.employee_checkin.test_employee_checkin import make_checkin
 from hrms.hr.doctype.overtime_slip.overtime_slip import convert_str_time_to_hours
 from hrms.hr.doctype.overtime_type.test_overtime_type import create_overtime_type
@@ -14,132 +15,146 @@ from hrms.payroll.doctype.salary_slip.test_salary_slip import clear_cache
 from hrms.payroll.doctype.salary_structure.test_salary_structure import make_salary_structure
 
 TEST_COMPANY = "_Test Company"
+
+
 class TestOvertimeSlip(IntegrationTestCase):
-    def setUp(self):
-        doctypes_to_clear = [
-            "Overtime Type",
-            "Overtime Slip",
-            "Overtime Details",
-            "Overtime Salary Component",
-            "Attendance",
-            "Employee Checkin",
-            "Shift Type",
-            "Shift Assignment",
-        ]
-        for doctype in doctypes_to_clear:
-            frappe.db.delete(doctype)
-        clear_cache()
+	def setUp(self):
+		doctypes_to_clear = [
+			"Overtime Type",
+			"Overtime Slip",
+			"Overtime Details",
+			"Overtime Salary Component",
+			"Attendance",
+			"Employee Checkin",
+			"Shift Type",
+			"Shift Assignment",
+		]
+		for doctype in doctypes_to_clear:
+			frappe.db.delete(doctype)
 
-    def test_create_overtime_slip(self):
-        employee = make_employee("test_overtime_slip@example.com", company=TEST_COMPANY)
-        make_salary_structure("Test Overtime Salary Slip", "Monthly", employee=employee, company=TEST_COMPANY)
+	def test_create_overtime_slip(self):
+		employee = make_employee("test_overtime_slip@example.com", company=TEST_COMPANY)
+		make_salary_structure("Test Overtime Salary Slip", "Monthly", employee=employee, company=TEST_COMPANY)
 
-        overtime_type, overtime_slip, total_overtime_hours = setup_overtime(employee)
+		overtime_type, overtime_slip, total_overtime_hours = setup_overtime(employee)
 
-        attendance_records = frappe.get_all(
-            "Attendance",
-            filters={"employee": employee, "status": "Present"},
-            fields=["name", "overtime_duration", "overtime_type", "attendance_date"],
-        )
+		attendance_records = frappe.get_all(
+			"Attendance",
+			filters={"employee": employee, "status": "Present"},
+			fields=["name", "overtime_duration", "overtime_type", "attendance_date"],
+		)
 
-        records = {rec.name: rec for rec in attendance_records}
+		records = {rec.name: rec for rec in attendance_records}
 
-        for detail in overtime_slip.overtime_details:
-            self.assertIn(detail.reference_document, records)
-            self.assertEqual(detail.overtime_duration, records[detail.reference_document].overtime_duration)
-            self.assertEqual(str(detail.date), str(records[detail.reference_document].attendance_date))
+		for detail in overtime_slip.overtime_details:
+			self.assertIn(detail.reference_document, records)
+			self.assertEqual(detail.overtime_duration, records[detail.reference_document].overtime_duration)
+			self.assertEqual(str(detail.date), str(records[detail.reference_document].attendance_date))
 
-    def test_overtime_calculation_and_additional_salary_creation(self):
-        from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_slip
+	def test_overtime_calculation_and_additional_salary_creation(self):
+		from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_slip
 
-        employee = make_employee("test_overtime_slip_salary@example.com")
-        salary_structure = make_salary_structure(
-            "Test Overtime Salary Slip", "Monthly", employee=employee, company=TEST_COMPANY
-        )
+		employee = make_employee("test_overtime_slip_salary@example.com")
+		salary_structure = make_salary_structure(
+			"Test Overtime Salary Slip", "Monthly", employee=employee, company=TEST_COMPANY
+		)
 
-        overtime_type, overtime_slip, total_overtime_hours = setup_overtime(employee)
-        salary_slip = make_salary_slip(salary_structure.name, employee=employee, posting_date=overtime_slip.from_date)
+		overtime_type, overtime_slip, total_overtime_hours = setup_overtime(employee)
+		salary_slip = make_salary_slip(
+			salary_structure.name,
+			employee=employee,
+			posting_date=overtime_slip.from_date,
+		)
 
-        standard_working_hours = convert_str_time_to_hours(overtime_slip.overtime_details[0].standard_working_hours)
-        applicable_amount = next(
-            (earning.amount for earning in salary_slip.earnings if earning.salary_component == "Basic Salary"), 0
-        )
+		standard_working_hours = convert_str_time_to_hours(
+			overtime_slip.overtime_details[0].standard_working_hours
+		)
 
-        actual_overtime_amount = frappe.db.get_value(
-            "Additional Salary", {"ref_docname": overtime_slip.name}, "amount"
-        )
+		applicable_amount = sum(
+			[
+				data.amount
+				for data in salary_slip.earnings
+				if data.salary_component in ["Basic Salary"] and not data.get("additional_salary", None)
+			]
+		)
+		daily_wages = applicable_amount / salary_slip.payment_days
+		hourly_rate = daily_wages / standard_working_hours
+		expected_overtime_amount = hourly_rate * total_overtime_hours * overtime_type.standard_multiplier
 
-        daily_wages = applicable_amount / salary_slip.payment_days
-        hourly_rate = daily_wages / standard_working_hours
-        expected_overtime_amount = hourly_rate * total_overtime_hours * overtime_type.standard_multiplier
+		actual_overtime_amount = frappe.db.get_value(
+			"Additional Salary", {"ref_docname": overtime_slip.name}, "amount"
+		)
+		self.assertEqual(flt(expected_overtime_amount, 2), flt(actual_overtime_amount, 2))
 
-        self.assertEqual(flt(expected_overtime_amount, 2), flt(actual_overtime_amount, 2))
+	def test_overtime_calculation_for_fixed_hourly_rate(self):
+		employee = make_employee("test_overtime_slip_fixed@example.com")
+		make_salary_structure("Test Overtime Salary Slip", "Monthly", employee=employee, company=TEST_COMPANY)
 
-    def test_overtime_calculation_for_fixed_hourly_rate(self):
-        employee = make_employee("test_overtime_slip_fixed@example.com")
-        make_salary_structure("Test Overtime Salary Slip", "Monthly", employee=employee, company=TEST_COMPANY)
+		overtime_type, overtime_slip, total_overtime_hours = setup_overtime(employee, "Fixed Hourly Rate")
+		expected_overtime_amount = (
+			overtime_type.hourly_rate * total_overtime_hours * overtime_type.standard_multiplier
+		)
 
-        overtime_type, overtime_slip, total_overtime_hours = setup_overtime(employee, "Fixed Hourly Rate")
-        expected_overtime_amount = overtime_type.hourly_rate * total_overtime_hours * overtime_type.standard_multiplier
+		actual_overtime_amount = frappe.db.get_value(
+			"Additional Salary", {"ref_docname": overtime_slip.name}, "amount"
+		)
 
-        actual_overtime_amount = frappe.db.get_value(
-            "Additional Salary", {"ref_docname": overtime_slip.name}, "amount"
-        )
+		self.assertEqual(flt(expected_overtime_amount, 2), flt(actual_overtime_amount, 2))
 
-        self.assertEqual(flt(expected_overtime_amount, 2), flt(actual_overtime_amount, 2))
-
-    def tearDown(self):
-        frappe.db.rollback()
+	def tearDown(self):
+		frappe.db.rollback()
 
 
 def create_overtime_slip(employee):
-    slip = frappe.new_doc("Overtime Slip")
-    slip.employee = employee
-    slip.posting_date = today()
-    slip.from_date = add_days(getdate(), -2)
-    slip.to_date = add_days(getdate(), 2)
-    slip.get_emp_and_overtime_details()
-    slip.status = "Approved"
-    slip.save()
-    return slip
+	slip = frappe.new_doc("Overtime Slip")
+	slip.employee = employee
+	slip.posting_date = today()
+	slip.from_date = add_days(getdate(), -2)
+	slip.to_date = add_days(getdate(), 2)
+	slip.get_emp_and_overtime_details()
+	slip.status = "Approved"
+	slip.save()
+	return slip
 
 
 def create_checkin_records_for_overtime(employee):
-    yesterday = add_days(getdate(), -1)
-    checkin_times = [
-        (f"{yesterday} 7:00:00", "IN"),
-        (f"{yesterday} 13:00:00", "OUT"),
-        (f"{getdate()} 7:00:00", "IN"),
-        (f"{getdate()} 13:00:00", "OUT"),
-    ]
-    for time, log_type in checkin_times:
-        make_checkin(employee, time=time, log_type=log_type)
+	yesterday = add_days(getdate(), -1)
+	checkin_times = [
+		(f"{yesterday} 7:00:00", "IN"),
+		(f"{yesterday} 13:00:00", "OUT"),
+		(f"{getdate()} 7:00:00", "IN"),
+		(f"{getdate()} 13:00:00", "OUT"),
+	]
+	for time, log_type in checkin_times:
+		make_checkin(employee, time=time, log_type=log_type)
 
 
 def setup_overtime(employee, overtime_calculation_method="Salary Component Based"):
-    overtime_type = create_overtime_type(overtime_calculation_method=overtime_calculation_method)
+	overtime_type = create_overtime_type(overtime_calculation_method=overtime_calculation_method)
 
-    shift_type = setup_shift_type(
-        company=TEST_COMPANY,
-        allow_overtime=1,
-        overtime_type=overtime_type.name,
-        last_sync_of_checkin=f"{add_days(getdate(), 1)} 15:00:00",
-        mark_auto_attendance_on_holidays=1
-    )
+	shift_type = setup_shift_type(
+		company=TEST_COMPANY,
+		allow_overtime=1,
+		overtime_type=overtime_type.name,
+		last_sync_of_checkin=f"{add_days(getdate(), 1)} 15:00:00",
+		mark_auto_attendance_on_holidays=1,
+	)
 
-    make_shift_assignment(shift_type=shift_type.name, employee=employee, start_date=add_days(today(), -5))
-    create_checkin_records_for_overtime(employee)
-    shift_type.process_auto_attendance()
+	make_shift_assignment(shift_type=shift_type.name, employee=employee, start_date=add_days(today(), -5))
+	create_checkin_records_for_overtime(employee)
+	shift_type.process_auto_attendance()
 
-    slip = create_overtime_slip(employee)
-    slip.submit()
+	slip = create_overtime_slip(employee)
+	slip.submit()
 
-    overtime_details = frappe.get_all(
-        "Overtime Details",
-        filters={"parent": slip.name},
-        fields=["overtime_type", "overtime_duration", "date", "standard_working_hours"],
-    )
+	overtime_details = frappe.get_all(
+		"Overtime Details",
+		filters={"parent": slip.name},
+		fields=["overtime_type", "overtime_duration", "date", "standard_working_hours"],
+	)
 
-    total_overtime_hours = sum(convert_str_time_to_hours(detail["overtime_duration"]) for detail in overtime_details)
+	total_overtime_hours = sum(
+		convert_str_time_to_hours(detail["overtime_duration"]) for detail in overtime_details
+	)
 
-    return overtime_type, slip, total_overtime_hours
+	return overtime_type, slip, total_overtime_hours
