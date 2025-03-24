@@ -21,17 +21,13 @@ frappe.ui.form.on("Overtime Slip", {
 	},
 
 	employee(frm) {
-		if (notfrm.doc.employee) {
-			frm.events.set_frequency_and_dates(frm);
-		}
+		frm.events.set_frequency_and_dates(frm);
 	},
-	from_date: function (frm) {
-		if (frm.doc.employee && frm.doc.from_date) {
-			frm.events.set_frequency_and_dates(frm);
-		}
+	posting_date(frm) {
+		frm.events.set_frequency_and_dates(frm);
 	},
 	set_frequency_and_dates: function (frm) {
-		if (frm.doc.employee) {
+		if (frm.doc.employee && frm.doc.posting_date) {
 			return frappe.call({
 				method: "get_frequency_and_dates",
 				doc: frm.doc,

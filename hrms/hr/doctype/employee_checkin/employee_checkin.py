@@ -2,7 +2,7 @@
 # For license information, please see license.txt
 
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Union
 
 import frappe
@@ -435,9 +435,6 @@ def update_attendance_in_checkins(log_names: list, attendance_id: str):
 		.set("attendance", attendance_id)
 		.where(EmployeeCheckin.name.isin(log_names))
 	).run()
-
-
-from datetime import timedelta
 
 
 def convert_to_timedelta(input_value: str | timedelta) -> timedelta:

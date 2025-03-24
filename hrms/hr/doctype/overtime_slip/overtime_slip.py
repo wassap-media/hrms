@@ -56,7 +56,7 @@ class OvertimeSlip(Document):
 
 	@frappe.whitelist()
 	def get_frequency_and_dates(self):
-		date = self.from_date or self.posting_date
+		date = self.posting_date
 
 		salary_structure = get_assigned_salary_structure(self.employee, date)
 		if salary_structure:
@@ -201,7 +201,7 @@ class OvertimeSlip(Document):
 			if holiday_date_map[overtime_date].weekly_off == 1:
 				calculated_amount = overtime_hours * applicable_hourly_rate * weekend_multiplier
 				weekends_duration_amount += calculated_amount
-			elif holiday_date_map[overtime_date].weekly_off == 0:
+			else:
 				calculated_amount = overtime_hours * applicable_hourly_rate * public_holiday_multiplier
 				public_holidays_duration_amount += calculated_amount
 		else:
@@ -231,7 +231,9 @@ class OvertimeSlip(Document):
 		from hrms.utils.holiday_list import get_holiday_dates_between
 
 		holiday_list = get_holiday_list_for_employee(self.employee)
-		holiday_dates = get_holiday_dates_between(holiday_list, self.from_date, self.to_date, as_dict=True)
+		holiday_dates = get_holiday_dates_between(
+			holiday_list, self.from_date, self.to_date, select_weekly_off=True, as_dict=True
+		)
 
 		holiday_date_map = {}
 		for holiday_date in holiday_dates:
@@ -258,13 +260,11 @@ class OvertimeSlip(Document):
 		)
 
 		components = []
-
 		if details.overtime_calculation_method == "Salary Component Based":
 			components = frappe.get_all(
 				"Overtime Salary Component", filters={"parent": name}, fields=["salary_component"]
 			)
 			components = [data.salary_component for data in components]
-
 		details["components"] = components
 
 		return details
@@ -293,7 +293,7 @@ class OvertimeSlip(Document):
 
 		component_amount = sum(
 			[
-				data.default_amount
+				data.amount
 				for data in self._cached_salary_slip.earnings
 				if data.salary_component in components and not data.get("additional_salary", None)
 			]
