@@ -59,13 +59,14 @@
   {
    "fieldname": "standard_working_hours",
    "fieldtype": "Data",
-   "label": "Standard Working Hours"
+   "label": "Standard Working Hours",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-03-23 22:57:01.320533",
+ "modified": "2025-03-25 15:31:16.328296",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Overtime Details",

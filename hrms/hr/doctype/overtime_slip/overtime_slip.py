@@ -19,15 +19,21 @@ from hrms.payroll.doctype.salary_structure_assignment.salary_structure_assignmen
 
 class OvertimeSlip(Document):
 	def validate(self):
-		if not (self.from_date or self.to_date or self.payroll_frequency):
+		if not (self.from_date or self.to_date):
 			self.get_frequency_and_dates()
 
-		self.validate_overlap()
-		if self.from_date >= self.to_date:
-			frappe.throw(_("From date can not be greater than To date"))
+		if self.from_date > self.to_date:
+			frappe.throw(_("From date cannot be greater than To date"))
 
-		if not len(self.overtime_details):
-			self.get_emp_and_overtime_details()
+		self.validate_overlap()
+		self.validate_overtime_date_and_duration()
+
+	def on_submit(self):
+		if self.status == "Pending":
+			frappe.throw(_("Overtime Slip with Status 'Approved' or 'Rejected' are allowed for Submission"))
+
+		if self.status == "Approved":
+			self.process_overtime_slip()
 
 	def validate_overlap(self):
 		overtime_slips = frappe.db.get_all(
@@ -47,12 +53,32 @@ class OvertimeSlip(Document):
 			)
 			frappe.throw(msg)
 
-	def on_submit(self):
-		if self.status == "Pending":
-			frappe.throw(_("Overtime Slip with Status 'Approved' or 'Rejected' are allowed for Submission"))
+	def validate_overtime_date_and_duration(self):
+		dates = set()
+		overtime_type_cache = {}
+		for detail in self.overtime_details:
+			# check for duplicate dates
+			if detail.date in dates:
+				frappe.throw(_("Date {0} is repeated in Overtime Details").format(detail.date))
+			dates.add(detail.date)
 
-		if self.status == "Approved":
-			self.process_overtime_slip()
+			# validate duration only for overtime details not linked to attendance
+			if detail.reference_document:
+				continue
+
+			if detail.overtime_type not in overtime_type_cache:
+				overtime_type_cache[detail.overtime_type] = frappe.db.get_value(
+					"Overtime Type", detail.overtime_type, "maximum_overtime_hours_allowed"
+				)
+			maximum_overtime_hours = overtime_type_cache[detail.overtime_type]
+			if maximum_overtime_hours:
+				duration = convert_str_time_to_hours(detail.overtime_duration)
+				if duration > maximum_overtime_hours:
+					frappe.throw(
+						_("Overtime Duration for {0} is greater than Maximum Overtime Hours Allowed").format(
+							detail.date
+						)
+					)
 
 	@frappe.whitelist()
 	def get_frequency_and_dates(self):

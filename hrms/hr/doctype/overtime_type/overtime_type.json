@@ -48,7 +48,7 @@
   {
    "fieldname": "maximum_overtime_hours_allowed",
    "fieldtype": "Int",
-   "label": "Maximum Overtime Hours Allowed",
+   "label": "Maximum Overtime Hours Allowed Per Day",
    "non_negative": 1
   },
   {
@@ -129,7 +129,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-22 06:11:59.329731",
+ "modified": "2025-03-24 19:53:29.437334",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Overtime Type",
