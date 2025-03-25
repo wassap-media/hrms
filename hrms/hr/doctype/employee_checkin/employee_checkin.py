@@ -277,21 +277,30 @@ def mark_attendance_and_link_log(
 								}
 							)
 
-				attendance.update(
-					{
-						"doctype": "Attendance",
-						"employee": employee,
-						"attendance_date": attendance_date,
-						"status": attendance_status,
-						"working_hours": working_hours,
-						"shift": shift,
-						"late_entry": late_entry,
-						"early_exit": early_exit,
-						"in_time": in_time,
-						"out_time": out_time,
-						"half_day_status": "Absent" if attendance_status == "Half Day" else None,
-					}
-				).submit()
+					else:
+						attendance.update(
+							{
+								"overtime_type": "",
+								"standard_working_hours": "",
+								"overtime_duration": "",
+								"actual_overtime_duration": "",
+							}
+						)
+
+			attendance.update(
+				{
+					"doctype": "Attendance",
+					"employee": employee,
+					"attendance_date": attendance_date,
+					"status": attendance_status,
+					"working_hours": working_hours,
+					"shift": shift,
+					"late_entry": late_entry,
+					"early_exit": early_exit,
+					"in_time": in_time,
+					"out_time": out_time,
+				}
+			).submit()
 
 
 			if attendance_status == "Absent":
