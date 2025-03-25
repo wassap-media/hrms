@@ -19,18 +19,8 @@ TEST_COMPANY = "_Test Company"
 
 class TestOvertimeSlip(IntegrationTestCase):
 	def setUp(self):
-		doctypes_to_clear = [
-			"Overtime Type",
-			"Overtime Slip",
-			"Overtime Details",
-			"Overtime Salary Component",
-			"Attendance",
-			"Employee Checkin",
-			"Shift Type",
-			"Shift Assignment",
-		]
-		for doctype in doctypes_to_clear:
-			frappe.db.delete(doctype)
+		frappe.db.delete("Overtime Type")
+		frappe.db.delete("Shift Type", {"name": "_Test Overtime Shift"})
 
 	def test_create_overtime_slip(self):
 		employee = make_employee("test_overtime_slip@example.com", company=TEST_COMPANY)
@@ -134,6 +124,7 @@ def setup_overtime(employee, overtime_calculation_method="Salary Component Based
 
 	shift_type = setup_shift_type(
 		company=TEST_COMPANY,
+		shift_type="_Test Overtime Shift",
 		allow_overtime=1,
 		overtime_type=overtime_type.name,
 		last_sync_of_checkin=f"{add_days(getdate(), 1)} 15:00:00",
