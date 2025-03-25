@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
+from frappe import _
 from frappe.model.document import Document
 
 
@@ -12,4 +13,4 @@ class OvertimeType(Document):
 
 	def validate_applicable_components(self):
 		if not len(self.applicable_salary_component):
-			frappe.throw("Select Applicable Components for Overtime Type")
+			frappe.throw(_("Select Applicable Components for Overtime Type"))
