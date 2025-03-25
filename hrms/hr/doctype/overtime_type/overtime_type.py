@@ -12,6 +12,4 @@ class OvertimeType(Document):
 
 	def validate_applicable_components(self):
 		if not len(self.applicable_salary_component):
-			frappe.throw(
-				("Select Applicable Components for Overtime Type")
-			)
+			frappe.throw("Select Applicable Components for Overtime Type")

@@ -4,7 +4,9 @@
 # import frappe
 import frappe
 from frappe.tests import UnitTestCase
+
 from hrms.payroll.doctype.salary_slip.test_salary_slip import make_salary_component
+
 
 class TestOvertimeType(UnitTestCase):
 	"""
