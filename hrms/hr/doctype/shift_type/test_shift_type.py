@@ -46,7 +46,7 @@ class TestShiftType(IntegrationTestCase):
 		date = getdate()
 		make_shift_assignment(shift_type.name, employee, date)
 
-		# case 1: last sync uodates from none to shift end after the shift end time
+		# case 1: last sync updates from none to shift end after the shift end time
 		frappe.flags.current_datetime = datetime.combine(getdate(), get_time("14:00:00"))
 		update_last_sync_of_checkin()
 		shift_type.reload()
