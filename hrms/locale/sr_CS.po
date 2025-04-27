@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-04-20 09:34+0000\n"
-"PO-Revision-Date: 2025-04-22 13:08\n"
+"PO-Revision-Date: 2025-04-27 13:55\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Serbian (Latin)\n"
 "MIME-Version: 1.0\n"
@@ -3473,7 +3473,7 @@ msgstr "Ruta isporuke"
 #: hrms/public/js/salary_slip_deductions_report_filters.js:42 hrms/setup.py:402
 #: hrms/templates/generators/job_opening.html:87
 msgid "Department"
-msgstr "Odsek"
+msgstr "Odeljenje"
 
 #. Name of a DocType
 #: hrms/hr/doctype/department_approver/department_approver.json
@@ -10471,7 +10471,7 @@ msgstr ""
 #. Label of the rate (Float) field in DocType 'Expense Taxes and Charges'
 #: hrms/hr/doctype/expense_taxes_and_charges/expense_taxes_and_charges.json
 msgid "Rate"
-msgstr "Stopa"
+msgstr "Jedinična cena"
 
 #. Label of the rate_goals_manually (Check) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
