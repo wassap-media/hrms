@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-04-20 09:34+0000\n"
-"PO-Revision-Date: 2025-04-27 13:54\n"
+"PO-Revision-Date: 2025-04-28 15:09\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -5039,12 +5039,12 @@ msgstr ""
 #. Label of a Link in the Performance Workspace
 #: hrms/hr/workspace/performance/performance.json
 msgid "Energy Point Rule"
-msgstr ""
+msgstr "Regra do ponto de energia"
 
 #. Label of a Link in the Performance Workspace
 #: hrms/hr/workspace/performance/performance.json
 msgid "Energy Point Settings"
-msgstr ""
+msgstr "Configurações de ponto de energia"
 
 #. Label of a Card Break in the Performance Workspace
 #: hrms/hr/workspace/performance/performance.json
@@ -13118,7 +13118,7 @@ msgstr "Até o Horário"
 #. Label of the to_user (Link) field in DocType 'PWA Notification'
 #: hrms/hr/doctype/pwa_notification/pwa_notification.json
 msgid "To User"
-msgstr ""
+msgstr "Ao usuário"
 
 #: hrms/hr/doctype/shift_assignment/shift_assignment.py:104
 msgid "To allow this, enable {0} under {1}."
