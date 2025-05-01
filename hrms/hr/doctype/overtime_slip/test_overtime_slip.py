@@ -26,7 +26,7 @@ class TestOvertimeSlip(IntegrationTestCase):
 		employee = make_employee("test_overtime_slip@example.com", company=TEST_COMPANY)
 		make_salary_structure("Test Overtime Salary Slip", "Monthly", employee=employee, company=TEST_COMPANY)
 
-		overtime_type, overtime_slip, total_overtime_hours = setup_overtime(employee)
+		_, overtime_slip, _ = setup_overtime(employee)
 
 		attendance_records = frappe.get_all(
 			"Attendance",
@@ -53,7 +53,7 @@ class TestOvertimeSlip(IntegrationTestCase):
 		salary_slip = make_salary_slip(
 			salary_structure.name,
 			employee=employee,
-			posting_date=overtime_slip.from_date,
+			posting_date=overtime_slip.start_date,
 		)
 
 		standard_working_hours = convert_str_time_to_hours(
@@ -99,8 +99,8 @@ def create_overtime_slip(employee):
 	slip = frappe.new_doc("Overtime Slip")
 	slip.employee = employee
 	slip.posting_date = today()
-	slip.from_date = add_days(getdate(), -2)
-	slip.to_date = add_days(getdate(), 2)
+	slip.start_date = add_days(getdate(), -2)
+	slip.end_date = add_days(getdate(), 2)
 	slip.get_emp_and_overtime_details()
 	slip.status = "Approved"
 	slip.save()

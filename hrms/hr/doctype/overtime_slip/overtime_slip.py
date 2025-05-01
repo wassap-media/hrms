@@ -19,11 +19,11 @@ from hrms.payroll.doctype.salary_structure_assignment.salary_structure_assignmen
 
 class OvertimeSlip(Document):
 	def validate(self):
-		if not (self.from_date or self.to_date):
+		if not (self.start_date or self.end_date):
 			self.get_frequency_and_dates()
 
-		if self.from_date > self.to_date:
-			frappe.throw(_("From date cannot be greater than To date"))
+		if self.start_date > self.end_date:
+			frappe.throw(_("Start date cannot be greater than end date"))
 
 		self.validate_overlap()
 		self.validate_overtime_date_and_duration()
@@ -41,15 +41,15 @@ class OvertimeSlip(Document):
 			filters={
 				"docstatus": ("<", 2),
 				"employee": self.employee,
-				"to_date": (">=", self.from_date),
-				"from_date": ("<=", self.to_date),
+				"end_date": (">=", self.start_date),
+				"start_date": ("<=", self.end_date),
 				"name": ("!=", self.name),
 			},
 		)
 		if len(overtime_slips):
 			form_link = get_link_to_form("Overtime Slip", overtime_slips[0].name)
 			msg = _("Overtime Slip:{0} has been created between {1} and {1}").format(
-				bold(form_link), bold(self.from_date), bold(self.to_date)
+				bold(form_link), bold(self.start_date), bold(self.end_date)
 			)
 			frappe.throw(msg)
 
@@ -90,8 +90,8 @@ class OvertimeSlip(Document):
 			date_details = get_start_end_dates(
 				payroll_frequency, date, frappe.db.get_value("Employee", self.employee, "company")
 			)
-			self.from_date = date_details.start_date
-			self.to_date = date_details.end_date
+			self.start_date = date_details.start_date
+			self.end_date = date_details.end_date
 			self.payroll_frequency = payroll_frequency
 		else:
 			frappe.throw(_("No Salary Structure Assignment found for Employee: {0}").format(self.employee))
@@ -125,7 +125,7 @@ class OvertimeSlip(Document):
 
 	def get_attendance_record(self):
 		records = []
-		if self.from_date and self.to_date:
+		if self.start_date and self.end_date:
 			records = frappe.get_all(
 				"Attendance",
 				fields=[
@@ -138,7 +138,7 @@ class OvertimeSlip(Document):
 				filters={
 					"employee": self.employee,
 					"docstatus": DocStatus.submitted(),
-					"attendance_date": ("between", [getdate(self.from_date), getdate(self.to_date)]),
+					"attendance_date": ("between", [getdate(self.start_date), getdate(self.end_date)]),
 					"status": "Present",
 					"overtime_type": ["!=", ""],
 				},
@@ -154,7 +154,7 @@ class OvertimeSlip(Document):
 					"employee": self.employee,
 					"salary_component": salary_component,
 					"amount": total_amount,
-					"payroll_date": self.from_date,
+					"payroll_date": self.start_date,
 					"overwrite_salary_structure_amount": 0,
 					"ref_doctype": "Overtime Slip",
 					"ref_docname": self.name,
@@ -258,7 +258,7 @@ class OvertimeSlip(Document):
 
 		holiday_list = get_holiday_list_for_employee(self.employee)
 		holiday_dates = get_holiday_dates_between(
-			holiday_list, self.from_date, self.to_date, select_weekly_off=True, as_dict=True
+			holiday_list, self.start_date, self.end_date, select_weekly_off=True, as_dict=True
 		)
 
 		holiday_date_map = {}
@@ -307,14 +307,14 @@ class OvertimeSlip(Document):
 
 		overtime_type_details = overtime_types[overtime_type]
 		components = overtime_type_details["components"]
-		salary_structure = get_assigned_salary_structure(self.employee, self.from_date)
+		salary_structure = get_assigned_salary_structure(self.employee, self.start_date)
 
 		if not hasattr(self, "_cached_salary_slip"):
 			self._cached_salary_slip = make_salary_slip(
 				salary_structure,
 				employee=self.employee,
 				ignore_permissions=True,
-				posting_date=self.from_date,
+				posting_date=self.start_date,
 			)
 
 		component_amount = sum(
