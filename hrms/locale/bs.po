@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2025-04-20 09:34+0000\n"
-"PO-Revision-Date: 2025-04-27 13:55\n"
+"POT-Creation-Date: 2025-05-04 09:34+0000\n"
+"PO-Revision-Date: 2025-05-05 18:11\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -616,7 +616,7 @@ msgstr "Stvarni Trošak"
 msgid "Actual Encashable Days"
 msgstr "Stvarni Unovčivi Dani"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:421
+#: hrms/hr/doctype/leave_application/leave_application.py:423
 msgid "Actual balances aren't available because the leave application spans over different leave allocations. You can still apply for leaves which would be compensated during the next allocation."
 msgstr "Stvarna stanja nisu dostupna jer se zahtjev za odsustvo proteže na različite dodjele odsustva. Još uvijek možete podnijeti zahtjev za odsustvo koje će biti nadoknađeno prilikom sljedeće dodjele."
 
@@ -1666,7 +1666,7 @@ msgstr "Prisustvo za {0} je već navedeno za preklapajuću smjenu {1}: {2}"
 msgid "Attendance for employee {0} is already marked for the date {1}: {2}"
 msgstr "Prisustvo za {0} je već navedeno za datum {1}: {2}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:586
+#: hrms/hr/doctype/leave_application/leave_application.py:588
 msgid "Attendance for employee {0} is already marked for the following dates: {1}"
 msgstr "Prisustvo za {0} je već navedeno za sljedeće datume: {1}"
 
@@ -2030,7 +2030,6 @@ msgstr "Prema standard postavkama, Konačni Rezultat izračunava se kao prosjek 
 
 #. Label of the ctc (Currency) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:589
 msgid "CTC"
 msgstr "Godišnja Plata"
 
@@ -2143,7 +2142,7 @@ msgstr "Nije moguće kreirati kandidata za posao za zatvoreno radno mjesto"
 msgid "Cannot create or change transactions against an Appraisal Cycle with status {0}."
 msgstr "Nije moguće kreirati ili mijenjati transakcije prema Ciklusu Ocjenjivanja sa statusom {0}."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:603
+#: hrms/hr/doctype/leave_application/leave_application.py:605
 msgid "Cannot find active Leave Period"
 msgstr "Nije moguće pronaći aktivni Period Odsustva"
 
@@ -3194,7 +3193,7 @@ msgstr "Datum Rođenja"
 #: hrms/hr/report/employee_exits/employee_exits.py:32
 #: hrms/payroll/doctype/retention_bonus/retention_bonus.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:581
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:615
 #: hrms/payroll/report/salary_register/salary_register.py:128 hrms/setup.py:396
 msgid "Date of Joining"
 msgstr "Datum Pridruživanja"
@@ -3493,7 +3492,7 @@ msgstr "Dostavna Ruta"
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:33
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:568
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:602
 #: hrms/payroll/report/salary_register/salary_register.py:141
 #: hrms/public/js/salary_slip_deductions_report_filters.js:42 hrms/setup.py:402
 #: hrms/templates/generators/job_opening.html:87
@@ -3668,7 +3667,7 @@ msgstr "Opis Otvorenog Radnog Mjesta"
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:575
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:609
 #: hrms/payroll/report/salary_register/salary_register.py:148
 msgid "Designation"
 msgstr "Pozicija"
@@ -4007,7 +4006,7 @@ msgstr "E-pošta Poslana"
 msgid "Email Template"
 msgstr "Šablon e-pošte"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:701
+#: hrms/hr/doctype/leave_application/leave_application.py:703
 msgid "Email sent to {0}"
 msgstr "E-pošta poslana {0}"
 
@@ -4171,7 +4170,7 @@ msgstr "Šalje platni List e-poštom zaposleniku na osnovu željene e-pošte oda
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.js:26
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:555
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:589
 #: hrms/payroll/report/income_tax_deductions/income_tax_deductions.py:25
 #: hrms/payroll/report/professional_tax_deductions/professional_tax_deductions.py:21
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:20
@@ -4575,7 +4574,7 @@ msgstr "Kredit"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/doctype/salary_withholding/salary_withholding.json
 #: hrms/payroll/report/bank_remittance/bank_remittance.py:32
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:562
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:596
 #: hrms/payroll/report/income_tax_deductions/income_tax_deductions.py:32
 #: hrms/payroll/report/professional_tax_deductions/professional_tax_deductions.py:28
 #: hrms/payroll/report/provident_fund_deductions/provident_fund_deductions.py:27
@@ -4836,7 +4835,7 @@ msgstr "{0} je već predao zahtjev {1} za period obračuna plata {2}"
 msgid "Employee {0} has already applied for Shift {1}: {2} that overlaps within this period"
 msgstr "{0} se već prijavio za smjenu {1}: {2} koja se preklapa u ovom periodu"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:475
+#: hrms/hr/doctype/leave_application/leave_application.py:477
 msgid "Employee {0} has already applied for {1} between {2} and {3} : {4}"
 msgstr "{0} se već prijavio za {1} između {2} i {3} : {4}"
 
@@ -6305,6 +6304,10 @@ msgstr "Detalji Žalbe"
 msgid "Grievance Type"
 msgstr "Tip Žalbe"
 
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:624
+msgid "Gross Earnings"
+msgstr "Bruto Zarada"
+
 #. Label of the gross_pay (Currency) field in DocType 'Salary Slip'
 #: frontend/src/components/SalarySlipItem.vue:13
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
@@ -6631,7 +6634,7 @@ msgid "Hold"
 msgstr "Zadrži"
 
 #: hrms/hr/doctype/attendance/attendance.py:281
-#: hrms/hr/doctype/leave_application/leave_application.py:1350
+#: hrms/hr/doctype/leave_application/leave_application.py:1352
 #: hrms/hr/report/employees_working_on_a_holiday/employees_working_on_a_holiday.py:46
 msgid "Holiday"
 msgstr "Praznik"
@@ -6975,7 +6978,7 @@ msgstr "Odbici Poreza na Platu"
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.json
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:142
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:583
+#: hrms/payroll/report/income_tax_computation/income_tax_computation.py:617
 #: hrms/payroll/workspace/salary_payout/salary_payout.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Income Tax Slab"
@@ -7032,11 +7035,11 @@ msgstr "Instaliraj"
 msgid "Install Frappe HR"
 msgstr "Instaliraj Frappe HR"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:434
+#: hrms/hr/doctype/leave_application/leave_application.py:436
 msgid "Insufficient Balance"
 msgstr "Nedovoljno Stanje"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:432
+#: hrms/hr/doctype/leave_application/leave_application.py:434
 msgid "Insufficient leave balance for Leave Type {0}"
 msgstr "Nedovoljno stanje odsustva za tip odsustva {0}"
 
@@ -7756,7 +7759,7 @@ msgstr "Dodjela Odsustva"
 msgid "Leave Application"
 msgstr "Zahtjev Odsustva"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:756
+#: hrms/hr/doctype/leave_application/leave_application.py:758
 msgid "Leave Application period cannot be across two non-consecutive leave allocations {0} and {1}."
 msgstr "Period Prijave Odsustva ne može biti između dvije neuzastopne dodjele odsustva {0} i {1}."
 
@@ -7834,7 +7837,7 @@ msgstr "Datumi Liste Blokiranog Odsustva"
 msgid "Leave Block List Name"
 msgstr "Naziv Liste Blokiranog Odsustva"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:1326
+#: hrms/hr/doctype/leave_application/leave_application.py:1328
 msgid "Leave Blocked"
 msgstr "Odsustvo Blokirano"
 
@@ -8050,7 +8053,7 @@ msgstr "Odsustvo se ne može dodijeliti prije {0}, jer je stanje odsustva već p
 msgid "Leave cannot be applied/cancelled before {0}, as leave balance has already been carry-forwarded in the future leave allocation record {1}"
 msgstr "Odsustvo se ne može primijeniti/otkazati prije {0}, jer je stanje odsustva već preneseno u budući zapis o dodjeli odsustva {1}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:502
+#: hrms/hr/doctype/leave_application/leave_application.py:504
 msgid "Leave of type {0} cannot be longer than {1}."
 msgstr "Odsustvo tipa {0} ne može biti duže od {1}."
 
@@ -8460,7 +8463,7 @@ msgstr "Maksimalni Broj Proslijeđenog Odsustva"
 msgid "Maximum Consecutive Leaves Allowed"
 msgstr "Maksimalno Dozvoljeno Uzastopno Odsustvo"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:512
+#: hrms/hr/doctype/leave_application/leave_application.py:514
 msgid "Maximum Consecutive Leaves Exceeded"
 msgstr "Maksimalan Broj Uzastopnog Odsustva je prekoračen"
 
@@ -9343,7 +9346,7 @@ msgstr "Početna Stanja"
 msgid "Opening closed."
 msgstr "Ponuda Radnog Mjesta Zatvorena."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:609
+#: hrms/hr/doctype/leave_application/leave_application.py:611
 msgid "Optional Holiday List not set for leave period {0}"
 msgstr "Izborna Lista Praznika nije postavljena za period odsustva {0}"
 
@@ -10098,11 +10101,11 @@ msgstr "Postavi Standard Gotovinski Račun u Standard Postavkama Kompanije"
 msgid "Please set account in Salary Component {0}"
 msgstr "Postavi Račun u Komponenti Plate {0}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:664
+#: hrms/hr/doctype/leave_application/leave_application.py:666
 msgid "Please set default template for Leave Approval Notification in HR Settings."
 msgstr "Postavi standard šablon Obavijesti Odobrenju Odsustva u Postavkama Personala."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:639
+#: hrms/hr/doctype/leave_application/leave_application.py:641
 msgid "Please set default template for Leave Status Notification in HR Settings."
 msgstr "Postavi standard šablon Obavijesti Statusa Odsustva u Postavkama Personala."
 
@@ -10656,7 +10659,7 @@ msgid "Reference Document Type"
 msgstr "Referentni Tip Dokumenta"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:371
-#: hrms/hr/doctype/leave_application/leave_application.py:506
+#: hrms/hr/doctype/leave_application/leave_application.py:508
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:141
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.py:91
 msgid "Reference: {0}"
@@ -11502,7 +11505,7 @@ msgstr "Ciklus Zadržavanja Plate"
 msgid "Salary Withholding {0} already exists for employee {1} for the selected period"
 msgstr "Zadržavanje Plate {0} već postoji za personal {1} za odabrani period"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:347
+#: hrms/hr/doctype/leave_application/leave_application.py:349
 msgid "Salary already processed for period between {0} and {1}, Leave application period cannot be between this date range."
 msgstr "Plata je već obrađena za period između {0} i {1}, period prijave za odsustvo ne može biti između ovog raspona datuma."
 
@@ -11723,7 +11726,7 @@ msgstr "Samorezultat"
 msgid "Self-Study"
 msgstr "Samoučenje"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:846
+#: hrms/hr/doctype/leave_application/leave_application.py:848
 msgid "Self-approval for leaves is not allowed"
 msgstr "Samoodobrenje za odsustvo nije dozvoljeno"
 
@@ -12865,7 +12868,7 @@ msgstr "Datum na koji će Komponenta Plate sa iznosom doprinijeti Zaradi/Odbitku
 msgid "The day of the month when leaves should be allocated"
 msgstr "Dan u mjesecu kada treba dodijeliti odsustvo"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:390
+#: hrms/hr/doctype/leave_application/leave_application.py:392
 msgid "The day(s) on which you are applying for leave are holidays. You need not apply for leave."
 msgstr "Dan(i) za koji podnosite Zahtjev za Odsustvo su praznici. Ne treba da podnosiš zahtjev za odsustvo."
 
@@ -14136,7 +14139,7 @@ msgstr "UPOZORENJE: Modul Upravljanja Kreditom je odvojen od Sistema."
 msgid "Walk In"
 msgstr "Spontana Posjeta"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:429
+#: hrms/hr/doctype/leave_application/leave_application.py:431
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:157
 #: hrms/payroll/doctype/salary_component/salary_component.py:56
 #: hrms/payroll/doctype/salary_structure/salary_structure.js:321
@@ -14145,15 +14148,15 @@ msgstr "Spontana Posjeta"
 msgid "Warning"
 msgstr "Upozorenje"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:417
+#: hrms/hr/doctype/leave_application/leave_application.py:419
 msgid "Warning: Insufficient leave balance for Leave Type {0} in this allocation."
 msgstr "Upozorenje: Nedovoljno stanje odsustva za Tip Odsustva {0} u ovoj dodjeli."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:425
+#: hrms/hr/doctype/leave_application/leave_application.py:427
 msgid "Warning: Insufficient leave balance for Leave Type {0}."
 msgstr "Upozorenje: Nedovoljno stanje odsustva za Tip Odsustva {0}."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:363
+#: hrms/hr/doctype/leave_application/leave_application.py:365
 msgid "Warning: Leave application contains following block dates"
 msgstr "Upozorenje: Zahtjev Odsustva sadrži sljedeće blokirane datume"
 
@@ -14376,7 +14379,7 @@ msgstr "Da"
 msgid "Yes, Proceed"
 msgstr "Da, Nastavi"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:373
+#: hrms/hr/doctype/leave_application/leave_application.py:375
 msgid "You are not authorized to approve leaves on Block Dates"
 msgstr "Niste ovlašteni odobravati odsustva na blokirane datume"
 
@@ -14622,7 +14625,7 @@ msgstr "{0} nije praznik."
 msgid "{0} is not allowed to submit Interview Feedback for the Interview: {1}"
 msgstr "{0} nije dozvoljeno slati Povratne Informacije o intervjuu za intervju: {1}"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:617
+#: hrms/hr/doctype/leave_application/leave_application.py:619
 msgid "{0} is not in Optional Holiday List"
 msgstr "{0} nije na listi Opcija Praznika"
 
