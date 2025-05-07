@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-05-04 09:34+0000\n"
-"PO-Revision-Date: 2025-05-05 18:11\n"
+"PO-Revision-Date: 2025-05-07 18:39\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -1058,7 +1058,7 @@ msgstr ""
 #. Advance'
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Amount of expense"
-msgstr ""
+msgstr "مبلغ هزینه"
 
 #. Description of the 'Paid Amount' (Currency) field in DocType 'Leave
 #. Encashment'
@@ -1084,7 +1084,7 @@ msgstr ""
 
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.py:58
 msgid "An amount of {0} already claimed for the component {1}, set the amount equal or greater than {2}"
-msgstr "مبلغ {0} قبلاً برای مؤلفه {1} ادعا شده است، مبلغ آن را برابر یا بیشتر از {2} قرار دهید"
+msgstr "مبلغ {0} قبلاً برای مؤلفه {1} مطلبه شده است، مبلغ آن را برابر یا بیشتر از {2} قرار دهید"
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:54
 msgid "An attendance record is linked to this checkin. Please cancel the attendance before modifying time."
@@ -2256,7 +2256,7 @@ msgstr "مطالبه یک هزینه"
 #: frontend/src/views/employee_advance/List.vue:41
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Claimed"
-msgstr "ادعا کرد"
+msgstr "مطالبه شده"
 
 #. Label of the claimed_amount (Currency) field in DocType 'Employee Advance'
 #. Label of the claimed_amount (Currency) field in DocType 'Employee Benefit
@@ -5033,7 +5033,7 @@ msgstr "زمان پایان نمی‌تواند قبل از زمان شروع ب
 #. Label of a Link in the Performance Workspace
 #: hrms/hr/workspace/performance/performance.json
 msgid "Energy Point Log"
-msgstr "گزارش نقطه انرژی"
+msgstr "لاگ نقطه انرژی"
 
 #. Label of a Link in the Performance Workspace
 #: hrms/hr/workspace/performance/performance.json
@@ -8014,7 +8014,7 @@ msgstr "مرخصی قبلاً برای این تخصیص سیاست مرخصی �
 #. DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Leave and Expense Claim Settings"
-msgstr "تنظیمات ادعای مرخصی و هزینه"
+msgstr "تنظیمات مرخصی و مطالبه هزینه"
 
 #: hrms/hr/doctype/leave_type/leave_type.py:26
 msgid "Leave application is linked with leave allocations {0}. Leave application cannot be set as leave without pay"
@@ -8214,7 +8214,7 @@ msgstr "نوع لاگ"
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:81
 msgid "Log Type is required for check-ins falling in the shift: {0}."
-msgstr "نوع گزارش برای اعلام حضور در شیفت مورد نیاز است: {0}."
+msgstr "نوع لاگ برای اعلام حضور در شیفت: {0} مورد نیاز است."
 
 #: frontend/src/views/Login.vue:34
 msgid "Login"
@@ -9259,7 +9259,7 @@ msgstr "فقط درخواست Shift با وضعیت \"تایید\" و \"رد ش�
 #. Label of the only_tax_impact (Check) field in DocType 'Salary Component'
 #: hrms/payroll/doctype/salary_component/salary_component.json
 msgid "Only Tax Impact (Cannot Claim But Part of Taxable Income)"
-msgstr "فقط تأثیر مالیات (نمی‌توان ادعا کرد اما بخشی از درآمد مشمول مالیات)"
+msgstr "فقط تأثیر مالیات (نمی‌توان مطالبه کرد اما بخشی از درآمد مشمول مالیات)"
 
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:33
 msgid "Only expired allocation can be cancelled"
@@ -9522,7 +9522,7 @@ msgstr "تا حدی حمایت مالی شده است، نیاز به بودجه
 #: frontend/src/views/employee_advance/List.vue:41
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Partly Claimed and Returned"
-msgstr "تا حدی ادعا شده و بازگردانده شده است"
+msgstr "تا حدی مطالبه شده و بازگردانده شده است"
 
 #. Label of the passport_number (Data) field in DocType 'Travel Request'
 #: hrms/hr/doctype/travel_request/travel_request.json
@@ -12939,7 +12939,7 @@ msgstr "این مرخصی جبرانی از {0} قابل اجرا خواهد ب�
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:47
 msgid "This employee already has a log with the same timestamp.{0}"
-msgstr "این کارمند قبلاً گزارشی با همان مهر زمانی دارد.{0}"
+msgstr "این کارمند قبلاً یک لاگ با همان مهر زمانی دارد.{0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1240
 msgid "This error can be due to invalid formula or condition."
@@ -13767,7 +13767,7 @@ msgstr "سابقه حضور و غیاب بدون پیوند از ورود کار
 
 #: hrms/hr/doctype/attendance/attendance.py:227
 msgid "Unlinked logs"
-msgstr "گزارش‌های بدون پیوند"
+msgstr "لاگ‌های بدون پیوند"
 
 #. Description of the 'Select Employees' (Section Break) field in DocType
 #. 'Employee Attendance Tool'
