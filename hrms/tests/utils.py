@@ -17,6 +17,31 @@ class HRMSTestSuite(ERPNextTestSuite):
 		super().make_employees()
 
 	@classmethod
+	def make_departments(cls):
+		"""Create test departments"""
+		# Create test departments here
+		records = [
+			{
+				"doctype": "Department",
+				"department_name": "_Test Department",
+				"company": "_Test Company",
+				"parent_department": "All Departments",
+			},
+			{
+				"doctype": "Department",
+				"department_name": "_Test Department 1",
+				"company": "_Test Company",
+				"parent_department": "All Departments",
+			},
+		]
+		cls.departments = []
+		for x in records:
+			if not frappe.db.exists("Department", x.get("department_name")):
+				cls.departments.append(frappe.get_doc(x).insert())
+			else:
+				cls.departments.append(frappe.get_doc("Department", x.get("department_name")))
+
+	@classmethod
 	def make_leave_types(cls):
 		"""Create test leave types"""
 		# Create test leave types here
