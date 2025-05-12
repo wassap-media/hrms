@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-05-04 09:34+0000\n"
-"PO-Revision-Date: 2025-05-07 18:39\n"
+"PO-Revision-Date: 2025-05-12 20:00\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -5085,7 +5085,7 @@ msgstr "لاگ خطا"
 #. Label of the error_message (Small Text) field in DocType 'Payroll Entry'
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 msgid "Error Message"
-msgstr "پیغام خطا"
+msgstr "پیام خطا"
 
 #: frontend/src/components/FormView.vue:531
 msgid "Error creating {0}"
@@ -8307,7 +8307,7 @@ msgstr "حضور خودکار در روزهای تعطیل را علامت بز�
 
 #: frontend/src/views/Notifications.vue:49
 msgid "Mark all as read"
-msgstr "همه را به عنوان خوانده شده علامت بزن"
+msgstr "علامت زدن همه به عنوان خوانده شده"
 
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.js:58
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.js:62
