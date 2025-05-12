@@ -6,12 +6,15 @@ from frappe.tests import IntegrationTestCase
 from frappe.utils import getdate
 
 from hrms.hr.doctype.leave_block_list.leave_block_list import get_applicable_block_dates
-
-test_dependencies = ["Employee"]
-test_records = frappe.get_test_records("Leave Block List")
+from hrms.tests.utils import HRMSTestSuite
 
 
-class TestLeaveBlockList(IntegrationTestCase):
+class TestLeaveBlockList(HRMSTestSuite):
+	@classmethod
+	def setUpClass(cls):
+		super().setUpClass()
+		cls.make_employees()
+
 	def tearDown(self):
 		frappe.set_user("Administrator")
 

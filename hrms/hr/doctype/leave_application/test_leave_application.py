@@ -3,7 +3,6 @@
 
 import frappe
 from frappe.permissions import clear_user_permissions_for_doctype
-from frappe.tests import IntegrationTestCase
 from frappe.utils import (
 	add_days,
 	add_months,
@@ -40,44 +39,67 @@ from hrms.payroll.doctype.salary_slip.test_salary_slip import (
 	make_leave_application,
 )
 from hrms.tests.test_utils import get_first_sunday
+from hrms.tests.utils import HRMSTestSuite
 
-test_dependencies = ["Leave Type", "Leave Allocation", "Leave Block List", "Employee"]
-
-_test_records = [
-	{
-		"company": "_Test Company",
-		"doctype": "Leave Application",
-		"employee": "_T-Employee-00001",
-		"from_date": "2013-05-01",
-		"description": "_Test Reason",
-		"leave_type": "_Test Leave Type",
-		"posting_date": "2013-01-02",
-		"to_date": "2013-05-05",
-	},
-	{
-		"company": "_Test Company",
-		"doctype": "Leave Application",
-		"employee": "_T-Employee-00002",
-		"from_date": "2013-05-01",
-		"description": "_Test Reason",
-		"leave_type": "_Test Leave Type",
-		"posting_date": "2013-01-02",
-		"to_date": "2013-05-05",
-	},
-	{
-		"company": "_Test Company",
-		"doctype": "Leave Application",
-		"employee": "_T-Employee-00001",
-		"from_date": "2013-01-15",
-		"description": "_Test Reason",
-		"leave_type": "_Test Leave Type LWP",
-		"posting_date": "2013-01-02",
-		"to_date": "2013-01-15",
-	},
-]
+test_dependencies = ["Leave Block List"]
 
 
-class TestLeaveApplication(IntegrationTestCase):
+class TestLeaveApplication(HRMSTestSuite):
+	@classmethod
+	def setUpClass(cls):
+		super().setUpClass()
+		cls.make_employees()
+		cls.make_leave_types()
+		cls.make_leave_allocations()
+		cls.make_leave_applications()
+
+	@classmethod
+	def make_leave_applications(cls):
+		records = [
+			{
+				"company": "_Test Company",
+				"doctype": "Leave Application",
+				"employee": "_T-Employee-00001",
+				"from_date": "2013-05-01",
+				"description": "_Test Reason",
+				"leave_type": "_Test Leave Type",
+				"posting_date": "2013-01-02",
+				"to_date": "2013-05-05",
+			},
+			{
+				"company": "_Test Company",
+				"doctype": "Leave Application",
+				"employee": "_T-Employee-00002",
+				"from_date": "2013-05-01",
+				"description": "_Test Reason",
+				"leave_type": "_Test Leave Type",
+				"posting_date": "2013-01-02",
+				"to_date": "2013-05-05",
+			},
+			{
+				"company": "_Test Company",
+				"doctype": "Leave Application",
+				"employee": "_T-Employee-00001",
+				"from_date": "2013-01-15",
+				"description": "_Test Reason",
+				"leave_type": "_Test Leave Type LWP",
+				"posting_date": "2013-01-02",
+				"to_date": "2013-01-15",
+			},
+		]
+		cls.leave_applications = []
+		for x in records:
+			if not frappe.db.exists(
+				"Leave Application", {"employee": x.get("employee"), "from_date": x.get("from_date")}
+			):
+				cls.leave_applications.append(frappe.get_doc(x).insert())
+			else:
+				cls.leave_applications.append(
+					frappe.get_doc(
+						"Leave Application", {"employee": x.get("employee"), "from_date": x.get("from_date")}
+					)
+				)
+
 	def setUp(self):
 		for dt in [
 			"Leave Application",
@@ -90,10 +112,10 @@ class TestLeaveApplication(IntegrationTestCase):
 			frappe.db.delete(dt)
 
 		frappe.set_user("Administrator")
-		set_leave_approver()
 
-		frappe.db.delete("Attendance", {"employee": "_T-Employee-00001"})
-		frappe.db.set_value("Employee", "_T-Employee-00001", "holiday_list", "")
+		employee = get_employee()
+		frappe.db.delete("Attendance", {"employee": employee.name})
+		frappe.db.set_value("Employee", employee.name, "holiday_list", "")
 
 		from_date = get_year_start(getdate())
 		to_date = get_year_ending(getdate())
@@ -284,7 +306,7 @@ class TestLeaveApplication(IntegrationTestCase):
 	def test_overwrite_attendance(self):
 		"""check attendance is automatically created on leave approval"""
 		make_allocation_record()
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.status = "Approved"
 		application.from_date = "2018-01-01"
 		application.to_date = "2018-01-03"
@@ -312,7 +334,7 @@ class TestLeaveApplication(IntegrationTestCase):
 		mark_attendance("_T-Employee-00001", "2023-01-02", "Absent")
 
 		make_allocation_record(from_date="2023-01-01", to_date="2023-12-31")
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.status = "Approved"
 		application.from_date = "2023-01-02"
 		application.to_date = "2023-01-02"
@@ -418,7 +440,7 @@ class TestLeaveApplication(IntegrationTestCase):
 
 		make_allocation_record()
 
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.insert()
 		application.reload()
 		application.status = "Approved"
@@ -429,7 +451,7 @@ class TestLeaveApplication(IntegrationTestCase):
 		# clear other applications
 		frappe.db.sql("delete from `tabLeave Application`")
 
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		self.assertTrue(application.insert())
 
 	def test_overlap(self):
@@ -443,10 +465,10 @@ class TestLeaveApplication(IntegrationTestCase):
 
 		make_allocation_record()
 
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.insert()
 
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		self.assertRaises(OverlapError, application.insert)
 
 	def test_overlap_with_half_day_1(self):
@@ -461,13 +483,13 @@ class TestLeaveApplication(IntegrationTestCase):
 		make_allocation_record()
 
 		# leave from 1-5, half day on 3rd
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.half_day = 1
 		application.half_day_date = "2013-01-03"
 		application.insert()
 
 		# Apply again for a half day leave on 3rd
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.from_date = "2013-01-03"
 		application.to_date = "2013-01-03"
 		application.half_day = 1
@@ -475,7 +497,7 @@ class TestLeaveApplication(IntegrationTestCase):
 		application.insert()
 
 		# Apply again for a half day leave on 3rd
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.from_date = "2013-01-03"
 		application.to_date = "2013-01-03"
 		application.half_day = 1
@@ -496,11 +518,11 @@ class TestLeaveApplication(IntegrationTestCase):
 		make_allocation_record()
 
 		# leave from 1-5, no half day
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.insert()
 
 		# Apply again for a half day leave on 1st
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.half_day = 1
 		application.half_day_date = application.from_date
 
@@ -519,13 +541,13 @@ class TestLeaveApplication(IntegrationTestCase):
 		make_allocation_record()
 
 		# leave from 1-5, half day on 5th
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.half_day = 1
 		application.half_day_date = "2013-01-05"
 		application.insert()
 
 		# Apply leave from 4-7, half day on 5th
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.from_date = "2013-01-04"
 		application.to_date = "2013-01-07"
 		application.half_day = 1
@@ -534,7 +556,7 @@ class TestLeaveApplication(IntegrationTestCase):
 		self.assertRaises(OverlapError, application.insert)
 
 		# Apply leave from 5-7, half day on 5th
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.from_date = "2013-01-05"
 		application.to_date = "2013-01-07"
 		application.half_day = 1
@@ -939,7 +961,7 @@ class TestLeaveApplication(IntegrationTestCase):
 
 		make_allocation_record(employee.name)
 
-		application = self.get_application(_test_records[0])
+		application = self.get_application(self.leave_applications[0])
 		application.from_date = "2018-01-01"
 		application.to_date = "2018-01-03"
 		application.leave_approver = user
@@ -1433,14 +1455,10 @@ def make_allocation_record(
 
 
 def get_employee():
-	return frappe.get_doc("Employee", "_T-Employee-00001")
-
-
-def set_leave_approver():
-	employee = get_employee()
-	dept_doc = frappe.get_doc("Department", employee.department)
-	dept_doc.append("leave_approvers", {"approver": "test@example.com"})
-	dept_doc.save(ignore_permissions=True)
+	employee = make_employee(
+		"test_leave_application1@salary.com", company="_Test Company", leave_approver="test@example.com"
+	)
+	return frappe.get_doc("Employee", employee)
 
 
 def get_leave_period():

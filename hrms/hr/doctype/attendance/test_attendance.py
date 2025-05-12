@@ -24,8 +24,6 @@ from hrms.hr.doctype.attendance.attendance import (
 )
 from hrms.tests.test_utils import get_first_sunday
 
-test_records = frappe.get_test_records("Attendance")
-
 
 class TestAttendance(IntegrationTestCase):
 	def setUp(self):

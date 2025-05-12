@@ -2,7 +2,6 @@
 # See license.txt
 
 import frappe
-from frappe.tests.utils import FrappeTestCase
 from frappe.utils import add_days, add_months, getdate, today
 
 from hrms.hr.doctype.attendance_request.test_attendance_request import get_employee
@@ -10,9 +9,15 @@ from hrms.hr.doctype.leave_allocation.test_leave_allocation import create_leave_
 from hrms.hr.doctype.leave_application.leave_application import get_leave_balance_on
 from hrms.hr.doctype.leave_period.test_leave_period import create_leave_period
 from hrms.tests.test_utils import add_date_to_holiday_list
+from hrms.tests.utils import HRMSTestSuite
 
 
-class TestCompensatoryLeaveRequest(FrappeTestCase):
+class TestCompensatoryLeaveRequest(HRMSTestSuite):
+	@classmethod
+	def setUpClass(cls):
+		super().setUpClass()
+		cls.make_employees()
+
 	def setUp(self):
 		frappe.db.delete("Compensatory Leave Request")
 		frappe.db.delete("Leave Ledger Entry")
