@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-05-04 09:34+0000\n"
-"PO-Revision-Date: 2025-05-05 18:11\n"
+"PO-Revision-Date: 2025-05-13 20:42\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -10499,7 +10499,7 @@ msgstr "Initierad Av"
 #. Label of the rate (Float) field in DocType 'Expense Taxes and Charges'
 #: hrms/hr/doctype/expense_taxes_and_charges/expense_taxes_and_charges.json
 msgid "Rate"
-msgstr "Sats"
+msgstr "Pris"
 
 #. Label of the rate_goals_manually (Check) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
@@ -14133,7 +14133,7 @@ msgstr "Violett"
 
 #: hrms/patches/v15_0/notify_about_loan_app_separation.py:16
 msgid "WARNING: Loan Management module has been separated from ERPNext."
-msgstr "Varning: Lån Hantering modul är separerad från System."
+msgstr "Varning: Lånehantering modul är separerad från System."
 
 #: hrms/setup.py:392
 msgid "Walk In"
