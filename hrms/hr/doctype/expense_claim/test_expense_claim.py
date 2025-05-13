@@ -2,7 +2,6 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
 from frappe.utils import flt, nowdate, random_string
 
 from erpnext.accounts.doctype.account.test_account import create_account
@@ -15,12 +14,17 @@ from hrms.hr.doctype.expense_claim.expense_claim import (
 	make_bank_entry,
 	make_expense_claim_for_delivery_trip,
 )
+from hrms.tests.utils import HRMSTestSuite
 
-test_dependencies = ["Employee"]
 company_name = "_Test Company 3"
 
 
-class TestExpenseClaim(IntegrationTestCase):
+class TestExpenseClaim(HRMSTestSuite):
+	@classmethod
+	def setUpClass(cls):
+		super().setUpClass()
+		cls.make_employees()
+
 	def setUp(self):
 		if not frappe.db.get_value("Cost Center", {"company": company_name}):
 			cost_center = frappe.new_doc("Cost Center")

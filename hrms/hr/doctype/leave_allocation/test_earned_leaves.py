@@ -1,5 +1,4 @@
 import frappe
-from frappe.tests import IntegrationTestCase
 from frappe.utils import (
 	add_days,
 	add_months,
@@ -25,9 +24,16 @@ from hrms.hr.doctype.leave_policy_assignment.leave_policy_assignment import (
 from hrms.hr.utils import allocate_earned_leaves, round_earned_leaves
 from hrms.payroll.doctype.salary_slip.test_salary_slip import make_holiday_list
 from hrms.tests.test_utils import get_first_sunday
+from hrms.tests.utils import HRMSTestSuite
 
 
-class TestLeaveAllocation(IntegrationTestCase):
+class TestLeaveAllocation(HRMSTestSuite):
+	@classmethod
+	def setUpClass(cls):
+		super().setUpClass()
+		cls.make_employees()
+		cls.make_leave_types()
+
 	def setUp(self):
 		for doctype in [
 			"Leave Period",
