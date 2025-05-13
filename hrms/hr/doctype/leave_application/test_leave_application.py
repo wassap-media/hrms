@@ -131,7 +131,6 @@ class TestLeaveApplication(HRMSTestSuite):
 			).insert()
 
 	def tearDown(self):
-		frappe.db.rollback()
 		frappe.set_user("Administrator")
 
 	def _clear_roles(self):
