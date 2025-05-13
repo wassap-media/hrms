@@ -1451,10 +1451,7 @@ def make_allocation_record(
 
 
 def get_employee():
-	employee = make_employee(
-		"test_leave_application1@salary.com", company="_Test Company", leave_approver="test@example.com"
-	)
-	return frappe.get_doc("Employee", employee)
+	return frappe.get_doc("Employee", "_T-Employee-00001")
 
 
 def get_leave_period():
