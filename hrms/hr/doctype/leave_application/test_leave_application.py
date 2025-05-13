@@ -992,14 +992,12 @@ class TestLeaveApplication(HRMSTestSuite):
 	def test_self_leave_approval_allowed(self):
 		frappe.db.set_single_value("HR Settings", "prevent_self_leave_approval", 0)
 
-		leave_approver = "test_leave_approver@example.com"
-		make_employee(leave_approver, "_Test Company")
-
-		employee = get_employee()
-		if not employee.user_id:
-			employee.user_id = "test_employee@example.com"
-		employee.leave_approver = leave_approver
-		employee.save()
+		employee = frappe.get_doc(
+			"Employee",
+			make_employee(
+				"test_self_leave_approval@example.com", "_Test Company", leave_approver="test@example.com"
+			),
+		)
 
 		from frappe.utils.user import add_role
 
@@ -1015,7 +1013,7 @@ class TestLeaveApplication(HRMSTestSuite):
 			posting_date="2014-05-30",
 			description="_Test Reason",
 			company="_Test Company",
-			leave_approver=leave_approver,
+			leave_approver="test@example.com",
 		)
 		application.insert()
 		application.status = "Approved"
@@ -1025,23 +1023,23 @@ class TestLeaveApplication(HRMSTestSuite):
 
 		self.assertEqual(1, application.docstatus)
 
-		frappe.set_user("Administrator")
-
 	def test_self_leave_approval_not_allowed(self):
 		frappe.db.set_single_value("HR Settings", "prevent_self_leave_approval", 1)
 
 		leave_approver = "test_leave_approver@example.com"
 		make_employee(leave_approver, "_Test Company")
 
-		employee = get_employee()
-		employee.leave_approver = leave_approver
-		if not employee.user_id:
-			employee.user_id = "test_employee@example.com"
-		employee.save()
+		employee = frappe.get_doc(
+			"Employee",
+			make_employee(
+				"test_self_leave_approval@example.com", "_Test Company", leave_approver=leave_approver
+			),
+		)
 
 		from frappe.utils.user import add_role
 
 		add_role(employee.user_id, "Leave Approver")
+		add_role(leave_approver, "Leave Approver")
 
 		make_allocation_record(employee.name)
 		application = application = frappe.get_doc(
@@ -1061,7 +1059,6 @@ class TestLeaveApplication(HRMSTestSuite):
 		frappe.set_user(employee.user_id)
 		self.assertRaises(frappe.ValidationError, application.submit)
 
-		add_role(leave_approver, "Leave Approver")
 		frappe.set_user(leave_approver)
 		application.reload()
 		application.submit()
