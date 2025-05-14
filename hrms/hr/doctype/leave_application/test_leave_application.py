@@ -1376,7 +1376,7 @@ class TestLeaveApplication(HRMSTestSuite):
 		)
 		create_carry_forwarded_allocation(employee, leave_type)
 		# attendance from one half leave
-		make_leave_application(
+		first_leave_application = make_leave_application(
 			employee.name,
 			nowdate(),
 			nowdate(),
@@ -1385,6 +1385,13 @@ class TestLeaveApplication(HRMSTestSuite):
 			half_day=1,
 			half_day_date=nowdate(),
 		)
+		half_day_status_after_first_application = frappe.get_value(
+			"Attendance",
+			filters={"attendance_date": nowdate(), "leave_application": first_leave_application.name},
+			fieldname="half_day_status",
+		)
+		# default is present
+		self.assertEqual(half_day_status_after_first_application, "Present")
 		second_leave_application = make_leave_application(
 			employee.name,
 			nowdate(),
@@ -1394,12 +1401,13 @@ class TestLeaveApplication(HRMSTestSuite):
 			half_day=1,
 			half_day_date=nowdate(),
 		)
-		half_day_status = frappe.get_value(
+		half_day_status_after_second_application = frappe.get_value(
 			"Attendance",
 			filters={"attendance_date": nowdate(), "leave_application": second_leave_application.name},
 			fieldname="half_day_status",
 		)
-		self.assertEqual(half_day_status, "Absent")
+		# the status should remain unchanged after creating second half day leave application
+		self.assertEqual(half_day_status_after_second_application, "Present")
 
 
 def create_carry_forwarded_allocation(employee, leave_type, date=None):
