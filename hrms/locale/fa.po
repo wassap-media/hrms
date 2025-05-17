@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2025-05-04 09:34+0000\n"
-"PO-Revision-Date: 2025-05-12 20:00\n"
+"PO-Revision-Date: 2025-05-17 21:10\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -8101,7 +8101,7 @@ msgstr "ترک کرد"
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.js:47
 msgctxt "Employee"
 msgid "Left"
-msgstr "ترک کرد"
+msgstr "چپ"
 
 #. Label of the letter_head (Link) field in DocType 'Job Offer'
 #. Label of the letter_head (Link) field in DocType 'Leave Application'
@@ -11063,7 +11063,7 @@ msgstr "CTC اصلاح شده"
 #. Label of the rgt (Int) field in DocType 'Goal'
 #: hrms/hr/doctype/goal/goal.json
 msgid "Right"
-msgstr "درست"
+msgstr "راست"
 
 #. Label of the role (Link) field in DocType 'Employee Boarding Activity'
 #: hrms/hr/doctype/employee_boarding_activity/employee_boarding_activity.json
