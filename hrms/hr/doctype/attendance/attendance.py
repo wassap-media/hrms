@@ -47,22 +47,9 @@ class Attendance(Document):
 		self.validate_overlapping_shift_attendance()
 		self.validate_employee_status()
 		self.check_leave_record()
-		self.validate_overtime_duration()
 
 	def on_cancel(self):
 		self.unlink_attendance_from_checkins()
-
-	def validate_overtime_duration(self):
-		if self.overtime_type:
-			maximum_overtime_hours = frappe.db.get_value(
-				"Overtime Type", self.overtime_type, "maximum_overtime_hours_allowed"
-			)
-			self.actual_overtime_duration = self.overtime_duration
-			if not maximum_overtime_hours:
-				return
-			overtime_duration_in_hours = convert_str_time_to_hours(self.overtime_duration)
-			if overtime_duration_in_hours > maximum_overtime_hours:
-				self.overtime_duration = str(maximum_overtime_hours) + ":00:00"
 
 	def validate_attendance_date(self):
 		date_of_joining = frappe.db.get_value("Employee", self.employee, "date_of_joining")

@@ -1,6 +1,7 @@
 # Copyright (c) 2024, Frappe Technologies Pvt. Ltd. and contributors
 # For license information, please see license.txt
 
+import json
 from datetime import timedelta
 from email.utils import formatdate
 
@@ -30,7 +31,11 @@ class OvertimeSlip(Document):
 
 	def on_submit(self):
 		if self.status == "Pending":
-			frappe.throw(_("Overtime Slip with Status 'Approved' or 'Rejected' are allowed for Submission"))
+			frappe.throw(
+				_(
+					"{0}: Overtime Slip with Status 'Approved' or 'Rejected' are allowed for Submission"
+				).format(self.employee)
+			)
 
 		if self.status == "Approved":
 			self.process_overtime_slip()
@@ -92,9 +97,12 @@ class OvertimeSlip(Document):
 			)
 			self.start_date = date_details.start_date
 			self.end_date = date_details.end_date
-			self.payroll_frequency = payroll_frequency
 		else:
-			frappe.throw(_("No Salary Structure Assignment found for Employee: {0}").format(self.employee))
+			frappe.throw(
+				_("Salary Structure not assigned for employee {0} for date {1}").format(
+					self.employee, self.start_date
+				)
+			)
 
 	@frappe.whitelist()
 	def get_emp_and_overtime_details(self):
@@ -143,6 +151,12 @@ class OvertimeSlip(Document):
 					"overtime_type": ["!=", ""],
 				},
 			)
+			if not len(records):
+				frappe.throw(
+					_("No attendance records found for employee {0} between {1} and {2}").format(
+						self.employee, self.start_date, self.end_date
+					)
+				)
 		return records
 
 	def create_additional_salary(self, salary_component, total_amount):
@@ -328,6 +342,82 @@ class OvertimeSlip(Document):
 		standard_working_hours = convert_str_time_to_hours(overtime_type_details.standard_working_hours)
 		applicable_daily_amount = component_amount / self._cached_salary_slip.payment_days
 		overtime_type_details["applicable_hourly_rate"] = applicable_daily_amount / standard_working_hours
+
+
+@frappe.whitelist()
+def filter_employees_for_overtime_slip_creation(start_date, end_date, employees):
+	if not employees:
+		return []
+
+	if not isinstance(employees, list):
+		employees = json.loads(employees)
+
+	OvertimeSlip = frappe.qb.DocType("Overtime Slip")
+	Attendance = frappe.qb.DocType("Attendance")
+
+	# Employees with existing Overtime Slips in the date range
+	employees_with_overtime_slips = (
+		frappe.qb.from_(OvertimeSlip)
+		.select(OvertimeSlip.employee)
+		.where(
+			(OvertimeSlip.docstatus != 2)
+			& (OvertimeSlip.start_date <= end_date)
+			& (OvertimeSlip.end_date >= start_date)
+			& (OvertimeSlip.employee.isin(employees))
+		)
+	).run(pluck=True)
+
+	# Employees who have attendance records with non-empty overtime_type
+	employees_with_valid_attendance = (
+		frappe.qb.from_(Attendance)
+		.select(Attendance.employee)
+		.where(
+			(Attendance.employee.isin(employees))
+			& (Attendance.attendance_date >= start_date)
+			& (Attendance.attendance_date <= end_date)
+			& (Attendance.overtime_type != "")
+		)
+		.distinct()
+	).run(pluck=True)
+
+	# employees valid attendance AND no overtime slips
+	eligible_employees = set(employees_with_valid_attendance) - set(employees_with_overtime_slips)
+
+	return eligible_employees
+
+
+def create_overtime_slips_for_employees(employees, args):
+	count = 0
+	errors = []
+	for emp in employees:
+		args.update({"doctype": "Overtime Slip", "employee": emp})
+		try:
+			doc = frappe.get_doc(args).insert()
+			doc.get_emp_and_overtime_details()
+			doc.status = "Approved"
+			doc.submit()
+			frappe.db.commit()
+			count += 1
+		except Exception as e:
+			frappe.clear_last_message()
+			frappe.db.rollback()
+			errors.append(str(e))
+			frappe.log_error(frappe.get_traceback(), _("Overtime Slip Creation Error for {0}").format(emp))
+	if count:
+		frappe.msgprint(
+			_("Overtime Slip created for {0} employee(s)").format(count),
+			indicator="green",
+		)
+	if errors:
+		frappe.msgprint(
+			_("Failed to create Overtime Slip:<br><ul>{0}</ul>").format(
+				"".join(f"<li>{err}</li>" for err in errors),
+				indicator="red",
+				alert=True,
+			)
+		)
+
+	frappe.publish_realtime("completed_overtime_slip_creation", user=frappe.session.user)
 
 
 def convert_str_time_to_hours(duration_str):

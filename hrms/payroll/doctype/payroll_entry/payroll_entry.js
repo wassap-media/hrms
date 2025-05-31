@@ -23,6 +23,11 @@ frappe.ui.form.on("Payroll Entry", {
 			frm.reload_doc();
 		});
 
+		frappe.realtime.off("completed_overtime_slip_creation");
+		frappe.realtime.on("completed_overtime_slip_creation", function () {
+			frm.reload_doc();
+		});
+
 		frappe.realtime.off("completed_salary_slip_submission");
 		frappe.realtime.on("completed_salary_slip_submission", function () {
 			frm.reload_doc();
@@ -51,7 +56,7 @@ frappe.ui.form.on("Payroll Entry", {
 		});
 	},
 
-	refresh: function (frm) {
+	refresh: async (frm) => {
 		if (frm.doc.status === "Queued") frm.page.btn_secondary.hide();
 
 		if (frm.doc.docstatus === 0 && !frm.is_new()) {
@@ -69,12 +74,26 @@ frappe.ui.form.on("Payroll Entry", {
 		) {
 			if (frm.doc.docstatus == 0 && !frm.is_new()) {
 				frm.page.clear_primary_action();
-				frm.page.set_primary_action(__("Create Salary Slips"), () => {
-					frm.save("Submit").then(() => {
-						frm.page.clear_primary_action();
-						frm.refresh();
+				let employees_eligible_for_overtime =
+					await frm.events.get_employees_for_overtime(frm);
+				if (employees_eligible_for_overtime.length > 0) {
+					frm.page
+						.set_primary_action(__("Create and Approve Overtime Slips"), () => {
+							frm.call({
+								doc: frm.doc,
+								method: "create_overtime_slips",
+								args: { employees: employees_eligible_for_overtime },
+							});
+						})
+						.addClass("btn-primary");
+				} else {
+					frm.page.set_primary_action(__("Create Salary Slips"), () => {
+						frm.save("Submit").then(() => {
+							frm.page.clear_primary_action();
+							frm.refresh();
+						});
 					});
-				});
+				}
 			} else if (frm.doc.docstatus == 1 && frm.doc.status == "Failed") {
 				frm.add_custom_button(__("Create Salary Slips"), function () {
 					frm.call("create_salary_slips");
@@ -128,7 +147,24 @@ frappe.ui.form.on("Payroll Entry", {
 			});
 	},
 
-	create_salary_slips: function (frm) {
+	get_employees_for_overtime: async (frm) => {
+		let employees_eligible_for_overtime = [];
+		if (frm.doc.create_overtime_slip) {
+			const employees = (frm.doc.employees || []).map((emp) => emp.employee);
+			const r = await frappe.call({
+				method: "hrms.hr.doctype.overtime_slip.overtime_slip.filter_employees_for_overtime_slip_creation",
+				args: {
+					employees: employees,
+					start_date: frm.doc.start_date,
+					end_date: frm.doc.end_date,
+				},
+			});
+			employees_eligible_for_overtime = r.message;
+		}
+		return employees_eligible_for_overtime;
+	},
+
+	create_salary_slip: function (frm) {
 		frm.call({
 			doc: frm.doc,
 			method: "run_doc_method",

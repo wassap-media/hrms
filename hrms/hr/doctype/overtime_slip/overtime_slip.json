@@ -20,7 +20,6 @@
   "end_date",
   "salary_slip",
   "column_break_sdpb",
-  "payroll_frequency",
   "total_overtime_duration",
   "section_break_dzua",
   "overtime_details"
@@ -97,12 +96,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "payroll_frequency",
-   "fieldtype": "Select",
-   "label": "Payroll Frequency",
-   "options": "\nMonthly\nFortnightly\nBimonthly\nWeekly\nDaily"
-  },
-  {
    "fieldname": "section_break_dzua",
    "fieldtype": "Section Break"
   },
@@ -110,8 +103,7 @@
    "fieldname": "overtime_details",
    "fieldtype": "Table",
    "label": "Overtime Details",
-   "options": "Overtime Details",
-   "reqd": 1
+   "options": "Overtime Details"
   },
   {
    "fieldname": "total_overtime_duration",
@@ -141,7 +133,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-01 12:41:38.211230",
+ "modified": "2025-05-19 12:04:27.735142",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Overtime Slip",

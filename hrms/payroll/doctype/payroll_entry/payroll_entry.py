@@ -1206,6 +1206,41 @@ class PayrollEntry(Document):
 
 		return self._holidays_between_dates.get(key) or 0
 
+	@frappe.whitelist()
+	def create_overtime_slips(self, employees):
+		from hrms.hr.doctype.overtime_slip.overtime_slip import (
+			create_overtime_slips_for_employees,
+		)
+
+		try:
+			if employees:
+				args = frappe._dict(
+					{
+						"start_date": self.start_date,
+						"end_date": self.end_date,
+						"company": self.company,
+						"posting_date": self.posting_date,
+						"currency": self.currency,
+					}
+				)
+				if len(employees) > 30 or frappe.flags.enqueue_payroll_entry:
+					self.db_set("status", "Queued")
+					frappe.enqueue(
+						create_overtime_slips_for_employees,
+						timeout=3000,
+						employees=employees,
+						args=args,
+					)
+					frappe.msgprint(
+						_("Overtime Slip creation is queued. It may take a few minutes"),
+						alert=True,
+						indicator="blue",
+					)
+				else:
+					create_overtime_slips_for_employees(employees, args)
+		except Exception as e:
+			frappe.throw(_(f"Overtime Slip creation failed due to {e}"))
+
 
 def get_salary_structure(
 	company: str, currency: str, salary_slip_based_on_timesheet: int, payroll_frequency: str

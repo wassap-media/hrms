@@ -23,6 +23,7 @@
   "column_break_13",
   "deduct_tax_for_unclaimed_employee_benefits",
   "deduct_tax_for_unsubmitted_tax_exemption_proof",
+  "create_overtime_slip",
   "employees_tab",
   "section_break_17",
   "branch",
@@ -330,12 +331,18 @@
    "fieldtype": "Link",
    "label": "Grade",
    "options": "Employee Grade"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_overtime_slip",
+   "fieldtype": "Check",
+   "label": "Create Overtime Slip For Eligible Employee(s)"
   }
  ],
  "icon": "fa fa-cog",
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-22 15:27:16.652848",
+ "modified": "2025-05-19 13:37:45.170747",
  "modified_by": "Administrator",
  "module": "Payroll",
  "name": "Payroll Entry",
@@ -354,6 +361,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []
