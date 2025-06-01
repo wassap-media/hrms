@@ -3,7 +3,7 @@
 
 import frappe
 from frappe.tests import IntegrationTestCase
-from frappe.utils import add_days, flt, getdate, today
+from frappe.utils import add_days, flt, getdate, nowdate, today
 
 from erpnext.setup.doctype.employee.test_employee import make_employee
 
@@ -11,7 +11,6 @@ from hrms.hr.doctype.employee_checkin.test_employee_checkin import make_checkin
 from hrms.hr.doctype.overtime_slip.overtime_slip import convert_str_time_to_hours
 from hrms.hr.doctype.overtime_type.test_overtime_type import create_overtime_type
 from hrms.hr.doctype.shift_type.test_shift_type import make_shift_assignment, setup_shift_type
-from hrms.payroll.doctype.salary_slip.test_salary_slip import clear_cache
 from hrms.payroll.doctype.salary_structure.test_salary_structure import make_salary_structure
 
 TEST_COMPANY = "_Test Company"
@@ -90,6 +89,77 @@ class TestOvertimeSlip(IntegrationTestCase):
 		)
 
 		self.assertEqual(flt(expected_overtime_amount, 2), flt(actual_overtime_amount, 2))
+
+	def test_overtime_slip_creation_via_payroll_entry(self):
+		"""Test creation of overtime slips via payroll entry."""
+		from hrms.payroll.doctype.payroll_entry.payroll_entry import get_start_end_dates
+		from hrms.payroll.doctype.payroll_entry.test_payroll_entry import get_payroll_entry
+
+		company = frappe.get_doc("Company", TEST_COMPANY)
+		employees = [
+			make_employee("test_overtime_slip_01@example.com"),
+			make_employee("test_overtime_slip_02@example.com"),
+		]
+		overtime_type = create_overtime_type(overtime_calculation_method="Fixed Hourly Rate")
+		shift_type = setup_shift_type(
+			company=TEST_COMPANY,
+			shift_type="_Test Overtime Shift",
+			allow_overtime=1,
+			overtime_type=overtime_type.name,
+			last_sync_of_checkin=f"{add_days(getdate(), 1)} 15:00:00",
+			mark_auto_attendance_on_holidays=1,
+		)
+
+		for employee in employees:
+			make_salary_structure(
+				"Test Overtime Salary Slip", "Monthly", employee=employee, company=TEST_COMPANY
+			)
+
+			make_shift_assignment(
+				shift_type=shift_type.name, employee=employee, start_date=add_days(today(), -5)
+			)
+
+			create_checkin_records_for_overtime(employee)
+			shift_type.process_auto_attendance()
+
+		dates = get_start_end_dates("Monthly", nowdate())
+		payroll_entry = get_payroll_entry(
+			start_date=dates.start_date,
+			end_date=dates.end_date,
+			payable_account=company.default_payroll_payable_account,
+			currency=company.default_currency,
+			company=company.name,
+		)
+
+		payroll_entry.create_overtime_slip = 1
+		payroll_entry.create_overtime_slips(
+			["test_overtime_slip_01@example.com", "test_overtime_slip_02@example.com"]
+		)
+
+		overtime_slips = frappe.get_all(
+			"Overtime Slip",
+			filters={
+				"employee": ["in", [emp.name for emp in employees]],
+				"start_date": payroll_entry.start_date,
+			},
+			fields=["name", "employee", "status", "docstatus"],
+		)
+
+		self.assertEqual(len(overtime_slips), len(employees))
+
+		for slip in overtime_slips:
+			self.assertEqual(slip.status, "Approved")
+			self.assertEqual(slip.docstatus, 1)
+
+		additional_salaries = frappe.get_all(
+			"Additional Salary",
+			filters={
+				"ref_doctype": "Overtime Slip",
+				"ref_docname": ["in", [slip.name for slip in overtime_slips]],
+			},
+			fields=["name", "employee", "amount", "docstatus"],
+		)
+		self.assertEqual(len(additional_salaries), len(employees))
 
 	def tearDown(self):
 		frappe.db.rollback()

@@ -219,22 +219,16 @@ def mark_attendance_and_link_log(
 	log_names = [x.name for x in logs]
 	employee = logs[0].employee
 
-	print(f"\n\n log_names: {log_names}\n employee: {employee} \n\n")
-
-	# Check if we should skip attendance
 	if attendance_status == "Skip":
 		skip_attendance_in_checkins(log_names)
 		return None
 
-	# Validate attendance status
 	if attendance_status not in ("Present", "Absent", "Half Day"):
 		frappe.throw(_("{0} is an invalid Attendance Status.").format(attendance_status))
 
-	# Process attendance
 	try:
 		frappe.db.savepoint("attendance_creation")
 
-		# Create or update attendance
 		attendance = create_or_update_attendance(
 			employee=employee,
 			attendance_date=attendance_date,
@@ -246,8 +240,6 @@ def mark_attendance_and_link_log(
 			in_time=in_time,
 			out_time=out_time,
 		)
-
-		print(f"\n\n attendance: {attendance} \n\n")
 
 		if attendance_status == "Absent":
 			attendance.add_comment(
@@ -274,9 +266,7 @@ def create_or_update_attendance(
 	out_time=None,
 ):
 	"""Creates a new attendance or updates an existing half-day attendance."""
-
 	if attendance := get_existing_half_day_attendance(employee, attendance_date):
-		# Update existing attendance
 		frappe.db.set_value(
 			"Attendance",
 			attendance.name,
@@ -322,8 +312,6 @@ def create_or_update_attendance(
 def set_overtime_data(attendance, shift, in_time, out_time):
 	from hrms.hr.doctype.overtime_slip.overtime_slip import convert_str_time_to_hours
 
-	"""Calculate and set overtime data in the attendance document.
-	"""
 	if not (in_time and out_time):
 		return
 
