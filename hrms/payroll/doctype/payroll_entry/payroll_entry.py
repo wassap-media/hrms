@@ -1221,6 +1221,7 @@ class PayrollEntry(Document):
 						"company": self.company,
 						"posting_date": self.posting_date,
 						"currency": self.currency,
+						"payroll_entry": self.name,
 					}
 				)
 				if len(employees) > 30 or frappe.flags.enqueue_payroll_entry:

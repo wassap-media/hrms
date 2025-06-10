@@ -21,6 +21,10 @@ class TestOvertimeSlip(IntegrationTestCase):
 		frappe.db.delete("Overtime Type")
 		frappe.db.delete("Shift Type", {"name": "_Test Overtime Shift"})
 
+	@classmethod
+	def tearDownClass(self):
+		frappe.db.rollback()
+
 	def test_create_overtime_slip(self):
 		employee = make_employee("test_overtime_slip@example.com", company=TEST_COMPANY)
 		make_salary_structure("Test Overtime Salary Slip", "Monthly", employee=employee, company=TEST_COMPANY)
@@ -132,15 +136,13 @@ class TestOvertimeSlip(IntegrationTestCase):
 		)
 
 		payroll_entry.create_overtime_slip = 1
-		payroll_entry.create_overtime_slips(
-			["test_overtime_slip_01@example.com", "test_overtime_slip_02@example.com"]
-		)
+		payroll_entry.create_overtime_slips(employees=employees)
 
 		overtime_slips = frappe.get_all(
 			"Overtime Slip",
 			filters={
-				"employee": ["in", [emp.name for emp in employees]],
-				"start_date": payroll_entry.start_date,
+				"employee": ["in", employees],
+				"payroll_entry": payroll_entry.name,
 			},
 			fields=["name", "employee", "status", "docstatus"],
 		)
