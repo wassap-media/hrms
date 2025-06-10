@@ -21,10 +21,6 @@ class TestOvertimeSlip(IntegrationTestCase):
 		frappe.db.delete("Overtime Type")
 		frappe.db.delete("Shift Type", {"name": "_Test Overtime Shift"})
 
-	@classmethod
-	def tearDownClass(self):
-		frappe.db.rollback()
-
 	def test_create_overtime_slip(self):
 		employee = make_employee("test_overtime_slip@example.com", company=TEST_COMPANY)
 		make_salary_structure("Test Overtime Salary Slip", "Monthly", employee=employee, company=TEST_COMPANY)
