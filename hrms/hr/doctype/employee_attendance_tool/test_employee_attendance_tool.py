@@ -129,7 +129,7 @@ class TestEmployeeAttendanceTool(IntegrationTestCase):
 		)
 
 		mark_employee_attendance(
-			employee_list=[self.employee1.name, self.employee3.name],
+			employee_list=[self.employee1, self.employee3],
 			status="Present",
 			date=date,
 			shift=shift.name,
@@ -146,10 +146,10 @@ class TestEmployeeAttendanceTool(IntegrationTestCase):
 		)
 		self.assertEqual(len(attendances), 4)
 		for attendance in attendances:
-			if attendance.get("employee") in (self.employee1.name, self.employee3.name):
+			if attendance.get("employee") in (self.employee1, self.employee3):
 				self.assertEqual(attendance.status, "Present")
 				self.assertIsNone(attendance.half_day_status)
-			if attendance.get("employee") in (self.employee2.name, self.employee4.name):
+			if attendance.get("employee") in (self.employee2, self.employee4):
 				self.assertEqual(attendance.status, "Half Day")
 				self.assertEqual(attendance.half_day_status, "Present")
 			self.assertEqual(attendance.shift, shift.name)
