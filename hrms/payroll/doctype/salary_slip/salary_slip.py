@@ -136,7 +136,6 @@ class SalarySlip(TransactionBase):
 		return self.__actual_end_date
 
 	def validate(self):
-		# frappe.get_single("Installed Applications").update_versions()
 		self.check_salary_withholding()
 		self.status = self.get_status()
 		validate_active_employee(self.employee)
@@ -1827,8 +1826,6 @@ class SalarySlip(TransactionBase):
 			"Salary Component", row.salary_component, "round_to_the_nearest_integer", cache=True
 		):
 			amount, additional_amount = rounded(amount or 0), rounded(additional_amount or 0)
-
-		# print(f'\n\n comp: {row.salary_component}, amount: {amount}, additional_amount: {additional_amount}\n\n')
 
 		return amount, additional_amount
 
