@@ -136,6 +136,7 @@ class SalarySlip(TransactionBase):
 		return self.__actual_end_date
 
 	def validate(self):
+		# frappe.get_single("Installed Applications").update_versions()
 		self.check_salary_withholding()
 		self.status = self.get_status()
 		validate_active_employee(self.employee)
@@ -204,7 +205,8 @@ class SalarySlip(TransactionBase):
 					frappe.db.get_single_value("Payroll Settings", "email_salary_slip_to_employee")
 				)
 				if email_salary_slip:
-					self.email_salary_slip()
+					return
+					# self.email_salary_slip()
 
 		self.update_payment_status_for_gratuity_and_leave_encashment()
 
@@ -1826,6 +1828,8 @@ class SalarySlip(TransactionBase):
 			"Salary Component", row.salary_component, "round_to_the_nearest_integer", cache=True
 		):
 			amount, additional_amount = rounded(amount or 0), rounded(additional_amount or 0)
+
+		# print(f'\n\n comp: {row.salary_component}, amount: {amount}, additional_amount: {additional_amount}\n\n')
 
 		return amount, additional_amount
 
