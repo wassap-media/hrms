@@ -205,8 +205,7 @@ class SalarySlip(TransactionBase):
 					frappe.db.get_single_value("Payroll Settings", "email_salary_slip_to_employee")
 				)
 				if email_salary_slip:
-					return
-					# self.email_salary_slip()
+					self.email_salary_slip()
 
 		self.update_payment_status_for_gratuity_and_leave_encashment()
 
