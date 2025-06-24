@@ -109,6 +109,7 @@ class TestOvertimeSlip(IntegrationTestCase):
 			last_sync_of_checkin=f"{add_days(getdate(), 1)} 15:00:00",
 			mark_auto_attendance_on_holidays=1,
 		)
+		frappe.db.set_single_value("Payroll Settings", "create_overtime_slip", 1)
 
 		for employee in employees:
 			make_salary_structure(
@@ -131,8 +132,8 @@ class TestOvertimeSlip(IntegrationTestCase):
 			company=company.name,
 		)
 
-		payroll_entry.create_overtime_slip = 1
 		payroll_entry.create_overtime_slips(employees=employees)
+		payroll_entry.submit_overtime_slips()
 
 		overtime_slips = frappe.get_all(
 			"Overtime Slip",
@@ -146,7 +147,6 @@ class TestOvertimeSlip(IntegrationTestCase):
 		self.assertEqual(len(overtime_slips), len(employees))
 
 		for slip in overtime_slips:
-			self.assertEqual(slip.status, "Approved")
 			self.assertEqual(slip.docstatus, 1)
 
 		additional_salaries = frappe.get_all(
@@ -170,8 +170,6 @@ def create_overtime_slip(employee):
 	slip.start_date = add_days(getdate(), -2)
 	slip.end_date = add_days(getdate(), 2)
 	slip.get_emp_and_overtime_details()
-	slip.status = "Approved"
-	slip.save()
 	return slip
 
 

@@ -8,13 +8,12 @@
  "field_order": [
   "section_break_wdfp",
   "posting_date",
-  "amended_from",
   "employee",
   "employee_name",
   "column_break_xsxd",
-  "department",
   "company",
-  "status",
+  "department",
+  "amended_from",
   "section_break_fvyh",
   "start_date",
   "end_date",
@@ -22,6 +21,7 @@
   "column_break_sdpb",
   "total_overtime_duration",
   "payroll_entry",
+  "submitted_via_payroll_entry",
   "section_break_dzua",
   "overtime_details"
  ],
@@ -82,13 +82,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "Pending\nApproved\nRejected"
-  },
-  {
    "fieldname": "section_break_fvyh",
    "fieldtype": "Section Break"
   },
@@ -137,12 +130,24 @@
    "label": "Payroll Entry",
    "options": "Payroll Entry",
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "submitted_via_payroll_entry",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Submitted via Payroll Entry"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2025-06-10 12:40:07.399453",
+ "links": [
+  {
+   "link_doctype": "Additional Salary",
+   "link_fieldname": "ref_docname"
+  }
+ ],
+ "modified": "2025-06-23 14:27:41.156873",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Overtime Slip",
@@ -205,5 +210,6 @@
  "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "employee_name"
 }

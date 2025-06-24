@@ -30,15 +30,7 @@ class OvertimeSlip(Document):
 		self.validate_overtime_date_and_duration()
 
 	def on_submit(self):
-		if self.status == "Pending":
-			frappe.throw(
-				_(
-					"{0}: Overtime Slip with Status 'Approved' or 'Rejected' are allowed for Submission"
-				).format(self.employee)
-			)
-
-		if self.status == "Approved":
-			self.process_overtime_slip()
+		self.process_overtime_slip()
 
 	def validate_overlap(self):
 		overtime_slips = frappe.db.get_all(
@@ -114,6 +106,7 @@ class OvertimeSlip(Document):
 			for detail in self.overtime_details:
 				if detail.overtime_duration is not None:
 					self.total_overtime_duration += detail.overtime_duration
+		self.save()
 
 	def create_overtime_details_row_for_attendance(self, records):
 		self.overtime_details = []
@@ -392,11 +385,8 @@ def create_overtime_slips_for_employees(employees, args):
 	for emp in employees:
 		args.update({"doctype": "Overtime Slip", "employee": emp})
 		try:
-			doc = frappe.get_doc(args).insert()
+			doc = frappe.get_doc(args)
 			doc.get_emp_and_overtime_details()
-			doc.status = "Approved"
-			doc.submit()
-			frappe.db.commit()
 			count += 1
 		except Exception as e:
 			frappe.clear_last_message()
@@ -407,17 +397,50 @@ def create_overtime_slips_for_employees(employees, args):
 		frappe.msgprint(
 			_("Overtime Slip created for {0} employee(s)").format(count),
 			indicator="green",
+			title=_("Overtime Slips Created"),
 		)
 	if errors:
-		frappe.msgprint(
+		frappe.throw(
 			_("Failed to create Overtime Slip:<br><ul>{0}</ul>").format(
 				"".join(f"<li>{err}</li>" for err in errors),
-				indicator="red",
-				alert=True,
+				title=_("Overtime Slip Creation Failed"),
 			)
 		)
 
 	frappe.publish_realtime("completed_overtime_slip_creation", user=frappe.session.user)
+
+
+def submit_overtime_slips_for_employees(overtime_slips):
+	count = 0
+
+	errors = []
+	for overtime_slip in overtime_slips:
+		try:
+			doc = frappe.get_doc("Overtime Slip", overtime_slip)
+			doc.submitted_via_payroll_entry = 1
+			doc.submit()
+			count += 1
+		except Exception as e:
+			frappe.clear_last_message()
+			frappe.db.rollback()
+			errors.append(str(e))
+			frappe.log_error(
+				frappe.get_traceback(), _("Overtime Slip Submission Error for {0}").format(overtime_slip)
+			)
+	if count:
+		frappe.msgprint(
+			_("Overtime Slips submitted for {0} employee(s)").format(count),
+			indicator="green",
+			title=_("Overtime Slip Submitted"),
+		)
+	if errors:
+		frappe.throw(
+			_("Failed to submit Overtime Slip:")
+			+ f"<br><ul>{''.join(f'<li>{err}</li>' for err in errors)}</ul>",
+			title=_("Overtime Slip Submission Failed"),
+		)
+
+	frappe.publish_realtime("completed_overtime_slip_submission", user=frappe.session.user)
 
 
 def convert_str_time_to_hours(duration_str):
