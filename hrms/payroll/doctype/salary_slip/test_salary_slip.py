@@ -912,17 +912,23 @@ class TestSalarySlip(IntegrationTestCase):
 			make_loan_disbursement_entry,
 			set_loan_settings_in_company,
 		)
-		from lending.loan_management.doctype.process_loan_interest_accrual.process_loan_interest_accrual import (
-			process_loan_interest_accrual_for_term_loans,
+		from lending.loan_management.doctype.process_loan_demand.process_loan_demand import (
+			process_daily_loan_demands,
 		)
+		from lending.loan_management.doctype.process_loan_interest_accrual.process_loan_interest_accrual import (
+			process_loan_interest_accrual_for_loans,
+		)
+		from lending.tests.test_utils import create_demand_offset_order
 
 		from hrms.payroll.doctype.salary_structure.test_salary_structure import make_salary_structure
 
 		set_loan_settings_in_company("_Test Company")
 		applicant = make_employee("test_loan_repayment_salary_slip@salary.com", company="_Test Company")
-
+		create_demand_offset_order(
+			"Test EMI Based Standard Loan Demand Offset Order",
+			["EMI (Principal + Interest)", "Penalty", "Charges"],
+		)
 		create_loan_accounts()
-
 		create_loan_product(
 			"Car Loan",
 			"Car Loan",
@@ -935,6 +941,7 @@ class TestSalarySlip(IntegrationTestCase):
 			interest_income_account="Interest Income Account - _TC",
 			penalty_income_account="Penalty Income Account - _TC",
 			repayment_schedule_type="Monthly as per repayment start date",
+			collection_offset_sequence_for_standard_asset="Test EMI Based Standard Loan Demand Offset Order",
 		)
 
 		payroll_period = create_payroll_period(name="_Test Payroll Period", company="_Test Company")
@@ -962,12 +969,15 @@ class TestSalarySlip(IntegrationTestCase):
 
 		make_loan_disbursement_entry(loan.name, loan.loan_amount, disbursement_date=add_months(nowdate(), -1))
 
-		process_loan_interest_accrual_for_term_loans(posting_date=nowdate())
+		process_loan_interest_accrual_for_loans(
+			posting_date=nowdate(), loan=loan.name, company="_Test Company"
+		)
+		process_daily_loan_demands(posting_date=nowdate(), loan=loan.name)
 
 		ss = make_employee_salary_slip(applicant, "Monthly", "Test Loan Repayment Salary Structure")
 		ss.submit()
 
-		self.assertEqual(ss.total_loan_repayment, 592)
+		self.assertEqual(ss.total_loan_repayment, 1184)
 		self.assertEqual(
 			ss.net_pay, (flt(ss.gross_pay) - (flt(ss.total_deduction) + flt(ss.total_loan_repayment)))
 		)
