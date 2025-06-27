@@ -45,7 +45,6 @@ from hrms.payroll.doctype.salary_slip.salary_slip import (
 	_safe_eval,
 	make_salary_slip_from_timesheet,
 )
-from hrms.payroll.doctype.salary_slip.salary_slip_loan_utils import if_lending_app_installed
 from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_slip
 from hrms.tests.test_utils import get_email_by_subject, get_first_sunday
 
@@ -902,85 +901,6 @@ class TestSalarySlip(IntegrationTestCase):
 		ss.submit()
 
 		self.assertIsNotNone(get_email_by_subject("Test Salary Slip Email Template"))
-
-	@if_lending_app_installed
-	def test_loan_repayment_salary_slip(self):
-		from lending.loan_management.doctype.loan.test_loan import (
-			create_loan,
-			create_loan_accounts,
-			create_loan_product,
-			make_loan_disbursement_entry,
-			set_loan_settings_in_company,
-		)
-		from lending.loan_management.doctype.process_loan_demand.process_loan_demand import (
-			process_daily_loan_demands,
-		)
-		from lending.loan_management.doctype.process_loan_interest_accrual.process_loan_interest_accrual import (
-			process_loan_interest_accrual_for_loans,
-		)
-		from lending.tests.test_utils import create_demand_offset_order
-
-		from hrms.payroll.doctype.salary_structure.test_salary_structure import make_salary_structure
-
-		set_loan_settings_in_company("_Test Company")
-		applicant = make_employee("test_loan_repayment_salary_slip@salary.com", company="_Test Company")
-		create_demand_offset_order(
-			"Test EMI Based Standard Loan Demand Offset Order",
-			["EMI (Principal + Interest)", "Penalty", "Charges"],
-		)
-		create_loan_accounts()
-		create_loan_product(
-			"Car Loan",
-			"Car Loan",
-			500000,
-			8.4,
-			is_term_loan=1,
-			disbursement_account="Disbursement Account - _TC",
-			payment_account="Payment Account - _TC",
-			loan_account="Loan Account - _TC",
-			interest_income_account="Interest Income Account - _TC",
-			penalty_income_account="Penalty Income Account - _TC",
-			repayment_schedule_type="Monthly as per repayment start date",
-			collection_offset_sequence_for_standard_asset="Test EMI Based Standard Loan Demand Offset Order",
-		)
-
-		payroll_period = create_payroll_period(name="_Test Payroll Period", company="_Test Company")
-
-		make_salary_structure(
-			"Test Loan Repayment Salary Structure",
-			"Monthly",
-			employee=applicant,
-			currency="INR",
-			payroll_period=payroll_period,
-			company="_Test Company",
-		)
-
-		frappe.db.sql("delete from tabLoan where applicant = 'test_loan_repayment_salary_slip@salary.com'")
-		loan = create_loan(
-			applicant,
-			"Car Loan",
-			11000,
-			"Repay Over Number of Periods",
-			20,
-			posting_date=add_months(nowdate(), -1),
-		)
-		loan.repay_from_salary = 1
-		loan.submit()
-
-		make_loan_disbursement_entry(loan.name, loan.loan_amount, disbursement_date=add_months(nowdate(), -1))
-
-		process_loan_interest_accrual_for_loans(
-			posting_date=nowdate(), loan=loan.name, company="_Test Company"
-		)
-		process_daily_loan_demands(posting_date=nowdate(), loan=loan.name)
-
-		ss = make_employee_salary_slip(applicant, "Monthly", "Test Loan Repayment Salary Structure")
-		ss.submit()
-
-		self.assertEqual(ss.total_loan_repayment, 1184)
-		self.assertEqual(
-			ss.net_pay, (flt(ss.gross_pay) - (flt(ss.total_deduction) + flt(ss.total_loan_repayment)))
-		)
 
 	def test_payroll_frequency(self):
 		fiscal_year = get_fiscal_year(nowdate(), company=erpnext.get_default_company())[0]

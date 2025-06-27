@@ -967,7 +967,7 @@ def setup_lending():
 
 
 def create_loan_for_employee(applicant):
-	from lending.loan_management.doctype.loan.test_loan import create_loan
+	from lending.tests.test_utils import create_loan
 
 	dates = frappe._dict({"start_date": add_months(getdate(), -1), "end_date": getdate()})
 
@@ -977,6 +977,7 @@ def create_loan_for_employee(applicant):
 		280000,
 		"Repay Over Number of Periods",
 		20,
+		applicant_type="Employee",
 		posting_date=dates.start_date,
 		repayment_start_date=dates.end_date,
 	)
