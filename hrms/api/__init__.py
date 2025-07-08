@@ -774,6 +774,25 @@ def download_salary_slip(name: str):
 	return f"data:{content_type};base64," + base64content.decode("utf-8")
 
 
+@frappe.whitelist()
+def download_expense_claim(name: str):
+	import base64
+
+	from frappe.utils.print_format import download_pdf
+
+	default_print_format = frappe.get_meta("Expense Claim").default_print_format or "Standard"
+
+	try:
+		download_pdf("Expense Claim", name, format=default_print_format)
+	except Exception:
+		frappe.throw(_("Failed to download Expense Claim PDF"))
+
+	base64content = base64.b64encode(frappe.local.response.filecontent)
+	content_type = frappe.local.response.type
+
+	return f"data:{content_type};base64," + base64content.decode("utf-8")
+
+
 # Workflow
 @frappe.whitelist()
 def get_workflow(doctype: str) -> dict:
