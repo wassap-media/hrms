@@ -12,7 +12,7 @@
 				:tabs="tabs"
 				:showAttachmentView="true"
 				@validateForm="validateForm"
-				:showFormButton="false"
+				:showFormButton="expenseClaim?.docstatus !== 1"
 			>
 				<!-- Child Tables -->
 				<template #expenses="{ isFormReadOnly }">
@@ -48,9 +48,11 @@
 				<template #formButton>
 					<ErrorMessage :message="downloadError" class="mt-2" />
 					<Button
+						v-if="expenseClaim?.name && expenseClaim?.docstatus === 1"
 						class="w-full rounded py-5 text-base disabled:bg-gray-700 disabled:text-white"
 						@click="downloadPDF"
 						variant="solid"
+						:loading="loading"
 					>
 						{{ __("Download PDF") }}
 					</Button>
