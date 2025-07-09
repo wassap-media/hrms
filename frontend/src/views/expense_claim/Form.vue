@@ -12,7 +12,7 @@
 				:tabs="tabs"
 				:showAttachmentView="true"
 				@validateForm="validateForm"
-				:showFormButton="expenseClaim?.docstatus !== 1"
+				:allowDownload="true"
 			>
 				<!-- Child Tables -->
 				<template #expenses="{ isFormReadOnly }">
@@ -45,18 +45,6 @@
 					/>
 			
 				</template>
-				<template #formButton>
-					<ErrorMessage :message="downloadError" class="mt-2" />
-					<Button
-						v-if="expenseClaim?.name && expenseClaim?.docstatus === 1"
-						class="w-full rounded py-5 text-base disabled:bg-gray-700 disabled:text-white"
-						@click="downloadPDF"
-						variant="solid"
-						:loading="loading"
-					>
-						{{ __("Download PDF") }}
-					</Button>
-				</template>
 			</FormView>
 		</ion-content>
 	</ion-page>
@@ -84,8 +72,6 @@ const sessionEmployee = inject("$employee")
 const currEmployee = ref(sessionEmployee.data.name)
 const employeeCompany = ref(sessionEmployee.data.company)
 
-const downloadError = ref("")
-const loading = ref(false)
 
 const props = defineProps({
 	id: {
@@ -427,45 +413,4 @@ function validateForm() {
 	})
 }
 
-function downloadPDF() {
-	const expenseClaimName = expenseClaim.value.name
-	loading.value = true
-
-	let headers = { "X-Frappe-Site-Name": window.location.hostname }
-	if (window.csrf_token) {
-		headers["X-Frappe-CSRF-Token"] = window.csrf_token
-	}
-
-	fetch("/api/method/hrms.api.download_expense_claim", {
-		method: "POST",
-		headers,
-		body: new URLSearchParams({ name: expenseClaimName }),
-		responseType: "blob",
-	})
-		.then((response) => {
-			if (response.ok) {
-				return response.blob()
-			} else {
-				downloadError.value = "Failed to download PDF"
-			}
-		})
-		.then((blob) => {
-			if (!blob) return
-			const blobUrl = window.URL.createObjectURL(blob)
-			const link = document.createElement("a")
-			link.href = blobUrl
-			link.download = `${expenseClaimName}.pdf`
-			link.click()
-
-			setTimeout(() => {
-				window.URL.revokeObjectURL(blobUrl)
-			}, 3000)
-		})
-		.catch((error) => {
-			downloadError.value = `Failed to download PDF: ${error.message}`
-		})
-		.finally(() => {
-			loading.value = false
-		})
-}
 </script>
