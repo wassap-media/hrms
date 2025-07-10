@@ -12,7 +12,7 @@
 				:tabs="tabs"
 				:showAttachmentView="true"
 				@validateForm="validateForm"
-				:allowDownload="true"
+				:showDownloadPDFButton="true"
 			>
 				<!-- Child Tables -->
 				<template #expenses="{ isFormReadOnly }">

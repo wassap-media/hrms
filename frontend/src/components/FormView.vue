@@ -43,7 +43,7 @@
 							{ label: __('Reload'), onClick: () => reloadDoc() },
 							{
 								label: __('Download PDF'),
-								condition: () => props.allowDownload,
+								condition: () => props.showDownloadPDFButton,
 								onClick: () => (handleDownload()),
 							},
 						]"
@@ -380,7 +380,7 @@ const props = defineProps({
 		required: false,
 		default: true,
 	},
-	allowDownload: {
+	showDownloadPDFButton: {
 		type: Boolean,
 		required: false,
 		default: false,
