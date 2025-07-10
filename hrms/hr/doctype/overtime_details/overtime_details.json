@@ -11,8 +11,7 @@
   "date",
   "column_break_ilza",
   "overtime_type",
-  "overtime_duration",
-  "standard_working_hours"
+  "overtime_duration"
  ],
  "fields": [
   {
@@ -51,22 +50,17 @@
   },
   {
    "fieldname": "overtime_duration",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Overtime Duration",
-   "reqd": 1
-  },
-  {
-   "fieldname": "standard_working_hours",
-   "fieldtype": "Data",
-   "label": "Standard Working Hours",
+   "precision": "2",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-03-25 15:31:16.328296",
+ "modified": "2025-07-10 17:57:32.748451",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Overtime Details",

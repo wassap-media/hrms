@@ -32,10 +32,9 @@
   "modify_half_day_status",
   "overtime_section",
   "overtime_type",
-  "overtime_duration",
+  "actual_overtime_duration",
   "column_break_idku",
-  "standard_working_hours",
-  "actual_overtime_duration"
+  "standard_working_hours"
  ],
  "fields": [
   {
@@ -233,14 +232,6 @@
    "label": "Overtime"
   },
   {
-   "description": "Based on \"Maximum Overtime Hours Allowed\" in Overtime Type",
-   "fieldname": "overtime_duration",
-   "fieldtype": "Time",
-   "hide_days": 1,
-   "label": "Overtime Duration",
-   "read_only": 1
-  },
-  {
    "fieldname": "overtime_type",
    "fieldtype": "Link",
    "label": "Overtime Type",
@@ -253,14 +244,13 @@
   },
   {
    "fieldname": "standard_working_hours",
-   "fieldtype": "Time",
+   "fieldtype": "Float",
    "label": "Standard Working Hours",
    "read_only": 1
   },
   {
-   "depends_on": "eval:doc.overtime_duration!==\"00:00:00\";",
    "fieldname": "actual_overtime_duration",
-   "fieldtype": "Time",
+   "fieldtype": "Float",
    "label": "Actual Overtime Duration",
    "read_only": 1
   }
@@ -269,7 +259,7 @@
  "idx": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-18 19:01:20.441652",
+ "modified": "2025-07-10 11:39:04.327505",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Attendance",

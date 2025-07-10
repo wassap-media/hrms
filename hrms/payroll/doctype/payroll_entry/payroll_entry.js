@@ -80,9 +80,6 @@ frappe.ui.form.on("Payroll Entry", {
 			if (frm.doc.docstatus == 0 && !frm.is_new()) {
 				frm.page.clear_primary_action();
 
-				// let employees_eligible_for_overtime, unsubmitted_overtime_slips;
-				// [employees_eligible_for_overtime, unsubmitted_overtime_slips] = await frm.events.get_overtime_slip_details(frm);
-
 				let [employees_eligible_for_overtime = [], unsubmitted_overtime_slips = []] =
 					await frm.events.get_overtime_slip_details(frm);
 				if (employees_eligible_for_overtime.length > 0) {

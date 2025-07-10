@@ -208,6 +208,7 @@ def mark_attendance_and_link_log(
 	in_time=None,
 	out_time=None,
 	shift=None,
+	overtime_type=None,
 ):
 	"""Creates an attendance and links the attendance to the Employee Checkin.
 	Note: If attendance is already present for the given date, the logs are marked as skipped and no exception is thrown.
@@ -240,6 +241,7 @@ def mark_attendance_and_link_log(
 			early_exit=early_exit,
 			in_time=in_time,
 			out_time=out_time,
+			overtime_type=overtime_type,
 		)
 
 		if attendance_status == "Absent":
@@ -265,6 +267,7 @@ def create_or_update_attendance(
 	early_exit=False,
 	in_time=None,
 	out_time=None,
+	overtime_type=None,
 ):
 	"""Creates a new attendance or updates an existing half-day attendance."""
 	if attendance := get_existing_half_day_attendance(employee, attendance_date):
@@ -301,68 +304,47 @@ def create_or_update_attendance(
 		)
 
 		# Set overtime data if applicable
-		if shift:
-			set_overtime_data(attendance, shift, in_time, out_time)
-
+		if overtime_type and attendance_status == "Present":
+			overtime_data = get_overtime_data(overtime_type, working_hours)
+			if overtime_data:
+				attendance.update(
+					{
+						"overtime_type": overtime_type,
+						"standard_working_hours": overtime_data.get("standard_working_hours"),
+						"actual_overtime_duration": overtime_data.get("actual_overtime_duration"),
+					}
+				)
 		attendance.save()
 		attendance.submit()
 
 	return attendance
 
 
-def set_overtime_data(attendance, shift, in_time, out_time):
-	from hrms.hr.doctype.overtime_slip.overtime_slip import convert_str_time_to_hours
+def get_overtime_data(shift_name, working_hours):
+	overtime_data = {}
 
-	if not (in_time and out_time):
-		return
-
-	shift_type_overtime = frappe.db.get_value(
+	shift_type_details = frappe.db.get_value(
 		doctype="Shift Type",
-		filters={"name": shift},
-		fieldname=["overtime_type", "allow_overtime", "start_time", "end_time"],
+		filters={"name": shift_name},
+		fieldname=["allow_overtime", "start_time", "end_time"],
 		as_dict=True,
 	)
 
-	if not shift_type_overtime.allow_overtime:
-		reset_overtime_fields(attendance)
-		return
+	if not shift_type_details.allow_overtime:
+		return overtime_data
 
 	standard_working_hours = calculate_time_difference(
-		shift_type_overtime.start_time, shift_type_overtime.end_time
+		shift_type_details.start_time, shift_type_details.end_time
 	)
-	total_working_duration = calculate_time_difference(in_time, out_time)
 
-	if total_working_duration > standard_working_hours:
-		overtime_duration = calculate_time_difference(standard_working_hours, total_working_duration)
-		actual_overtime_duration = overtime_duration
-
-		maximum_overtime_hours = frappe.db.get_value(
-			"Overtime Type", shift_type_overtime.overtime_type, "maximum_overtime_hours_allowed"
-		)
-		if maximum_overtime_hours and convert_str_time_to_hours(overtime_duration) > maximum_overtime_hours:
-			overtime_duration = str(maximum_overtime_hours) + ":00:00"
-
-		attendance.update(
-			{
-				"overtime_type": shift_type_overtime.overtime_type,
-				"standard_working_hours": standard_working_hours,
-				"overtime_duration": overtime_duration,
-				"actual_overtime_duration": actual_overtime_duration,
-			}
-		)
-	else:
-		reset_overtime_fields(attendance)
-
-
-def reset_overtime_fields(attendance):
-	attendance.update(
-		{
-			"overtime_type": "",
-			"standard_working_hours": None,
-			"overtime_duration": None,
-			"actual_overtime_duration": None,
+	if working_hours > standard_working_hours:
+		actual_overtime_duration = working_hours - standard_working_hours
+		overtime_data = {
+			"standard_working_hours": standard_working_hours,
+			"actual_overtime_duration": actual_overtime_duration,
 		}
-	)
+
+	return overtime_data
 
 
 def get_existing_half_day_attendance(employee, attendance_date):
@@ -493,33 +475,9 @@ def update_attendance_in_checkins(log_names: list, attendance_id: str):
 	).run()
 
 
-def convert_to_timedelta(input_value: str | timedelta) -> timedelta:
-	"""
-	Converts a string in the format 'HH:MM:SS'
-	"""
-	if isinstance(input_value, str):
-		# If the input is a string, parse it into a datetime object
-		time_format = "%H:%M:%S"
-		time_obj = datetime.strptime(input_value, time_format)
-		# Convert datetime to timedelta (we only care about the time)
-		return timedelta(hours=time_obj.hour, minutes=time_obj.minute, seconds=time_obj.second)
-
-	return input_value
-
-
 def calculate_time_difference(start_time, end_time):
-	"""
-	Converts inputs to timedelta, finds the difference between start and end times.
-	"""
-	# Convert both start and end times to timedelta
-	start_time_delta = convert_to_timedelta(start_time)
-	end_time_delta = convert_to_timedelta(end_time)
+	if end_time < start_time:
+		end_time += timedelta(days=1)
+	time_difference = abs(start_time - end_time)
 
-	# Calculate the time difference
-	time_difference = end_time_delta - start_time_delta
-
-	# Return the difference only if it's positive
-	if time_difference.total_seconds() > 0:
-		return time_difference
-	else:
-		return timedelta(0)
+	return round(time_difference.total_seconds() / 3600, 2)

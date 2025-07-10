@@ -69,8 +69,7 @@ class OvertimeSlip(Document):
 				)
 			maximum_overtime_hours = overtime_type_cache[detail.overtime_type]
 			if maximum_overtime_hours:
-				duration = convert_str_time_to_hours(detail.overtime_duration)
-				if duration > maximum_overtime_hours:
+				if detail.overtime_duration > maximum_overtime_hours:
 					frappe.throw(
 						_("Overtime Duration for {0} is greater than Maximum Overtime Hours Allowed").format(
 							detail.date
@@ -98,20 +97,38 @@ class OvertimeSlip(Document):
 
 	@frappe.whitelist()
 	def get_emp_and_overtime_details(self):
-		records = self.get_attendance_record()
+		records = self.get_attendance_records()
 		if len(records):
 			self.create_overtime_details_row_for_attendance(records)
 		if len(self.overtime_details):
-			self.total_overtime_duration = timedelta()
+			total_overtime_duration = 0.0
 			for detail in self.overtime_details:
 				if detail.overtime_duration is not None:
-					self.total_overtime_duration += detail.overtime_duration
+					total_overtime_duration += detail.overtime_duration
+			self.total_overtime_duration += total_overtime_duration
 		self.save()
 
 	def create_overtime_details_row_for_attendance(self, records):
 		self.overtime_details = []
+		overtime_type_cache = {}
+
 		for record in records:
-			if record.overtime_duration:
+			if record.overtime_type not in overtime_type_cache:
+				overtime_type_cache[record.overtime_type] = frappe.db.get_value(
+					"Overtime Type", record.overtime_type, "maximum_overtime_hours_allowed"
+				)
+
+			maximum_overtime_hours_allowed = overtime_type_cache[record.overtime_type]
+			overtime_duration = record.actual_overtime_duration or 0.0
+
+			if maximum_overtime_hours_allowed > 0:
+				overtime_duration = (
+					overtime_duration
+					if maximum_overtime_hours_allowed > overtime_duration
+					else maximum_overtime_hours_allowed
+				)
+
+			if overtime_duration > 0:
 				self.append(
 					"overtime_details",
 					{
@@ -119,26 +136,24 @@ class OvertimeSlip(Document):
 						"reference_document": record.name,
 						"date": record.attendance_date,
 						"overtime_type": record.overtime_type,
-						"overtime_duration": record.overtime_duration,
-						"standard_working_hours": record.standard_working_hours,
+						"overtime_duration": overtime_duration,
 					},
 				)
 
-	def get_attendance_record(self):
+	def get_attendance_records(self):
 		records = []
 		if self.start_date and self.end_date:
 			records = frappe.get_all(
 				"Attendance",
 				fields=[
-					"overtime_duration",
+					"actual_overtime_duration",
 					"name",
 					"attendance_date",
 					"overtime_type",
-					"standard_working_hours",
 				],
 				filters={
 					"employee": self.employee,
-					"docstatus": DocStatus.submitted(),
+					"docstatus": 1,
 					"attendance_date": ("between", [getdate(self.start_date), getdate(self.end_date)]),
 					"status": "Present",
 					"overtime_type": ["!=", ""],

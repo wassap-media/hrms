@@ -1292,7 +1292,7 @@ class PayrollEntry(Document):
 
 		employee_eligible_for_overtime = unsubmitted_overtime_slips = []
 
-		if frappe.get_single_value("Payroll Settings", "create_overtime_slip"):
+		if frappe.db.get_single_value("Payroll Settings", "create_overtime_slip"):
 			employees = [emp.employee for emp in self.employees]
 			employee_eligible_for_overtime = filter_employees_for_overtime_slip_creation(
 				self.start_date, self.end_date, employees
