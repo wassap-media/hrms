@@ -101,8 +101,9 @@
   },
   {
    "fieldname": "total_overtime_duration",
-   "fieldtype": "Data",
-   "label": "Total Overtime Duration"
+   "fieldtype": "Float",
+   "label": "Total Overtime Duration",
+   "read_only": 1
   },
   {
    "allow_on_submit": 1,
@@ -147,7 +148,7 @@
    "link_fieldname": "ref_docname"
   }
  ],
- "modified": "2025-06-23 14:27:41.156873",
+ "modified": "2025-07-10 18:26:41.064977",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Overtime Slip",

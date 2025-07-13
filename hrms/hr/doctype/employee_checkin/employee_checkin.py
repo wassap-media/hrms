@@ -305,7 +305,7 @@ def create_or_update_attendance(
 
 		# Set overtime data if applicable
 		if overtime_type and attendance_status == "Present":
-			overtime_data = get_overtime_data(overtime_type, working_hours)
+			overtime_data = get_overtime_data(shift, working_hours)
 			if overtime_data:
 				attendance.update(
 					{

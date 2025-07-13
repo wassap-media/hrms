@@ -9,7 +9,7 @@ import frappe
 from frappe import _, bold
 from frappe.model.docstatus import DocStatus
 from frappe.model.document import Document
-from frappe.utils import cstr
+from frappe.utils import cstr, flt
 from frappe.utils.data import format_time, get_link_to_form, getdate
 
 from hrms.payroll.doctype.payroll_entry.payroll_entry import get_start_end_dates
@@ -105,7 +105,7 @@ class OvertimeSlip(Document):
 			for detail in self.overtime_details:
 				if detail.overtime_duration is not None:
 					total_overtime_duration += detail.overtime_duration
-			self.total_overtime_duration += total_overtime_duration
+			self.total_overtime_duration = total_overtime_duration
 		self.save()
 
 	def create_overtime_details_row_for_attendance(self, records):
@@ -132,7 +132,6 @@ class OvertimeSlip(Document):
 				self.append(
 					"overtime_details",
 					{
-						"reference_document_type": "Attendance",
 						"reference_document": record.name,
 						"date": record.attendance_date,
 						"overtime_type": record.overtime_type,
@@ -146,10 +145,10 @@ class OvertimeSlip(Document):
 			records = frappe.get_all(
 				"Attendance",
 				fields=[
-					"actual_overtime_duration",
 					"name",
 					"attendance_date",
 					"overtime_type",
+					"actual_overtime_duration",
 				],
 				filters={
 					"employee": self.employee,
@@ -167,24 +166,6 @@ class OvertimeSlip(Document):
 				)
 		return records
 
-	def create_additional_salary(self, salary_component, total_amount):
-		if total_amount > 0:
-			additional_salary = frappe.get_doc(
-				{
-					"doctype": "Additional Salary",
-					"company": self.company,
-					"employee": self.employee,
-					"salary_component": salary_component,
-					"amount": total_amount,
-					"payroll_date": self.start_date,
-					"overwrite_salary_structure_amount": 0,
-					"ref_doctype": "Overtime Slip",
-					"ref_docname": self.name,
-				}
-			)
-			additional_salary.save()
-			additional_salary.submit()
-
 	def process_overtime_slip(self):
 		overtime_components = self.get_overtime_component_amounts()
 		for component, total_amount in overtime_components.items():
@@ -192,86 +173,61 @@ class OvertimeSlip(Document):
 
 	def get_overtime_component_amounts(self):
 		"""
-		Calculate total amount for each salary component based on overtime details
+		Get amount for each overtime detail child item, sum and group amounts by salary component for additional salary creation
 		"""
 		holiday_date_map = self.get_holiday_map()
-		overtime_types = {}
-		overtime_components = {}
+		self.overtime_types = {}  # details of each overtime type
+		overtime_components = {}  # store total amount against each overtime salary component
 
 		for overtime_detail in self.overtime_details:
 			overtime_type = overtime_detail.overtime_type
-			overtime_types = self.set_overtime_type_details(overtime_types, overtime_detail)
-			overtime_amounts = self.calculate_overtime_amount(
-				overtime_types, overtime_detail, holiday_date_map
-			)
-			salary_component = overtime_types[overtime_type]["overtime_salary_component"]
 
-			overtime_components[salary_component] = overtime_components.get(salary_component, 0) + sum(
-				overtime_amounts
+			self.get_overtime_types_with_details(overtime_type, overtime_detail.standard_working_hours)
+			overtime_amount = self.calculate_overtime_amount(
+				overtime_type, overtime_detail.overtime_duration, holiday_date_map
+			)
+			salary_component = self.overtime_types[overtime_type]["overtime_salary_component"]
+			overtime_components[salary_component] = (
+				overtime_components.get(salary_component, 0) + overtime_amount
 			)
 
 		return overtime_components
 
-	def set_overtime_type_details(self, overtime_types, overtime_type_details):
+	def get_overtime_types_with_details(self, overtime_type, standard_working_hours):
 		"""
-		Store details of each overtime type in overtime_types
+		Get all configurations for an overtime type and set in self.overtime_types
 		"""
-		overtime_type = overtime_type_details.overtime_type
-		if overtime_type not in overtime_types:
-			details = self.get_overtime_type_details(overtime_type)
-			overtime_types[overtime_type] = details
-
-			overtime_types[overtime_type]["standard_working_hours"] = (
-				overtime_type_details.standard_working_hours
+		if overtime_type not in self.overtime_types:
+			self.overtime_types[overtime_type] = self.get_overtime_type_details(overtime_type)
+			self.overtime_types[overtime_type]["standard_working_hours"] = standard_working_hours
+			self.overtime_types[overtime_type]["applicable_hourly_rate"] = self.get_applicable_hourly_rate(
+				overtime_type
 			)
-			overtime_types[overtime_type]["overtime_duration"] = overtime_type_details.overtime_duration
 
-			if "applicable_hourly_rate" not in overtime_types[overtime_type]:
-				self.set_applicable_hourly_rate(overtime_types, overtime_type)
-
-		return overtime_types
-
-	def calculate_overtime_amount(self, overtime_types, overtime_detail, holiday_date_map):
+	def calculate_overtime_amount(self, overtime_type, overtime_duration, holiday_date_map):
 		"""
-		Calculate total amount
+		Calculate total amount for the given overtime detail child item based on its type and date.
 		"""
-		standard_duration_amount, weekends_duration_amount = 0, 0
-		public_holidays_duration_amount, calculated_amount = 0, 0
-		overtime_hours = convert_str_time_to_hours(overtime_detail.overtime_duration)
+		precision = frappe.db.get_single_value("System Settings", "currency_precision") or 2
 
-		applicable_hourly_rate = overtime_types[overtime_detail.overtime_type]["applicable_hourly_rate"]
+		overtime_details = self.overtime_types.get(overtime_type)
+		if not overtime_details:
+			return 0.0
 
-		weekend_multiplier, public_holiday_multiplier = self.get_multipliers(
-			overtime_types, overtime_detail.overtime_type
-		)
-		overtime_date = cstr(overtime_detail.date)
-		if overtime_date in holiday_date_map.keys():
-			if holiday_date_map[overtime_date].weekly_off == 1:
-				calculated_amount = overtime_hours * applicable_hourly_rate * weekend_multiplier
-				weekends_duration_amount += calculated_amount
-			else:
-				calculated_amount = overtime_hours * applicable_hourly_rate * public_holiday_multiplier
-				public_holidays_duration_amount += calculated_amount
-		else:
-			calculated_amount = (
-				overtime_hours
-				* applicable_hourly_rate
-				* overtime_types[overtime_detail.overtime_type]["standard_multiplier"]
-			)
-			standard_duration_amount += calculated_amount
+		applicable_hourly_rate = overtime_details.get("applicable_hourly_rate", 0)
+		overtime_date = cstr(overtime_details.get("date"))
 
-		return weekends_duration_amount, public_holidays_duration_amount, standard_duration_amount
+		multiplier = overtime_details.get("standard_multiplier", 1)
 
-	def get_multipliers(self, overtime_types, overtime_type):
-		weekend_multiplier = overtime_types[overtime_type]["standard_multiplier"]
-		public_holiday_multiplier = overtime_types[overtime_type]["standard_multiplier"]
+		holiday_info = holiday_date_map.get(overtime_date)
+		if holiday_info:
+			if overtime_details.get("applicable_for_weekend") and holiday_info.weekly_off:
+				multiplier = overtime_details.get("weekend_multiplier", multiplier)
+			elif overtime_details.get("applicable_for_public_holiday") and not holiday_info.weekly_off:
+				multiplier = overtime_details.get("public_holiday_multiplier", multiplier)
 
-		if overtime_types[overtime_type]["applicable_for_weekend"]:
-			weekend_multiplier = overtime_types[overtime_type]["weekend_multiplier"]
-		if overtime_types[overtime_type]["applicable_for_public_holiday"]:
-			public_holiday_multiplier = overtime_types[overtime_type]["public_holiday_multiplier"]
-
-		return weekend_multiplier, public_holiday_multiplier
+		amount = overtime_duration * applicable_hourly_rate * multiplier
+		return flt(amount, precision)
 
 	def get_holiday_map(self):
 		from erpnext.setup.doctype.employee.employee import get_holiday_list_for_employee
@@ -317,18 +273,23 @@ class OvertimeSlip(Document):
 
 		return details
 
-	def set_applicable_hourly_rate(self, overtime_types, overtime_type):
-		overtime_type_details = overtime_types[overtime_type]
-		if overtime_type_details["overtime_calculation_method"] == "Fixed Hourly Rate":
-			overtime_types[overtime_type]["applicable_hourly_rate"] = overtime_type_details.hourly_rate
-			return
-		self.get_hourly_rate_for_overtime_based_on_salary_component(overtime_types, overtime_type)
+	def get_applicable_hourly_rate(self, overtime_type):
+		overtime_details = self.overtime_types.get(overtime_type)
+		overtime_calculation_method = overtime_details.get("overtime_calculation_method")
 
-	def get_hourly_rate_for_overtime_based_on_salary_component(self, overtime_types, overtime_type):
+		applicable_hourly_rate = 0.0
+		if overtime_calculation_method == "Fixed Hourly Rate":
+			applicable_hourly_rate = overtime_details.get("hourly_rate", 0.0)
+		elif overtime_calculation_method == "Salary Component Based":
+			applicable_hourly_rate = self.get_hourly_rate_for_overtime_based_on_salary_component(
+				overtime_type
+			)
+		return applicable_hourly_rate
+
+	def get_hourly_rate_for_overtime_based_on_salary_component(self, overtime_type):
 		from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_slip
 
-		overtime_type_details = overtime_types[overtime_type]
-		components = overtime_type_details["components"]
+		components = self.overtime_types[overtime_type]["components"]
 		salary_structure = get_assigned_salary_structure(self.employee, self.start_date)
 
 		if not hasattr(self, "_cached_salary_slip"):
@@ -347,9 +308,27 @@ class OvertimeSlip(Document):
 			]
 		)
 
-		standard_working_hours = convert_str_time_to_hours(overtime_type_details.standard_working_hours)
+		standard_working_hours = self.overtime_types[overtime_type]["standard_working_hours"]
 		applicable_daily_amount = component_amount / self._cached_salary_slip.payment_days
-		overtime_type_details["applicable_hourly_rate"] = applicable_daily_amount / standard_working_hours
+		return applicable_daily_amount / standard_working_hours
+
+	def create_additional_salary(self, salary_component, total_amount):
+		if total_amount > 0:
+			additional_salary = frappe.get_doc(
+				{
+					"doctype": "Additional Salary",
+					"company": self.company,
+					"employee": self.employee,
+					"salary_component": salary_component,
+					"amount": total_amount,
+					"payroll_date": self.start_date,
+					"overwrite_salary_structure_amount": 0,
+					"ref_doctype": "Overtime Slip",
+					"ref_docname": self.name,
+				}
+			)
+			additional_salary.save()
+			additional_salary.submit()
 
 
 @frappe.whitelist()
