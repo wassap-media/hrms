@@ -1254,8 +1254,6 @@ class PayrollEntry(Document):
 			submit_overtime_slips_for_employees,
 		)
 
-		"""Submits all the overtime slips created for this payroll entry"""
-
 		if not overtime_slips:
 			overtime_slips = self.get_unsubmitted_overtime_slips()
 

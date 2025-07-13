@@ -208,7 +208,6 @@ class OvertimeSlip(Document):
 		"""
 		Calculate total amount for the given overtime detail child item based on its type and date.
 		"""
-		precision = frappe.db.get_single_value("System Settings", "currency_precision") or 2
 
 		overtime_details = self.overtime_types.get(overtime_type)
 		if not overtime_details:
@@ -227,7 +226,7 @@ class OvertimeSlip(Document):
 				multiplier = overtime_details.get("public_holiday_multiplier", multiplier)
 
 		amount = overtime_duration * applicable_hourly_rate * multiplier
-		return flt(amount, precision)
+		return amount
 
 	def get_holiday_map(self):
 		from erpnext.setup.doctype.employee.employee import get_holiday_list_for_employee
@@ -314,13 +313,14 @@ class OvertimeSlip(Document):
 
 	def create_additional_salary(self, salary_component, total_amount):
 		if total_amount > 0:
+			precision = frappe.db.get_single_value("System Settings", "currency_precision") or 2
 			additional_salary = frappe.get_doc(
 				{
 					"doctype": "Additional Salary",
 					"company": self.company,
 					"employee": self.employee,
 					"salary_component": salary_component,
-					"amount": total_amount,
+					"amount": flt(total_amount, precision),
 					"payroll_date": self.start_date,
 					"overwrite_salary_structure_amount": 0,
 					"ref_doctype": "Overtime Slip",
@@ -367,7 +367,7 @@ def filter_employees_for_overtime_slip_creation(start_date, end_date, employees)
 		.distinct()
 	).run(pluck=True)
 
-	# employees valid attendance AND no overtime slips
+	# employees with valid attendance AND no overtime slips
 	eligible_employees = set(employees_with_valid_attendance) - set(employees_with_overtime_slips)
 
 	return eligible_employees
@@ -435,18 +435,3 @@ def submit_overtime_slips_for_employees(overtime_slips):
 		)
 
 	frappe.publish_realtime("completed_overtime_slip_submission", user=frappe.session.user)
-
-
-def convert_str_time_to_hours(duration_str):
-	# Split the string into hours, minutes, and seconds
-	if isinstance(duration_str, timedelta):
-		duration_str = format_time(duration_str)
-	if not duration_str:
-		return
-	parts = duration_str.split(":")
-	hours = int(parts[0])
-	minutes = int(parts[1]) if len(parts) > 1 else 0
-	seconds = int(float(parts[2])) if len(parts) > 2 else 0  # Default to 0 if seconds are missing
-
-	total_seconds = hours * 3600 + minutes * 60 + seconds
-	return total_seconds / 3600
