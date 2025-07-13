@@ -385,7 +385,7 @@ def create_overtime_slips_for_employees(employees, args):
 		except Exception as e:
 			frappe.clear_last_message()
 			frappe.db.rollback()
-			errors.append(str(e))
+			errors.append(_("Employee {0} : {1}").format(emp, str(e)))
 			frappe.log_error(frappe.get_traceback(), _("Overtime Slip Creation Error for {0}").format(emp))
 	if count:
 		frappe.msgprint(
@@ -394,11 +394,11 @@ def create_overtime_slips_for_employees(employees, args):
 			title=_("Overtime Slips Created"),
 		)
 	if errors:
-		frappe.throw(
-			_("Failed to create Overtime Slip:<br><ul>{0}</ul>").format(
-				"".join(f"<li>{err}</li>" for err in errors),
-				title=_("Overtime Slip Creation Failed"),
-			)
+		error_list_html = "".join(f"<li>{err}</li>" for err in errors)
+		frappe.msgprint(
+			title=_("Overtime Slip Creation Failed"),
+			msg=f"<ul>{error_list_html}</ul>",
+			indicator="red",
 		)
 
 	frappe.publish_realtime("completed_overtime_slip_creation", user=frappe.session.user)
@@ -406,7 +406,6 @@ def create_overtime_slips_for_employees(employees, args):
 
 def submit_overtime_slips_for_employees(overtime_slips):
 	count = 0
-
 	errors = []
 	for overtime_slip in overtime_slips:
 		try:
@@ -417,7 +416,7 @@ def submit_overtime_slips_for_employees(overtime_slips):
 		except Exception as e:
 			frappe.clear_last_message()
 			frappe.db.rollback()
-			errors.append(str(e))
+			errors.append(_("{0} : {1}").format(overtime_slip, str(e)))
 			frappe.log_error(
 				frappe.get_traceback(), _("Overtime Slip Submission Error for {0}").format(overtime_slip)
 			)
@@ -428,10 +427,11 @@ def submit_overtime_slips_for_employees(overtime_slips):
 			title=_("Overtime Slip Submitted"),
 		)
 	if errors:
-		frappe.throw(
-			_("Failed to submit Overtime Slip:")
-			+ f"<br><ul>{''.join(f'<li>{err}</li>' for err in errors)}</ul>",
+		error_list_html = "".join(f"<li>{err}</li>" for err in errors)
+		frappe.msgprint(
 			title=_("Overtime Slip Submission Failed"),
+			msg=_(f"<ul>{error_list_html}</ul>"),
+			indicator="red",
 		)
 
 	frappe.publish_realtime("completed_overtime_slip_submission", user=frappe.session.user)
