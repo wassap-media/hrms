@@ -248,27 +248,6 @@ class Attendance(Document):
 
 
 @frappe.whitelist()
-def get_shift_type(employee, attendance_date):
-	ShiftAssignment = frappe.qb.DocType("Shift Assignment")
-
-	shift_assignment = (
-		frappe.qb.from_(ShiftAssignment)
-		.select(ShiftAssignment.name, ShiftAssignment.shift_type)
-		.where(ShiftAssignment.docstatus == 1)
-		.where(ShiftAssignment.employee == employee)
-		.where(ShiftAssignment.start_date <= attendance_date)
-		.where((ShiftAssignment.end_date >= attendance_date) | (ShiftAssignment.end_date.isnull()))
-		.where(ShiftAssignment.status == "Active")
-	).run(as_dict=1)
-
-	if len(shift_assignment):
-		shift = shift_assignment[0].shift_type
-	else:
-		shift = frappe.db.get_value("Employee", employee, "default_shift")
-	return shift
-
-
-@frappe.whitelist()
 def get_events(start, end, filters=None):
 	employee = frappe.db.get_value("Employee", {"user_id": frappe.session.user})
 	if not employee:
