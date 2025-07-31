@@ -47,6 +47,7 @@
   "bank_account",
   "salary_slips_created",
   "salary_slips_submitted",
+  "overtime_step",
   "failure_details_section",
   "error_message",
   "section_break_41",
@@ -330,6 +331,12 @@
    "fieldtype": "Link",
    "label": "Grade",
    "options": "Employee Grade"
+  },
+  {
+   "fieldname": "overtime_step",
+   "fieldtype": "Select",
+   "label": "Overtime Slip Step",
+   "options": "\nCreate\nSubmit"
   }
  ],
  "icon": "fa fa-cog",
@@ -340,7 +347,7 @@
    "link_fieldname": "payroll_entry"
   }
  ],
- "modified": "2025-06-24 11:52:32.077740",
+ "modified": "2025-07-30 14:15:18.826081",
  "modified_by": "Administrator",
  "module": "Payroll",
  "name": "Payroll Entry",

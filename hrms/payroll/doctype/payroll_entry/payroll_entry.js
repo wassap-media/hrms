@@ -61,7 +61,7 @@ frappe.ui.form.on("Payroll Entry", {
 		});
 	},
 
-	refresh: async (frm) => {
+	refresh: (frm) => {
 		if (frm.doc.status === "Queued") frm.page.btn_secondary.hide();
 
 		if (frm.doc.docstatus === 0 && !frm.is_new()) {
@@ -79,44 +79,28 @@ frappe.ui.form.on("Payroll Entry", {
 		) {
 			if (frm.doc.docstatus == 0 && !frm.is_new()) {
 				frm.page.clear_primary_action();
-
-				let [employees_eligible_for_overtime = [], unsubmitted_overtime_slips = []] =
-					await frm.events.get_overtime_slip_details(frm);
-				if (employees_eligible_for_overtime.length > 0) {
-					frm.page.add_inner_button(
-						__("Create"),
-						() => {
-							frm.call({
-								doc: frm.doc,
-								method: "create_overtime_slips",
-								args: { employees: employees_eligible_for_overtime },
-							});
-						},
-						__("Overtime Slips"),
-					);
-				} else if (unsubmitted_overtime_slips.length > 0) {
-					frm.page.add_inner_button(
-						__("Submit"),
-						() => {
-							frm.call({
-								doc: frm.doc,
-								method: "submit_overtime_slips",
-								args: { overtime_slips: unsubmitted_overtime_slips },
-							});
-						},
-						__("Overtime Slips"),
-					);
-				} else {
-					frm.page.set_primary_action(__("Create Salary Slips"), () => {
-						frm.save("Submit").then(() => {
-							frm.page.clear_primary_action();
-							frm.refresh();
+				if (frm.doc.overtime_step === "Create") {
+					frm.add_custom_button(__("Create Overtime Slips"), () => {
+						frm.call({
+							doc: frm.doc,
+							method: "create_overtime_slips",
 						});
 					});
+				} else if (frm.doc.overtime_step === "Submit") {
+					frm.add_custom_button(__("Submit Overtime Slips"), () => {
+						frm.call({
+							doc: frm.doc,
+							method: "submit_overtime_slips",
+						});
+					});
+				} else {
+					frm.add_custom_button(__("Create Salary Slips"), function () {
+						frm.call("create_salary_slips");
+					}).addClass("btn-primary");
 				}
 			} else if (frm.doc.docstatus == 1 && frm.doc.status == "Failed") {
 				frm.add_custom_button(__("Create Salary Slips"), function () {
-					frm.call("create_sala2ry_slips");
+					frm.call("create_salary_slips");
 				}).addClass("btn-primary");
 			}
 		}
@@ -165,14 +149,6 @@ frappe.ui.form.on("Payroll Entry", {
 				}
 				frm.scroll_to_field("employees");
 			});
-	},
-
-	get_overtime_slip_details: async (frm) => {
-		const r = await frm.call({
-			doc: frm.doc,
-			method: "get_overtime_slip_details",
-		});
-		return r.message;
 	},
 
 	create_salary_slip: function (frm) {

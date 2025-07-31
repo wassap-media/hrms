@@ -36,7 +36,7 @@ class OvertimeSlip(Document):
 		overtime_slips = frappe.db.get_all(
 			"Overtime Slip",
 			filters={
-				"docstatus": ("<", 2),
+				"docstatus": ("!=", 2),
 				"employee": self.employee,
 				"end_date": (">=", self.start_date),
 				"start_date": ("<=", self.end_date),
@@ -58,7 +58,6 @@ class OvertimeSlip(Document):
 			if detail.date in dates:
 				frappe.throw(_("Date {0} is repeated in Overtime Details").format(detail.date))
 			dates.add(detail.date)
-
 			# validate duration only for overtime details not linked to attendance
 			if detail.reference_document:
 				continue
@@ -168,23 +167,52 @@ class OvertimeSlip(Document):
 
 	def process_overtime_slip(self):
 		overtime_components = self.get_overtime_component_amounts()
+
+		precision = frappe.db.get_single_value("System Settings", "currency_precision") or 2
 		for component, total_amount in overtime_components.items():
-			self.create_additional_salary(component, total_amount)
+			self.create_additional_salary(component, total_amount, precision)
+
+	def create_additional_salary(self, salary_component, total_amount, precision=None):
+		if total_amount > 0:
+			additional_salary = frappe.get_doc(
+				{
+					"doctype": "Additional Salary",
+					"company": self.company,
+					"employee": self.employee,
+					"salary_component": salary_component,
+					"amount": flt(total_amount, precision),
+					"payroll_date": self.end_date,
+					"overwrite_salary_structure_amount": 0,
+					"ref_doctype": "Overtime Slip",
+					"ref_docname": self.name,
+				}
+			)
+			additional_salary.submit()
 
 	def get_overtime_component_amounts(self):
 		"""
 		Get amount for each overtime detail child item, sum and group amounts by salary component for additional salary creation
 		"""
+		if not self.overtime_details:
+			return {}
+
+		unique_overtime_types = {detail.overtime_type for detail in self.overtime_details}
+		self.overtime_types = self._bulk_load_overtime_types(unique_overtime_types)
 		holiday_date_map = self.get_holiday_map()
-		self.overtime_types = {}  # details of each overtime type
-		overtime_components = {}  # store total amount against each overtime salary component
+		self._precompute_hourly_rates()  # Pre-calculate all hourly rates
+
+		overtime_components = {}
 
 		for overtime_detail in self.overtime_details:
 			overtime_type = overtime_detail.overtime_type
+			# Set standard working hours (only if not already set)
+			if "standard_working_hours" not in self.overtime_types[overtime_type]:
+				self.overtime_types[overtime_type]["standard_working_hours"] = (
+					overtime_detail.standard_working_hours
+				)
 
-			self.get_overtime_types_with_details(overtime_type, overtime_detail.standard_working_hours)
 			overtime_amount = self.calculate_overtime_amount(
-				overtime_type, overtime_detail.overtime_duration, holiday_date_map
+				overtime_type, overtime_detail.overtime_duration, overtime_detail.date, holiday_date_map
 			)
 			salary_component = self.overtime_types[overtime_type]["overtime_salary_component"]
 			overtime_components[salary_component] = (
@@ -193,32 +221,129 @@ class OvertimeSlip(Document):
 
 		return overtime_components
 
-	def get_overtime_types_with_details(self, overtime_type, standard_working_hours):
+	def _bulk_load_overtime_types(self, overtime_type_names):
 		"""
-		Get all configurations for an overtime type and set in self.overtime_types
+		Load all overtime type details in bulk
 		"""
-		if overtime_type not in self.overtime_types:
-			self.overtime_types[overtime_type] = self.get_overtime_type_details(overtime_type)
-			self.overtime_types[overtime_type]["standard_working_hours"] = standard_working_hours
-			self.overtime_types[overtime_type]["applicable_hourly_rate"] = self.get_applicable_hourly_rate(
-				overtime_type
+		if not overtime_type_names:
+			return {}
+
+		# Get all overtime types details
+		overtime_types_data = frappe.get_all(
+			"Overtime Type",
+			filters={"name": ["in", list(overtime_type_names)]},
+			fields=[
+				"name",
+				"standard_multiplier",
+				"weekend_multiplier",
+				"public_holiday_multiplier",
+				"applicable_for_weekend",
+				"applicable_for_public_holiday",
+				"overtime_salary_component",
+				"overtime_calculation_method",
+				"hourly_rate",
+			],
+		)
+
+		overtime_types = {}
+		salary_component_based_types = []
+
+		for ot_data in overtime_types_data:
+			overtime_types[ot_data.name] = ot_data
+			if ot_data.overtime_calculation_method == "Salary Component Based":
+				salary_component_based_types.append(ot_data.name)
+
+		# Bulk load salary components for salary component based types
+		if salary_component_based_types:
+			salary_components_data = frappe.get_all(
+				"Overtime Salary Component",
+				filters={"parent": ["in", salary_component_based_types]},
+				fields=["parent", "salary_component"],
 			)
 
-	def calculate_overtime_amount(self, overtime_type, overtime_duration, holiday_date_map):
+			# Group by parent
+			components_by_parent = {}
+			for comp_data in salary_components_data:
+				if comp_data.parent not in components_by_parent:
+					components_by_parent[comp_data.parent] = []
+				components_by_parent[comp_data.parent].append(comp_data.salary_component)
+
+			for ot_type in salary_component_based_types:  # Add components to overtime types
+				overtime_types[ot_type]["components"] = components_by_parent.get(ot_type, [])
+
+		return overtime_types
+
+	def _precompute_hourly_rates(self):
+		"""
+		Pre-compute hourly rates for all overtime types to avoid repeated calculations
+		"""
+		salary_slip_created = False
+
+		for overtime_type, overtime_details in self.overtime_types.items():
+			if overtime_details["overtime_calculation_method"] == "Fixed Hourly Rate":
+				overtime_details["applicable_hourly_rate"] = overtime_details.get("hourly_rate", 0.0)
+			elif overtime_details["overtime_calculation_method"] == "Salary Component Based":
+				if not salary_slip_created:
+					# Create salary slip only once for all calculations
+					salary_structure = get_assigned_salary_structure(self.employee, self.start_date)
+					self._cached_salary_slip = self._make_salary_slip(salary_structure)
+					salary_slip_created = True
+
+				overtime_details["applicable_hourly_rate"] = self._calculate_component_based_rate(
+					overtime_type
+				)
+
+	def _make_salary_slip(self, salary_structure):
+		"""
+		Create salary slip with error handling
+		"""
+		from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_slip
+
+		return make_salary_slip(
+			salary_structure,
+			employee=self.employee,
+			ignore_permissions=True,
+			posting_date=self.start_date,
+		)
+
+	def _calculate_component_based_rate(self, overtime_type):
+		"""
+		Calculate hourly rate based on salary components
+		"""
+		overtime_details = self.overtime_types[overtime_type]
+		components = overtime_details.get("components", [])
+
+		if not components or not hasattr(self, "_cached_salary_slip"):
+			return 0.0
+
+		component_amount = sum(
+			data.amount
+			for data in self._cached_salary_slip.earnings
+			if data.salary_component in components and not data.get("additional_salary", None)
+		)
+
+		standard_working_hours = overtime_details.get("standard_working_hours")
+		payment_days = max(self._cached_salary_slip.payment_days, 1)
+		applicable_daily_amount = component_amount / payment_days
+
+		return applicable_daily_amount / standard_working_hours if standard_working_hours > 0 else 0.0
+
+	def calculate_overtime_amount(self, overtime_type, overtime_duration, overtime_date, holiday_date_map):
 		"""
 		Calculate total amount for the given overtime detail child item based on its type and date.
 		"""
-
 		overtime_details = self.overtime_types.get(overtime_type)
 		if not overtime_details:
 			return 0.0
 
 		applicable_hourly_rate = overtime_details.get("applicable_hourly_rate", 0)
-		overtime_date = cstr(overtime_details.get("date"))
+		if applicable_hourly_rate <= 0:
+			return 0.0
 
+		overtime_date_str = cstr(overtime_date)
 		multiplier = overtime_details.get("standard_multiplier", 1)
 
-		holiday_info = holiday_date_map.get(overtime_date)
+		holiday_info = holiday_date_map.get(overtime_date_str)
 		if holiday_info:
 			if overtime_details.get("applicable_for_weekend") and holiday_info.weekly_off:
 				multiplier = overtime_details.get("weekend_multiplier", multiplier)
@@ -311,28 +436,9 @@ class OvertimeSlip(Document):
 		applicable_daily_amount = component_amount / self._cached_salary_slip.payment_days
 		return applicable_daily_amount / standard_working_hours
 
-	def create_additional_salary(self, salary_component, total_amount):
-		if total_amount > 0:
-			precision = frappe.db.get_single_value("System Settings", "currency_precision") or 2
-			additional_salary = frappe.get_doc(
-				{
-					"doctype": "Additional Salary",
-					"company": self.company,
-					"employee": self.employee,
-					"salary_component": salary_component,
-					"amount": flt(total_amount, precision),
-					"payroll_date": self.start_date,
-					"overwrite_salary_structure_amount": 0,
-					"ref_doctype": "Overtime Slip",
-					"ref_docname": self.name,
-				}
-			)
-			additional_salary.save()
-			additional_salary.submit()
-
 
 @frappe.whitelist()
-def filter_employees_for_overtime_slip_creation(start_date, end_date, employees):
+def filter_employees_for_overtime_slip_creation(start_date, end_date, employees, limit=None):
 	if not employees:
 		return []
 
@@ -342,33 +448,42 @@ def filter_employees_for_overtime_slip_creation(start_date, end_date, employees)
 	OvertimeSlip = frappe.qb.DocType("Overtime Slip")
 	Attendance = frappe.qb.DocType("Attendance")
 
-	# Employees with existing Overtime Slips in the date range
-	employees_with_overtime_slips = (
-		frappe.qb.from_(OvertimeSlip)
-		.select(OvertimeSlip.employee)
-		.where(
-			(OvertimeSlip.docstatus != 2)
-			& (OvertimeSlip.start_date <= end_date)
-			& (OvertimeSlip.end_date >= start_date)
-			& (OvertimeSlip.employee.isin(employees))
-		)
-	).run(pluck=True)
-
-	# Employees who have attendance records with non-empty overtime_type
-	employees_with_valid_attendance = (
+	# First, get employees with valid attendance records
+	employees_with_overtime_attendance = (
 		frappe.qb.from_(Attendance)
 		.select(Attendance.employee)
+		.distinct()
 		.where(
 			(Attendance.employee.isin(employees))
 			& (Attendance.attendance_date >= start_date)
 			& (Attendance.attendance_date <= end_date)
+			& (Attendance.docstatus == 1)  # Only submitted attendance
+			& (Attendance.status == "Present")  # Only present attendance
 			& (Attendance.overtime_type != "")
+			& (Attendance.overtime_type.isnotnull())
 		)
-		.distinct()
 	).run(pluck=True)
 
-	# employees with valid attendance AND no overtime slips
-	eligible_employees = set(employees_with_valid_attendance) - set(employees_with_overtime_slips)
+	if not employees_with_overtime_attendance:
+		return []
+
+	# exclude employees who already have overtime slips for this period
+	employees_with_existing_overtime_slips = (
+		frappe.qb.from_(OvertimeSlip)
+		.select(OvertimeSlip.employee)
+		.distinct()
+		.where(
+			(OvertimeSlip.employee.isin(employees_with_overtime_attendance))
+			& (OvertimeSlip.docstatus != 2)
+			& (OvertimeSlip.start_date <= end_date)
+			& (OvertimeSlip.end_date >= start_date)
+		)
+	).run(pluck=True)
+
+	# Get eligible employees (those with overtime attendance but no existing slips)
+	eligible_employees = list(
+		set(employees_with_overtime_attendance) - set(employees_with_existing_overtime_slips)
+	)
 
 	return eligible_employees
 
@@ -379,14 +494,13 @@ def create_overtime_slips_for_employees(employees, args):
 	for emp in employees:
 		args.update({"doctype": "Overtime Slip", "employee": emp})
 		try:
-			doc = frappe.get_doc(args)
-			doc.get_emp_and_overtime_details()
+			frappe.get_doc(args).get_emp_and_overtime_details()
 			count += 1
 		except Exception as e:
 			frappe.clear_last_message()
-			frappe.db.rollback()
 			errors.append(_("Employee {0} : {1}").format(emp, str(e)))
 			frappe.log_error(frappe.get_traceback(), _("Overtime Slip Creation Error for {0}").format(emp))
+
 	if count:
 		frappe.msgprint(
 			_("Overtime Slip created for {0} employee(s)").format(count),
@@ -401,10 +515,12 @@ def create_overtime_slips_for_employees(employees, args):
 			indicator="red",
 		)
 
+	status = "Failed" if errors else "Draft"
+	frappe.get_doc("Payroll Entry", args.get("payroll_entry")).db_set({"status": status})
 	frappe.publish_realtime("completed_overtime_slip_creation", user=frappe.session.user)
 
 
-def submit_overtime_slips_for_employees(overtime_slips):
+def submit_overtime_slips_for_employees(overtime_slips, payroll_entry):
 	count = 0
 	errors = []
 	for overtime_slip in overtime_slips:
@@ -415,7 +531,6 @@ def submit_overtime_slips_for_employees(overtime_slips):
 			count += 1
 		except Exception as e:
 			frappe.clear_last_message()
-			frappe.db.rollback()
 			errors.append(_("{0} : {1}").format(overtime_slip, str(e)))
 			frappe.log_error(
 				frappe.get_traceback(), _("Overtime Slip Submission Error for {0}").format(overtime_slip)
@@ -434,4 +549,6 @@ def submit_overtime_slips_for_employees(overtime_slips):
 			indicator="red",
 		)
 
+	status = "Failed" if errors else "Draft"
+	payroll_entry = frappe.get_doc("Payroll Entry", payroll_entry).db_set({"status": status})
 	frappe.publish_realtime("completed_overtime_slip_submission", user=frappe.session.user)
