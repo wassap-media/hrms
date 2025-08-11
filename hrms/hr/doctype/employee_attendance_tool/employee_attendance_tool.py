@@ -89,35 +89,37 @@ def _get_unmarked_attendance(employee_list: list[dict], attendance_list: list[di
 
 	return unmarked_attendance
 
+
 def _get_unmarked_attendance_with_shift(unmarked_attendance, shift, date):
 	# Fetch employees based on Shift Assignment
 	shift_assigned_employees = frappe.get_list(
-		'Shift Assignment',
-		filters = {
-			'shift_type': shift,
-			'start_date': ['<=', frappe.utils.getdate(date)],
+		"Shift Assignment",
+		filters={
+			"shift_type": shift,
+			"start_date": ["<=", frappe.utils.getdate(date)],
 		},
-		fields=['employee']
+		fields=["employee"],
 	)
 	# Fetch employees based on default shifts
 	default_shift_employees = frappe.get_list(
-		'Employee',
-		filters = {
-			'default_shift': shift,
+		"Employee",
+		filters={
+			"default_shift": shift,
 		},
-		fields=['employee']
+		fields=["employee"],
 	)
 
 	all_employees_with_shift = shift_assigned_employees + default_shift_employees
-	distinct_employees_with_shift = {emp['employee'] for emp in all_employees_with_shift}
+	distinct_employees_with_shift = {emp["employee"] for emp in all_employees_with_shift}
 
 	# Filter unmarked attendance based on assigned employees
 	shiftwise_unmarked_attendance = []
 	for emp in unmarked_attendance:
-		if emp['employee'] in distinct_employees_with_shift:
+		if emp["employee"] in distinct_employees_with_shift:
 			shiftwise_unmarked_attendance.append(emp)
 
 	return shiftwise_unmarked_attendance
+
 
 @frappe.whitelist()
 def mark_employee_attendance(
