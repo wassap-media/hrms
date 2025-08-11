@@ -97,7 +97,8 @@
    "fieldname": "overtime_details",
    "fieldtype": "Table",
    "label": "Overtime Details",
-   "options": "Overtime Details"
+   "options": "Overtime Details",
+   "reqd": 1
   },
   {
    "fieldname": "total_overtime_duration",
@@ -117,12 +118,14 @@
   {
    "fieldname": "start_date",
    "fieldtype": "Date",
-   "label": "Start Date"
+   "label": "Start Date",
+   "reqd": 1
   },
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
-   "label": "End Date"
+   "label": "End Date",
+   "reqd": 1
   },
   {
    "depends_on": "payroll_entry",
@@ -148,7 +151,7 @@
    "link_fieldname": "ref_docname"
   }
  ],
- "modified": "2025-07-10 18:26:41.064977",
+ "modified": "2025-08-11 17:02:10.282104",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Overtime Slip",

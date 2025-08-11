@@ -329,7 +329,7 @@ def get_overtime_data(shift_name, working_hours):
 		as_dict=True,
 	)
 
-	if not shift_type_details.allow_overtime:
+	if not shift_type_details or not shift_type_details.allow_overtime:
 		return overtime_data
 
 	standard_working_hours = calculate_time_difference(
@@ -475,8 +475,13 @@ def update_attendance_in_checkins(log_names: list, attendance_id: str):
 
 
 def calculate_time_difference(start_time, end_time):
-	if end_time < start_time:
-		end_time += timedelta(days=1)
-	time_difference = abs(start_time - end_time)
+	base_date = datetime.today().date()
+	start_dt = datetime.combine(base_date, start_time)
+	end_dt = datetime.combine(base_date, end_time)
 
-	return round(time_difference.total_seconds() / 3600, 2)
+	# Handle overnight shifts (end time on next day)
+	if end_dt <= start_dt:
+		end_dt += timedelta(days=1)
+
+	diff = end_dt - start_dt
+	return round(diff.total_seconds() / 3600, 2)
