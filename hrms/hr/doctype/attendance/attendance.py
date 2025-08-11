@@ -16,6 +16,7 @@ from frappe.utils import (
 	nowdate,
 )
 
+import hrms
 from hrms.hr.doctype.shift_assignment.shift_assignment import has_overlapping_timings
 from hrms.hr.utils import (
 	get_holiday_dates_for_employee,
