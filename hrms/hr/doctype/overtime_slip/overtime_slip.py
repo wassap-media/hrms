@@ -45,7 +45,7 @@ class OvertimeSlip(Document):
 		)
 		if len(overtime_slips):
 			form_link = get_link_to_form("Overtime Slip", overtime_slips[0].name)
-			msg = _("Overtime Slip:{0} has been created between {1} and {1}").format(
+			msg = _("Overtime Slip:{0} has been created between {1} and {2}").format(
 				bold(form_link), bold(self.start_date), bold(self.end_date)
 			)
 			frappe.throw(msg)
@@ -396,45 +396,6 @@ class OvertimeSlip(Document):
 		details["components"] = components
 
 		return details
-
-	def get_applicable_hourly_rate(self, overtime_type):
-		overtime_details = self.overtime_types.get(overtime_type)
-		overtime_calculation_method = overtime_details.get("overtime_calculation_method")
-
-		applicable_hourly_rate = 0.0
-		if overtime_calculation_method == "Fixed Hourly Rate":
-			applicable_hourly_rate = overtime_details.get("hourly_rate", 0.0)
-		elif overtime_calculation_method == "Salary Component Based":
-			applicable_hourly_rate = self.get_hourly_rate_for_overtime_based_on_salary_component(
-				overtime_type
-			)
-		return applicable_hourly_rate
-
-	def get_hourly_rate_for_overtime_based_on_salary_component(self, overtime_type):
-		from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_slip
-
-		components = self.overtime_types[overtime_type]["components"]
-		salary_structure = get_assigned_salary_structure(self.employee, self.start_date)
-
-		if not hasattr(self, "_cached_salary_slip"):
-			self._cached_salary_slip = make_salary_slip(
-				salary_structure,
-				employee=self.employee,
-				ignore_permissions=True,
-				posting_date=self.start_date,
-			)
-
-		component_amount = sum(
-			[
-				data.amount
-				for data in self._cached_salary_slip.earnings
-				if data.salary_component in components and not data.get("additional_salary", None)
-			]
-		)
-
-		standard_working_hours = self.overtime_types[overtime_type]["standard_working_hours"]
-		applicable_daily_amount = component_amount / self._cached_salary_slip.payment_days
-		return applicable_daily_amount / standard_working_hours
 
 
 @frappe.whitelist()

@@ -3,7 +3,6 @@
 
 
 from datetime import datetime, timedelta
-from typing import Union
 
 import frappe
 from frappe import _
