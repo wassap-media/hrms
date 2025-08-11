@@ -52,7 +52,7 @@
 
 <script setup>
 import { IonPage, IonContent } from "@ionic/vue"
-import { createResource, ErrorMessage, Button } from "frappe-ui"
+import { createResource } from "frappe-ui"
 import { computed, ref, watch, inject } from "vue"
 
 import FormView from "@/components/FormView.vue"
