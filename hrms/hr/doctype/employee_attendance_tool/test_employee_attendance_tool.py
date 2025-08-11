@@ -156,14 +156,7 @@ class TestEmployeeAttendanceTool(IntegrationTestCase):
 			self.assertEqual(attendance.shift, shift.name)
 
 	def test_get_unmarked_attendance_with_shift(self):
-		self.shift = frappe.get_doc(
-			{
-				"doctype": "Shift Type",
-				"name": "Shift 1",
-				"start_time": "09:00:00",
-				"end_time": "17:00:00",
-			}
-		).insert()
+		self.shift = setup_shift_type(shift_type="Shift 1", start_time="08:00:00", end_time="10:00:00")
 		self.employee1 = frappe.get_doc(
 			{
 				"doctype": "Employee",
