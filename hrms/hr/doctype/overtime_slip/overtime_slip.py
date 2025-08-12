@@ -197,23 +197,26 @@ class OvertimeSlip(Document):
 			return {}
 
 		unique_overtime_types = {detail.overtime_type for detail in self.overtime_details}
+
 		self.overtime_types = self._bulk_load_overtime_types(unique_overtime_types)
 		holiday_date_map = self.get_holiday_map()
-		self._precompute_hourly_rates()  # Pre-calculate all hourly rates
-
 		overtime_components = {}
 
 		for overtime_detail in self.overtime_details:
 			overtime_type = overtime_detail.overtime_type
-			# Set standard working hours (only if not already set)
-			if "standard_working_hours" not in self.overtime_types[overtime_type]:
-				self.overtime_types[overtime_type]["standard_working_hours"] = (
-					overtime_detail.standard_working_hours
-				)
+			# calculate hourly rate separately for each overtime log since standard working hours may vary
+			applicable_hourly_rate = self._get_applicable_hourly_rate(
+				overtime_type, overtime_detail.get("standard_working_hours")
+			)
 
 			overtime_amount = self.calculate_overtime_amount(
-				overtime_type, overtime_detail.overtime_duration, overtime_detail.date, holiday_date_map
+				overtime_type,
+				applicable_hourly_rate,
+				overtime_detail.overtime_duration,
+				overtime_detail.date,
+				holiday_date_map,
 			)
+
 			salary_component = self.overtime_types[overtime_type]["overtime_salary_component"]
 			overtime_components[salary_component] = (
 				overtime_components.get(salary_component, 0) + overtime_amount
@@ -273,45 +276,26 @@ class OvertimeSlip(Document):
 
 		return overtime_types
 
-	def _precompute_hourly_rates(self):
-		"""
-		Pre-compute hourly rates for all overtime types to avoid repeated calculations
-		"""
-		salary_slip_created = False
-
-		for overtime_type, overtime_details in self.overtime_types.items():
-			if overtime_details["overtime_calculation_method"] == "Fixed Hourly Rate":
-				overtime_details["applicable_hourly_rate"] = overtime_details.get("hourly_rate", 0.0)
-			elif overtime_details["overtime_calculation_method"] == "Salary Component Based":
-				if not salary_slip_created:
-					# Create salary slip only once for all calculations
-					salary_structure = get_assigned_salary_structure(self.employee, self.start_date)
-					self._cached_salary_slip = self._make_salary_slip(salary_structure)
-					salary_slip_created = True
-
-				overtime_details["applicable_hourly_rate"] = self._calculate_component_based_rate(
-					overtime_type
-				)
-
-	def _make_salary_slip(self, salary_structure):
-		"""
-		Create salary slip with error handling
-		"""
-		from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_slip
-
-		return make_salary_slip(
-			salary_structure,
-			employee=self.employee,
-			ignore_permissions=True,
-			posting_date=self.start_date,
-		)
-
-	def _calculate_component_based_rate(self, overtime_type):
-		"""
-		Calculate hourly rate based on salary components
-		"""
+	def _get_applicable_hourly_rate(self, overtime_type, standard_working_hours=0):
 		overtime_details = self.overtime_types[overtime_type]
-		components = overtime_details.get("components", [])
+		overtime_calculation_method = overtime_details["overtime_calculation_method"]
+
+		applicable_hourly_rate = 0.0
+		if overtime_calculation_method == "Fixed Hourly Rate":
+			applicable_hourly_rate = overtime_details.get("hourly_rate", 0.0)
+		elif overtime_calculation_method == "Salary Component Based":
+			applicable_hourly_rate = self._calculate_component_based_hourly_rate(
+				overtime_type, standard_working_hours
+			)
+		return applicable_hourly_rate
+
+	def _calculate_component_based_hourly_rate(self, overtime_type, standard_working_hours):
+		components = self.overtime_types[overtime_type]["components"] or []
+		salary_structure = get_assigned_salary_structure(self.employee, self.start_date)
+
+		if not hasattr(self, "_cached_salary_slip"):
+			salary_structure = get_assigned_salary_structure(self.employee, self.start_date)
+			self._cached_salary_slip = self._make_salary_slip(salary_structure)
 
 		if not components or not hasattr(self, "_cached_salary_slip"):
 			return 0.0
@@ -321,14 +305,24 @@ class OvertimeSlip(Document):
 			for data in self._cached_salary_slip.earnings
 			if data.salary_component in components and not data.get("additional_salary", None)
 		)
-
-		standard_working_hours = overtime_details.get("standard_working_hours")
 		payment_days = max(self._cached_salary_slip.payment_days, 1)
 		applicable_daily_amount = component_amount / payment_days
 
-		return applicable_daily_amount / standard_working_hours if standard_working_hours > 0 else 0.0
+		return applicable_daily_amount / standard_working_hours
 
-	def calculate_overtime_amount(self, overtime_type, overtime_duration, overtime_date, holiday_date_map):
+	def _make_salary_slip(self, salary_structure):
+		from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_slip
+
+		return make_salary_slip(
+			salary_structure,
+			employee=self.employee,
+			ignore_permissions=True,
+			posting_date=self.start_date,
+		)
+
+	def calculate_overtime_amount(
+		self, overtime_type, applicable_hourly_rate, overtime_duration, overtime_date, holiday_date_map
+	):
 		"""
 		Calculate total amount for the given overtime detail child item based on its type and date.
 		"""
@@ -336,7 +330,6 @@ class OvertimeSlip(Document):
 		if not overtime_details:
 			return 0.0
 
-		applicable_hourly_rate = overtime_details.get("applicable_hourly_rate", 0)
 		if applicable_hourly_rate <= 0:
 			return 0.0
 

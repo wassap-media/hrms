@@ -475,13 +475,8 @@ def update_attendance_in_checkins(log_names: list, attendance_id: str):
 
 
 def calculate_time_difference(start_time, end_time):
-	base_date = datetime.today().date()
-	start_dt = datetime.combine(base_date, start_time)
-	end_dt = datetime.combine(base_date, end_time)
+	if end_time < start_time:
+		end_time += timedelta(days=1)
+	time_difference = abs(start_time - end_time)
 
-	# Handle overnight shifts (end time on next day)
-	if end_dt <= start_dt:
-		end_dt += timedelta(days=1)
-
-	diff = end_dt - start_dt
-	return round(diff.total_seconds() / 3600, 2)
+	return round(time_difference.total_seconds() / 3600, 2)
