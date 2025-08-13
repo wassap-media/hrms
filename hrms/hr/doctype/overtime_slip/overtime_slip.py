@@ -135,6 +135,7 @@ class OvertimeSlip(Document):
 						"date": record.attendance_date,
 						"overtime_type": record.overtime_type,
 						"overtime_duration": overtime_duration,
+						"standard_working_hours": record.standard_working_hours,
 					},
 				)
 
@@ -148,6 +149,7 @@ class OvertimeSlip(Document):
 					"attendance_date",
 					"overtime_type",
 					"actual_overtime_duration",
+					"standard_working_hours",
 				],
 				filters={
 					"employee": self.employee,
@@ -291,7 +293,6 @@ class OvertimeSlip(Document):
 
 	def _calculate_component_based_hourly_rate(self, overtime_type, standard_working_hours):
 		components = self.overtime_types[overtime_type]["components"] or []
-		salary_structure = get_assigned_salary_structure(self.employee, self.start_date)
 
 		if not hasattr(self, "_cached_salary_slip"):
 			salary_structure = get_assigned_salary_structure(self.employee, self.start_date)
