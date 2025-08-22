@@ -171,7 +171,6 @@ class LeavePolicyAssignment(Document):
 		periods_passed = self.get_periods_passed(
 			leave_details.earned_leave_frequency, current_date, from_date, consider_current_period
 		)
-		print(periods_passed, leave_details.earned_leave_frequency)
 		if periods_passed > 0:
 			new_leaves_allocated = self.calculate_leaves_for_passed_period(
 				annual_allocation, leave_details, date_of_joining, periods_passed, consider_current_period
