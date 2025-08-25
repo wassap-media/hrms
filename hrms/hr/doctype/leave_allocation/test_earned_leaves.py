@@ -577,7 +577,7 @@ class TestLeaveAllocation(HRMSTestSuite):
 
 		self.assertEqual(total_leaves_allocated, 0.0)
 
-	def test_quatertly_earned_leaves_allocated_on_first_day_at_the_start_of_leave_period(self):
+	def test_quartertly_earned_leaves_allocated_on_first_day_at_the_start_of_leave_period(self):
 		frappe.flags.current_date = get_year_start(getdate())
 
 		employee = frappe.get_doc("Employee", "_T-Employee-00002")
@@ -600,7 +600,7 @@ class TestLeaveAllocation(HRMSTestSuite):
 
 		self.assertEqual(total_leaves_allocated, 3.0)
 
-	def test_quaterly_earned_leaves_allocated_by_the_scheduler(self):
+	def test_quarterly_earned_leaves_allocated_by_the_scheduler(self):
 		frappe.flags.current_date = get_year_start(getdate())
 
 		employee = frappe.get_doc("Employee", "_T-Employee-00002")
@@ -918,7 +918,7 @@ class TestLeaveAllocation(HRMSTestSuite):
 		)
 		self.assertEqual(total_leaves_allocated, 24)
 
-	def test_yearly_leaves_allocated_prorated(self):
+	def test_yearly_leaves_allocated_pro_rated(self):
 		employee = frappe.get_doc("Employee", "_T-Employee-00002")
 		employee.date_of_joining = add_to_date(get_year_start(getdate()), months=7, days=15)
 		employee.save()
