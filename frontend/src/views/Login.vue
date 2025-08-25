@@ -3,9 +3,9 @@
 		<ion-content class="ion-padding">
 			<div class="flex h-screen w-screen flex-col justify-center bg-white">
 				<div class="flex flex-col mx-auto gap-3 items-center">
-					<FrappeHRLogo class="h-8 w-8" />
+					<ShreyasLogo class="mb-4" />
 					<div class="text-3xl font-semibold text-gray-900 text-center">
-						{{ __("Login to Frappe HR") }}
+						{{ __("Login to Shreyas HR") }}
 					</div>
 				</div>
 
@@ -108,8 +108,9 @@
 import { IonPage, IonContent } from "@ionic/vue"
 import { inject, reactive, ref } from "vue"
 import { Input, Button, ErrorMessage, Dialog, createResource } from "frappe-ui"
+import ShreyasLogo from "@/components/icons/ShreyasLogo.vue"
 
-import FrappeHRLogo from "@/components/icons/FrappeHRLogo.vue"
+
 
 const email = ref(null)
 const password = ref(null)

@@ -1,8 +1,40 @@
 <div align="center">
-	<a href="https://frappe.io/hr">
-		<img src=".github/frappe-hr-logo.png" height="80px" width="80px" alt="Frappe HR Logo">
-	</a>
-	<h2>Frappe HR</h2>
+	<div class="flex items-center justify-center gap-3 mb-4">
+		<!-- Abstract Logo with three intertwined ribbon shapes -->
+		<div class="relative w-12 h-12">
+			<!-- Top ribbon (pink) -->
+			<svg class="absolute inset-0 w-full h-full" viewBox="0 0 48 48" fill="none">
+				<path
+					d="M12 24 Q24 16 36 24 Q30 32 24 40 Q18 32 12 24 Z"
+					fill="#FF69B4"
+					opacity="0.9"
+				/>
+			</svg>
+			<!-- Middle ribbon (green) -->
+			<svg class="absolute inset-0 w-full h-full" viewBox="0 0 48 48" fill="none">
+				<path
+					d="M9 27 Q24 21 39 27 Q33 33 24 39 Q15 33 9 27 Z"
+					fill="#32CD32"
+					opacity="0.8"
+				/>
+			</svg>
+			<!-- Bottom ribbon (blue) -->
+			<svg class="absolute inset-0 w-full h-full" viewBox="0 0 48 48" fill="none">
+				<path
+					d="M6 30 Q24 24 42 30 Q36 36 24 42 Q12 36 6 30 Z"
+					fill="#4169E1"
+					opacity="0.7"
+				/>
+			</svg>
+		</div>
+		
+		<!-- Text "Shreyas" -->
+		<div class="flex flex-col">
+			<span class="text-3xl font-bold text-pink-500 italic">Shreyas</span>
+			<div class="w-full h-1 bg-gray-300"></div>
+		</div>
+	</div>
+	<h2>Shreyas HR</h2>
 	<p align="center">
 		<p>Open Source, modern, and easy-to-use HR and Payroll Software</p>
 	</p>
@@ -18,14 +50,14 @@
 </div>
 
 <div align="center">
-	<a href="https://frappe.io/hr">Website</a>
+	<a href="https://github.com/frappe/hrms">GitHub</a>
 	-
 	<a href="https://docs.frappe.io/hr/introduction">Documentation</a>
 </div>
 
-## Frappe HR
+## Shreyas HR
 
-Frappe HR has everything you need to drive excellence within the company. It's a complete HRMS solution with over 13 different modules right from Employee Management, Onboarding, Leaves, to Payroll, Taxation, and more!
+Shreyas HR has everything you need to drive excellence within the company. It's a complete HRMS solution with over 13 different modules right from Employee Management, Onboarding, Leaves, to Payroll, Taxation, and more!
 
 ## Motivation
 When Frappe team started growing in terms of size, we needed an open-source HR and Payroll software. We didn't find any "true" open-source HR software out there and so decided to build one ourselves.
@@ -38,7 +70,7 @@ Initially, it was a set of modules within ERPNext but version 14 onwards, as the
 - **Expense Claims and Advances**: Manage employee advances, claim expenses, configure multi-level approval workflows, all this with seamless integration with ERPNext accounting.
 - **Performance Management**: Track goals, align goals with key result areas (KRAs), enable employees to evaluate themselves, make managing appraisal cycles easy.
 - **Payroll & Taxation**: Create salary structures, configure income tax slabs, run standard payroll, accomodate additional salaries and off cycle payments, view income breakup on salary slips and so much more.
-- **Frappe HR Mobile App**: Apply for and approve leaves on the go, check-in and check-out, access employee profile right from the mobile app.
+- **Shreyas HR Mobile App**: Apply for and approve leaves on the go, check-in and check-out, access employee profile right from the mobile app.
 
 <details open>
 

@@ -5,8 +5,9 @@
 				<div class="flex flex-col bg-white shadow-sm p-4">
 					<div class="flex flex-row justify-between items-center">
 						<div class="flex flex-row items-center gap-2">
+							<ShreyasLogoIcon class="mr-2" />
 							<h2 class="text-xl font-bold text-gray-900">
-								{{ props.pageTitle || __("Frappe HR") }}
+								{{ props.pageTitle || __("Shreyas HR") }}
 							</h2>
 						</div>
 						<div class="flex flex-row items-center gap-3 ml-auto">
@@ -51,6 +52,7 @@
 <script setup>
 import { IonHeader, IonContent, IonPage } from "@ionic/vue"
 import { FeatherIcon, Avatar } from "frappe-ui"
+import ShreyasLogoIcon from "@/components/icons/ShreyasLogoIcon.vue"
 
 import { unreadNotificationsCount } from "@/data/notifications"
 
