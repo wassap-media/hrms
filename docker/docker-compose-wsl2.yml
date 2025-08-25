@@ -12,11 +12,15 @@ services:
     volumes:
       - mariadb-data:/var/lib/mysql
     restart: unless-stopped
+    networks:
+      - hrms-network
 
   # Redis for caching and queues
   redis:
     image: redis:alpine
     restart: unless-stopped
+    networks:
+      - hrms-network
 
   # Frappe Bench with HRMS only (no ERPNext)
   frappe:
@@ -26,10 +30,7 @@ services:
       - SHELL=/bin/bash
     working_dir: /home/frappe
     volumes:
-      - type: bind
-        source: .
-        target: /workspace
-        consistency: cached
+      - ./:/workspace:cached
     ports:
       - "8000:8000"
       - "9000:9000"
@@ -37,6 +38,12 @@ services:
       - mariadb
       - redis
     restart: unless-stopped
+    networks:
+      - hrms-network
 
 volumes:
   mariadb-data:
+
+networks:
+  hrms-network:
+    driver: bridge

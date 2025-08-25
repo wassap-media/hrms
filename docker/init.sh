@@ -24,7 +24,7 @@ bench set-redis-socketio-host redis://redis:6379
 sed -i '/redis/d' ./Procfile
 sed -i '/watch/d' ./Procfile
 
-bench get-app erpnext
+# Only install HRMS, remove ERPNext
 bench get-app hrms
 
 bench new-site hrms.localhost \
