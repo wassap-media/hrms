@@ -537,10 +537,10 @@ def check_effective_date(from_date, today, frequency, allocate_on_day):
 		"Yearly": {"First Day": get_year_start(today), "Last Day": get_year_ending(today)},
 	}[frequency][allocate_on_day]
 
-	if expected_date.day == today.day:
-		return True
-
-	return False
+	if allocate_on_day == "Date of Joining":
+		return expected_date.day == today.day
+	else:
+		return expected_date == today
 
 
 def get_salary_assignments(employee, payroll_period):
