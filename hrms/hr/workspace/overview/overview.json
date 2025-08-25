@@ -1,7 +1,7 @@
 {
  "app": "hrms",
  "charts": [],
- "content": "[{\"id\":\"pu9Ft3mUeT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"-xxN9AyGlK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"mYg4h6H7aX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"HR Dashboard\",\"col\":3}},{\"id\":\"OBOPP0dnjY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payroll Dashboard\",\"col\":3}},{\"id\":\"new-employee-dashboard\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Dashboard\",\"col\":3}},{\"id\":\"zyVHu4rF3u\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"HSmKHOvqMN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"lKeffKf1va\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}},{\"id\":\"UnVtsnxLo_\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee\",\"col\":4}},{\"id\":\"YXISc0V2sT\",\"type\":\"card\",\"data\":{\"card_name\":\"Leaves\",\"col\":4}},{\"id\":\"TH5ZW37wDA\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"vx8pBTHNsf\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance\",\"col\":4}},{\"id\":\"wv3Sy37NgW\",\"type\":\"card\",\"data\":{\"card_name\":\"Expense Claim\",\"col\":4}},{\"id\":\"v82YqH3rek\",\"type\":\"card\",\"data\":{\"card_name\":\"Key Reports\",\"col\":4}},{\"id\":\"60GScqYEk0\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}},{\"id\":\"employee-dashboard-card\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee Dashboard\",\"col\":4}}]",
+ "content": "[{\"id\":\"pu9Ft3mUeT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"-xxN9AyGlK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"mYg4h6H7aX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"HR Dashboard\",\"col\":3}},{\"id\":\"OBOPP0dnjY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payroll Dashboard\",\"col\":3}},{\"id\":\"new-employee-dashboard\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Dashboard\",\"col\":3}},{\"id\":\"employee-profile-shortcut\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Profile\",\"col\":3}},{\"id\":\"zyVHu4rF3u\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"HSmKHOvqMN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"lKeffKf1va\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}},{\"id\":\"UnVtsnxLo_\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee\",\"col\":4}},{\"id\":\"YXISc0V2sT\",\"type\":\"card\",\"data\":{\"card_name\":\"Leaves\",\"col\":4}},{\"id\":\"TH5ZW37wDA\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"vx8pBTHNsf\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance\",\"col\":4}},{\"id\":\"wv3Sy37NgW\",\"type\":\"card\",\"data\":{\"card_name\":\"Expense Claim\",\"col\":4}},{\"id\":\"v82YqH3rek\",\"type\":\"card\",\"data\":{\"card_name\":\"Key Reports\",\"col\":4}},{\"id\":\"60GScqYEk0\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}},{\"id\":\"employee-dashboard-card\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee Dashboard\",\"col\":4}}]",
  "creation": "2020-03-02 15:48:58.322521",
  "custom_blocks": [],
  "docstatus": 0,
@@ -429,14 +429,22 @@
    "stats_filter": "{\n    \"status\": \"Open\"\n}",
    "type": "Dashboard"
   },
-  {
-   "color": "Blue",
-   "format": "{} Active",
-   "label": "Employee Dashboard",
-   "link_to": "Employee",
-   "stats_filter": "{\"status\":\"Active\"}",
-   "type": "Dashboard"
-  },
+  		{
+			"color": "Blue",
+			"format": "{} Active",
+			"label": "Employee Dashboard",
+			"link_to": "Employee",
+			"stats_filter": "{\"status\":\"Active\"}",
+			"type": "Dashboard"
+		},
+		{
+			"color": "Purple",
+			"format": "{} Profile",
+			"label": "Employee Profile",
+			"link_to": "Employee Profile",
+			"stats_filter": "{\"status\":\"Active\"}",
+			"type": "Page"
+		},
   {
    "color": "Green",
    "format": "{} Active",
