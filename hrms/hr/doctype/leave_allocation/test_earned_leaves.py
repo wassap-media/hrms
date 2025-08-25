@@ -2,6 +2,7 @@ import frappe
 from frappe.utils import (
 	add_days,
 	add_months,
+	add_to_date,
 	get_first_day,
 	get_last_day,
 	get_year_ending,
@@ -618,7 +619,7 @@ class TestLeaveAllocation(HRMSTestSuite):
 		)[0]
 
 		# quarter passed 2 so leaves allocated should be 6
-		frappe.flags.current_date = add_months(get_year_start(getdate()), 7)
+		frappe.flags.current_date = add_months(get_year_start(getdate()), 3)
 
 		allocate_earned_leaves()
 
@@ -692,7 +693,7 @@ class TestLeaveAllocation(HRMSTestSuite):
 
 		assignment = make_policy_assignment(
 			employee,
-			allocate_on_day="Last Day",
+			allocate_on_day="First Day",
 			earned_leave_frequency="Half-Yearly",
 			annual_allocation=12,
 			assignment_based_on="Leave Period",
@@ -713,7 +714,6 @@ class TestLeaveAllocation(HRMSTestSuite):
 
 		employee = frappe.get_doc("Employee", "_T-Employee-00002")
 
-		# created policy assignment at the begining of the year so allocated leaces should be 0
 		assignment = make_policy_assignment(
 			employee,
 			allocate_on_day="First Day",
@@ -732,7 +732,7 @@ class TestLeaveAllocation(HRMSTestSuite):
 		self.assertEqual(total_leaves_allocated, 6)
 
 		# after 6 months, all 12 leaves should be allocated
-		frappe.flags.current_date = add_months(get_year_start(getdate()), 6)
+		frappe.flags.current_date = add_to_date(get_year_start(getdate()), months=6, days=1)
 
 		allocate_earned_leaves()
 
