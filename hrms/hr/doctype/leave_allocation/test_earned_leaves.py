@@ -2,7 +2,6 @@ import frappe
 from frappe.utils import (
 	add_days,
 	add_months,
-	add_to_date,
 	get_first_day,
 	get_last_day,
 	get_year_ending,
@@ -631,7 +630,7 @@ class TestLeaveAllocation(HRMSTestSuite):
 		self.assertEqual(total_leaves_allocated, 6)
 
 		# quarter three passed so leaves allocated should be 9
-		frappe.flags.current_date = add_months(get_year_start(getdate()), 10)
+		frappe.flags.current_date = add_months(get_year_start(getdate()), 9)
 		allocate_earned_leaves()
 
 		total_leaves_allocated = frappe.get_value(
@@ -732,7 +731,7 @@ class TestLeaveAllocation(HRMSTestSuite):
 		self.assertEqual(total_leaves_allocated, 6)
 
 		# after 6 months, all 12 leaves should be allocated
-		frappe.flags.current_date = add_to_date(get_year_start(getdate()), months=6, days=1)
+		frappe.flags.current_date = add_months(get_year_start(getdate()), 6)
 
 		allocate_earned_leaves()
 
