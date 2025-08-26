@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "autoname": "ATT-IMP-.YYYY.-.#####",
+ "creation": "2024-12-19 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "import_name",
+  "company",
+  "import_type",
+  "column_break_3",
+  "import_date",
+  "status",
+  "total_records",
+  "successful_records",
+  "failed_records",
+  "section_break_4",
+  "file_attachment",
+  "template_download",
+  "section_break_5",
+  "import_settings",
+  "validation_rules",
+  "section_break_6",
+  "import_log",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "import_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Import Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "import_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Import Type",
+   "options": "Daily Attendance\nCheck-in/Check-out\nLeave Applications\nOvertime Hours",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "import_date",
+   "fieldtype": "Datetime",
+   "label": "Import Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nValidating\nImporting\nCompleted\nFailed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_records",
+   "fieldtype": "Int",
+   "label": "Total Records",
+   "read_only": 1
+  },
+  {
+   "fieldname": "successful_records",
+   "fieldtype": "Int",
+   "label": "Successful Records",
+   "read_only": 1
+  },
+  {
+   "fieldname": "failed_records",
+   "fieldtype": "Int",
+   "label": "Failed Records",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "File Management"
+  },
+  {
+   "fieldname": "file_attachment",
+   "fieldtype": "Attach",
+   "label": "File Attachment",
+   "description": "Upload CSV/Excel file for import",
+   "reqd": 1
+  },
+  {
+   "fieldname": "template_download",
+   "fieldtype": "Button",
+   "label": "Download Template",
+   "description": "Download sample template file"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Import Configuration"
+  },
+  {
+   "fieldname": "import_settings",
+   "fieldtype": "Table",
+   "label": "Import Settings",
+   "options": "Attendance Import Setting"
+  },
+  {
+   "fieldname": "validation_rules",
+   "fieldtype": "Table",
+   "label": "Validation Rules",
+   "options": "Attendance Validation Rule"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Import Results"
+  },
+  {
+   "fieldname": "import_log",
+   "fieldtype": "Table",
+   "label": "Import Log",
+   "options": "Attendance Import Log"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Attendance Import",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-19 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Attendance Import",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "import_name"
+}

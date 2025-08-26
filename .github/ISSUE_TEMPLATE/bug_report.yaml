@@ -42,11 +42,10 @@ body:
     id: exact-version
     attributes:
       label: Version
-      description: Share exact version number of Frappe, ERPNext and Frappe HR you are using.
+      description: Share exact version number of Frappe and Shreyas HR you are using.
       placeholder: |
         Frappe version -
-        ERPNext version -
-        Frappe HR version -
+        Shreyas HR version -
     validations:
       required: true
 

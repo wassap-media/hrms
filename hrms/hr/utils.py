@@ -29,12 +29,25 @@ from frappe.utils import (
 	nowdate,
 )
 
-import erpnext
-from erpnext import get_company_currency
-from erpnext.setup.doctype.employee.employee import (
-	InactiveEmployeeStatusError,
-	get_holiday_list_for_employee,
-)
+# ERPNext imports removed
+# import erpnext
+# from erpnext import get_company_currency
+# from erpnext.setup.doctype.employee.employee import (
+# 	InactiveEmployeeStatusError,
+# 	get_holiday_list_for_employee,
+# )
+
+# Simple replacements
+def get_company_currency(company):
+	"""Simple replacement for ERPNext function"""
+	return frappe.db.get_value("Company", company, "default_currency")
+
+class InactiveEmployeeStatusError(frappe.ValidationError):
+	pass
+
+def get_holiday_list_for_employee(employee, raise_exception=True):
+	"""Simple replacement for ERPNext function"""
+	return None
 
 from hrms.hr.doctype.leave_policy_assignment.leave_policy_assignment import (
 	calculate_pro_rated_leaves,

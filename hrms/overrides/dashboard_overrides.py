@@ -39,10 +39,10 @@ def get_dashboard_for_employee(data):
 					"Salary Structure Assignment",
 					"Salary Slip",
 					"Additional Salary",
-					"Timesheet",
+					# "Timesheet",  # ERPNext removed
 					"Employee Incentive",
 					"Retention Bonus",
-					"Bank Account",
+					# "Bank Account",  # ERPNext removed
 				],
 			},
 			{
@@ -53,13 +53,14 @@ def get_dashboard_for_employee(data):
 		]
 	)
 
-	data["non_standard_fieldnames"].update({"Bank Account": "party", "Employee Grievance": "raised_by"})
+	# data["non_standard_fieldnames"].update({"Bank Account": "party", "Employee Grievance": "raised_by"})  # ERPNext removed
+	data["non_standard_fieldnames"].update({"Employee Grievance": "raised_by"})
 	data.update(
 		{
 			"heatmap": True,
 			"heatmap_message": _("This is based on the attendance of this Employee"),
 			"fieldname": "employee",
-			"method": "hrms.overrides.employee_master.get_timeline_data",
+			# "method": "hrms.overrides.employee_master.get_timeline_data",  # ERPNext removed
 		}
 	)
 	return data
@@ -73,24 +74,7 @@ def get_dashboard_for_holiday_list(data):
 	return data
 
 
-def get_dashboard_for_timesheet(data):
-	data["transactions"].append({"label": _("Payroll"), "items": ["Salary Slip"]})
-
-	return data
-
-
-def get_dashboard_for_project(data):
-	data["transactions"].append(
-		{"label": _("Claims"), "items": ["Expense Claim"]},
-	)
-
-	return data
-
-
-def get_dashboard_for_bank_account(data):
-	for section in data["transactions"]:
-		if section.get("label") == "Transactions":
-			section["items"].append("Payroll Entry")
-			break
-
-	return data
+# ERPNext-dependent functions removed:
+# def get_dashboard_for_timesheet(data):
+# def get_dashboard_for_project(data):
+# def get_dashboard_for_bank_account(data):

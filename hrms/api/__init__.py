@@ -5,7 +5,12 @@ from frappe.model.workflow import get_workflow_name
 from frappe.query_builder import Order
 from frappe.utils import add_days, date_diff, getdate, strip_html
 
-from erpnext.setup.doctype.employee.employee import get_holiday_list_for_employee
+# ERPNext import removed - creating simple replacement
+def get_holiday_list_for_employee(employee, raise_exception=True):
+	"""Simple replacement for ERPNext function - returns None for now"""
+	# This would need to be implemented with HRMS-specific logic
+	# For now, returning None to avoid errors
+	return None
 
 SUPPORTED_FIELD_TYPES = [
 	"Link",

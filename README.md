@@ -61,13 +61,13 @@ Shreyas HR has everything you need to drive excellence within the company. It's 
 
 ## Motivation
 When Frappe team started growing in terms of size, we needed an open-source HR and Payroll software. We didn't find any "true" open-source HR software out there and so decided to build one ourselves.
-Initially, it was a set of modules within ERPNext but version 14 onwards, as the modules became more mature, Frappe HR was created as a separate product.
+Initially, it was a set of modules within ERPNext but version 14 onwards, as the modules became more mature, Shreyas HR was created as a separate product.
 
 ## Key Features
 
 - **Employee Lifecycle**: From onboarding employees, managing promotions and transfers, all the way to documenting feedback with exit interviews, make life easier for employees throughout their life cycle.
 - **Leave and Attendance**: Configure leave policies, pull regional holidays with a click, check-in and check-out with geolocation capturing, track leave balances and attendance with reports.
-- **Expense Claims and Advances**: Manage employee advances, claim expenses, configure multi-level approval workflows, all this with seamless integration with ERPNext accounting.
+- **Expense Claims and Advances**: Manage employee advances, claim expenses, configure multi-level approval workflows, all this with seamless integration with modern accounting systems.
 - **Performance Management**: Track goals, align goals with key result areas (KRAs), enable employees to evaluate themselves, make managing appraisal cycles easy.
 - **Payroll & Taxation**: Create salary structures, configure income tax slabs, run standard payroll, accomodate additional salaries and off cycle payments, view income breakup on salary slips and so much more.
 - **Shreyas HR Mobile App**: Apply for and approve leaves on the go, check-in and check-out, access employee profile right from the mobile app.
@@ -131,7 +131,7 @@ Use the following credentials to log in:
 2. In a separate terminal window, run the following commands
 	```sh
 	$ bench new-site hrms.local
-	$ bench get-app erpnext
+	# $ bench get-app erpnext  # ERPNext removed - HRMS only
 	$ bench get-app hrms
 	$ bench --site hrms.local install-app hrms
 	$ bench --site hrms.local add-to-hosts
@@ -140,17 +140,17 @@ Use the following credentials to log in:
 
 ## Learning and Community
 
-1. [Frappe School](https://frappe.school) - Learn Frappe Framework and ERPNext from the various courses by the maintainers or from the community.
+1. [Frappe School](https://frappe.school) - Learn Frappe Framework from the various courses by the maintainers or from the community.
 2. [Documentation](https://docs.frappe.io/hr) - Extensive documentation for Frappe HR.
-3. [User Forum](https://discuss.erpnext.com/) - Engage with the community of ERPNext users and service providers.
+3. [User Forum](https://discuss.frappe.io/) - Engage with the community of Frappe users and service providers.
 4. [Telegram Group](https://t.me/frappehr) - Get instant help from the community of users.
 
 
 ## Contributing
 
-1. [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)
-1. [Report Security Vulnerabilities](https://erpnext.com/security)
-1. [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
+1. [Issue Guidelines](https://github.com/frappe/hrms/wiki/Issue-Guidelines)
+2. [Report Security Vulnerabilities](https://frappe.io/security)
+3. [Pull Request Requirements](https://github.com/frappe/hrms/wiki/Contribution-Guidelines)
 
 
 ## Logo and Trademark Policy

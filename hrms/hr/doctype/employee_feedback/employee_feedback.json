@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "autoname": "FEEDBACK-.YYYY.-.#####",
+ "creation": "2024-12-19 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "feedback_title",
+  "feedback_type",
+  "employee",
+  "employee_name",
+  "column_break_3",
+  "company",
+  "department",
+  "feedback_period",
+  "section_break_4",
+  "feedback_criteria",
+  "overall_rating",
+  "section_break_5",
+  "employee_comments",
+  "manager_feedback",
+  "anonymous_feedback",
+  "section_break_6",
+  "action_items",
+  "follow_up_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "feedback_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Feedback Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "feedback_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Feedback Type",
+   "options": "Performance Review\nPulse Survey\nExit Interview\nPeer Feedback\nManager Feedback\n360 Degree Feedback",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "feedback_period",
+   "fieldtype": "Select",
+   "label": "Feedback Period",
+   "options": "Weekly\nMonthly\nQuarterly\nBi-annually\nAnnually\nAd-hoc"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Feedback Assessment"
+  },
+  {
+   "fieldname": "feedback_criteria",
+   "fieldtype": "Table",
+   "label": "Feedback Criteria",
+   "options": "Employee Feedback Criteria",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overall_rating",
+   "fieldtype": "Rating",
+   "label": "Overall Rating",
+   "description": "Calculated average of all criteria ratings"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Feedback Details"
+  },
+  {
+   "fieldname": "employee_comments",
+   "fieldtype": "Text Editor",
+   "label": "Employee Comments",
+   "description": "Employee's self-assessment and comments"
+  },
+  {
+   "fieldname": "manager_feedback",
+   "fieldtype": "Text Editor",
+   "label": "Manager Feedback",
+   "description": "Manager's qualitative feedback and notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "anonymous_feedback",
+   "fieldtype": "Check",
+   "label": "Anonymous Feedback",
+   "description": "Check if this feedback should be anonymous"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Action Items"
+  },
+  {
+   "fieldname": "action_items",
+   "fieldtype": "Table",
+   "label": "Action Items",
+   "options": "Feedback Action Item"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date",
+   "description": "Date for follow-up on action items"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Feedback",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-19 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Employee Feedback",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee Self Service",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "feedback_title"
+}

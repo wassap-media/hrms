@@ -4,7 +4,7 @@ app_publisher = "Frappe Technologies Pvt. Ltd."
 app_description = "Modern HR and Payroll Software"
 app_email = "contact@frappe.io"
 app_license = "GNU General Public License (v3)"
-required_apps = ["frappe/erpnext"]
+# required_apps = ["frappe/erpnext"]  # ERPNext dependency removed
 source_link = "http://github.com/frappe/hrms"
 app_logo_url = ""
 app_home = "/app/overview"
@@ -45,16 +45,16 @@ app_include_css = "hrms.bundle.css"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {
-	"Employee": "public/js/erpnext/employee.js",
-	"Company": "public/js/erpnext/company.js",
-	"Department": "public/js/erpnext/department.js",
-	"Timesheet": "public/js/erpnext/timesheet.js",
-	"Payment Entry": "public/js/erpnext/payment_entry.js",
-	"Journal Entry": "public/js/erpnext/journal_entry.js",
-	"Delivery Trip": "public/js/erpnext/delivery_trip.js",
-	"Bank Transaction": "public/js/erpnext/bank_transaction.js",
-}
+# doctype_js = {
+# 	"Employee": "public/js/erpnext/employee.js",
+# 	"Company": "public/js/erpnext/company.js",
+# 	"Department": "public/js/erpnext/department.js",
+# 	"Timesheet": "public/js/erpnext/timesheet.js",
+# 	"Payment Entry": "public/js/erpnext/payment_entry.js",
+# 	"Journal Entry": "public/js/erpnext/journal_entry.js",
+# 	"Delivery Trip": "public/js/erpnext/delivery_trip.js",
+# 	"Bank Transaction": "public/js/erpnext/bank_transaction.js",
+# }  # ERPNext doctypes removed
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -99,8 +99,6 @@ jinja = {
 after_install = "hrms.install.after_install"
 after_migrate = "hrms.setup.update_select_perm_after_install"
 
-setup_wizard_complete = "hrms.subscription_utils.update_erpnext_access"
-
 # Uninstallation
 # ------------
 
@@ -141,27 +139,24 @@ before_app_uninstall = "hrms.setup.before_app_uninstall"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
-has_upload_permission = {"Employee": "erpnext.setup.doctype.employee.employee.has_upload_permission"}
+# has_upload_permission = {"Employee": "erpnext.setup.doctype.employee.employee.has_upload_permission"}
 
 # DocType Class
 # ---------------
 # Override standard doctype classes
 
-override_doctype_class = {
-	"Employee": "hrms.overrides.employee_master.EmployeeMaster",
-	"Timesheet": "hrms.overrides.employee_timesheet.EmployeeTimesheet",
-	"Payment Entry": "hrms.overrides.employee_payment_entry.EmployeePaymentEntry",
-	"Project": "hrms.overrides.employee_project.EmployeeProject",
-}
+# override_doctype_class = {
+# 	"Employee": "hrms.overrides.employee_master.EmployeeMaster",
+# 	"Timesheet": "hrms.overrides.employee_timesheet.EmployeeTimesheet",
+# 	"Payment Entry": "hrms.overrides.employee_payment_entry.EmployeePaymentEntry",
+# 	"Project": "hrms.overrides.employee_project.EmployeeProject",
+# }
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
 doc_events = {
-	"User": {
-		"validate": "erpnext.setup.doctype.employee.employee.validate_employee_role",
-	},
 	"Company": {
 		"validate": "hrms.overrides.company.validate_default_accounts",
 		"on_update": [
@@ -173,27 +168,6 @@ doc_events = {
 	"Holiday List": {
 		"on_update": "hrms.utils.holiday_list.invalidate_cache",
 		"on_trash": "hrms.utils.holiday_list.invalidate_cache",
-	},
-	"Timesheet": {"validate": "hrms.hr.utils.validate_active_employee"},
-	"Payment Entry": {
-		"on_submit": "hrms.hr.doctype.expense_claim.expense_claim.update_payment_for_expense_claim",
-		"on_cancel": "hrms.hr.doctype.expense_claim.expense_claim.update_payment_for_expense_claim",
-		"on_update_after_submit": "hrms.hr.doctype.expense_claim.expense_claim.update_payment_for_expense_claim",
-	},
-	"Journal Entry": {
-		"validate": "hrms.hr.doctype.expense_claim.expense_claim.validate_expense_claim_in_jv",
-		"on_submit": [
-			"hrms.hr.doctype.expense_claim.expense_claim.update_payment_for_expense_claim",
-			"hrms.hr.doctype.full_and_final_statement.full_and_final_statement.update_full_and_final_statement_status",
-			"hrms.payroll.doctype.salary_withholding.salary_withholding.update_salary_withholding_payment_status",
-		],
-		"on_update_after_submit": "hrms.hr.doctype.expense_claim.expense_claim.update_payment_for_expense_claim",
-		"on_cancel": [
-			"hrms.hr.doctype.expense_claim.expense_claim.update_payment_for_expense_claim",
-			"hrms.payroll.doctype.salary_slip.salary_slip.unlink_ref_doc_from_salary_slip",
-			"hrms.hr.doctype.full_and_final_statement.full_and_final_statement.update_full_and_final_statement_status",
-			"hrms.payroll.doctype.salary_withholding.salary_withholding.update_salary_withholding_payment_status",
-		],
 	},
 	"Loan": {"validate": "hrms.hr.utils.validate_loan_repay_from_salary"},
 	"Employee": {
@@ -301,10 +275,11 @@ global_search_doctypes = {
 override_doctype_dashboards = {
 	"Employee": "hrms.overrides.dashboard_overrides.get_dashboard_for_employee",
 	"Holiday List": "hrms.overrides.dashboard_overrides.get_dashboard_for_holiday_list",
-	"Task": "hrms.overrides.dashboard_overrides.get_dashboard_for_project",
-	"Project": "hrms.overrides.dashboard_overrides.get_dashboard_for_project",
-	"Timesheet": "hrms.overrides.dashboard_overrides.get_dashboard_for_timesheet",
-	"Bank Account": "hrms.overrides.dashboard_overrides.get_dashboard_for_bank_account",
+	# ERPNext doctypes removed:
+	# "Task": "hrms.overrides.dashboard_overrides.get_dashboard_for_project",
+	# "Project": "hrms.overrides.dashboard_overrides.get_dashboard_for_project",
+	# "Timesheet": "hrms.overrides.dashboard_overrides.get_dashboard_for_timesheet",
+	# "Bank Account": "hrms.overrides.dashboard_overrides.get_dashboard_for_bank_account",
 }
 
 # exempt linked doctypes from being automatically cancelled

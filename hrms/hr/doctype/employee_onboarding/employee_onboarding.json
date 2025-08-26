@@ -1,98 +1,72 @@
 {
  "actions": [],
- "autoname": "HR-EMP-ONB-.YYYY.-.#####",
- "creation": "2018-05-09 04:57:20.016220",
+ "autoname": "ONBOARD-.YYYY.-.#####",
+ "creation": "2024-12-19 10:00:00.000000",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "job_applicant",
-  "job_offer",
-  "employee_onboarding_template",
-  "column_break_7",
-  "company",
-  "boarding_status",
-  "project",
-  "details_section",
   "employee",
   "employee_name",
+  "employee_id",
+  "onboarding_template",
+  "column_break_3",
+  "company",
   "department",
   "designation",
-  "employee_grade",
-  "holiday_list",
-  "column_break_13",
-  "date_of_joining",
-  "boarding_begins_on",
-  "table_for_activity",
-  "activities",
-  "notify_users_by_email",
+  "section_break_4",
+  "onboarding_status",
+  "start_date",
+  "expected_completion",
+  "actual_completion",
+  "section_break_5",
+  "onboarding_activities",
+  "section_break_6",
+  "required_documents",
+  "document_status",
+  "section_break_7",
+  "e_signature_required",
+  "e_signature_status",
+  "e_signature_date",
+  "section_break_8",
+  "checklist_items",
   "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "job_applicant",
+   "fieldname": "employee",
    "fieldtype": "Link",
-   "label": "Job Applicant",
-   "options": "Job Applicant",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
    "reqd": 1
   },
   {
-   "fieldname": "job_offer",
-   "fieldtype": "Link",
-   "label": "Job Offer",
-   "options": "Job Offer",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "job_applicant.applicant_name",
+   "fetch_from": "employee.employee_name",
    "fieldname": "employee_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Employee Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "employee",
-   "fieldtype": "Link",
-   "label": "Employee",
-   "options": "Employee",
    "read_only": 1
   },
   {
-   "fieldname": "date_of_joining",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Date of Joining",
-   "reqd": 1
-  },
-  {
-   "allow_on_submit": 1,
-   "default": "Pending",
-   "fieldname": "boarding_status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Pending\nIn Process\nCompleted",
+   "fetch_from": "employee.employee_id",
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee ID",
    "read_only": 1
   },
   {
-   "allow_on_submit": 1,
-   "default": "0",
-   "fieldname": "notify_users_by_email",
-   "fieldtype": "Check",
-   "label": "Notify users by email"
-  },
-  {
-   "fieldname": "column_break_7",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "employee_onboarding_template",
+   "fieldname": "onboarding_template",
    "fieldtype": "Link",
-   "label": "Employee Onboarding Template",
+   "label": "Onboarding Template",
    "options": "Employee Onboarding Template"
   },
   {
-   "fetch_from": "employee_onboarding_template.company",
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
@@ -100,46 +74,108 @@
    "reqd": 1
   },
   {
-   "fetch_from": "employee_onboarding_template.department",
    "fieldname": "department",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Department",
    "options": "Department"
   },
   {
-   "fetch_from": "employee_onboarding_template.designation",
    "fieldname": "designation",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Designation",
    "options": "Designation"
   },
   {
-   "fetch_from": "employee_onboarding_template.employee_grade",
-   "fieldname": "employee_grade",
-   "fieldtype": "Link",
-   "label": "Employee Grade",
-   "options": "Employee Grade"
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Onboarding Timeline"
   },
   {
-   "fieldname": "project",
-   "fieldtype": "Link",
-   "label": "Project",
-   "options": "Project",
-   "read_only": 1
+   "fieldname": "onboarding_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Onboarding Status",
+   "options": "Not Started\nIn Progress\nCompleted\nOn Hold\nCancelled",
+   "reqd": 1
   },
   {
-   "fieldname": "table_for_activity",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_completion",
+   "fieldtype": "Date",
+   "label": "Expected Completion"
+  },
+  {
+   "fieldname": "actual_completion",
+   "fieldtype": "Date",
+   "label": "Actual Completion"
+  },
+  {
+   "fieldname": "section_break_5",
    "fieldtype": "Section Break",
    "label": "Onboarding Activities"
   },
   {
-   "allow_on_submit": 1,
-   "fieldname": "activities",
+   "fieldname": "onboarding_activities",
    "fieldtype": "Table",
-   "label": "Activities",
-   "options": "Employee Boarding Activity"
+   "label": "Onboarding Activities",
+   "options": "Employee Onboarding Activity"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Document Management"
+  },
+  {
+   "fieldname": "required_documents",
+   "fieldtype": "Table",
+   "label": "Required Documents",
+   "options": "Onboarding Document"
+  },
+  {
+   "fieldname": "document_status",
+   "fieldtype": "Select",
+   "label": "Overall Document Status",
+   "options": "Pending\nIn Progress\nCompleted\nOverdue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "E-Signature"
+  },
+  {
+   "default": "1",
+   "fieldname": "e_signature_required",
+   "fieldtype": "Check",
+   "label": "E-Signature Required",
+   "description": "Check if employee needs to sign documents electronically"
+  },
+  {
+   "fieldname": "e_signature_status",
+   "fieldtype": "Select",
+   "label": "E-Signature Status",
+   "options": "Pending\nSigned\nNot Required"
+  },
+  {
+   "fieldname": "e_signature_date",
+   "fieldtype": "Datetime",
+   "label": "E-Signature Date"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Checklist"
+  },
+  {
+   "fieldname": "checklist_items",
+   "fieldtype": "Table",
+   "label": "Checklist Items",
+   "options": "Onboarding Checklist Item"
   },
   {
    "fieldname": "amended_from",
@@ -149,41 +185,17 @@
    "options": "Employee Onboarding",
    "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fieldname": "details_section",
-   "fieldtype": "Section Break",
-   "label": "Employee Details"
-  },
-  {
-   "fieldname": "column_break_13",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "boarding_begins_on",
-   "fieldtype": "Date",
-   "label": "Onboarding Begins On",
-   "reqd": 1
-  },
-  {
-   "fieldname": "holiday_list",
-   "fieldtype": "Link",
-   "label": "Holiday List",
-   "options": "Holiday List"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-27 13:09:39.939109",
+ "modified": "2024-12-19 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Employee Onboarding",
- "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
-   "amend": 1,
-   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -191,27 +203,28 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "HR Manager",
    "share": 1,
    "submit": 1,
    "write": 1
   },
   {
-   "amend": 1,
-   "cancel": 1,
    "create": 1,
+   "delete": 1,
+   "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
-   "role": "HR Manager",
+   "report": 1,
+   "role": "HR User",
    "share": 1,
    "submit": 1,
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "employee_name",
- "track_changes": 1
+ "title_field": "employee"
 }

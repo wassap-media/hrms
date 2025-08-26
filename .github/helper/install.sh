@@ -13,7 +13,7 @@ pip install frappe-bench
 githubbranch=${GITHUB_BASE_REF:-${GITHUB_REF##*/}}
 frappeuser=${FRAPPE_USER:-"frappe"}
 frappebranch=${FRAPPE_BRANCH:-$githubbranch}
-erpnextbranch=${ERPNEXT_BRANCH:-$githubbranch}
+# erpnextbranch=${ERPNEXT_BRANCH:-$githubbranch}  # ERPNext removed
 paymentsbranch=${PAYMENTS_BRANCH:-${githubbranch%"-hotfix"}}
 lendingbranch="develop"
 
@@ -27,7 +27,7 @@ mariadb --host 127.0.0.1 --port 3306 -u root -proot -e "SET GLOBAL character_set
 mariadb --host 127.0.0.1 --port 3306 -u root -proot -e "SET GLOBAL collation_server = 'utf8mb4_unicode_ci'"
 
 mariadb --host 127.0.0.1 --port 3306 -u root -proot -e "CREATE USER 'test_frappe'@'localhost' IDENTIFIED BY 'test_frappe'"
-mariadb --host 127.0.0.1 --port 3306 -u root -proot -e "CREATE DATABASE test_frappe"
+mariadb --host 127.0.0.1 --db test_frappe -u root -proot -e "CREATE DATABASE test_frappe"
 mariadb --host 127.0.0.1 --port 3306 -u root -proot -e "GRANT ALL PRIVILEGES ON \`test_frappe\`.* TO 'test_frappe'@'localhost'"
 
 mariadb --host 127.0.0.1 --port 3306 -u root -proot -e "FLUSH PRIVILEGES"
@@ -48,7 +48,7 @@ sed -i 's/socketio:/# socketio:/g' Procfile
 sed -i 's/redis_socketio:/# redis_socketio:/g' Procfile
 
 bench get-app "https://github.com/${frappeuser}/payments" --branch "$paymentsbranch"
-bench get-app "https://github.com/${frappeuser}/erpnext" --branch "$erpnextbranch" --resolve-deps
+# bench get-app "https://github.com/${frappeuser}/erpnext" --branch "$erpnextbranch" --resolve-deps"  # ERPNext removed
 bench get-app "https://github.com/${frappeuser}/lending" --branch "$lendingbranch"
 bench get-app hrms "${GITHUB_WORKSPACE}"
 bench setup requirements --dev

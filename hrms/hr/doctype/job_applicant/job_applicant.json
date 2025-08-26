@@ -1,102 +1,146 @@
 {
  "actions": [],
- "allow_import": 1,
- "allow_rename": 1,
- "autoname": "HR-APP-.YYYY.-.#####",
- "creation": "2013-01-29 19:25:37",
- "description": "Applicant for a Job",
+ "autoname": "JOB-APP-.YYYY.-.#####",
+ "creation": "2024-12-19 10:00:00.000000",
  "doctype": "DocType",
- "document_type": "Document",
- "email_append_to": 1,
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "details_section",
   "applicant_name",
   "email_id",
   "phone_number",
-  "country",
+  "status",
   "column_break_3",
   "job_title",
-  "designation",
-  "status",
-  "source_and_rating_section",
+  "company",
+  "department",
+  "section_break_4",
+  "pipeline_stage",
+  "stage_score",
+  "overall_score",
+  "priority",
+  "column_break_5",
   "source",
-  "source_name",
-  "employee_referral",
-  "column_break_13",
-  "applicant_rating",
+  "referred_by",
+  "expected_salary",
   "section_break_6",
-  "notes",
-  "cover_letter",
   "resume_attachment",
-  "resume_link",
-  "section_break_16",
-  "currency",
-  "column_break_18",
-  "lower_range",
-  "upper_range"
+  "cover_letter",
+  "portfolio_url",
+  "section_break_7",
+  "interview_details",
+  "feedback_notes",
+  "amended_from"
  ],
  "fields": [
   {
-   "bold": 1,
    "fieldname": "applicant_name",
    "fieldtype": "Data",
-   "in_global_search": 1,
+   "in_list_view": 1,
    "label": "Applicant Name",
    "reqd": 1
   },
   {
-   "bold": 1,
    "fieldname": "email_id",
    "fieldtype": "Data",
-   "label": "Email Address",
-   "options": "Email",
+   "in_list_view": 1,
+   "label": "Email ID",
    "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Status",
-   "options": "Open\nReplied\nRejected\nHold\nAccepted",
+   "options": "Open\nReplied\nReplied and Forwarded\nAppointment Letter\nRejected\nHold\nWithdrawn",
    "reqd": 1
   },
   {
    "fieldname": "column_break_3",
-   "fieldtype": "Column Break",
-   "width": "50%"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "job_title",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Job Opening",
+   "label": "Job Title",
    "options": "Job Opening",
-   "search_index": 1
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "ATS Pipeline"
+  },
+  {
+   "fieldname": "pipeline_stage",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Pipeline Stage",
+   "options": "Applied\nScreening\nPhone Interview\nTechnical Interview\nFinal Interview\nReference Check\nOffer\nHired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "stage_score",
+   "fieldtype": "Rating",
+   "label": "Stage Score",
+   "description": "Score for current pipeline stage"
+  },
+  {
+   "fieldname": "overall_score",
+   "fieldtype": "Rating",
+   "label": "Overall Score",
+   "description": "Cumulative score across all stages"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "source",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "Source",
-   "options": "Job Applicant Source"
+   "options": "Website\nJob Portal\nReferral\nSocial Media\nDirect Application\nRecruitment Agency"
   },
   {
-   "depends_on": "eval: doc.source==\"Employee Referral\" ",
-   "fieldname": "source_name",
+   "fieldname": "referred_by",
    "fieldtype": "Link",
-   "label": "Source Name",
+   "label": "Referred By",
    "options": "Employee"
+  },
+  {
+   "fieldname": "expected_salary",
+   "fieldtype": "Currency",
+   "label": "Expected Salary"
   },
   {
    "fieldname": "section_break_6",
    "fieldtype": "Section Break",
-   "label": "Resume"
-  },
-  {
-   "fieldname": "cover_letter",
-   "fieldtype": "Text",
-   "label": "Cover Letter"
+   "label": "Documents"
   },
   {
    "fieldname": "resume_attachment",
@@ -104,121 +148,80 @@
    "label": "Resume Attachment"
   },
   {
-   "fieldname": "notes",
+   "fieldname": "cover_letter",
+   "fieldtype": "Text Editor",
+   "label": "Cover Letter"
+  },
+  {
+   "fieldname": "portfolio_url",
    "fieldtype": "Data",
-   "label": "Notes",
+   "label": "Portfolio URL"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Interview & Feedback"
+  },
+  {
+   "fieldname": "interview_details",
+   "fieldtype": "Table",
+   "label": "Interview Details",
+   "options": "Interview Detail"
+  },
+  {
+   "fieldname": "feedback_notes",
+   "fieldtype": "Table",
+   "label": "Feedback Notes",
+   "options": "Applicant Feedback"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job Applicant",
+   "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fieldname": "phone_number",
-   "fieldtype": "Data",
-   "label": "Phone Number",
-   "options": "Phone"
-  },
-  {
-   "fieldname": "country",
-   "fieldtype": "Link",
-   "label": "Country",
-   "options": "Country"
-  },
-  {
-   "fieldname": "resume_link",
-   "fieldtype": "Data",
-   "label": "Resume Link"
-  },
-  {
-   "fieldname": "applicant_rating",
-   "fieldtype": "Rating",
-   "in_list_view": 1,
-   "label": "Applicant Rating"
-  },
-  {
-   "fieldname": "section_break_16",
-   "fieldtype": "Section Break",
-   "label": "Salary Expectation"
-  },
-  {
-   "fieldname": "lower_range",
-   "fieldtype": "Currency",
-   "label": "Lower Range",
-   "options": "currency",
-   "precision": "0"
-  },
-  {
-   "fieldname": "upper_range",
-   "fieldtype": "Currency",
-   "label": "Upper Range",
-   "options": "currency",
-   "precision": "0"
-  },
-  {
-   "fieldname": "column_break_18",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "currency",
-   "fieldtype": "Link",
-   "label": "Currency",
-   "options": "Currency"
-  },
-  {
-   "fieldname": "employee_referral",
-   "fieldtype": "Link",
-   "label": "Employee Referral",
-   "options": "Employee Referral",
-   "read_only": 1
-  },
-  {
-   "fieldname": "details_section",
-   "fieldtype": "Section Break",
-   "label": "Details"
-  },
-  {
-   "fieldname": "source_and_rating_section",
-   "fieldtype": "Section Break",
-   "label": "Source and Rating"
-  },
-  {
-   "fieldname": "column_break_13",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fetch_from": "job_title.designation",
-   "fetch_if_empty": 1,
-   "fieldname": "designation",
-   "fieldtype": "Link",
-   "label": "Designation",
-   "options": "Designation"
   }
  ],
- "icon": "fa fa-user",
- "idx": 1,
- "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-01-16 13:06:05.312255",
+ "modified": "2024-12-19 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Job Applicant",
- "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
    "delete": 1,
    "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "HR User",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
- "search_fields": "applicant_name, email_id, job_title, phone_number",
- "sender_field": "email_id",
+ "quick_entry": 1,
  "sort_field": "creation",
- "sort_order": "ASC",
+ "sort_order": "DESC",
  "states": [],
- "subject_field": "notes",
  "title_field": "applicant_name"
 }

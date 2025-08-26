@@ -125,57 +125,13 @@ def set_app_logo():
 	pass
 
 
-def get_erpnext_roles() -> set:
-	erpnext_roles = get_roles_for_app("erpnext")
-	hrms_roles = get_roles_for_app("hrms")
-	return erpnext_roles - hrms_roles - set(STANDARD_ROLES)
-
-
-def get_roles_for_app(app_name: str) -> set:
-	erpnext_modules = get_modules_by_app(app_name)
-	doctypes = get_doctypes_by_modules(erpnext_modules)
-	roles = roles_by_doctype(doctypes)
-
-	return roles
-
-
-def get_modules_by_app(app_name: str) -> list:
-	return frappe.db.get_all("Module Def", filters={"app_name": app_name}, pluck="name")
-
-
-def get_doctypes_by_modules(modules: list) -> list:
-	return frappe.db.get_all("DocType", filters={"module": ("in", modules)}, pluck="name")
-
-
-def roles_by_doctype(doctypes: list) -> set:
-	roles = []
-	for d in doctypes:
-		permissions = frappe.get_meta(d).permissions
-
-		for d in permissions:
-			roles.append(d.role)
-
-	return set(roles)
-
-
-def hide_erpnext() -> bool:
-	hr_subscription = has_subscription(frappe.conf.sk_hrms)
-	erpnext_subscription = has_subscription(frappe.conf.sk_erpnext_smb or frappe.conf.sk_erpnext)
-
-	if not hr_subscription:
-		return False
-
-	if hr_subscription and erpnext_subscription:
-		# subscribed for ERPNext
-		return False
-
-	# no subscription for ERPNext
-	return True
-
-
-def has_subscription(secret_key) -> bool:
-	url = f"https://frappecloud.com/api/method/press.api.developer.marketplace.get_subscription_status?secret_key={secret_key}"
-	response = requests.request(method="POST", url=url, timeout=5)
-
-	status = response.json().get("message")
-	return True if status == "Active" else False
+# ERPNext functions removed - no longer needed
+# def update_erpnext_workspaces(disable: bool = True):
+# def update_erpnext_roles(disable: bool = True):
+# def get_erpnext_roles() -> set:
+# def get_roles_for_app(app_name: str) -> set:
+# def get_modules_by_app(app_name: str) -> list:
+# def get_doctypes_by_modules(modules: list) -> list:
+# def roles_by_doctype(doctypes: list) -> set:
+# def hide_erpnext() -> bool:
+# def has_subscription(secret_key) -> bool:
